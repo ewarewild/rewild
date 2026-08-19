@@ -1,0 +1,28 @@
+@import "tailwindcss";
+
+@theme {
+  --font-display: "Merriweather", Georgia, serif;
+  --font-sans: "Nunito", system-ui, sans-serif;
+  --font-button: "Sanchez", Georgia, serif;
+
+  --color-forest: #111111;
+  --color-sage: #4a6741;
+  --color-sage-light: #8fa882;
+  --color-cream: #f9f6f1;
+  --color-warm: #c4a878;
+  --color-muted: #6b7c63;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-sans);
+  color: var(--color-forest);
+  -webkit-font-smoothing: antialiased;
+}
+
+button {
+  font-family: var(--font-button);
+}

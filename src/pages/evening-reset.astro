@@ -1,0 +1,207 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Nav from '../components/Nav.astro';
+---
+
+<Layout title="Evening Reset - Rewild" description="One month, four hikes, 4 different regions. This is a unique opportunity to get out into nature and exercise in your local area.">
+
+  <!-- Navigation -->
+  <Nav />
+
+  <!-- Hero image -->
+  <section class="relative mt-[60px] overflow-hidden" style="height: 65vh;">
+    <div
+      class="absolute inset-0 bg-cover bg-no-repeat"
+      style="background-image: url('/images/skolapparn.jpg'); background-position: center 25%;"
+    ></div>
+    <div class="absolute inset-0" style="background: linear-gradient(to top, rgba(20,25,14,0.5) 0%, transparent 60%);"></div>
+    <a href="/#events" class="absolute top-6 left-6 md:left-12 inline-flex items-center gap-2 text-xs tracking-[0.25em] uppercase font-light text-white/60 hover:text-white transition-colors duration-200">
+      <span>←</span><span>All events</span>
+    </a>
+  </section>
+
+  <!-- Title strip (bg-white) -->
+  <div class="bg-white py-10 px-6 text-center">
+    <p class="font-display font-light italic text-forest text-xl md:text-2xl lg:text-3xl leading-relaxed max-w-2xl mx-auto">The moment you step into trees, something shifts. Stress drops. The mind quietens. Everything else falls away, and you are simply here. With a long exhale, your guard drops with it - tension releasing, something opening. You feel more awake, more present.</p>
+  </div>
+
+  <!-- Intro section (bg-cream, matching 'You were built for this') -->
+  <section class="bg-cream py-16 md:py-24">
+    <div class="max-w-6xl mx-auto px-6 md:px-12">
+      <div class="max-w-[420px]">
+        <h2 class="font-display font-light text-4xl md:text-5xl text-forest mt-6 mb-10 leading-tight">Evening Reset</h2>
+        <div class="space-y-5 text-forest font-light leading-relaxed text-[1.08rem]">
+          <p>
+            Welcome to a unique hike in your local area that combines exercise with nature immersion. This is a great opportunity to get out of town after a long day, release stress and revitalise your body and mind.
+          </p>
+          <p>
+            Each walk is designed around supporting:
+          </p>
+          <div class="space-y-3">
+            {[
+              'Stress release',
+              'Increasing energy levels',
+              'Core strength and balance',
+              'Mental and physical resilience',
+            ].map(item => (
+              <div class="flex items-start gap-4">
+                <span class="mt-2.5 w-1 h-1 rounded-full bg-sage flex-shrink-0"></span>
+                <span class="text-[1.08rem] text-forest font-light leading-relaxed">{item}</span>
+              </div>
+            ))}
+          </div>
+          <p>
+            Explore new trails over one month period.
+          </p>
+          <p>
+            We walk in every weather, practice breathing techniques, yoga, pilates, qi gong-inspired exercises and guided sensory nature immersion.
+          </p>
+          <p>
+            We cultivate presence through noble silence while moving mindfully in terrain.
+          </p>
+          <p>
+            After the practice we take time to rest, chat, enjoy a snack and share a wild plant tea.
+          </p>
+          <p>
+            Currently available in 4 different regions: Skien, Porsgrunn, Larvik and Sandefjord.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Practical info (bg-white) -->
+  <section class="bg-white py-14 md:py-20">
+    <div class="max-w-6xl mx-auto px-6 md:px-12">
+      <div class="max-w-[420px]">
+        <h3 class="font-display font-light text-3xl md:text-4xl text-forest mb-10 leading-tight">Technical info:</h3>
+        <div class="space-y-5 text-forest font-light leading-relaxed text-[1.08rem]">
+          <p>
+            No previous experience is needed, though you should be comfortable maintaining a steady pace on a medium difficulty trail for up to 30 minutes.
+          </p>
+          <p>
+            Please get in touch if you have any questions.
+          </p>
+          <p>
+            What to bring: Appropriate clothes for the weather, comfortable shoes with a grip, water bottle, seating mat, a snack and a cup for the tea.
+          </p>
+          <p>
+            Full practical details and the exact trip locations will be sent once you've booked your place. The parking place for each trip is up to 10-20 min drive from the town center of your region.
+          </p>
+        </div>
+        <p class="text-forest/60 text-[1.08rem] font-light leading-relaxed mt-12">
+          Please note: the exact location of every hike will be confirmed the day before to optimise the trail type for current weather conditions. We hike in all weather, however, if hazardous conditions arise - strong winds or icy trails - the hike may be cancelled. You will then be presented with the option to rebook your trip within a month.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Details (bg-cream) -->
+  <section class="bg-cream py-14 md:py-20">
+    <div class="max-w-6xl mx-auto px-6 md:px-12">
+      <div class="grid md:grid-cols-[5fr_7fr] gap-16 md:gap-24">
+        <div>
+          <!-- Details -->
+          <div class="space-y-4">
+            <div class="flex gap-6">
+              <span class="text-xs tracking-[0.2em] uppercase text-sage font-light w-28 flex-shrink-0">Duration</span>
+              <span class="text-base text-forest font-light">Approx 1.5 hours</span>
+            </div>
+            <div class="flex gap-6">
+              <span class="text-xs tracking-[0.2em] uppercase text-sage font-light w-28 flex-shrink-0">Meet up</span>
+              <span class="text-base text-forest font-light">17:00</span>
+            </div>
+            <div class="flex gap-6">
+              <span class="text-xs tracking-[0.2em] uppercase text-sage font-light w-28 flex-shrink-0">Location</span>
+              <div class="text-base text-forest font-light space-y-1">
+                <p>Skien - Mondays</p>
+                <p>Porsgrunn - Tuesdays</p>
+                <p>Larvik - Thursdays</p>
+                <p>Sandefjord - Fridays</p>
+              </div>
+            </div>
+            <div class="flex gap-6">
+              <span class="text-xs tracking-[0.2em] uppercase text-sage font-light w-28 flex-shrink-0">Price</span>
+              <span class="text-base text-forest font-light">1400 NOK / 4 hikes - 1 month</span>
+            </div>
+
+            <div class="pt-12">
+              <a
+                href="/signup"
+                class="inline-block px-10 py-4 bg-forest text-white text-xs tracking-[0.25em] uppercase font-light hover:bg-sage transition-colors duration-300"
+              >
+                Sign up
+              </a>
+              <p class="text-sage text-sm font-light mt-4">50% off for new members in September</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- More events -->
+  <section class="bg-white pt-10 pb-24 md:pt-14 md:pb-36">
+    <div class="max-w-6xl mx-auto px-6 md:px-12">
+      <p class="text-xs tracking-[0.3em] uppercase text-forest mb-10 font-light">More events</p>
+      <div class="grid md:grid-cols-2 gap-16 md:gap-8">
+
+        <!-- Deep Rest -->
+        <a href="/deep-rest" class="bg-cream group overflow-hidden block cursor-pointer">
+          <div class="overflow-hidden h-72">
+            <img
+              src="/images/moss.jpg"
+              alt="Deep Rest - guided relaxation"
+              class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700"
+              loading="lazy"
+            />
+          </div>
+          <div class="p-8">
+            <p class="text-xs tracking-[0.3em] uppercase text-sage mb-3 font-light">Guided relaxation</p>
+            <h3 class="font-display font-light text-3xl text-forest mb-5 leading-tight">Deep Rest</h3>
+            <p class="text-forest font-light text-[1.08rem] leading-relaxed mb-8">
+              A guided relaxation journey, helping you release tension after an intense day or high-activity period. Followed by a nourishing soup. Small groups, cosy atmosphere.
+            </p>
+            <div class="pt-5 border-t border-white">
+              <span class="inline-block text-xs tracking-[0.25em] uppercase font-light text-forest group-hover:text-sage transition-colors duration-300">Learn more →</span>
+            </div>
+          </div>
+        </a>
+
+        <!-- Nordkollen Rewild Trip -->
+        <a href="/nordkollen-rewild-trip" class="bg-cream group overflow-hidden block cursor-pointer">
+          <div class="overflow-hidden h-72">
+            <img
+              src="/images/trees.jpg"
+              alt="Nordkollen Rewild Trip - full-day hike"
+              class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700"
+              loading="lazy"
+            />
+          </div>
+          <div class="p-8">
+            <p class="text-xs tracking-[0.3em] uppercase text-sage mb-3 font-light">Day trip</p>
+            <h3 class="font-display font-light text-3xl text-forest mb-5 leading-tight">Nordkollen Rewild</h3>
+            <p class="text-forest font-light text-[1.08rem] leading-relaxed mb-8">
+              A longer, wilder, daytime hike that takes you deeper into your core, movement and breath awareness. Expanded nature immersion with more time to be, sense and connect.
+            </p>
+            <div class="pt-5 border-t border-white">
+              <span class="inline-block text-xs tracking-[0.25em] uppercase font-light text-forest group-hover:text-sage transition-colors duration-300">
+                Learn more →
+              </span>
+            </div>
+          </div>
+        </a>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-forest text-white py-14 px-6">
+    <div class="max-w-6xl mx-auto flex flex-col items-center gap-2 text-center">
+      <p class="text-white/30 text-xs font-light">© 2025 Rewild</p>
+    </div>
+  </footer>
+
+</Layout>

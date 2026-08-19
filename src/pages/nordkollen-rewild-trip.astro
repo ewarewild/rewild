@@ -1,0 +1,198 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Nav from '../components/Nav.astro';
+---
+
+<Layout title="Nordkollen Rewild Trip - Rewild" description="A full day trip up Nordkollen - more ground, more time, deeper nature immersion than our regular hikes.">
+
+  <!-- Navigation -->
+  <Nav />
+
+  <!-- Hero image -->
+  <section class="relative mt-[60px] overflow-hidden" style="height: 65vh;">
+    <div
+      class="absolute inset-0 bg-cover bg-no-repeat"
+      style="background-image: url('/images/trees.jpg'); background-position: center 40%;"
+    ></div>
+    <div class="absolute inset-0" style="background: linear-gradient(to top, rgba(20,25,14,0.5) 0%, transparent 60%);"></div>
+    <a href="/#events" class="absolute top-6 left-6 md:left-12 inline-flex items-center gap-2 text-xs tracking-[0.25em] uppercase font-light text-white/60 hover:text-white transition-colors duration-200">
+      <span>←</span><span>All events</span>
+    </a>
+  </section>
+
+  <!-- Title strip (bg-white) -->
+  <div class="bg-white py-10 px-6 text-center">
+    <p class="font-display font-light italic text-forest text-xl md:text-2xl lg:text-3xl leading-relaxed max-w-2xl mx-auto">A full day outdoors gives you time to properly arrive - to walk further, sit longer, and let the nervous system fully unwind.</p>
+  </div>
+
+  <!-- Intro section (bg-cream, matching 'You were built for this') -->
+  <section class="bg-cream py-16 md:py-24">
+    <div class="max-w-6xl mx-auto px-6 md:px-12">
+      <div class="max-w-[420px]">
+        <h2 class="font-display font-light text-4xl md:text-5xl text-forest mt-6 mb-10 leading-tight">Nordkollen Rewild Trip</h2>
+        <div class="space-y-5 text-forest font-light leading-relaxed text-[1.08rem]">
+          <p>
+            Welcome to the Nordkollen Rewild Trip, a day out in nature to help you get back into your body, combining yoga, pilates and movement meditation with deep nature immersion.
+          </p>
+          <p>
+            This hike is designed around supporting:
+          </p>
+          <div class="space-y-3">
+            {[
+              'Stress release',
+              'Core strength and balance',
+              'Focus and presence',
+              'Injury prevention',
+              'Mental and physical resilience',
+            ].map(item => (
+              <div class="flex items-start gap-4">
+                <span class="mt-2.5 w-1 h-1 rounded-full bg-sage flex-shrink-0"></span>
+                <span class="text-[1.08rem] text-forest font-light leading-relaxed">{item}</span>
+              </div>
+            ))}
+          </div>
+          <p>
+            During the walk we cultivate presence through noble silence while moving mindfully in terrain, practice sensory connection with nature, and have a balancing practice on top of the mountain.
+          </p>
+          <p>
+            After the practice we take time to rest, enjoy a packed lunch and a tea made from wild local plants.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Practical info (bg-white) -->
+  <section class="bg-white py-14 md:py-20">
+    <div class="max-w-6xl mx-auto px-6 md:px-12">
+      <div class="max-w-[420px]">
+        <h3 class="font-display font-light text-3xl md:text-4xl text-forest mb-10 leading-tight">Technical info:</h3>
+        <div class="space-y-5 text-forest font-light leading-relaxed text-[1.08rem]">
+          <p>
+            We meet up on a parking space in <a href="https://maps.app.goo.gl/XFBhQxn792H8DzwaA" target="_blank" rel="noopener" class="underline hover:text-sage transition-colors duration-200">Oklungen</a> and walk from there on a gravel road, then on a forest trail. Total distance is up to 7km, about 1h 20min each way.
+          </p>
+          <p>
+            No previous experience is needed, but you should be comfortable maintaining a steady pace on a medium difficulty trail for the entire duration.
+          </p>
+          <p>
+            Please get in touch if you have any questions.
+          </p>
+          <p>
+            What to bring: Appropriate clothes for the weather, comfortable shoes with a grip, water bottle, seating mat, a packed lunch and a cup for the tea.
+          </p>
+          <p>
+            Full practical details on what to bring and the exact meeting point will be sent once you've booked your place.
+          </p>
+        </div>
+        <p class="text-forest/60 text-[1.08rem] font-light leading-relaxed mt-12">
+          Please note: We hike in all weather, however, if hazardous conditions arise, such as strong winds - the hike may be cancelled. You will then receive a full refund.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Details (bg-cream) -->
+  <section class="bg-cream py-14 md:py-20">
+    <div class="max-w-6xl mx-auto px-6 md:px-12">
+      <div class="grid md:grid-cols-[5fr_7fr] gap-16 md:gap-24">
+        <div>
+          <!-- Details -->
+          <div class="space-y-4">
+            <div class="flex gap-6">
+              <span class="text-xs tracking-[0.2em] uppercase text-sage font-light w-28 flex-shrink-0">Duration</span>
+              <span class="text-base text-forest font-light">Approximately 5 hours</span>
+            </div>
+            <div class="flex gap-6">
+              <span class="text-xs tracking-[0.2em] uppercase text-sage font-light w-28 flex-shrink-0">Meet up</span>
+              <span class="text-base text-forest font-light">Saturday 5 September, 10:00</span>
+            </div>
+            <div class="flex gap-6">
+              <span class="text-xs tracking-[0.2em] uppercase text-sage font-light w-28 flex-shrink-0">Location</span>
+              <div class="text-base text-forest font-light space-y-1">
+                <p><a href="https://maps.app.goo.gl/XFBhQxn792H8DzwaA" target="_blank" rel="noopener" class="underline hover:text-sage transition-colors duration-200">Oklungen</a></p>
+              </div>
+            </div>
+            <div class="flex gap-6">
+              <span class="text-xs tracking-[0.2em] uppercase text-sage font-light w-28 flex-shrink-0">Price</span>
+              <span class="text-base text-forest font-light">600 NOK</span>
+            </div>
+
+            <div class="pt-12">
+              <a
+                href="/signup"
+                class="inline-block px-10 py-4 bg-forest text-white text-xs tracking-[0.25em] uppercase font-light hover:bg-sage transition-colors duration-300"
+              >
+                Sign up
+              </a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- More events -->
+  <section class="bg-white pt-10 pb-24 md:pt-14 md:pb-36">
+    <div class="max-w-6xl mx-auto px-6 md:px-12">
+      <p class="text-xs tracking-[0.3em] uppercase text-forest mb-10 font-light">More events</p>
+      <div class="grid md:grid-cols-2 gap-16 md:gap-8">
+
+        <!-- Evening Reset -->
+        <a href="/evening-reset" class="bg-cream group overflow-hidden block cursor-pointer">
+          <div class="overflow-hidden h-72">
+            <img
+              src="/images/skolapparn.jpg"
+              alt="Evening Reset - forest hike"
+              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+              loading="lazy"
+            />
+          </div>
+          <div class="p-8">
+            <p class="text-xs tracking-[0.3em] uppercase text-sage mb-3 font-light">Hike & movement</p>
+            <h3 class="font-display font-light text-3xl text-forest mb-5 leading-tight">Evening Reset</h3>
+            <p class="text-forest font-light text-[1.08rem] leading-relaxed mb-8">
+              A weekly evening hike designed to help you release stress, build core strength, and move with greater awareness. Explore a new trail each week, in all weather and every season.
+            </p>
+            <div class="pt-5 border-t border-white">
+              <span class="inline-block text-xs tracking-[0.25em] uppercase font-light text-forest group-hover:text-sage transition-colors duration-300">
+                Learn more →
+              </span>
+            </div>
+          </div>
+        </a>
+
+        <!-- Deep Rest -->
+        <a href="/deep-rest" class="bg-cream group overflow-hidden block cursor-pointer">
+          <div class="overflow-hidden h-72">
+            <img
+              src="/images/moss.jpg"
+              alt="Deep Rest - guided relaxation"
+              class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700"
+              loading="lazy"
+            />
+          </div>
+          <div class="p-8">
+            <p class="text-xs tracking-[0.3em] uppercase text-sage mb-3 font-light">Guided relaxation</p>
+            <h3 class="font-display font-light text-3xl text-forest mb-5 leading-tight">Deep Rest</h3>
+            <p class="text-forest font-light text-[1.08rem] leading-relaxed mb-8">
+              A guided relaxation journey, helping you release tension after an intense day or high-activity period. Followed by a nourishing soup. Small groups, cosy atmosphere.
+            </p>
+            <div class="pt-5 border-t border-white">
+              <span class="inline-block text-xs tracking-[0.25em] uppercase font-light text-forest group-hover:text-sage transition-colors duration-300">Learn more →</span>
+            </div>
+          </div>
+        </a>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-forest text-white py-14 px-6">
+    <div class="max-w-6xl mx-auto flex flex-col items-center gap-2 text-center">
+      <p class="text-white/30 text-xs font-light">© 2025 Rewild</p>
+    </div>
+  </footer>
+
+</Layout>

@@ -1,0 +1,63 @@
+---
+---
+
+<nav id="nav" class="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-sm shadow-sm transition-all duration-300 px-6 py-5 md:px-12">
+  <div class="max-w-6xl mx-auto grid grid-cols-3 items-center md:flex md:justify-between">
+    <div class="md:hidden"></div>
+    <a href="/" class="text-sm tracking-[0.3em] uppercase font-light text-forest transition-colors duration-300 justify-self-center md:justify-self-auto">Rewild</a>
+    <ul class="hidden md:flex gap-10 text-xs tracking-[0.3em] uppercase font-light">
+      <li><a href="/#philosophy" class="text-forest hover:opacity-60 transition-opacity duration-200">Philosophy</a></li>
+      <li><a href="/#events" class="text-forest hover:opacity-60 transition-opacity duration-200">Events</a></li>
+      <li><a href="/about" class="text-forest hover:opacity-60 transition-opacity duration-200">About</a></li>
+      <li><a href="/contact" class="text-forest hover:opacity-60 transition-opacity duration-200">Contact</a></li>
+    </ul>
+    <button id="menu-btn" class="md:hidden text-forest transition-colors duration-300 justify-self-end" aria-label="Open menu">
+      <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+        <line x1="3" y1="6" x2="21" y2="6"/>
+        <line x1="3" y1="12" x2="21" y2="12"/>
+        <line x1="3" y1="18" x2="21" y2="18"/>
+      </svg>
+    </button>
+  </div>
+</nav>
+
+<!-- Mobile menu -->
+<div id="mobile-menu" class="fixed inset-0 z-40 bg-white flex flex-col items-center justify-center hidden">
+  <button id="menu-close" class="absolute top-5 right-6 text-forest" aria-label="Close menu">
+    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+      <line x1="18" y1="6" x2="6" y2="18"/>
+      <line x1="6" y1="6" x2="18" y2="18"/>
+    </svg>
+  </button>
+  <ul class="flex flex-col gap-8 text-center">
+    <li><a href="/#philosophy" class="font-display text-[1.8rem] text-forest font-light mobile-link">Philosophy</a></li>
+    <li><a href="/#events" class="font-display text-[1.8rem] text-forest font-light mobile-link">Events</a></li>
+    <li><a href="/about" class="font-display text-[1.8rem] text-forest font-light mobile-link">About</a></li>
+    <li><a href="/contact" class="font-display text-[1.8rem] text-forest font-light mobile-link">Contact</a></li>
+  </ul>
+</div>
+
+<script>
+  const menuBtn = document.getElementById('menu-btn');
+  const mobileMenu = document.getElementById('mobile-menu');
+  const menuClose = document.getElementById('menu-close');
+
+  const closeMobileMenu = () => {
+    mobileMenu?.classList.add('hidden');
+    document.body.style.overflow = '';
+  };
+
+  menuBtn?.addEventListener('click', () => {
+    if (mobileMenu?.classList.contains('hidden')) {
+      mobileMenu.classList.remove('hidden');
+      document.body.style.overflow = 'hidden';
+    } else {
+      closeMobileMenu();
+    }
+  });
+
+  menuClose?.addEventListener('click', closeMobileMenu);
+  document.querySelectorAll('.mobile-link').forEach(link => {
+    link.addEventListener('click', closeMobileMenu);
+  });
+</script>

@@ -1,0 +1,148 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Nav from '../components/Nav.astro';
+---
+
+<Layout title="Deep Rest - Rewild" description="A guided Non-Sleep Deep Rest (NSDR) session based on yoga Nidra, followed by nourishing soup and tea.">
+
+  <!-- Navigation -->
+  <Nav />
+
+  <!-- Hero image -->
+  <section class="relative mt-[60px] overflow-hidden" style="height: 65vh;">
+    <div
+      class="absolute inset-0 bg-cover bg-no-repeat"
+      style="background-image: url('/images/moss.jpg'); background-position: center 60%;"
+    ></div>
+    <div class="absolute inset-0" style="background: linear-gradient(to top, rgba(20,25,14,0.5) 0%, transparent 60%);"></div>
+    <a href="/#events" class="absolute top-6 left-6 md:left-12 inline-flex items-center gap-2 text-xs tracking-[0.25em] uppercase font-light text-white/60 hover:text-white transition-colors duration-200">
+      <span>←</span><span>All events</span>
+    </a>
+  </section>
+
+  <!-- Title strip (bg-white) -->
+  <div class="bg-white py-10 px-6 text-center">
+    <p class="font-display font-light italic text-forest text-xl md:text-2xl lg:text-3xl leading-relaxed max-w-2xl mx-auto">Rest deeply. Restore fully.</p>
+  </div>
+
+  <!-- Intro section (bg-cream) -->
+  <section class="bg-cream py-16 md:py-24">
+    <div class="max-w-6xl mx-auto px-6 md:px-12">
+      <div class="max-w-[420px]">
+        <h2 class="font-display font-light text-4xl md:text-5xl text-forest mb-10 leading-tight">Deep Rest</h2>
+        <div class="space-y-5 text-forest font-light leading-relaxed text-[1.08rem]">
+          <p>
+            Welcome to a guided Deep Rest session, based on the ancient practice of yoga Nidra. Lie down comfortably and simply listen while your attention is being guided through your body and you ease into a state between waking and sleep. It's ideal after an intense day, training or high-activity period to help you recover and bring your nervous system baseline right down.
+          </p>
+          <p>
+            The session is held in a quiet location outside of Porsgrunn, in a small group, in front of an open fireplace. Afterwards we enjoy a soup and a wild plant tea.
+          </p>
+          <p>
+            Research suggests NSDR (Non-Sleep Deep Rest) can restore dopamine levels, accelerate neuroplasticity, reduce stress and anxiety, and improve sleep quality. It has also been used in clinical and rehabilitation settings as a complementary tool for nervous system regulation.
+          </p>
+          <p>
+            Limited spaces, cosy atmosphere.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Details (bg-white) -->
+  <section class="bg-white py-14 md:py-20">
+    <div class="max-w-6xl mx-auto px-6 md:px-12">
+      <div class="grid md:grid-cols-[5fr_7fr] gap-16 md:gap-24">
+        <div>
+          <div class="space-y-4">
+            <div class="flex gap-6">
+              <span class="text-xs tracking-[0.2em] uppercase text-sage font-light w-28 flex-shrink-0">Location</span>
+              <span class="text-base text-forest font-light">Porsgrunn - Fridays</span>
+            </div>
+            <div class="flex gap-6">
+              <span class="text-xs tracking-[0.2em] uppercase text-sage font-light w-28 flex-shrink-0">Time</span>
+              <span class="text-base text-forest font-light">17:00 - 18:30</span>
+            </div>
+            <div class="flex gap-6">
+              <span class="text-xs tracking-[0.2em] uppercase text-sage font-light w-28 flex-shrink-0">Contribution</span>
+              <span class="text-base text-forest font-light">500 NOK</span>
+            </div>
+            <div class="pt-12">
+              <a
+                href="/signup"
+                class="inline-block px-10 py-4 bg-forest text-white text-xs tracking-[0.25em] uppercase font-light hover:bg-sage transition-colors duration-300"
+              >
+                Sign up
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- More events -->
+  <section class="bg-cream pt-10 pb-24 md:pt-14 md:pb-36">
+    <div class="max-w-6xl mx-auto px-6 md:px-12">
+      <p class="text-xs tracking-[0.3em] uppercase text-forest mb-10 font-light">More events</p>
+      <div class="grid md:grid-cols-2 gap-16 md:gap-8">
+
+        <!-- Evening Reset -->
+        <a href="/evening-reset" class="bg-white group overflow-hidden block cursor-pointer">
+          <div class="overflow-hidden h-72">
+            <img
+              src="/images/skolapparn.jpg"
+              alt="Evening Reset - forest hike"
+              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+              loading="lazy"
+            />
+          </div>
+          <div class="p-8">
+            <p class="text-xs tracking-[0.3em] uppercase text-sage mb-3 font-light">Hike & movement</p>
+            <h3 class="font-display font-light text-3xl text-forest mb-5 leading-tight">Evening Reset</h3>
+            <p class="text-forest font-light text-[1.08rem] leading-relaxed mb-8">
+              A weekly evening hike designed to help you release stress, build core strength, and move with greater awareness. Explore a new trail each week, in all weather and every season.
+            </p>
+            <div class="pt-5 border-t border-cream">
+              <span class="inline-block text-xs tracking-[0.25em] uppercase font-light text-forest group-hover:text-sage transition-colors duration-300">
+                Learn more →
+              </span>
+            </div>
+          </div>
+        </a>
+
+        <!-- Nordkollen Rewild Trip -->
+        <a href="/nordkollen-rewild-trip" class="bg-white group overflow-hidden block cursor-pointer">
+          <div class="overflow-hidden h-72">
+            <img
+              src="/images/trees.jpg"
+              alt="Nordkollen Rewild Trip - full-day hike"
+              class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700"
+              loading="lazy"
+            />
+          </div>
+          <div class="p-8">
+            <p class="text-xs tracking-[0.3em] uppercase text-sage mb-3 font-light">Day trip</p>
+            <h3 class="font-display font-light text-3xl text-forest mb-5 leading-tight">Nordkollen Rewild</h3>
+            <p class="text-forest font-light text-[1.08rem] leading-relaxed mb-8">
+              A longer, wilder, daytime hike that takes you deeper into your core, movement and breath awareness. Expanded nature immersion with more time to be, sense and connect.
+            </p>
+            <div class="pt-5 border-t border-cream">
+              <span class="inline-block text-xs tracking-[0.25em] uppercase font-light text-forest group-hover:text-sage transition-colors duration-300">
+                Learn more →
+              </span>
+            </div>
+          </div>
+        </a>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-forest text-white py-14 px-6">
+    <div class="max-w-6xl mx-auto flex flex-col items-center gap-2 text-center">
+      <p class="text-white/30 text-xs font-light">© 2025 Rewild</p>
+    </div>
+  </footer>
+
+</Layout>
