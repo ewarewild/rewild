@@ -4,9 +4,12 @@ import '../styles/global.css';
 interface Props {
   title: string;
   description?: string;
+  ogTitle?: string;
+  ogImage?: string;
 }
 
-const { title, description = 'Rewild - come back to yourself through nature' } = Astro.props;
+const { title, description = 'Rewild - come back to yourself through nature', ogTitle, ogImage } = Astro.props;
+const ogImageUrl = ogImage ? new URL(ogImage, Astro.site) : undefined;
 ---
 
 <!doctype html>
@@ -15,6 +18,11 @@ const { title, description = 'Rewild - come back to yourself through nature' } =
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content={description} />
+    <meta property="og:title" content={ogTitle ?? title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={new URL(Astro.url.pathname, Astro.site)} />
+    {ogImageUrl && <meta property="og:image" content={ogImageUrl} />}
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
