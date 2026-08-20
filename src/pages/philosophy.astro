@@ -1,7 +1,9 @@
 ---
+import { Image } from 'astro:assets';
 import Layout from '../layouts/Layout.astro';
 import Nav from '../components/Nav.astro';
 import Footer from '../components/Footer.astro';
+import waterflow from '../images/waterflow.webp';
 ---
 
 <Layout title="Philosophy - Rewild" description="You were built for this - the philosophy behind Rewild.">
@@ -12,14 +14,13 @@ import Footer from '../components/Footer.astro';
   <!-- Philosophy -->
   <section class="bg-white pt-36 pb-24 md:pt-44 md:pb-36">
     <div class="max-w-6xl mx-auto px-6 md:px-12">
-      <a href="/" class="inline-flex items-center gap-2 text-xs tracking-[0.25em] uppercase font-light text-forest/60 hover:text-forest transition-colors duration-200 mb-12">
-        <span>←</span><span>Home</span>
-      </a>
       <div class="grid gap-6 md:grid-cols-2 md:gap-24 items-stretch">
         <div class="md:order-1 min-h-[400px]">
-          <img
-            src="/images/waterflow.webp"
+          <Image
+            src={waterflow}
             alt="Connected with the earth"
+            width={900}
+            densities={[1, 2]}
             class="w-full h-full object-cover object-center"
             loading="lazy"
           />

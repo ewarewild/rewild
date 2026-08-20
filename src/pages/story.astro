@@ -1,7 +1,9 @@
 ---
+import { Image } from 'astro:assets';
 import Layout from '../layouts/Layout.astro';
 import Nav from '../components/Nav.astro';
 import Footer from '../components/Footer.astro';
+import firesmoke from '../images/firesmoke.webp';
 ---
 
 <Layout title="The Story - Rewild" description="The story of how Rewild began.">
@@ -17,9 +19,11 @@ import Footer from '../components/Footer.astro';
       </a>
       <div class="grid gap-6 md:grid-cols-2 md:gap-24">
         <div class="md:order-1 md:sticky md:top-32 self-start">
-          <img
-            src="/images/firesmoke.webp"
+          <Image
+            src={firesmoke}
             alt="Fire smoke"
+            width={900}
+            densities={[1, 2]}
             class="w-full h-auto aspect-[4/5] object-cover object-center"
             loading="lazy"
           />

@@ -1,10 +1,14 @@
 ---
+import { getImage } from 'astro:assets';
 import Layout from '../layouts/Layout.astro';
 import Nav from '../components/Nav.astro';
 import Footer from '../components/Footer.astro';
+import rondane2 from '../images/rondane2.webp';
+
+const heroImage = await getImage({ src: rondane2, width: 2000, format: 'webp' });
 ---
 
-<Layout title="One-to-One - Rewild" description="Tailor made activities for your individual needs. A personally guided program for maximum support in fulfilling your goals and intentions.">
+<Layout title="One-to-One - Rewild" description="Tailor made activities for your individual needs. A personally guided program for maximum support in fulfilling your goals and intentions." preloadImage={heroImage.src}>
 
   <!-- Navigation -->
   <Nav />
@@ -13,7 +17,7 @@ import Footer from '../components/Footer.astro';
   <section class="relative mt-[60px] overflow-hidden" style="height: 65vh;">
     <div
       class="absolute inset-0 bg-cover bg-no-repeat"
-      style="background-image: url('/images/rondane2.webp'); background-position: center 60%;"
+      style={`background-image: url('${heroImage.src}'); background-position: center 60%;`}
     ></div>
     <div class="absolute inset-0" style="background: linear-gradient(to top, rgba(20,25,14,0.5) 0%, transparent 60%);"></div>
     <a href="/#events" class="absolute top-6 left-6 md:left-12 inline-flex items-center gap-2 text-xs tracking-[0.25em] uppercase font-light text-white/60 hover:text-white transition-colors duration-200">

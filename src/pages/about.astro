@@ -1,7 +1,9 @@
 ---
+import { Image } from 'astro:assets';
 import Layout from '../layouts/Layout.astro';
 import Nav from '../components/Nav.astro';
 import Footer from '../components/Footer.astro';
+import eva from '../images/eva.webp';
 ---
 
 <Layout title="About - Rewild" description="Meet Ewa, your guide at Rewild - grounded in nature, rooted in practice.">
@@ -17,9 +19,11 @@ import Footer from '../components/Footer.astro';
       </a>
       <div class="grid gap-6 md:grid-cols-2 md:gap-24 items-stretch">
         <div class="md:order-1 min-h-[400px]">
-          <img
-            src="/images/eva.webp"
+          <Image
+            src={eva}
             alt="Ewa"
+            width={1000}
+            densities={[1, 2]}
             class="w-full h-full object-cover object-top"
             loading="lazy"
           />

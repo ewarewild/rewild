@@ -7,9 +7,10 @@ interface Props {
   ogTitle?: string;
   ogDescription?: string;
   ogImage?: string;
+  preloadImage?: string;
 }
 
-const { title, description = 'Rewild - come back to yourself through nature', ogTitle, ogDescription, ogImage } = Astro.props;
+const { title, description = 'Rewild - come back to yourself through nature', ogTitle, ogDescription, ogImage, preloadImage } = Astro.props;
 const ogImageUrl = ogImage ? new URL(ogImage, Astro.site) : undefined;
 ---
 
@@ -25,6 +26,7 @@ const ogImageUrl = ogImage ? new URL(ogImage, Astro.site) : undefined;
     <meta property="og:url" content={new URL(Astro.url.pathname, Astro.site)} />
     {ogImageUrl && <meta property="og:image" content={ogImageUrl} />}
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    {preloadImage && <link rel="preload" as="image" href={preloadImage} fetchpriority="high" />}
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link

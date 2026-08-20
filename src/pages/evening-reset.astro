@@ -1,10 +1,16 @@
 ---
+import { Image, getImage } from 'astro:assets';
 import Layout from '../layouts/Layout.astro';
 import Nav from '../components/Nav.astro';
 import Footer from '../components/Footer.astro';
+import skolapparn from '../images/skolapparn.webp';
+import moss from '../images/moss.webp';
+import trees from '../images/trees.webp';
+
+const heroImage = await getImage({ src: skolapparn, width: 2000, format: 'webp' });
 ---
 
-<Layout title="Evening Reset - Rewild" description="One month, four hikes, 4 different regions. This is a unique opportunity to get out into nature and exercise in your local area.">
+<Layout title="Evening Reset - Rewild" description="One month, four hikes, 4 different regions. This is a unique opportunity to get out into nature and exercise in your local area." preloadImage={heroImage.src}>
 
   <!-- Navigation -->
   <Nav />
@@ -13,7 +19,7 @@ import Footer from '../components/Footer.astro';
   <section class="relative mt-[60px] overflow-hidden" style="height: 65vh;">
     <div
       class="absolute inset-0 bg-cover bg-no-repeat"
-      style="background-image: url('/images/skolapparn.webp'); background-position: center 25%;"
+      style={`background-image: url('${heroImage.src}'); background-position: center 25%;`}
     ></div>
     <div class="absolute inset-0" style="background: linear-gradient(to top, rgba(20,25,14,0.5) 0%, transparent 60%);"></div>
     <a href="/#events" class="absolute top-6 left-6 md:left-12 inline-flex items-center gap-2 text-xs tracking-[0.25em] uppercase font-light text-white/60 hover:text-white transition-colors duration-200">
@@ -154,9 +160,11 @@ import Footer from '../components/Footer.astro';
         <!-- Deep Rest -->
         <a href="/deep-rest" class="bg-cream group overflow-hidden block cursor-pointer">
           <div class="overflow-hidden h-72">
-            <img
-              src="/images/moss.webp"
+            <Image
+              src={moss}
               alt="Deep Rest - guided relaxation"
+              width={1200}
+              densities={[1, 2]}
               class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700"
               loading="lazy"
             />
@@ -176,9 +184,11 @@ import Footer from '../components/Footer.astro';
         <!-- Nordkollen Trip -->
         <a href="/nordkollen-rewild-trip" class="bg-cream group overflow-hidden block cursor-pointer">
           <div class="overflow-hidden h-72">
-            <img
-              src="/images/trees.webp"
+            <Image
+              src={trees}
               alt="Nordkollen Trip - full-day hike"
+              width={1200}
+              densities={[1, 2]}
               class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700"
               loading="lazy"
             />
