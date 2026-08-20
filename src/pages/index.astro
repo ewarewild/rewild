@@ -7,16 +7,15 @@ import Footer from '../components/Footer.astro';
 
   <!-- Navigation -->
   <nav id="nav" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 px-6 py-5 md:px-12">
-    <div class="max-w-6xl mx-auto grid grid-cols-3 items-center md:flex md:justify-between">
-      <div class="md:hidden"></div>
-      <a href="#" class="text-xs tracking-[0.3em] uppercase font-light text-white transition-colors duration-300 justify-self-center md:justify-self-auto" id="nav-logo">Rewild</a>
+    <div class="max-w-6xl mx-auto flex items-center justify-end md:justify-center">
       <ul class="hidden md:flex gap-10 text-xs tracking-[0.3em] uppercase font-normal" id="nav-links">
-        <li><a href="/philosophy" class="text-white hover:opacity-60 transition-opacity duration-200">Philosophy</a></li>
+        <li><a href="/" class="text-white hover:opacity-60 transition-opacity duration-200">Home</a></li>
         <li><a href="#events" class="text-white hover:opacity-60 transition-opacity duration-200">Events</a></li>
         <li><a href="#about" class="text-white hover:opacity-60 transition-opacity duration-200">About</a></li>
+        <li><a href="/philosophy" class="text-white hover:opacity-60 transition-opacity duration-200">Philosophy</a></li>
         <li><a href="/contact" class="text-white hover:opacity-60 transition-opacity duration-200">Contact</a></li>
       </ul>
-      <button id="menu-btn" class="md:hidden text-white transition-colors duration-300 justify-self-end" aria-label="Open menu">
+      <button id="menu-btn" class="md:hidden text-white transition-colors duration-300" aria-label="Open menu">
         <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
           <line x1="3" y1="6" x2="21" y2="6"/>
           <line x1="3" y1="12" x2="21" y2="12"/>
@@ -35,9 +34,10 @@ import Footer from '../components/Footer.astro';
       </svg>
     </button>
     <ul class="flex flex-col gap-8 text-center">
-      <li><a href="/philosophy" class="font-display text-[1.8rem] text-forest font-light mobile-link">Philosophy</a></li>
+      <li><a href="/" class="font-display text-[1.8rem] text-forest font-light mobile-link">Home</a></li>
       <li><a href="#events" class="font-display text-[1.8rem] text-forest font-light mobile-link">Events</a></li>
       <li><a href="#about" class="font-display text-[1.8rem] text-forest font-light mobile-link">About</a></li>
+      <li><a href="/philosophy" class="font-display text-[1.8rem] text-forest font-light mobile-link">Philosophy</a></li>
       <li><a href="/contact" class="font-display text-[1.8rem] text-forest font-light mobile-link">Contact</a></li>
     </ul>
   </div>
@@ -68,7 +68,7 @@ import Footer from '../components/Footer.astro';
   </div>
 
   <!-- Intro two-column -->
-  <section class="bg-white pt-12 pb-24 md:pt-16 md:pb-36">
+  <section class="bg-white pt-6 pb-20 md:pt-10 md:pb-32">
     <div class="max-w-6xl mx-auto px-6 md:px-12">
       <div class="md:max-w-2xl md:mx-auto">
         <div class="space-y-5 text-forest font-light leading-relaxed text-[1.08rem] md:text-[1.28rem] text-center">
@@ -184,7 +184,7 @@ import Footer from '../components/Footer.astro';
               I grew up in the mountains of southern Poland, training a variety of disciplines from an early age - mainly slalom skiing, trail running, mountain biking, swimming, martial arts and basketball.
             </p>
             <p>
-              This developed a practical understanding of the body and a deep passion for nature, adventure and movement.
+              This early exposure gave me a practical understanding of the body and a deep passion for nature, adventure and movement.
             </p>
             <p>
               I studied physical education in the UK, where I was introduced to yoga and pilates.
@@ -209,7 +209,6 @@ import Footer from '../components/Footer.astro';
 <script>
   // Nav scroll behaviour
   const nav = document.getElementById('nav');
-  const navLogo = document.getElementById('nav-logo');
   const navLinks = document.getElementById('nav-links');
   const menuBtn = document.getElementById('menu-btn');
 
@@ -218,12 +217,10 @@ import Footer from '../components/Footer.astro';
 
     if (scrolled) {
       nav?.classList.add('bg-white/95', 'backdrop-blur-sm', 'shadow-sm');
-      navLogo?.classList.replace('text-white', 'text-forest');
       menuBtn?.classList.replace('text-white', 'text-forest');
       navLinks?.querySelectorAll('a').forEach(a => a.classList.replace('text-white', 'text-forest'));
     } else {
       nav?.classList.remove('bg-white/95', 'backdrop-blur-sm', 'shadow-sm');
-      navLogo?.classList.replace('text-forest', 'text-white');
       menuBtn?.classList.replace('text-forest', 'text-white');
       navLinks?.querySelectorAll('a').forEach(a => a.classList.replace('text-forest', 'text-white'));
     }
