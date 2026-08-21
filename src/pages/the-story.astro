@@ -4,7 +4,9 @@ import Layout from '../layouts/Layout.astro';
 import Nav from '../components/Nav.astro';
 import Footer from '../components/Footer.astro';
 import waterflow from '../images/waterflow.webp';
+import firesmoke from '../images/firesmoke.webp';
 import skowint from '../images/skowint.jpg';
+import boots from '../images/boots.jpg';
 ---
 
 <Layout title="The Story - Rewild" description="The story of Rewild, and the philosophy behind it.">
@@ -18,11 +20,11 @@ import skowint from '../images/skowint.jpg';
       <div class="grid gap-6 md:grid-cols-2 md:gap-24">
         <div class="md:order-2 md:sticky md:top-32 self-start">
           <Image
-            src={skowint}
-            alt="Footprints in deep snow on a mountain ridge at sunset"
+            src={firesmoke}
+            alt="Fire smoke"
             width={900}
             densities={[1, 2]}
-            class="w-full h-auto aspect-[3/2] object-cover object-center"
+            class="w-full h-auto aspect-[4/5] object-cover object-center"
             loading="lazy"
           />
         </div>
@@ -79,6 +81,14 @@ import skowint from '../images/skowint.jpg';
             <p>
               Every cell filling with life.
             </p>
+            <Image
+              src={skowint}
+              alt="Footprints in deep snow on a mountain ridge at sunset"
+              width={900}
+              densities={[1, 2]}
+              class="md:hidden w-full h-auto aspect-[3/2] object-cover object-center"
+              loading="lazy"
+            />
             <p>
               Immersing in nature with all of my senses.
             </p>
@@ -86,7 +96,7 @@ import skowint from '../images/skowint.jpg';
               My nostrils sticking from the frozen air.
             </p>
             <p>
-              The occasional hiss of snow crystals flowing from the trees.
+              The soft hiss of snow crystals flowing from the trees.
             </p>
             <p>
               The citrusy aroma of spruce needles.
@@ -133,6 +143,14 @@ import skowint from '../images/skowint.jpg';
             <p>
               Singing while walking home.
             </p>
+            <Image
+              src={boots}
+              alt="Boots resting in the snow at sunset"
+              width={700}
+              densities={[1, 2]}
+              class="md:hidden w-full h-auto aspect-[2/3] object-cover object-center"
+              loading="lazy"
+            />
             <p>
               The effects lingered.
             </p>
