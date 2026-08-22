@@ -20,6 +20,7 @@ const heroImage = await getImage({ src: heroNordkollen, width: 2000, format: 'we
         <li><a href="/" class="text-white hover:opacity-60 transition-opacity duration-200">Home</a></li>
         <li><a href="#events" class="text-white hover:opacity-60 transition-opacity duration-200">Events</a></li>
         <li><a href="#about" class="text-white hover:opacity-60 transition-opacity duration-200">About</a></li>
+        <li><a href="/the-story" class="text-white hover:opacity-60 transition-opacity duration-200">The Story</a></li>
         <li><a href="/contact" class="text-white hover:opacity-60 transition-opacity duration-200">Contact</a></li>
       </ul>
       <button id="menu-btn" class="md:hidden text-white transition-colors duration-300" aria-label="Open menu">
@@ -44,6 +45,7 @@ const heroImage = await getImage({ src: heroNordkollen, width: 2000, format: 'we
       <li><a href="/" class="font-display text-[1.8rem] text-forest font-light mobile-link">Home</a></li>
       <li><a href="#events" class="font-display text-[1.8rem] text-forest font-light mobile-link">Events</a></li>
       <li><a href="#about" class="font-display text-[1.8rem] text-forest font-light mobile-link">About</a></li>
+      <li><a href="/the-story" class="font-display text-[1.8rem] text-forest font-light mobile-link">The Story</a></li>
       <li><a href="/contact" class="font-display text-[1.8rem] text-forest font-light mobile-link">Contact</a></li>
     </ul>
   </div>
@@ -176,13 +178,13 @@ const heroImage = await getImage({ src: heroNordkollen, width: 2000, format: 'we
   <section id="about" class="bg-white py-24 md:py-36">
     <div class="max-w-6xl mx-auto px-6 md:px-12">
       <div class="grid gap-6 md:grid-cols-2 md:gap-24 items-stretch">
-        <div class="md:order-1 min-h-[400px]">
+        <div class="md:order-1 md:sticky md:top-32 self-start">
           <Image
             src={eva}
             alt="Ewa"
             width={1000}
             densities={[1, 2]}
-            class="w-full h-full object-cover object-top"
+            class="w-full h-auto aspect-square object-cover object-top"
             loading="lazy"
           />
         </div>
@@ -207,10 +209,25 @@ const heroImage = await getImage({ src: heroNordkollen, width: 2000, format: 'we
               After several years of practice, I obtained yoga teacher certification in London, and Advanced Trauma-Informed Academy certification with Nordic Maha Yoga, Oslo.
             </p>
             <p>
-              My approach to exercise incorporates a variety of methods with an emphasis on functional movement and injury prevention.
+              The story of Rewild goes way back to the 80s, when being in nature was a part of daily life - training, foraging, and having a lot of freedom to play wild.
             </p>
             <p>
-              I spend a lot of time in nature - sleeping, training, healing, exploring - it brings me back to balance, fills with life, beauty and inspiration.
+              In my early thirties, I've experienced immense challenges that took almost a decade to recover from. It led to physical and mental burnout, feeling exhausted, overwhelmed and isolated.
+            </p>
+            <p>
+              It got to a point where I had to get out of my everyday reality. Intuitively, I hiked up local mountains straight after work, in all weather, incorporating physical practices with nature connection.
+            </p>
+            <p>
+              The transformative effects of it were immediate, and it totally changed my life. You can read more about this story <a href="/the-story" class="font-semibold underline decoration-forest/40 hover:decoration-forest transition-colors duration-200">here</a>.
+            </p>
+            <p>
+              I felt inspired to share these tools with others, and it led to the creation of Rewild.
+            </p>
+            <p>
+              My approach to exercise incorporates a variety of methods with an emphasis on functional movement, recovery and injury prevention.
+            </p>
+            <p>
+              I spend a lot of time in nature - sleeping, training, healing, being, exploring - it brings me back to balance, fills with life, beauty and inspiration.
             </p>
           </div>
         </div>
