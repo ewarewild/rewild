@@ -5,7 +5,7 @@ import Nav from '../components/Nav.astro';
 import Footer from '../components/Footer.astro';
 import moss from '../images/moss.webp';
 import skolapparn from '../images/skolapparn.webp';
-import trees from '../images/trees.webp';
+import noname2 from '../images/noname2.webp';
 
 const heroImage = await getImage({ src: moss, width: 2000, format: 'webp' });
 ---
@@ -122,12 +122,12 @@ const heroImage = await getImage({ src: moss, width: 2000, format: 'webp' });
           </div>
         </a>
 
-        <!-- Nordkollen Trip -->
-        <a href="/nordkollen-rewild-trip" class="bg-white group overflow-hidden block cursor-pointer">
+        <!-- Rewild Trip -->
+        <a href="/rewild-trip" class="bg-white group overflow-hidden block cursor-pointer">
           <div class="overflow-hidden h-72">
             <Image
-              src={trees}
-              alt="Nordkollen Trip - full-day hike"
+              src={noname2}
+              alt="Rewild Trip - full-day hike"
               width={1200}
               densities={[1, 2]}
               class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700"
@@ -136,7 +136,7 @@ const heroImage = await getImage({ src: moss, width: 2000, format: 'webp' });
           </div>
           <div class="p-8">
             <p class="text-xs tracking-[0.3em] uppercase text-sage mb-3 font-light">Day hike</p>
-            <h3 class="font-display font-light text-3xl text-forest mb-5 leading-tight">Nordkollen Trip</h3>
+            <h3 class="font-display font-light text-3xl text-forest mb-5 leading-tight">Rewild Trip</h3>
             <p class="text-forest font-light text-[1.08rem] leading-relaxed mb-8">
               A longer, wilder, daytime hike that takes you deeper into your core, movement and breath awareness. Expanded nature immersion with more time to be, sense and connect.
             </p>

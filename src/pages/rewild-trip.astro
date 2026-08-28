@@ -3,14 +3,14 @@ import { Image, getImage } from 'astro:assets';
 import Layout from '../layouts/Layout.astro';
 import Nav from '../components/Nav.astro';
 import Footer from '../components/Footer.astro';
-import trees from '../images/trees.webp';
+import nordkollen2 from '../images/nordkollen2.webp';
 import skolapparn from '../images/skolapparn.webp';
 import moss from '../images/moss.webp';
 
-const heroImage = await getImage({ src: trees, width: 2000, format: 'webp' });
+const heroImage = await getImage({ src: nordkollen2, width: 2000, format: 'webp' });
 ---
 
-<Layout title="Nordkollen Trip - Rewild" description="A full day trip up Nordkollen - more ground, more time, deeper nature immersion than our regular hikes." preloadImage={heroImage.src}>
+<Layout title="Rewild Trip - Rewild" description="A full day trip up Nordkollen - more ground, more time, deeper nature immersion than our regular hikes." preloadImage={heroImage.src}>
 
   <!-- Navigation -->
   <Nav />
@@ -19,7 +19,7 @@ const heroImage = await getImage({ src: trees, width: 2000, format: 'webp' });
   <section class="relative mt-[60px] overflow-hidden" style="height: 65vh;">
     <div
       class="absolute inset-0 bg-cover bg-no-repeat"
-      style={`background-image: url('${heroImage.src}'); background-position: center top;`}
+      style={`background-image: url('${heroImage.src}'); background-position: center center;`}
     ></div>
     <div class="absolute inset-0" style="background: linear-gradient(to top, rgba(20,25,14,0.5) 0%, transparent 60%);"></div>
     <a href="/#events" class="absolute top-6 left-6 md:left-12 inline-flex items-center gap-2 text-xs tracking-[0.25em] uppercase font-light text-white/60 hover:text-white transition-colors duration-200">
@@ -29,17 +29,17 @@ const heroImage = await getImage({ src: trees, width: 2000, format: 'webp' });
 
   <!-- Title strip (bg-white) -->
   <div class="bg-white py-10 px-6 text-center">
-    <p class="font-display font-light italic text-forest text-xl md:text-2xl lg:text-3xl leading-relaxed max-w-2xl mx-auto">A full day outdoors gives you time to properly arrive - to walk further, sit longer, and let the nervous system fully unwind.</p>
+    <p class="font-display font-light italic text-forest text-xl md:text-2xl lg:text-3xl leading-relaxed max-w-2xl mx-auto">A full day outdoors gives you time to properly arrive - to walk further, rest longer, and let the nervous system fully unwind.</p>
   </div>
 
   <!-- Intro section (bg-cream, matching 'You were built for this') -->
   <section class="bg-cream py-16 md:py-24">
     <div class="max-w-6xl mx-auto px-6 md:px-12">
       <div class="max-w-[420px]">
-        <h2 class="font-display font-light text-4xl md:text-5xl text-forest mt-6 mb-10 leading-tight">Nordkollen Trip</h2>
+        <h2 class="font-display font-light text-4xl md:text-5xl text-forest mt-6 mb-10 leading-tight">Rewild Trip</h2>
         <div class="space-y-5 text-forest font-light leading-relaxed text-[1.08rem]">
           <p>
-            Welcome to the Nordkollen Trip, a day out in nature to help you get back into your body, combining yoga, pilates and movement meditation with deep nature immersion.
+            Welcome to the Rewild Trip, a day out in nature to help you get back into your body. We hike, move to challenge our bodies, immerse in wild nature and take plenty of time to rest and unwind.
           </p>
           <p>
             This hike is designed around supporting:
@@ -49,6 +49,7 @@ const heroImage = await getImage({ src: trees, width: 2000, format: 'webp' });
               'Stress release',
               'Core strength and balance',
               'Focus and presence',
+              'Connection with nature',
               'Injury prevention',
               'Mental and physical resilience',
             ].map(item => (
@@ -76,23 +77,23 @@ const heroImage = await getImage({ src: trees, width: 2000, format: 'webp' });
         <h3 class="font-display font-light text-3xl md:text-4xl text-forest mb-10 leading-tight">Technical info:</h3>
         <div class="space-y-5 text-forest font-light leading-relaxed text-[1.08rem]">
           <p>
-            We meet up at a parking space in <a href="https://maps.app.goo.gl/XFBhQxn792H8DzwaA" target="_blank" rel="noopener" class="underline hover:text-sage transition-colors duration-200">Oklungen</a> and walk from there on a gravel road, then on a forest trail. Total distance is up to 7km, about 1h 20min each way.
+            We meet up at a parking space in <a href="https://maps.app.goo.gl/XFBhQxn792H8DzwaA" target="_blank" rel="noopener" class="underline hover:text-sage transition-colors duration-200">Oklungen</a> and walk from there on a gravel road, then on a forest trail. Total distance is 9.5km, including 6km on an easy trail and 3.5km on a medium to challenging trail, approximately 3-3.5 hours in total.
           </p>
           <p>
-            No previous experience is needed, but you should be comfortable maintaining a steady pace on a medium difficulty trail for the entire duration.
+            No previous experience is needed, but you should be comfortable maintaining a steady pace for the duration of the hike.
           </p>
           <p>
             Please get in touch if you have any questions.
           </p>
           <p>
-            What to bring: Appropriate clothes for the weather, comfortable shoes with a grip, water bottle, seating mat, a packed lunch and a cup for the tea.
+            What to bring: Appropriate clothes for the weather, comfortable shoes with a grip, at least 1 litre of water, seating mat, a packed lunch and a cup for the tea.
           </p>
           <p>
-            Full practical details on what to bring and the exact meeting point will be sent once you've booked your place.
+            Full practical details will be sent once you've booked your place.
           </p>
         </div>
         <p class="text-forest/60 text-[1.08rem] font-light leading-relaxed mt-12">
-          Please note: We hike in all weather. However, if hazardous conditions arise, such as strong winds - the hike may be cancelled. You will receive a full refund.
+          Please note: We hike in all weather. However, if hazardous conditions arise, the hike may be cancelled. You will then be refunded the full amount.
         </p>
       </div>
     </div>
@@ -121,7 +122,7 @@ const heroImage = await getImage({ src: trees, width: 2000, format: 'webp' });
             </div>
             <div class="flex gap-6">
               <span class="text-xs tracking-[0.2em] uppercase text-sage font-light w-28 flex-shrink-0">Price</span>
-              <span class="text-base text-forest font-light">700 NOK</span>
+              <span class="text-base text-forest font-light">300 NOK</span>
             </div>
 
             <div class="pt-12">
