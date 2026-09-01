@@ -10,7 +10,7 @@ import noname2 from '../images/noname2.webp';
 const heroImage = await getImage({ src: skolapparn, width: 2000, format: 'webp' });
 ---
 
-<Layout title="Evening Reset - Rewild" description="One month, four hikes, 4 different regions. This is a unique opportunity to get out into nature and exercise in your local area." preloadImage={heroImage.src}>
+<Layout title="Evening Reset - Rewild" description="A one-off three-day course, one region at a time. This is a unique opportunity to get out into nature and exercise in your local area." preloadImage={heroImage.src}>
 
   <!-- Navigation -->
   <Nav />
@@ -39,16 +39,19 @@ const heroImage = await getImage({ src: skolapparn, width: 2000, format: 'webp' 
         <h2 class="font-display font-medium text-4xl md:text-5xl text-forest mt-6 mb-10 leading-tight">Evening Reset</h2>
         <div class="space-y-5 text-forest font-light leading-relaxed text-[1.08rem]">
           <p>
-            Welcome to a unique hike in your local area that combines exercise with nature immersion. This is a great opportunity to get out of town after a long day, release stress and revitalise your body and mind.
+            Welcome to a unique three-day course that combines exercise with nature immersion. This is a great opportunity to get out of town after a long day, release stress and revitalise your body and mind.
           </p>
           <p>
-            Each walk is designed around supporting:
+            The course is designed around supporting:
           </p>
           <div class="space-y-3">
             {[
               'Stress release',
               'Core strength and balance',
               'Increasing energy levels',
+              'Focus and presence',
+              'Injury prevention',
+              'Mental and physical resilience',
             ].map(item => (
               <div class="flex items-start gap-4">
                 <span class="mt-2.5 w-1 h-1 rounded-full bg-sage flex-shrink-0"></span>
@@ -57,7 +60,7 @@ const heroImage = await getImage({ src: skolapparn, width: 2000, format: 'webp' 
             ))}
           </div>
           <p>
-            During the hike we practice breathing techniques, yoga, pilates, qi gong-inspired exercises and guided sensory nature immersion.
+            During the course we practice breathing techniques, yoga, pilates, qi gong-inspired exercises and guided sensory nature immersion.
           </p>
           <p>
             We cultivate presence through noble silence while moving mindfully in terrain.
@@ -66,10 +69,7 @@ const heroImage = await getImage({ src: skolapparn, width: 2000, format: 'webp' 
             After the practice we take time to rest, chat, enjoy a snack and share a tea.
           </p>
           <p>
-            Explore a new trail each week in your chosen region - 4 weeks, 4 different trails.
-          </p>
-          <p>
-            Currently available in 4 different regions: Sandefjord, Skien, Porsgrunn and Larvik.
+            This is a one-off three-day course - three sessions, three different trails.
           </p>
         </div>
       </div>
@@ -96,7 +96,7 @@ const heroImage = await getImage({ src: skolapparn, width: 2000, format: 'webp' 
           </p>
         </div>
         <p class="text-forest/60 text-[1.08rem] font-light leading-relaxed mt-5">
-          Please note: we hike in all weather. However, if hazardous conditions arise, the hike may be cancelled. You will then be presented with the option to rebook your trip.
+          Please note: we hike in all weather. However, if hazardous conditions arise, the hike may be cancelled. You will then receive a full refund.
         </p>
         <p class="text-forest/60 text-[1.08rem] font-light leading-relaxed mt-4">
           To keep the group calm and focused, dogs aren't able to join this trip.
@@ -121,23 +121,21 @@ const heroImage = await getImage({ src: skolapparn, width: 2000, format: 'webp' 
               <span class="text-base text-forest font-light">17:00</span>
             </div>
             <div class="flex gap-6">
+              <span class="text-xs tracking-[0.2em] uppercase text-sage font-light w-28 flex-shrink-0">Schedule</span>
+              <span class="text-base text-forest font-light">Tuesday, Wednesday, Thursday</span>
+            </div>
+            <div class="flex gap-6">
               <span class="text-xs tracking-[0.2em] uppercase text-sage font-light w-28 flex-shrink-0">Location</span>
               <div class="text-base text-forest font-light space-y-1">
-                <p>Sandefjord - Monday</p>
-                <p>Larvik - Tuesday</p>
-                <p>Porsgrunn - Wednesday</p>
-                <p>Skien - Thursday</p>
+                <p>Sandefjord - 6-8 Oct</p>
+                <p>Larvik - 13-15 Oct</p>
+                <p>Porsgrunn - 20-22 Oct</p>
               </div>
             </div>
             <div class="flex gap-6">
               <span class="text-xs tracking-[0.2em] uppercase text-sage font-light w-28 flex-shrink-0">Price</span>
-              <span class="text-base text-forest font-light">1400 NOK / 4 hikes - 1 month</span>
+              <span class="text-base text-forest font-light">1000 NOK / 3 sessions - 1 week</span>
             </div>
-            <div class="flex gap-6">
-              <span class="w-28 flex-shrink-0 hidden md:block"></span>
-              <p class="text-sage text-sm font-light">50% off for new members in October</p>
-            </div>
-
             <div class="pt-12">
               <a
                 href="/signup"
