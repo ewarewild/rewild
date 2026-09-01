@@ -6,6 +6,7 @@ import Footer from '../components/Footer.astro';
 import firesmoke from '../images/firesmoke.webp';
 import skowint from '../images/skowint.webp';
 import boots from '../images/boots.webp';
+import nordsnow from '../images/nordsnow.webp';
 ---
 
 <Layout title="The Story - Rewild" description="The story of Rewild, and the philosophy behind it.">
@@ -68,6 +69,14 @@ import boots from '../images/boots.webp';
             <p>
               Sun, wind, frost, rain or snow.
             </p>
+            <Image
+              src={nordsnow}
+              alt="Snowy mountain trail"
+              width={900}
+              densities={[1, 2]}
+              class="md:hidden w-full h-auto aspect-[3/2] object-cover object-center"
+              loading="lazy"
+            />
             <p>
               I welcomed the elements as a gateway into presence.
             </p>
@@ -92,6 +101,24 @@ import boots from '../images/boots.webp';
             <p>
               Every cell filling with life.
             </p>
+            <p>
+              Immersing in nature with all of my senses.
+            </p>
+            <p>
+              Nostrils sticking from the cold air.
+            </p>
+            <p>
+              Picking up the citrusy scent of spruce needles.
+            </p>
+            <p>
+              Reminding me of life all around.
+            </p>
+            <p>
+              The soft hiss of snow crystals flowing from trees.
+            </p>
+            <p>
+              Onto the ground covered in glitter.
+            </p>
             <Image
               src={skowint}
               alt="Footprints in deep snow on a mountain ridge at sunset"
@@ -100,24 +127,6 @@ import boots from '../images/boots.webp';
               class="md:hidden w-full h-auto aspect-[3/2] object-cover object-center"
               loading="lazy"
             />
-            <p>
-              Immersing in nature with all of my senses.
-            </p>
-            <p>
-              Nostrils sticking from the cold air.
-            </p>
-            <p>
-              Picking up the citrusy aroma of spruce needles.
-            </p>
-            <p>
-              Reminding me, that even here, I'm surrounded by life.
-            </p>
-            <p>
-              The soft hiss of snow crystals flowing from trees.
-            </p>
-            <p>
-              Onto the ground covered in glitter.
-            </p>
             <p>
               I felt overwhelmed by gratitude.
             </p>
