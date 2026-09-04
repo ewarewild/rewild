@@ -10,7 +10,7 @@ import noname2 from '../images/noname2.webp';
 const heroImage = await getImage({ src: skolapparn, width: 2000, format: 'webp' });
 ---
 
-<Layout title="Evening Reset - Rewild" description="A three-day course, one region at a time. This is a unique opportunity to get out into nature and exercise in your local area." preloadImage={heroImage.src}>
+<Layout title="Evening Reset - Rewild" description="A headlamp hike through the dark months - breath, silence and the senses. Now in Skien, Porsgrunn, Larvik and Sandefjord." preloadImage={heroImage.src}>
 
   <!-- Navigation -->
   <Nav />
@@ -37,21 +37,20 @@ const heroImage = await getImage({ src: skolapparn, width: 2000, format: 'webp' 
     <div class="max-w-6xl mx-auto px-6 md:px-12">
       <div class="max-w-[420px]">
         <h2 class="font-display font-medium text-4xl md:text-5xl text-forest mt-6 mb-10 leading-tight">Evening Reset</h2>
+        <p class="text-sage text-xs tracking-[0.2em] uppercase font-light mb-6">Autumn/winter edition - runs through the dark months, until the evenings lighten again in spring</p>
         <div class="space-y-5 text-forest font-light leading-relaxed text-[1.08rem]">
           <p>
-            Welcome to a unique three-day course that combines exercise with nature immersion. This is a great opportunity to get out of town after a long day, release stress and revitalise your body and mind.
+            Welcome to an evening hike designed to take you out of your head and into your body. After a day of screens, thinking and talking, this is a chance to step outside as the light fades, move by headlamp through the dark, and reconnect with your senses, your breath and the ground under your feet.
           </p>
           <p>
-            The course is designed around supporting:
+            Each walk is designed around supporting:
           </p>
           <div class="space-y-3">
             {[
+              'Improved mental clarity and focus',
               'Stress release',
-              'Core strength and balance',
-              'Increasing energy levels',
-              'Focus and presence',
-              'Injury prevention',
-              'Mental and physical resilience',
+              'Improved creativity',
+              'Getting out of the head and into the body',
             ].map(item => (
               <div class="flex items-start gap-4">
                 <span class="mt-2.5 w-1 h-1 rounded-full bg-sage flex-shrink-0"></span>
@@ -60,16 +59,22 @@ const heroImage = await getImage({ src: skolapparn, width: 2000, format: 'webp' 
             ))}
           </div>
           <p>
-            During the course we practice breathing techniques, yoga, pilates, qi gong-inspired exercises and guided sensory nature immersion.
+            We hike after dark, by headlamp, on familiar local trails through every season. There is no class, no demonstration, no exercises to follow - just a steady hike through natural terrain, guided into presence through breath, body awareness and the senses.
           </p>
           <p>
-            We cultivate presence through noble silence while moving mindfully in terrain.
+            We breathe through the nose throughout the walk. Nasal breathing warms, filters and slows the breath, which calms the nervous system, sharpens focus and lets the body draw more oxygen from every breath in. It also simply makes for a steadier engine on the trail.
           </p>
           <p>
-            After the practice we take time to rest, chat, enjoy a snack and share a tea.
+            We walk mostly in silence. Not to withhold connection, but because silence turns attention inward - off the conversation and onto the trail, the breath, the body. It's also efficient: energy and breath spent talking is energy not spent hiking well, or listening to what your own body is telling you.
           </p>
           <p>
-            This is a three-day course - three sessions, three different trails.
+            Along the way we pause to connect with the senses - the texture of bark and moss underfoot, the scent of the forest air, the layered sounds of the dark, the bite of cold air on skin. In darkness the senses sharpen on their own: with sight quiet, everything else gets louder.
+          </p>
+          <p>
+            After the hike, we rest and share a wild plant tea.
+          </p>
+          <p>
+            Currently available in 4 different regions: Skien, Porsgrunn, Larvik and Sandefjord.
           </p>
         </div>
       </div>
@@ -83,20 +88,20 @@ const heroImage = await getImage({ src: skolapparn, width: 2000, format: 'webp' 
         <h3 class="font-display font-medium text-3xl md:text-4xl text-forest mb-10 leading-tight">Technical info:</h3>
         <div class="space-y-5 text-forest font-light leading-relaxed text-[1.08rem]">
           <p>
-            No previous experience is needed, though you should be comfortable maintaining a steady pace on a medium difficulty trail for up to 30 minutes.
+            No previous experience is needed, though you should be comfortable maintaining a steady pace on a medium difficulty trail in the dark for up to 30 minutes.
           </p>
           <p>
             Please get in touch if you have any questions.
           </p>
           <p>
-            What to bring: Appropriate clothes for the weather, comfortable shoes with a grip, water bottle, seating mat, a snack and a cup for the tea.
+            What to bring: A headlamp with spare batteries, warm clothes for the weather, comfortable shoes with a grip, water bottle, a snack and a cup for the tea.
           </p>
           <p>
-            Full practical details and the exact trip locations will be sent once you've booked your place. The parking place for each trip is up to a 10-20 min drive from the town center of your region.
+            Full practical details and the exact trip location will be sent once you've booked your place. The parking place for each trip is up to 10-20 min drive from the town center of your region.
           </p>
         </div>
         <p class="text-forest/60 text-[1.08rem] font-light leading-relaxed mt-5">
-          Please note: we hike in all weather. However, if hazardous conditions arise, the hike may be cancelled. You will then receive a full refund.
+          Please note: the exact location of every hike will be confirmed the day before to optimise the trail type for current weather and light conditions. We hike in all weather, however, if hazardous conditions arise - strong winds, icy trails or very low visibility - the hike may be canceled. You will then be presented with the option to rebook your trip within a month.
         </p>
         <p class="text-forest/60 text-[1.08rem] font-light leading-relaxed mt-4">
           To keep the group calm and focused, dogs aren't able to join this trip.
@@ -121,20 +126,17 @@ const heroImage = await getImage({ src: skolapparn, width: 2000, format: 'webp' 
               <span class="text-base text-forest font-light">17:00</span>
             </div>
             <div class="flex gap-6">
-              <span class="text-xs tracking-[0.2em] uppercase text-sage font-light w-28 flex-shrink-0">Schedule</span>
-              <span class="text-base text-forest font-light">Tuesday, Wednesday, Thursday</span>
-            </div>
-            <div class="flex gap-6">
               <span class="text-xs tracking-[0.2em] uppercase text-sage font-light w-28 flex-shrink-0">Location</span>
               <div class="text-base text-forest font-light space-y-1">
-                <p>Sandefjord - 6-8 Oct</p>
-                <p>Larvik - 13-15 Oct</p>
-                <p>Porsgrunn - 20-22 Oct</p>
+                <p>Skien - Mondays</p>
+                <p>Porsgrunn - Tuesdays</p>
+                <p>Larvik - Thursdays</p>
+                <p>Sandefjord - Fridays</p>
               </div>
             </div>
             <div class="flex gap-6">
               <span class="text-xs tracking-[0.2em] uppercase text-sage font-light w-28 flex-shrink-0">Price</span>
-              <span class="text-base text-forest font-light">1000 NOK / 3 days</span>
+              <span class="text-base text-forest font-light">1400 NOK / 4 hikes - 1 month</span>
             </div>
             <div class="pt-12">
               <a
@@ -143,6 +145,7 @@ const heroImage = await getImage({ src: skolapparn, width: 2000, format: 'webp' 
               >
                 Sign up
               </a>
+              <p class="text-sage text-xs tracking-[0.15em] uppercase font-light mt-5">50% off for new members in September</p>
             </div>
           </div>
 
