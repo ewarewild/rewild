@@ -47,9 +47,10 @@ const heroImage = await getImage({ src: skolapparn, width: 2000, format: 'webp' 
           <div class="space-y-3">
             {[
               'Stress release',
-              'Focus and energy',
-              'Resilience',
+              'Core strengthening',
               'Injury prevention',
+              'Increasing energy levels',
+              'Mental and physical resilience',
               'Better sleep',
             ].map(item => (
               <div class="flex items-start gap-4">
@@ -59,19 +60,19 @@ const heroImage = await getImage({ src: skolapparn, width: 2000, format: 'webp' 
             ))}
           </div>
           <p>
-            We hike with a headlamp exploring different trails throughout the season.
+            We explore different trails throughout the season.
           </p>
           <p>
-            You're guided into presence through breath, body awareness and moving mindfully in terrain.
+            We move mindfully in terrain to prevent injuries and train our core as we're walking.
           </p>
           <p>
-            We use breath to sharpen focus, calm our nervous system and increase oxygen uptake by the body.
+            We use breath to focus, calm our nervous system and increase oxygen uptake by the body.
           </p>
           <p>
             We alternate between physically challenging our bodies and more relaxing practices.
           </p>
           <p>
-            Along the way we pause to connect with our environment through the senses.
+            We take several stops to connect with nature around us through the senses.
           </p>
           <p>
             Before heading back we take time to share a herbal tea, chat and connect.
@@ -79,6 +80,21 @@ const heroImage = await getImage({ src: skolapparn, width: 2000, format: 'webp' 
           <p>
             Currently available in 4 different regions: Skien, Porsgrunn, Larvik and Sandefjord.
           </p>
+          <p class="font-normal pt-4">
+            Who is it for?
+          </p>
+          <div class="space-y-3">
+            {[
+              'Anyone who spends their day at a desk and wants to feel like themselves again by evening',
+              'People who want to train smarter on the trail, instead of just walking it',
+              'Anyone who enjoys being outdoors and wants to learn a safe way to walk in terrain',
+            ].map(item => (
+              <div class="flex items-start gap-4">
+                <span class="mt-2.5 w-1 h-1 rounded-full bg-sage flex-shrink-0"></span>
+                <span class="text-[1.08rem] text-forest font-light leading-relaxed">{item}</span>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </div>
