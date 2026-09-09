@@ -33,15 +33,15 @@ const heroImage = await getImage({ src: skolapparn, width: 2000, format: 'webp' 
   </div>
 
   <!-- Intro section (bg-cream, matching 'You were built for this') -->
-  <section class="bg-cream py-16 md:py-24">
+  <section class="bg-cream pt-16 md:pt-24 pb-10 md:pb-14">
     <div class="max-w-6xl mx-auto px-6 md:px-12">
       <div class="max-w-[420px]">
         <h2 class="font-display font-medium text-4xl md:text-5xl text-forest mt-6 mb-10 leading-tight">Evening Reset</h2>
         <div class="space-y-5 text-forest font-light leading-relaxed text-[1.08rem]">
           <p>
-            Welcome to an evening hike designed to take you out of your head and into your body. Perfect after a day of screens, thinking and talking, to bring you back into your senses.
+            Welcome to an evening hike designed to take you out of your head and into your body. Perfect after a day of screens, thinking and talking, to bring you back into your senses. Explore four different trails over four weeks.
           </p>
-          <p>
+          <p class="pt-2">
             Each walk is designed around supporting:
           </p>
           <div class="space-y-3">
@@ -66,18 +66,36 @@ const heroImage = await getImage({ src: skolapparn, width: 2000, format: 'webp' 
               );
             })}
           </div>
-          <p>
-            We explore different trails throughout the season.
-          </p>
-          <p>
-            You'll learn practical techniques to prevent falls and injuries while walking in terrain.
-          </p>
-          <p>
-            You'll learn how to make the most of the walk to strengthen your core, balance and improve posture.
-          </p>
-          <p>
-            You'll learn how to use breath to focus, calm your nervous system and get more energy during exercise through your breath.
-          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- You'll learn strip (bg-white, full width) -->
+  <div class="bg-white py-10 md:py-14">
+    <div class="max-w-6xl mx-auto px-6 md:px-12">
+      <div class="max-w-[420px] space-y-3">
+        <p class="text-forest font-light leading-relaxed text-[1.08rem]">
+          You'll learn:
+        </p>
+        {[
+          'Practical techniques to prevent falls and injuries while walking in terrain.',
+          'How to make the most of the walk to strengthen your core, balance and improve posture.',
+          'How to use breath to focus, calm your nervous system and get more energy during exercise through your breath.',
+        ].map(item => (
+          <div class="flex items-start gap-4">
+            <span class="mt-2.5 w-1 h-1 rounded-full bg-sage flex-shrink-0"></span>
+            <span class="text-[1.08rem] text-forest font-light leading-relaxed">{item}</span>
+          </div>
+        ))}
+      </div>
+    </div>
+  </div>
+
+  <section class="bg-cream pt-10 md:pt-14 pb-16 md:pb-24">
+    <div class="max-w-6xl mx-auto px-6 md:px-12">
+      <div class="max-w-[420px]">
+        <div class="space-y-5 text-forest font-light leading-relaxed text-[1.08rem]">
           <p>
             We alternate between physically challenging our bodies and more relaxing practices.
           </p>
@@ -90,9 +108,7 @@ const heroImage = await getImage({ src: skolapparn, width: 2000, format: 'webp' 
           <p>
             Currently available in 4 different regions: Skien, Porsgrunn, Larvik and Sandefjord.
           </p>
-          <p class="font-semibold pt-4">
-            Who is it for?
-          </p>
+          <h3 class="font-display font-medium text-3xl md:text-4xl text-forest pt-6 leading-tight">Who is it for?</h3>
           <div class="space-y-3">
             {[
               'Anyone who spends their day at a desk and wants to feel like themselves again by evening',
