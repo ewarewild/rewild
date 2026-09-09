@@ -54,12 +54,17 @@ const heroImage = await getImage({ src: skolapparn, width: 2000, format: 'webp' 
               'Increasing energy levels - to give you more power in everyday life',
               'Mental and physical resilience - to increase your everyday capacity to deal with stress',
               'Better sleep - essential for recovery and normal functioning',
-            ].map(item => (
-              <div class="flex items-start gap-4">
-                <span class="mt-2.5 w-1 h-1 rounded-full bg-sage flex-shrink-0"></span>
-                <span class="text-[1.08rem] text-forest font-light leading-relaxed">{item}</span>
-              </div>
-            ))}
+            ].map(item => {
+              const [label, description] = item.split(' - ');
+              return (
+                <div class="flex items-start gap-4">
+                  <span class="mt-2.5 w-1 h-1 rounded-full bg-sage flex-shrink-0"></span>
+                  <span class="text-[1.08rem] text-forest font-light leading-relaxed">
+                    <span class="font-semibold">{label}</span> - {description}
+                  </span>
+                </div>
+              );
+            })}
           </div>
           <p>
             We explore different trails throughout the season.
@@ -85,7 +90,7 @@ const heroImage = await getImage({ src: skolapparn, width: 2000, format: 'webp' 
           <p>
             Currently available in 4 different regions: Skien, Porsgrunn, Larvik and Sandefjord.
           </p>
-          <p class="font-normal pt-4">
+          <p class="font-semibold pt-4">
             Who is it for?
           </p>
           <div class="space-y-3">
