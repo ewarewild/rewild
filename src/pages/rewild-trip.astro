@@ -39,7 +39,10 @@ const heroImage = await getImage({ src: nordkollen2, width: 2000, format: 'webp'
         <h2 class="font-display font-medium text-4xl md:text-5xl text-forest mt-6 mb-10 leading-tight">Rewild Day Course</h2>
         <div class="space-y-5 text-forest font-light leading-relaxed text-[1.08rem]">
           <p>
-            Welcome to the Rewild Day Course, a full day of practical training in nature to help you get back into your body. Built around five core modules, it gives you the tools to move, feel and recover better - on the trail and in everyday life. We hike, practice, immerse in wild nature and take plenty of time to rest and unwind.
+            Welcome to the Rewild Day Course, a full day of practical training in nature to help you get back into your body. It gives you the tools to move, feel and recover better - on the trail and in everyday life.
+          </p>
+          <p>
+            We hike, alternate between physically challenging our bodies and more relaxing practices by immersing in wild nature and taking plenty of time to rest and unwind.
           </p>
           <p class="pt-[28px] md:pt-[36px]">
             The course is built around five core modules:
@@ -80,6 +83,7 @@ const heroImage = await getImage({ src: nordkollen2, width: 2000, format: 'webp'
             'Practical techniques to prevent falls and injuries while walking in terrain.',
             'How to make the most of the walk to strengthen your core, balance and improve posture.',
             'How to use breath to focus, calm your nervous system and get more energy during exercise.',
+            'How to connect with nature through your senses for a fuller nervous system re-balancing.',
           ].map(item => (
             <div class="flex items-start gap-4">
               <span class="mt-2 w-1.5 h-1.5 rounded-full bg-sage-light flex-shrink-0"></span>
@@ -87,6 +91,9 @@ const heroImage = await getImage({ src: nordkollen2, width: 2000, format: 'webp'
             </div>
           ))}
         </div>
+        <p class="text-forest font-light text-[1.08rem] leading-relaxed pt-[28px] md:pt-[36px]">
+          After the practice we take time to rest, chat, enjoy a packed lunch and a tea made from local plants.
+        </p>
       </div>
     </div>
   </div>
@@ -95,21 +102,15 @@ const heroImage = await getImage({ src: nordkollen2, width: 2000, format: 'webp'
     <div class="max-w-6xl mx-auto px-6 md:px-12">
       <div class="max-w-[420px]">
         <div class="space-y-5 text-forest font-light leading-relaxed text-[1.08rem]">
-          <p>
-            We'll alternate between physically challenging our bodies and more relaxing practices.
-          </p>
-          <p>
-            You'll be guided to immerse in nature through your senses for a fuller nervous system re-balancing.
-          </p>
-          <p>
-            After the practice we take time to rest, chat, enjoy a packed lunch and a tea made from local plants.
-          </p>
-          <h3 class="font-display font-medium text-3xl md:text-4xl text-forest pt-[12px] md:pt-[36px] leading-tight">Who is it for?</h3>
+          <h3 class="font-display font-medium text-3xl md:text-4xl text-forest leading-tight">Who is it for?</h3>
           <div class="space-y-6">
             {[
-              'Anyone who spends their day at a desk and wants to feel like themselves again at the end of the week',
-              'People who want to train smarter on the trail, instead of just walking it',
               'Anyone who enjoys being outdoors and wants to learn a safe way to walk in terrain',
+              'People who want to train smarter on the trail, instead of just walking it',
+              'Anyone who deals with back, joint or posture strain from long hours of sitting',
+              'People feeling overwhelmed or burnt out who want a reset in nature',
+              'Anyone who wants to build physical and mental resilience through exposure to the elements',
+              'People curious about using breath to manage stress and increase energy',
             ].map(item => (
               <div class="flex items-start gap-4">
                 <span class="mt-2 w-1.5 h-1.5 rounded-full bg-sage-light flex-shrink-0"></span>
