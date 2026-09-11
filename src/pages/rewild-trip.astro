@@ -10,7 +10,7 @@ import moss from '../images/moss.webp';
 const heroImage = await getImage({ src: nordkollen2, width: 2000, format: 'webp' });
 ---
 
-<Layout title="Rewild Day Course - Rewild" description="A full day course up Nordkollen, built around four core modules: injury prevention, core strength, stress release & recovery, and building resilience." preloadImage={heroImage.src}>
+<Layout title="Rewild Day Course - Rewild" description="A full day course up Nordkollen, built around five core modules: injury prevention, core strength, stress release & recovery, building resilience, and breath." preloadImage={heroImage.src}>
 
   <!-- Navigation -->
   <Nav />
@@ -39,17 +39,18 @@ const heroImage = await getImage({ src: nordkollen2, width: 2000, format: 'webp'
         <h2 class="font-display font-medium text-4xl md:text-5xl text-forest mt-6 mb-10 leading-tight">Rewild Day Course</h2>
         <div class="space-y-5 text-forest font-light leading-relaxed text-[1.08rem]">
           <p>
-            Welcome to the Rewild Day Course, a full day of practical training in nature to help you get back into your body. Built around four core modules, it gives you the tools to move, feel and recover better - on the trail and in everyday life. We hike, practice, immerse in wild nature and take plenty of time to rest and unwind.
+            Welcome to the Rewild Day Course, a full day of practical training in nature to help you get back into your body. Built around five core modules, it gives you the tools to move, feel and recover better - on the trail and in everyday life. We hike, practice, immerse in wild nature and take plenty of time to rest and unwind.
           </p>
           <p class="pt-[28px] md:pt-[36px]">
-            The course is built around four core modules:
+            The course is built around five core modules:
           </p>
           <div class="space-y-6 pt-[16px] md:pt-[24px]">
             {[
-              'Injury prevention - learn functional walking patterns that protect you while walking in terrain and on pavement. This minimises the risk of falls, protects you from the injuries of the foot, ankle, knee and hip, as well as back pain',
-              'Core strength - find out how to train it simply by modifying walking patterns and separate exercises - also helpful for injury prevention - to counteract the negative effects of sitting, promote balance, good posture, brain health and longevity',
+              'Injury prevention - learn functional walking patterns that support safer movement while walking in terrain and on pavement, reducing strain on your feet, ankles, knees, hips and back',
+              'Core strength - find out how to train your core by modifying walking patterns and practicing core-focused exercises to support injury prevention. This counteracts the negative effects of sitting and promotes balance, good posture, brain health and longevity',
               'Stress release & recovery - physical activity promotes stress release and production of feel-good chemicals. With sensory immersion in nature, your nervous system shifts into a rest and repair mode, essential for many processes, like healing, learning, muscle growth and more',
-              'Building resilience - by spending a day in nature you are exposed to various weather conditions. Like a plant growing on a mountain ridge, which adapts to withstand a lot of stress, your body is built to respond to challenge. This is a natural tool for building your capacity to handle stress in everyday life',
+              'Building resilience - like a plant growing on a mountain ridge, which adapts to withstand a lot of stress, your body is built to respond to challenge. Regular exposure to various weather conditions, with adequate recovery, is a natural tool for building your capacity to handle stress in everyday life',
+              'Breath - learn simple breathing techniques to focus, calm your nervous system and increase energy during exercise. Conscious breathing supports better oxygen use, reduces tension and helps regulate your response to stress',
             ].map(item => {
               const separatorIndex = item.indexOf(' - ');
               const label = item.slice(0, separatorIndex);
@@ -222,7 +223,7 @@ const heroImage = await getImage({ src: nordkollen2, width: 2000, format: 'webp'
             <p class="text-xs tracking-[0.3em] uppercase text-sage mb-3 font-light">Hike & movement</p>
             <h3 class="font-display font-medium text-3xl text-forest mb-5 leading-tight">Evening Reset</h3>
             <p class="text-forest font-light text-[1.08rem] leading-relaxed mb-8">
-              <span class="text-sage-light font-semibold">October 2026</span> An evening adventure that helps you shake off the day, reconnect with your body, strengthen your core, learn to prevent injuries and improve quality of sleep.
+              <span class="text-sage-light font-semibold">October 2026</span> An evening adventure that helps you shake off the day, reconnect with your body, strengthen your core, learn injury-aware movement, and support better sleep.
             </p>
             <div class="pt-5 border-t border-white">
               <span class="inline-block text-xs tracking-[0.25em] uppercase font-light text-forest group-hover:text-sage transition-colors duration-300">
