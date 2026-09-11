@@ -39,7 +39,10 @@ const heroImage = await getImage({ src: nordkollen2, width: 2000, format: 'webp'
         <h2 class="font-display font-medium text-4xl md:text-5xl text-forest mt-6 mb-10 leading-tight">Rewild Day Course</h2>
         <div class="space-y-5 text-forest font-light leading-relaxed text-[1.08rem]">
           <p>
-            Welcome to the Rewild Day Course, a full day of practical training in nature to help you get back into your body. It gives you the tools to move, feel and recover better - on the trail and in everyday life.
+            Welcome to the Rewild Day Course, a full day of practical training in nature to help you get back into your body.
+          </p>
+          <p>
+            It gives you the tools to move safely, build core strength, feel and recover better - on the trail and in everyday life.
           </p>
           <p>
             We hike, alternate between physically challenging our bodies and more relaxing practices by immersing in wild nature and taking plenty of time to rest and unwind.
@@ -49,24 +52,17 @@ const heroImage = await getImage({ src: nordkollen2, width: 2000, format: 'webp'
           </p>
           <div class="space-y-6 pt-[16px] md:pt-[24px]">
             {[
-              'Injury prevention - learn functional walking patterns that support safer movement while walking in terrain and on pavement, reducing strain on your feet, ankles, knees, hips and back',
-              'Core and leg strength - find out how to train your core by modifying walking patterns and practicing core-focused exercises to support injury prevention. This counteracts the negative effects of sitting and promotes balance, good posture, brain health and longevity',
-              'Stress release & recovery - physical activity promotes stress release and production of feel-good chemicals. With sensory immersion in nature, your nervous system shifts into a rest and repair mode, essential for many processes, like healing, learning, muscle growth and more',
-              'Building resilience - like a plant growing on a mountain ridge, which adapts to withstand a lot of stress, your body is built to respond to challenge. Regular exposure to various weather conditions, with adequate recovery, is a natural tool for building your capacity to handle stress in everyday life',
-              'Breath - learn simple breathing techniques to focus, calm your nervous system and increase energy during exercise. Conscious breathing supports better oxygen use, reduces tension and helps regulate your response to stress',
-            ].map(item => {
-              const separatorIndex = item.indexOf(' - ');
-              const label = item.slice(0, separatorIndex);
-              const description = item.slice(separatorIndex + 3);
-              return (
-                <div class="flex items-start gap-4">
-                  <span class="mt-2 w-1.5 h-1.5 rounded-full bg-sage-light flex-shrink-0"></span>
-                  <span class="text-[1.08rem] text-forest font-light leading-relaxed">
-                    <span class="font-semibold">{label}</span> - {description}
-                  </span>
-                </div>
-              );
-            })}
+              'Injury prevention',
+              'Core and leg strength',
+              'Stress release & recovery',
+              'Building resilience',
+              'Breath',
+            ].map(item => (
+              <div class="flex items-start gap-4">
+                <span class="mt-2 w-1.5 h-1.5 rounded-full bg-sage-light flex-shrink-0"></span>
+                <span class="text-[1.08rem] text-forest font-semibold leading-relaxed">{item}</span>
+              </div>
+            ))}
           </div>
         </div>
       </div>
@@ -80,10 +76,11 @@ const heroImage = await getImage({ src: nordkollen2, width: 2000, format: 'webp'
         <h3 class="font-display font-medium text-3xl md:text-4xl text-forest leading-tight mb-6">In this course, you'll learn:</h3>
         <div class="space-y-6">
           {[
-            'Practical techniques to prevent falls and injuries while walking in terrain.',
-            'How to make the most of the walk to strengthen your core, balance and improve posture.',
-            'How to use breath to focus, calm your nervous system and get more energy during exercise.',
-            'How to connect with nature through your senses for a fuller nervous system re-balancing.',
+            'Functional walking patterns that support safer movement while walking in terrain and on pavement, helping reduce strain on your feet, ankles, knees, hips and back.',
+            'How to train your core and legs by modifying walking patterns and practicing core-focused exercises to support injury prevention, helping counteract the negative effects of sitting - core strength promotes balance and good posture, while leg strength is closely linked to brain health and longevity.',
+            'How physical activity promotes stress release and the production of feel-good chemicals, and how sensory immersion in nature can shift your nervous system into a rest and repair mode - important for processes like healing, learning and muscle growth.',
+            'How regular exposure to various weather conditions, combined with adequate recovery, is a natural tool for building your capacity to handle stress in everyday life.',
+            'Simple breathing techniques to focus, calm your nervous system and increase energy during exercise - supporting better oxygen use, reducing tension and helping regulate your response to stress.',
           ].map(item => (
             <div class="flex items-start gap-4">
               <span class="mt-2 w-1.5 h-1.5 rounded-full bg-sage-light flex-shrink-0"></span>
