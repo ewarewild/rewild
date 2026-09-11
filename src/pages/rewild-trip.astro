@@ -10,7 +10,7 @@ import moss from '../images/moss.webp';
 const heroImage = await getImage({ src: nordkollen2, width: 2000, format: 'webp' });
 ---
 
-<Layout title="Rewild Trip to Nordkollen - Rewild" description="A full day trip up Nordkollen - more ground, more time, deeper nature immersion than our regular hikes." preloadImage={heroImage.src}>
+<Layout title="Rewild Day Course - Rewild" description="A full day course up Nordkollen, built around four core modules: injury prevention, core strength, stress release & recovery, and building resilience." preloadImage={heroImage.src}>
 
   <!-- Navigation -->
   <Nav />
@@ -36,26 +36,24 @@ const heroImage = await getImage({ src: nordkollen2, width: 2000, format: 'webp'
   <section class="bg-cream pt-16 md:pt-24 pb-12 md:pb-[72px]">
     <div class="max-w-6xl mx-auto px-6 md:px-12">
       <div class="max-w-[420px]">
-        <h2 class="font-display font-medium text-4xl md:text-5xl text-forest mt-6 mb-10 leading-tight">Rewild Trip to Nordkollen</h2>
+        <h2 class="font-display font-medium text-4xl md:text-5xl text-forest mt-6 mb-10 leading-tight">Rewild Day Course</h2>
         <div class="space-y-5 text-forest font-light leading-relaxed text-[1.08rem]">
           <p>
-            Welcome to the Rewild Trip, a day out in nature to help you get back into your body. Packed with valuable tools to help you avoid injuries and get the most out of walking in terrain and in everyday life. We hike, practice, immerse in wild nature and take plenty of time to rest and unwind.
+            Welcome to the Rewild Day Course, a full day of practical training in nature to help you get back into your body. Built around four core modules, it gives you the tools to move, feel and recover better - on the trail and in everyday life. We hike, practice, immerse in wild nature and take plenty of time to rest and unwind.
           </p>
           <p class="pt-[28px] md:pt-[36px]">
-            This hike is designed around supporting:
+            The course is built around four core modules:
           </p>
           <div class="space-y-6 pt-[16px] md:pt-[24px]">
             {[
-              'Stress release - for better health and overall functioning',
-              'Core strengthening - essential for longevity',
-              'Injury prevention - for safety and long-term enjoyment of life',
-              'Focus and presence - to improve mental performance',
-              'Connection with nature - to bring balance to your nervous system',
-              'Increasing energy levels - to give you more power in everyday life',
-              'Mental and physical resilience - to increase your everyday capacity to deal with stress',
-              'Better sleep - essential for recovery and normal functioning',
+              'Injury prevention - learn functional walking patterns that protect you from injury while walking in terrain, and in everyday life. This minimises the risk of falls, protects you from head and joint injuries, as well as lower and upper back pain',
+              'Core strength - find out how to train it simply by modifying walking patterns, to counteract the negative effects of sitting and promote balance, brain health and longevity',
+              'Stress release & recovery - physical activity promotes stress release and production of feel-good chemicals. With sensory immersion in nature, your nervous system shifts into a rest and repair mode, essential for many processes, like healing, learning, muscle growth and more',
+              'Building resilience - by spending a day in nature you are exposed to various weather conditions. Like a plant growing on a mountain ridge, which adapts to withstand a lot of stress, your body is built to respond to challenge. This is a natural tool for building your capacity to handle stress in everyday life',
             ].map(item => {
-              const [label, description] = item.split(' - ');
+              const separatorIndex = item.indexOf(' - ');
+              const label = item.slice(0, separatorIndex);
+              const description = item.slice(separatorIndex + 3);
               return (
                 <div class="flex items-start gap-4">
                   <span class="mt-2 w-1.5 h-1.5 rounded-full bg-sage-light flex-shrink-0"></span>
@@ -75,7 +73,7 @@ const heroImage = await getImage({ src: nordkollen2, width: 2000, format: 'webp'
   <div class="bg-white pt-12 md:pt-[72px] pb-12 md:pb-[72px]">
     <div class="max-w-6xl mx-auto px-6 md:px-12">
       <div class="max-w-[420px]">
-        <h3 class="font-display font-medium text-3xl md:text-4xl text-forest leading-tight mb-6">What you'll learn:</h3>
+        <h3 class="font-display font-medium text-3xl md:text-4xl text-forest leading-tight mb-6">In this course, you'll learn:</h3>
         <div class="space-y-6">
           {[
             'Practical techniques to prevent falls and injuries while walking in terrain.',
@@ -145,7 +143,7 @@ const heroImage = await getImage({ src: nordkollen2, width: 2000, format: 'webp'
             Please get in touch if you have any questions.
           </p>
           <p>
-            What to bring: Appropriate clothes for the weather, comfortable shoes with a grip, seating mat, at least 1 litre of water, a packed lunch and a cup for the tea.
+            What to bring: Appropriate clothes for the weather, comfortable shoes with a grip, seating mat, minimum 1 litre of water, a packed lunch, a small sweet snack, pen and notepad, and a cup for the tea.
           </p>
           <p>
             Full practical details will be sent once you've booked your place.
@@ -155,7 +153,7 @@ const heroImage = await getImage({ src: nordkollen2, width: 2000, format: 'webp'
           Please note: We hike in all weather. However, if hazardous conditions arise, the hike will be cancelled. You will then receive a full refund.
         </p>
         <p class="text-forest/60 text-[1.08rem] font-light leading-relaxed mt-4">
-          To keep the group calm and focused, dogs aren't able to join this trip.
+          To keep the group calm and focused, dogs aren't able to join this course.
         </p>
       </div>
     </div>
@@ -184,7 +182,7 @@ const heroImage = await getImage({ src: nordkollen2, width: 2000, format: 'webp'
             </div>
             <div class="flex gap-6">
               <span class="text-xs tracking-[0.2em] uppercase text-sage font-light w-28 flex-shrink-0">Price</span>
-              <span class="text-base text-forest font-light">700 NOK</span>
+              <span class="text-base text-forest font-light">1500 NOK</span>
             </div>
 
             <div class="pt-12">
