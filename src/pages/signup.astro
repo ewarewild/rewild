@@ -97,6 +97,32 @@ import Footer from '../components/Footer.astro';
             ></textarea>
           </div>
 
+          <div id="age-field">
+            <label for="age" class="block text-xs tracking-[0.2em] uppercase text-forest font-light mb-3">Age</label>
+            <input
+              type="number"
+              id="age"
+              name="Age"
+              min="0"
+              required
+              class="w-full bg-white border border-forest/20 px-4 py-3 text-forest font-light text-sm focus:outline-none focus:border-forest transition-colors duration-200"
+            />
+            <p class="text-xs text-forest/50 font-light mt-2 leading-relaxed">Asked in case emergency responders need this information during the hike.</p>
+          </div>
+
+          <div id="emergency-contact-field">
+            <label for="emergency-contact" class="block text-xs tracking-[0.2em] uppercase text-forest font-light mb-3">Emergency contact</label>
+            <input
+              type="text"
+              id="emergency-contact"
+              name="Emergency contact"
+              placeholder="Name and phone number"
+              required
+              class="w-full bg-white border border-forest/20 px-4 py-3 text-forest font-light text-sm focus:outline-none focus:border-forest transition-colors duration-200"
+            />
+            <p class="text-xs text-forest/50 font-light mt-2 leading-relaxed">Someone we can reach if there's an emergency during the hike.</p>
+          </div>
+
           <div class="pt-4">
             <button
               id="signup-submit"
@@ -105,8 +131,8 @@ import Footer from '../components/Footer.astro';
             >
               Send
             </button>
-            <p class="text-base text-sage font-light mt-4">Your privacy is important - your details will not be shared with anyone.</p>
-            <p class="text-sm text-forest/60 font-light mt-4 leading-relaxed">Ewa is not a licensed medical professional. If you have an injury or health condition, please consult a doctor or physiotherapist before participating.</p>
+            <p class="text-base text-sage font-light mt-4">Your privacy is important - your details will not be shared with anyone other than with relevant services in case of an emergency.</p>
+            <p class="text-sm text-forest/60 font-light mt-4 leading-relaxed">The guidance given during Rewild events is not a substitute for medical advice. If you have an injury or health condition, please consult a doctor or physiotherapist before participating.</p>
             <p id="signup-status" class="text-sm font-light mt-4" role="status"></p>
           </div>
         </form>
@@ -123,11 +149,19 @@ import Footer from '../components/Footer.astro';
   const eventSelect = document.getElementById('event') as HTMLSelectElement;
   const injuriesField = document.getElementById('injuries-field') as HTMLElement;
   const injuriesTextarea = document.getElementById('injuries') as HTMLTextAreaElement;
+  const ageField = document.getElementById('age-field') as HTMLElement;
+  const ageInput = document.getElementById('age') as HTMLInputElement;
+  const emergencyContactField = document.getElementById('emergency-contact-field') as HTMLElement;
+  const emergencyContactInput = document.getElementById('emergency-contact') as HTMLInputElement;
 
   eventSelect?.addEventListener('change', () => {
     const isDeepRest = eventSelect.value.startsWith('Deep Rest');
     injuriesField.style.display = isDeepRest ? 'none' : 'block';
     injuriesTextarea.required = !isDeepRest;
+    ageField.style.display = isDeepRest ? 'none' : 'block';
+    ageInput.required = !isDeepRest;
+    emergencyContactField.style.display = isDeepRest ? 'none' : 'block';
+    emergencyContactInput.required = !isDeepRest;
   });
 
   const form = document.getElementById('signup-form') as HTMLFormElement;
