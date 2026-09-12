@@ -39,29 +39,27 @@ const heroImage = await getImage({ src: skolapparn, width: 2000, format: 'webp' 
         <h2 class="font-display font-medium text-4xl md:text-5xl text-forest mt-6 mb-10 leading-tight">Evening Reset</h2>
         <div class="space-y-5 text-forest font-light leading-relaxed text-[1.08rem]">
           <p>
-            Welcome to an evening hike designed to take you out of your head and into your body. Perfect after a day of screens, thinking and talking, to bring you back into your senses. Explore different trails over four weeks in October.
+            Welcome to an evening hike designed to take you out of your head and into your body. Perfect after a day of screens, thinking and talking, to bring you back into your senses.
+          </p>
+          <p>
+            Explore different trails over four weeks in October.
           </p>
           <p class="pt-[28px] md:pt-[36px]">
             Each walk is designed around supporting:
           </p>
           <div class="space-y-6 pt-[16px] md:pt-[24px]">
             {[
-              'Injury prevention - for safety and long-term enjoyment of life',
-              'Core and leg strength - linked to longevity',
-              'Stress release - for better health and overall functioning',
-              'Focus and energy - to help improve mental performance',
-              'Better sleep - important for recovery and everyday functioning',
-            ].map(item => {
-              const [label, description] = item.split(' - ');
-              return (
-                <div class="flex items-start gap-4">
-                  <span class="mt-2 w-1.5 h-1.5 rounded-full bg-sage-light flex-shrink-0"></span>
-                  <span class="text-[1.08rem] text-forest font-light leading-relaxed">
-                    <span class="font-semibold">{label}</span> - {description}
-                  </span>
-                </div>
-              );
-            })}
+              'Injury prevention',
+              'Core and leg strength',
+              'Stress release',
+              'Focus and energy',
+              'Better sleep',
+            ].map(label => (
+              <div class="flex items-start gap-4">
+                <span class="mt-2 w-1.5 h-1.5 rounded-full bg-sage-light flex-shrink-0"></span>
+                <span class="text-[1.08rem] text-forest font-semibold leading-relaxed">{label}</span>
+              </div>
+            ))}
           </div>
         </div>
       </div>
@@ -140,7 +138,7 @@ const heroImage = await getImage({ src: skolapparn, width: 2000, format: 'webp' 
             Please get in touch if you have any questions.
           </p>
           <p>
-            What to bring: A headlamp, ideally with a red light function and full batteries (not a phone light), appropriate clothes for the weather (layers are best), comfortable shoes with a grip, water bottle, a small snack and a cup. Tea will be provided.
+            What to bring: Appropriate clothes for the weather and water. Tea will be provided.
           </p>
           <p>
             Full practical details will be sent once you've booked your place. The parking place for each trip is up to a 10-20 min drive from the town centre of your region.
