@@ -13,16 +13,18 @@
   --color-muted: #6b7c63;
 }
 
-html {
-  scroll-behavior: smooth;
-}
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
 
-body {
-  font-family: var(--font-sans);
-  color: var(--color-forest);
-  -webkit-font-smoothing: antialiased;
-}
+  body {
+    font-family: var(--font-sans);
+    color: var(--color-forest);
+    -webkit-font-smoothing: antialiased;
+  }
 
-button {
-  font-family: var(--font-button);
+  button {
+    font-family: var(--font-button);
+  }
 }
