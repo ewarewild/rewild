@@ -83,20 +83,22 @@ const heroImage = await getImage({ src: skolapparn, width: 2000, format: 'webp' 
             </div>
           ))}
         </div>
-        <div class="space-y-5 text-forest font-light leading-relaxed text-[1.08rem] pt-[28px] md:pt-[36px]">
-          <p>
-            We alternate between physically challenging our bodies and more relaxing practices.
-          </p>
-          <p>
-            We take several stops to connect with nature around us through the senses.
-          </p>
-          <p>
-            Before heading back we take time to share a herbal tea, chat and connect.
-          </p>
-          <p>
-            Currently available in 4 different regions: Skien, Porsgrunn, Larvik and Sandefjord.
-          </p>
+        <h3 class="font-display font-medium text-3xl md:text-4xl text-forest leading-tight mt-12 mb-6">What we'll do:</h3>
+        <div class="space-y-6">
+          {[
+            'Alternate between physically challenging our bodies and more relaxing practices.',
+            'Pause several times to connect with nature around us through the senses.',
+            'Take time to share a herbal tea, chat and connect before heading back.',
+          ].map(item => (
+            <div class="flex items-start gap-4">
+              <span class="mt-2 w-1.5 h-1.5 rounded-full bg-sage-light flex-shrink-0"></span>
+              <span class="text-[1.08rem] text-forest font-light leading-relaxed">{item}</span>
+            </div>
+          ))}
         </div>
+        <p class="text-forest font-light leading-relaxed text-[1.08rem] pt-[28px] md:pt-[36px]">
+          We currently run this in 4 different regions: Skien, Porsgrunn, Larvik and Sandefjord.
+        </p>
       </div>
     </div>
   </div>
