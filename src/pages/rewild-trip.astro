@@ -5,7 +5,7 @@ import Nav from '../components/Nav.astro';
 import Footer from '../components/Footer.astro';
 import nordkollen2 from '../images/nordkollen2.webp';
 import skolapparn from '../images/skolapparn.webp';
-import flowerspring from '../images/flowerspring.webp';
+import moss from '../images/moss.webp';
 
 const heroImage = await getImage({ src: nordkollen2, width: 2000, format: 'webp' });
 ---
@@ -233,7 +233,7 @@ const heroImage = await getImage({ src: nordkollen2, width: 2000, format: 'webp'
         <a href="/deep-rest" class="bg-cream group overflow-hidden block cursor-pointer">
           <div class="overflow-hidden h-72">
             <Image
-              src={flowerspring}
+              src={moss}
               alt="Deep Rest - guided relaxation"
               width={1200}
               densities={[1, 2]}

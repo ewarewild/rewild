@@ -3,11 +3,11 @@ import { Image, getImage } from 'astro:assets';
 import Layout from '../layouts/Layout.astro';
 import Nav from '../components/Nav.astro';
 import Footer from '../components/Footer.astro';
-import flowerspring from '../images/flowerspring.webp';
+import moss from '../images/moss.webp';
 import skolapparn from '../images/skolapparn.webp';
 import nordkollen2 from '../images/nordkollen2.webp';
 
-const heroImage = await getImage({ src: flowerspring, width: 2000, format: 'webp' });
+const heroImage = await getImage({ src: moss, width: 2000, format: 'webp' });
 ---
 
 <Layout title="Deep Rest - Rewild" description="A guided Non-Sleep Deep Rest (NSDR) session based on yoga Nidra." preloadImage={heroImage.src}>
