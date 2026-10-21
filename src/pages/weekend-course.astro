@@ -3,7 +3,7 @@ import { Image, getImage } from 'astro:assets';
 import Layout from '../layouts/Layout.astro';
 import Nav from '../components/Nav.astro';
 import Footer from '../components/Footer.astro';
-import nordkollen2 from '../images/nordkollen2.webp';
+import sandefjord from '../images/sandefjord.webp';
 import forestsun from '../images/forestsun.webp';
 import moss from '../images/moss.webp';
 
@@ -209,7 +209,7 @@ const heroImage = await getImage({ src: forestsun, width: 2000, format: 'webp' }
         <a href="/day-course" class="bg-cream group overflow-hidden block cursor-pointer">
           <div class="overflow-hidden h-72">
             <Image
-              src={nordkollen2}
+              src={sandefjord}
               alt="Day Course - full-day training"
               width={1200}
               densities={[1, 2]}
