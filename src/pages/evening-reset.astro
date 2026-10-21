@@ -4,7 +4,7 @@ import Layout from '../layouts/Layout.astro';
 import Nav from '../components/Nav.astro';
 import Footer from '../components/Footer.astro';
 import skolapparn from '../images/skolapparn.webp';
-import moss from '../images/moss.webp';
+import rondane2 from '../images/rondane2.webp';
 import nordkollen2 from '../images/nordkollen2.webp';
 
 const heroImage = await getImage({ src: skolapparn, width: 2000, format: 'webp' });
@@ -204,12 +204,12 @@ const heroImage = await getImage({ src: skolapparn, width: 2000, format: 'webp' 
       <p class="text-xs tracking-[0.3em] uppercase text-sage/80 mb-10 font-light">More events</p>
       <div class="grid md:grid-cols-2 gap-16 md:gap-8">
 
-        <!-- Deep Rest -->
-        <a href="/deep-rest" class="bg-cream group overflow-hidden block cursor-pointer">
+        <!-- One-to-One -->
+        <a href="/one-to-one" class="bg-cream group overflow-hidden block cursor-pointer">
           <div class="overflow-hidden h-72">
             <Image
-              src={moss}
-              alt="Deep Rest - guided relaxation"
+              src={rondane2}
+              alt="One-to-One - individual program"
               width={1200}
               densities={[1, 2]}
               class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700"
@@ -217,10 +217,10 @@ const heroImage = await getImage({ src: skolapparn, width: 2000, format: 'webp' 
             />
           </div>
           <div class="p-8">
-            <p class="text-xs tracking-[0.3em] uppercase text-sage/80 mb-3 font-light">Guided relaxation</p>
-            <h3 class="font-display font-bold text-3xl text-forest mb-5 leading-tight">Deep Rest</h3>
+            <p class="text-xs tracking-[0.3em] uppercase text-sage/80 mb-3 font-light">Individual program</p>
+            <h3 class="font-display font-bold text-3xl text-forest mb-5 leading-tight">One-to-One</h3>
             <p class="text-forest font-light text-[1.08rem] leading-relaxed mb-8">
-              <span class="text-sage-light font-semibold">October 2026</span> A guided relaxation journey, helping you release tension after an intense day or high-activity period. Small groups, cosy atmosphere.
+              Tailor-made activities for your individual needs. A personally guided program for maximum support in fulfilling your goals and intentions.
             </p>
             <div class="pt-5 border-t border-white">
               <span class="inline-block text-xs tracking-[0.25em] uppercase font-light text-sage/80 group-hover:text-sage transition-colors duration-300">More →</span>
