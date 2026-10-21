@@ -128,6 +128,32 @@ const heroImage = await getImage({ src: heroNordkollen, width: 2000, format: 'we
       <p class="text-xs tracking-[0.3em] uppercase text-sage/80 mb-10 font-light">Events</p>
       <div class="grid md:grid-cols-3 gap-16 md:gap-8">
 
+        <!-- Rewild Trip -->
+        <a href="/day-course" class="bg-white group overflow-hidden block cursor-pointer">
+          <div class="overflow-hidden h-72">
+            <Image
+              src={nordkollen2}
+              alt="Day Course - full-day training"
+              width={1200}
+              densities={[1, 2]}
+              class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700"
+              loading="lazy"
+            />
+          </div>
+          <div class="p-8">
+            <p class="text-xs tracking-[0.3em] uppercase text-sage/80 mb-3 font-light">Hike & movement</p>
+            <h3 class="font-display font-bold text-3xl text-forest mb-5 leading-tight">Day Course</h3>
+            <p class="text-forest font-light text-[1.08rem] leading-relaxed mb-8">
+              <span class="text-sage-light font-semibold">October 2026</span> A day hike to Nordkollen built around injury prevention, functional strength, increasing focus, stress release and building resilience.
+            </p>
+            <div class="pt-5 border-t border-cream">
+              <span class="inline-block text-xs tracking-[0.25em] uppercase font-light text-sage/80 group-hover:text-sage transition-colors duration-300">
+                More →
+              </span>
+            </div>
+          </div>
+        </a>
+
         <!-- Weekend Course -->
         <a href="/weekend-course" class="bg-white group overflow-hidden block cursor-pointer">
           <div class="overflow-hidden h-72">
@@ -174,32 +200,6 @@ const heroImage = await getImage({ src: heroNordkollen, width: 2000, format: 'we
             </p>
             <div class="pt-5 border-t border-cream">
               <span class="inline-block text-xs tracking-[0.25em] uppercase font-light text-sage/80 group-hover:text-sage transition-colors duration-300">More →</span>
-            </div>
-          </div>
-        </a>
-
-        <!-- Rewild Trip -->
-        <a href="/day-course" class="bg-white group overflow-hidden block cursor-pointer">
-          <div class="overflow-hidden h-72">
-            <Image
-              src={nordkollen2}
-              alt="Day Course - full-day training"
-              width={1200}
-              densities={[1, 2]}
-              class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700"
-              loading="lazy"
-            />
-          </div>
-          <div class="p-8">
-            <p class="text-xs tracking-[0.3em] uppercase text-sage/80 mb-3 font-light">Hike & movement</p>
-            <h3 class="font-display font-bold text-3xl text-forest mb-5 leading-tight">Day Course</h3>
-            <p class="text-forest font-light text-[1.08rem] leading-relaxed mb-8">
-              <span class="text-sage-light font-semibold">October 2026</span> A day hike to Nordkollen built around injury prevention, functional strength, increasing focus, stress release and building resilience.
-            </p>
-            <div class="pt-5 border-t border-cream">
-              <span class="inline-block text-xs tracking-[0.25em] uppercase font-light text-sage/80 group-hover:text-sage transition-colors duration-300">
-                More →
-              </span>
             </div>
           </div>
         </a>
