@@ -3,9 +3,9 @@ import { getImage } from 'astro:assets';
 import Layout from '../layouts/Layout.astro';
 import Nav from '../components/Nav.astro';
 import Footer from '../components/Footer.astro';
-import rondane2 from '../images/rondane2.webp';
+import moss from '../images/moss.webp';
 
-const heroImage = await getImage({ src: rondane2, width: 2000, format: 'webp' });
+const heroImage = await getImage({ src: moss, width: 2000, format: 'webp' });
 ---
 
 <Layout title="One-to-One - Rewild" description="Tailor-made activities for your individual needs. A personally guided program for maximum support in fulfilling your goals and intentions." preloadImage={heroImage.src}>
