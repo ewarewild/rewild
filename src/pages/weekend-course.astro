@@ -1,0 +1,264 @@
+---
+import { Image, getImage } from 'astro:assets';
+import Layout from '../layouts/Layout.astro';
+import Nav from '../components/Nav.astro';
+import Footer from '../components/Footer.astro';
+import nordkollen2 from '../images/nordkollen2.webp';
+import moss from '../images/moss.webp';
+
+const heroImage = await getImage({ src: nordkollen2, width: 2000, format: 'webp' });
+---
+
+<Layout title="Weekend Course - Rewild" description="A full day course up Nordkollen, built around five modules: injury prevention, core strength, focus and awareness, stress release & recovery, and building resilience." preloadImage={heroImage.src}>
+
+  <!-- Navigation -->
+  <Nav />
+
+  <!-- Hero image -->
+  <section class="relative mt-[60px] overflow-hidden" style="height: 65vh;">
+    <div
+      class="absolute inset-0 bg-cover bg-no-repeat"
+      style={`background-image: url('${heroImage.src}'); background-position: center center;`}
+    ></div>
+    <div class="absolute inset-0" style="background: linear-gradient(to top, rgba(20,25,14,0.5) 0%, transparent 60%);"></div>
+    <a href="/#events" class="absolute top-6 left-6 md:left-12 inline-flex items-center gap-2 text-xs tracking-[0.25em] uppercase font-light text-white/60 hover:text-white transition-colors duration-200">
+      <span>←</span><span>All events</span>
+    </a>
+  </section>
+
+  <!-- Title strip (bg-white) -->
+  <div class="bg-white py-10 px-6 text-center">
+    <p class="font-display font-normal italic text-forest text-[16pt] md:text-[20.5pt] lg:text-[25pt] leading-relaxed max-w-2xl mx-auto">A full day outdoors gives you time to properly arrive and let the nervous system fully unwind.</p>
+  </div>
+
+  <!-- Intro section (bg-cream, matching 'You were built for this') -->
+  <section class="bg-cream pt-16 md:pt-24 pb-12 md:pb-[72px]">
+    <div class="max-w-6xl mx-auto px-6 md:px-12">
+      <div class="max-w-[420px]">
+        <h2 class="font-display font-bold text-4xl md:text-5xl text-forest mb-10 leading-tight">Weekend Course</h2>
+        <div class="space-y-5 text-forest font-light leading-relaxed text-[1.08rem]">
+          <p>
+            Welcome to a day of practical training in nature that gives you tools to move safely, build core strength, and recover better - on the trail, and in everyday life.
+          </p>
+          <p>
+            We hike to <a href="https://www.google.com/maps?q=59.197427717465644,9.8402239222746" target="_blank" rel="noopener" class="underline hover:text-sage transition-colors duration-200">Nordkollen</a>, a mountain near Porsgrunn, to immerse ourselves in wild nature.
+          </p>
+          <p>
+            We alternate between physically challenging our bodies, and more relaxing practices, taking time to rest and unwind.
+          </p>
+          <p class="pt-[28px] md:pt-[36px]">
+            The course is built around five modules:
+          </p>
+          <div class="space-y-6 pt-[16px] md:pt-[24px]">
+            {[
+              'Injury prevention',
+              'Core strength',
+              'Focus and awareness',
+              'Stress release & recovery',
+              'Building resilience',
+            ].map(item => (
+              <div class="flex items-start gap-4">
+                <span class="mt-2 w-1.5 h-1.5 rounded-full bg-sage-light flex-shrink-0"></span>
+                <span class="text-[1.08rem] text-forest font-semibold leading-relaxed">{item}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- What you'll learn strip (bg-white, full width) -->
+  <div class="bg-white pt-12 md:pt-[72px] pb-12 md:pb-[72px]">
+    <div class="max-w-6xl mx-auto px-6 md:px-12">
+      <div class="max-w-[420px]">
+        <h3 class="font-display font-medium text-3xl md:text-4xl text-forest leading-tight mb-6">You'll learn:</h3>
+        <div class="space-y-6">
+          {[
+            'How to walk in terrain to reduce strain on your feet, ankles, knees, hips and back, and minimise the risk of falling and head injuries.',
+            'How to use terrain as a tool for training your core to protect your joints on the trail and to counteract the negative effects of sitting.',
+            'Simple breathing techniques to improve focus, balance your nervous system and increase energy during exercise.',
+            'How to connect with nature through your senses to lower stress, calm your nervous system, elevate your mood, increase focus and promote recovery.',
+            'How to use exposure to the elements as a tool that may build resilience to stress and support your body\'s natural defences.',
+          ].map(item => (
+            <div class="flex items-start gap-4">
+              <span class="mt-2 w-1.5 h-1.5 rounded-full bg-sage-light flex-shrink-0"></span>
+              <span class="text-[1.08rem] text-forest font-light leading-relaxed">{item}</span>
+            </div>
+          ))}
+        </div>
+        <p class="text-forest font-light text-[1.08rem] leading-relaxed pt-[28px] md:pt-[36px]">
+          On top of the mountain, we take time to rest, chat, enjoy a packed lunch and a tea.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <section class="bg-cream pt-12 md:pt-[72px] pb-12 md:pb-[72px]">
+    <div class="max-w-6xl mx-auto px-6 md:px-12">
+      <div class="max-w-[420px]">
+        <div class="space-y-5 text-forest font-light leading-relaxed text-[1.08rem]">
+          <h3 class="font-display font-medium text-3xl md:text-4xl text-forest leading-tight">Who is it for?</h3>
+          <div class="space-y-6">
+            {[
+              'People who want to train smarter on the trail, instead of just walking it',
+              'Anyone who enjoys being outdoors and wants to protect their joints in terrain',
+              'People looking to boost their energy levels for everyday tasks',
+              'Those wearing barefoot shoes and still experiencing foot pain',
+              'Anyone who deals with back pain, joint pain, or posture strain from hours of sitting',
+              'People curious about using breath to focus, relieve stress and increase energy during exercise',
+            ].map(item => (
+              <div class="flex items-start gap-4">
+                <span class="mt-2 w-1.5 h-1.5 rounded-full bg-sage-light flex-shrink-0"></span>
+                <span class="text-[1.08rem] text-forest font-light leading-relaxed">{item}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Practical info (bg-white) -->
+  <section class="bg-white pt-12 md:pt-[72px] pb-12 md:pb-[72px]">
+    <div class="max-w-6xl mx-auto px-6 md:px-12">
+      <div class="max-w-[420px]">
+        <h3 class="font-display font-medium text-3xl md:text-4xl text-forest mb-10 leading-tight">Technical info:</h3>
+        <div class="space-y-5 text-forest font-light leading-relaxed text-[1.08rem]">
+          <p>
+            We meet up at a parking space in <a href="https://www.google.com/maps?q=59.18604216274942,9.803863873385133" target="_blank" rel="noopener" class="underline hover:text-sage transition-colors duration-200">Oklungen</a> and walk from there on a gravel road, then on a forest trail.
+          </p>
+          <p>
+            Nordkollen's elevation is 353m - total distance both ways is 7km, about 2 hours 40 minutes of walking, mostly easy but can be challenging on the main climb.
+          </p>
+          <p>
+            Including practice and breaks, total time is up to 5 hours.
+          </p>
+          <p>
+            No previous experience is needed, but you should be comfortable maintaining a steady pace for the duration of the hike.
+          </p>
+          <p>
+            Please get in touch if you have any questions.
+          </p>
+          <p>
+            What to bring: Appropriate clothes for the weather, comfortable shoes with a grip, seating mat, minimum 1 litre of water, a packed lunch, a small sweet snack, pen and notepad, and a cup for the tea.
+          </p>
+          <p>
+            Full practical details will be sent once you've booked your place.
+          </p>
+        </div>
+        <p class="text-forest/60 text-[1.08rem] font-light leading-relaxed mt-12">
+          Please note: We hike in all weather. However, if hazardous conditions arise, the hike will be cancelled. You will then receive a full refund.
+        </p>
+        <p class="text-forest/60 text-[1.08rem] font-light leading-relaxed mt-4">
+          To keep the group calm and focused, dogs aren't able to join this course.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Details (bg-cream) -->
+  <section class="bg-cream pt-12 md:pt-[72px] pb-14 md:pb-20">
+    <div class="max-w-6xl mx-auto px-6 md:px-12">
+      <div class="grid md:grid-cols-[5fr_7fr] gap-16 md:gap-24">
+        <div>
+          <!-- Details -->
+          <div class="space-y-4">
+            <div class="flex gap-6">
+              <span class="text-xs tracking-[0.2em] uppercase text-sage/80 font-light w-28 flex-shrink-0">Duration</span>
+              <span class="text-base text-forest font-light">Approximately 5 hours</span>
+            </div>
+            <div class="flex gap-6">
+              <span class="text-xs tracking-[0.2em] uppercase text-sage/80 font-light w-28 flex-shrink-0">Meet up</span>
+              <span class="text-base text-forest font-light">Sunday 25 October, 10:00</span>
+            </div>
+            <div class="flex gap-6">
+              <span class="text-xs tracking-[0.2em] uppercase text-sage/80 font-light w-28 flex-shrink-0">Location</span>
+              <div class="text-base text-forest font-light space-y-1">
+                <p><a href="https://www.google.com/maps?q=59.18604216274942,9.803863873385133" target="_blank" rel="noopener" class="underline hover:text-sage transition-colors duration-200">Oklungen</a></p>
+              </div>
+            </div>
+            <div class="flex gap-6">
+              <span class="text-xs tracking-[0.2em] uppercase text-sage/80 font-light w-28 flex-shrink-0">Price</span>
+              <span class="text-base text-forest font-light">1500 NOK</span>
+            </div>
+
+            <div class="pt-12">
+              <a
+                href="/signup"
+                class="inline-block px-10 py-4 bg-forest text-white text-xs tracking-[0.25em] uppercase font-light hover:bg-sage transition-colors duration-300"
+              >
+                Sign up
+              </a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- More events -->
+  <section class="bg-white pt-10 pb-24 md:pt-14 md:pb-36">
+    <div class="max-w-6xl mx-auto px-6 md:px-12">
+      <p class="text-xs tracking-[0.3em] uppercase text-sage/80 mb-10 font-light">More events</p>
+      <div class="grid md:grid-cols-2 gap-16 md:gap-8">
+
+        <!-- Rewild Trip -->
+        <a href="/day-course" class="bg-cream group overflow-hidden block cursor-pointer">
+          <div class="overflow-hidden h-72">
+            <Image
+              src={nordkollen2}
+              alt="Day Course - full-day training"
+              width={1200}
+              densities={[1, 2]}
+              class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700"
+              loading="lazy"
+            />
+          </div>
+          <div class="p-8">
+            <p class="text-xs tracking-[0.3em] uppercase text-sage/80 mb-3 font-light">Hike & movement</p>
+            <h3 class="font-display font-bold text-3xl text-forest mb-5 leading-tight">Day Course</h3>
+            <p class="text-forest font-light text-[1.08rem] leading-relaxed mb-8">
+              <span class="text-sage-light font-semibold">October 2026</span> A day hike to Nordkollen built around injury prevention, functional strength, increasing focus, stress release and building resilience.
+            </p>
+            <div class="pt-5 border-t border-white">
+              <span class="inline-block text-xs tracking-[0.25em] uppercase font-light text-sage/80 group-hover:text-sage transition-colors duration-300">
+                More →
+              </span>
+            </div>
+          </div>
+        </a>
+
+        <!-- One-to-One -->
+        <a href="/one-to-one" class="bg-cream group overflow-hidden block cursor-pointer">
+          <div class="overflow-hidden h-72">
+            <Image
+              src={moss}
+              alt="One-to-One - individual program"
+              width={1200}
+              densities={[1, 2]}
+              class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700"
+              loading="lazy"
+            />
+          </div>
+          <div class="p-8">
+            <p class="text-xs tracking-[0.3em] uppercase text-sage/80 mb-3 font-light">Individual program</p>
+            <h3 class="font-display font-bold text-3xl text-forest mb-5 leading-tight">One-to-One</h3>
+            <p class="text-forest font-light text-[1.08rem] leading-relaxed mb-8">
+              Tailor-made activities for your individual needs. A personally guided program for maximum support in fulfilling your goals and intentions.
+            </p>
+            <div class="pt-5 border-t border-white">
+              <span class="inline-block text-xs tracking-[0.25em] uppercase font-light text-sage/80 group-hover:text-sage transition-colors duration-300">More →</span>
+            </div>
+          </div>
+        </a>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <Footer />
+
+</Layout>
