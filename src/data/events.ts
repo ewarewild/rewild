@@ -60,7 +60,7 @@ export const sessions: Session[] = [
     meetingPoint: 'Parkering for Svarteberget og Nordkollen', mapUrl: 'https://www.google.com/maps?q=59.18604216274942,9.803863873385133',
     intro: [
       "Welcome to an evening hike designed to help you release stress and tension, increase energy flow and promote better sleep. We'll walk at a steady, moderate pace with occasional stops along the way.",
-      "It's a medium-difficulty trail, 4km in total. A beautiful, quiet mountain with an impressive view, without the city lights. Fairly easy to get to, with 1.26km on a gravel road before the forest path begins.",
+      "It's a medium-difficulty trail to Skolapparåsen (313m), 4km in total. A beautiful, quiet mountain with an impressive view, without the city lights. Fairly easy to get to, with 1.26km on a gravel road before the forest path begins.",
     ],
   },
   { event: 'evening-reset', date: '2026-11-10', time: '17:00', place: 'Skien', signup: 'Evening Reset Skien' },
