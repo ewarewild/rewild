@@ -59,7 +59,7 @@ export const sessions: Session[] = [
     event: 'evening-reset', date: '2026-11-03', time: '17:00', place: 'Porsgrunn', signup: 'Evening Reset Porsgrunn',
     intro: [
       "Welcome to an evening hike to Skolapparåsen (313m). The trip is designed to help you release stress and tension, increase energy flow and improve sleep. We'll walk at a steady, moderate pace with occasional stops along the way.",
-      "It's a medium-difficulty trail, 4km in total. A beautiful, quiet mountain with an impressive view, away from the lights of the city. Fairly easy to get to, with 1.26km on a gravel road before the forest path begins.",
+      "It's a medium-difficulty trail, 4km in total. A beautiful, quiet mountain with an impressive view, without the city lights. Fairly easy to get to, with 1.26km on a gravel road before the forest path begins.",
     ],
   },
   { event: 'evening-reset', date: '2026-11-10', time: '17:00', place: 'Skien', signup: 'Evening Reset Skien' },
