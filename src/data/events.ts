@@ -23,7 +23,7 @@ export const events: Record<EventId, EventInfo> = {
     label: 'Hike & movement',
     image: skolapparn,
     alt: 'Evening Reset - forest hike',
-    description: 'A trip that helps you shake off the day and reconnect with your body. Focused on stress release, as well as strength and stability for joint-friendly walking.',
+    description: 'A trip that helps you shake off the day and reconnect with your body. Designed for stress release, stability and balance. Joint-friendly.',
   },
   'rewild-course': {
     name: 'Rewild Course',
