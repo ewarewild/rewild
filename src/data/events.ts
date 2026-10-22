@@ -57,7 +57,7 @@ export type Session = {
 export const sessions: Session[] = [
   {
     event: 'evening-reset', date: '2026-11-03', time: '17:00', place: 'Porsgrunn', signup: 'Evening Reset Porsgrunn',
-    intro: "Welcome to an evening hike to Skolapparåsen. The trip is designed to help you release stress and tension, increase energy flow and improve sleep. We'll walk at a steady, moderate pace with occasional stops.",
+    intro: "Welcome to an evening hike to Skolapparåsen (313). The trip is designed to help you release stress and tension, increase energy flow and improve sleep. We'll walk at a steady, moderate pace with occasional stops.",
   },
   { event: 'evening-reset', date: '2026-11-10', time: '17:00', place: 'Skien', signup: 'Evening Reset Skien' },
   { event: 'evening-reset', date: '2026-11-17', time: '17:00', place: 'Larvik', signup: 'Evening Reset Larvik' },
