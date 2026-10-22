@@ -67,8 +67,9 @@ const chip = 'cal-filter font-sans px-4 py-2 border border-forest/20 text-xs tra
                 <a href={e.href} class="block">
                   <h3 class="font-display font-bold text-3xl text-forest mb-5 leading-tight hover:opacity-60 transition-opacity duration-200">{e.name} - {s.place}</h3>
                 </a>
+                <a href={`/signup?event=${encodeURIComponent(s.signup)}`} class="self-start mb-5 px-4 py-2 border border-forest/20 text-xs tracking-[0.2em] uppercase font-light text-forest hover:border-forest transition-colors duration-200">{weekdays[day.getDay()]} {day.getDate()} {months[day.getMonth()]}</a>
                 <p class="text-forest font-light text-[1.08rem] leading-relaxed mb-8 flex-1">
-                  <span class="text-sage-light font-semibold">{weekdays[day.getDay()]} {day.getDate()} {months[day.getMonth()]}, {s.time}</span> {e.description}
+                  {e.description}
                 </p>
                 <div class="pt-5 border-t border-cream flex justify-between">
                   <a href={e.href} class="text-xs tracking-[0.25em] uppercase font-light text-sage/80 hover:text-sage transition-colors duration-300">More →</a>
