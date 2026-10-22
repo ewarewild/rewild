@@ -18,17 +18,17 @@
 }
 
 @font-face {
-  font-family: "Inter Wordmark";
+  font-family: "Montserrat Wordmark";
   font-style: italic;
   font-weight: 100 900;
   font-display: block;
-  src: url("/fonts/inter-italic-latin.woff2") format("woff2");
+  src: url("/fonts/montserrat-italic-latin.woff2") format("woff2");
 }
 
 @theme {
   --font-display: "Schibsted Grotesk", "Helvetica Neue", Arial, sans-serif;
   --font-sans: "Schibsted Grotesk", "Helvetica Neue", Arial, sans-serif;
-  --font-wordmark: "Inter Wordmark", "Helvetica Neue", Arial, sans-serif;
+  --font-wordmark: "Montserrat Wordmark", "Helvetica Neue", Arial, sans-serif;
   --font-button: "Sanchez", Georgia, serif;
 
   --color-forest: #111111;
