@@ -1,11 +1,11 @@
-// Single source for calendar dates. Each session is one card in the calendar.
-// Past dates are hidden automatically in the browser, so old ones can stay here.
+// Single source for trips. Each session is one card in the calendar and gets its own
+// page at /<event>/<place>-<day>-<month>. Past dates are hidden from the calendar.
 import type { ImageMetadata } from 'astro';
 import skolapparn from '../images/skolapparn.webp';
 import nordkollen2 from '../images/nordkollen2.webp';
 import rondane2 from '../images/rondane2.webp';
 
-export type EventId = 'evening-reset' | 'rewild-course' | 'deep-dive';
+export type EventId = 'evening-reset' | 'rewild-course' | 'rewild-immersion';
 
 type EventInfo = {
   name: string;
@@ -27,15 +27,15 @@ export const events: Record<EventId, EventInfo> = {
   },
   'rewild-course': {
     name: 'Rewild Course',
-    href: '/day-course',
+    href: '/rewild-course',
     label: 'Hike & movement',
     image: nordkollen2,
     alt: 'Rewild Course - full-day training',
     description: 'A day hike to Nordkollen built around injury prevention, functional strength, increasing focus, stress release and building resilience.',
   },
-  'deep-dive': {
+  'rewild-immersion': {
     name: 'Rewild Immersion',
-    href: '/weekend-course',
+    href: '/rewild-immersion',
     label: 'Hike & movement',
     image: rondane2,
     alt: 'Rewild Immersion - training in nature',
@@ -49,24 +49,37 @@ export type Session = {
   time: string;
   place: string;
   signup: string; // value of the matching option in the signup form
+  meetingPoint?: string; // shown as "To be announced" until set
+  mapUrl?: string;
 };
 
-const eveningReset = (place: string, days: number[]): Session[] =>
-  days.map(day => ({
-    event: 'evening-reset',
-    date: `2026-11-${String(day).padStart(2, '0')}`,
-    time: '17:00',
-    place,
-    signup: `Evening Reset ${place}`,
-  }));
-
 export const sessions: Session[] = [
-  ...eveningReset('Porsgrunn', [3]),
-  ...eveningReset('Skien', [10]),
-  ...eveningReset('Larvik', [17]),
-  ...eveningReset('Sandefjord', [24]),
+  { event: 'evening-reset', date: '2026-11-03', time: '17:00', place: 'Porsgrunn', signup: 'Evening Reset Porsgrunn' },
+  { event: 'evening-reset', date: '2026-11-10', time: '17:00', place: 'Skien', signup: 'Evening Reset Skien' },
+  { event: 'evening-reset', date: '2026-11-17', time: '17:00', place: 'Larvik', signup: 'Evening Reset Larvik' },
+  { event: 'evening-reset', date: '2026-11-24', time: '17:00', place: 'Sandefjord', signup: 'Evening Reset Sandefjord' },
   { event: 'rewild-course', date: '2026-11-06', time: '10:00', place: 'Porsgrunn', signup: 'Rewild Course Porsgrunn' },
   { event: 'rewild-course', date: '2026-11-13', time: '10:00', place: 'Larvik', signup: 'Rewild Course Larvik' },
   { event: 'rewild-course', date: '2026-11-27', time: '10:00', place: 'Sandefjord', signup: 'Rewild Course Sandefjord' },
-  { event: 'deep-dive', date: '2026-11-15', time: '10:00', place: 'Nordkollen', signup: 'Rewild Immersion' },
+  {
+    event: 'rewild-immersion', date: '2026-11-15', time: '10:00', place: 'Nordkollen', signup: 'Rewild Immersion',
+    meetingPoint: 'Oklungen', mapUrl: 'https://www.google.com/maps?q=59.18604216274942,9.803863873385133',
+  },
 ].sort((a, b) => (a.date + a.time).localeCompare(b.date + b.time));
+
+const weekdays = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+const months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+
+const day = (s: Session) => new Date(`${s.date}T12:00:00`);
+
+export const tripSlug = (s: Session) =>
+  `${s.place}-${day(s).getDate()}-${months[day(s).getMonth()]}`.toLowerCase();
+
+export const tripUrl = (s: Session) => `${events[s.event].href}/${tripSlug(s)}`;
+
+// e.g. "Tuesday 3 November"
+export const longDate = (s: Session) =>
+  `${weekdays[day(s).getDay()]} ${day(s).getDate()} ${months[day(s).getMonth()]}`;
+
+export const tripPaths = (event: EventId) =>
+  sessions.filter(s => s.event === event).map(session => ({ params: { trip: tripSlug(session) }, props: { session } }));

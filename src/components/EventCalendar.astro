@@ -1,6 +1,6 @@
 ---
 import { Image } from 'astro:assets';
-import { events, sessions } from '../data/events';
+import { events, sessions, tripUrl } from '../data/events';
 
 interface Props {
   limit?: number;
@@ -49,7 +49,7 @@ const chip = 'cal-filter font-sans px-4 py-2 border border-forest/20 text-xs tra
           const day = new Date(`${s.date}T12:00:00`);
           return (
             <div class="cal-row bg-white group overflow-hidden flex flex-col" data-date={s.date} data-event={s.event} data-place={s.place}>
-              <a href={e.href} class="block">
+              <a href={tripUrl(s)} class="block">
                 <div class="overflow-hidden h-72">
                   <Image
                     src={e.image}
@@ -63,15 +63,15 @@ const chip = 'cal-filter font-sans px-4 py-2 border border-forest/20 text-xs tra
               </a>
               <div class="p-8 flex flex-col flex-1">
                 <p class="text-xs tracking-[0.3em] uppercase text-sage/80 mb-3 font-light">{e.label}</p>
-                <a href={e.href} class="block">
+                <a href={tripUrl(s)} class="block">
                   <h3 class="font-display font-bold text-3xl text-forest mb-5 leading-tight hover:opacity-60 transition-opacity duration-200">{e.name} - {s.place}</h3>
                 </a>
-                <a href={e.href} class="self-start mb-5 px-4 py-2 border border-forest/20 text-xs tracking-[0.2em] uppercase font-light text-forest hover:border-forest transition-colors duration-200">{day.getDate()} {months[day.getMonth()]}</a>
+                <a href={tripUrl(s)} class="self-start mb-5 px-4 py-2 border border-forest/20 text-xs tracking-[0.2em] uppercase font-light text-forest hover:border-forest transition-colors duration-200">{day.getDate()} {months[day.getMonth()]}</a>
                 <p class="text-forest font-light text-[1.08rem] leading-relaxed mb-8 flex-1">
                   {e.description}
                 </p>
                 <div class="pt-5 border-t border-cream flex justify-between">
-                  <a href={e.href} class="text-xs tracking-[0.25em] uppercase font-light text-sage/80 hover:text-sage transition-colors duration-300">More →</a>
+                  <a href={tripUrl(s)} class="text-xs tracking-[0.25em] uppercase font-light text-sage/80 hover:text-sage transition-colors duration-300">More →</a>
                 </div>
               </div>
             </div>

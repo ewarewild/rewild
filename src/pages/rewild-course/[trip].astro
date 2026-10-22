@@ -1,17 +1,26 @@
 ---
-import { Image, getImage } from 'astro:assets';
-import Layout from '../layouts/Layout.astro';
-import Nav from '../components/Nav.astro';
-import Footer from '../components/Footer.astro';
-import nordkollen2 from '../images/nordkollen2.webp';
-import skolapparn from '../images/skolapparn.webp';
-import rondane2 from '../images/rondane2.webp';
-import moss from '../images/moss.webp';
+import { getImage } from 'astro:assets';
+import Layout from '../../layouts/Layout.astro';
+import Nav from '../../components/Nav.astro';
+import Footer from '../../components/Footer.astro';
+import nordkollen2 from '../../images/nordkollen2.webp';
+import { events, tripPaths, longDate, type Session } from '../../data/events';
 
-const heroImage = await getImage({ src: rondane2, width: 2000, format: 'webp' });
+export function getStaticPaths() {
+  return tripPaths('rewild-course');
+}
+
+interface Props {
+  session: Session;
+}
+
+const { session } = Astro.props;
+const name = events['rewild-course'].name;
+
+const heroImage = await getImage({ src: nordkollen2, width: 2000, format: 'webp' });
 ---
 
-<Layout title="Rewild Immersion - Rewild" description="A full day course up Nordkollen, built around five modules: injury prevention, core strength, focus and awareness, stress release & recovery, and building resilience." preloadImage={heroImage.src}>
+<Layout title={`${name} - ${session.place} - Rewild`} description="A full day course up Nordkollen, built around five modules: injury prevention, core strength, focus and awareness, stress release & recovery, and building resilience." preloadImage={heroImage.src}>
 
   <!-- Navigation -->
   <Nav />
@@ -37,7 +46,7 @@ const heroImage = await getImage({ src: rondane2, width: 2000, format: 'webp' })
   <section class="bg-cream pt-16 md:pt-24 pb-12 md:pb-[72px]">
     <div class="max-w-6xl mx-auto px-6 md:px-12">
       <div class="max-w-[420px]">
-        <h2 class="font-display font-bold text-4xl md:text-5xl text-forest mb-10 leading-tight">Rewild Immersion</h2>
+        <h2 class="font-display font-bold text-4xl md:text-5xl text-forest mb-10 leading-tight">{name} - {session.place}</h2>
         <div class="space-y-5 text-forest font-light leading-relaxed text-[1.08rem]">
           <p>
             Welcome to a day of practical training in nature that gives you tools to move safely, build core strength, and recover better - on the trail, and in everyday life.
@@ -168,26 +177,32 @@ const heroImage = await getImage({ src: rondane2, width: 2000, format: 'webp' })
           <div class="space-y-4">
             <div class="flex gap-6">
               <span class="text-xs tracking-[0.2em] uppercase text-sage/80 font-light w-28 flex-shrink-0">Duration</span>
-              <span class="text-base text-forest font-light">Approximately 5 hours</span>
+              <span class="text-base text-forest font-light">2 hours</span>
+            </div>
+            <div class="flex gap-6">
+              <span class="text-xs tracking-[0.2em] uppercase text-sage/80 font-light w-28 flex-shrink-0">Date</span>
+              <span class="text-base text-forest font-light">{longDate(session)}</span>
             </div>
             <div class="flex gap-6">
               <span class="text-xs tracking-[0.2em] uppercase text-sage/80 font-light w-28 flex-shrink-0">Meet up</span>
-              <span class="text-base text-forest font-light">Sunday 15 November, 10:00</span>
+              <span class="text-base text-forest font-light">{session.time}</span>
             </div>
             <div class="flex gap-6">
-              <span class="text-xs tracking-[0.2em] uppercase text-sage/80 font-light w-28 flex-shrink-0">Location</span>
-              <div class="text-base text-forest font-light space-y-1">
-                <p><a href="https://www.google.com/maps?q=59.18604216274942,9.803863873385133" target="_blank" rel="noopener" class="underline hover:text-sage transition-colors duration-200">Oklungen</a></p>
-              </div>
+              <span class="text-xs tracking-[0.2em] uppercase text-sage/80 font-light w-28 flex-shrink-0">Meeting point</span>
+              <span class="text-base text-forest font-light">
+                {session.mapUrl
+                  ? <a href={session.mapUrl} target="_blank" rel="noopener" class="underline hover:text-sage transition-colors duration-200">{session.meetingPoint}</a>
+                  : session.meetingPoint ?? 'To be announced'}
+              </span>
             </div>
             <div class="flex gap-6">
               <span class="text-xs tracking-[0.2em] uppercase text-sage/80 font-light w-28 flex-shrink-0">Price</span>
-              <span class="text-base text-forest font-light">500 NOK</span>
+              <span class="text-base text-forest font-light">300 NOK</span>
             </div>
 
             <div class="pt-12">
               <a
-                href="/signup"
+                href={`/signup?event=${encodeURIComponent(session.signup)}`}
                 class="inline-block px-10 py-4 bg-forest text-white text-xs tracking-[0.25em] uppercase font-light hover:bg-sage transition-colors duration-300"
               >
                 Sign up
@@ -196,92 +211,6 @@ const heroImage = await getImage({ src: rondane2, width: 2000, format: 'webp' })
           </div>
 
         </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- More events -->
-  <section class="bg-white pt-10 pb-24 md:pt-14 md:pb-36">
-    <div class="max-w-6xl mx-auto px-6 md:px-12">
-      <p class="text-xs tracking-[0.3em] uppercase text-sage/80 mb-10 font-light">More events</p>
-      <div class="grid md:grid-cols-3 gap-16 md:gap-8">
-
-        <!-- Evening Reset -->
-        <a href="/evening-reset" class="bg-cream group overflow-hidden block cursor-pointer">
-          <div class="overflow-hidden h-72">
-            <Image
-              src={skolapparn}
-              alt="Evening Reset - forest hike"
-              width={1200}
-              densities={[1, 2]}
-              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
-              loading="lazy"
-            />
-          </div>
-          <div class="p-8">
-            <p class="text-xs tracking-[0.3em] uppercase text-sage/80 mb-3 font-light">Hike & movement</p>
-            <h3 class="font-display font-bold text-3xl text-forest mb-5 leading-tight">Evening Reset</h3>
-            <p class="text-forest font-light text-[1.08rem] leading-relaxed mb-8">
-              <span class="text-sage-light font-semibold">November 2026</span> A trip that helps you shake off the day and reconnect with your body. Focused on stress release, as well as strength and stability for joint-friendly walking.
-            </p>
-            <div class="pt-5 border-t border-white">
-              <span class="inline-block text-xs tracking-[0.25em] uppercase font-light text-sage/80 group-hover:text-sage transition-colors duration-300">
-                More →
-              </span>
-            </div>
-          </div>
-        </a>
-
-        <!-- Rewild Trip -->
-        <a href="/day-course" class="bg-cream group overflow-hidden block cursor-pointer">
-          <div class="overflow-hidden h-72">
-            <Image
-              src={nordkollen2}
-              alt="Rewild Course - full-day training"
-              width={1200}
-              densities={[1, 2]}
-              class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700"
-              loading="lazy"
-            />
-          </div>
-          <div class="p-8">
-            <p class="text-xs tracking-[0.3em] uppercase text-sage/80 mb-3 font-light">Hike & movement</p>
-            <h3 class="font-display font-bold text-3xl text-forest mb-5 leading-tight">Rewild Course</h3>
-            <p class="text-forest font-light text-[1.08rem] leading-relaxed mb-8">
-              <span class="text-sage-light font-semibold">November 2026</span> A day hike to Nordkollen built around injury prevention, functional strength, increasing focus, stress release and building resilience.
-            </p>
-            <div class="pt-5 border-t border-white">
-              <span class="inline-block text-xs tracking-[0.25em] uppercase font-light text-sage/80 group-hover:text-sage transition-colors duration-300">
-                More →
-              </span>
-            </div>
-          </div>
-        </a>
-
-        <!-- One-to-One -->
-        <a href="/one-to-one" class="bg-cream group overflow-hidden block cursor-pointer">
-          <div class="overflow-hidden h-72">
-            <Image
-              src={moss}
-              alt="One-to-One - individual program"
-              width={1200}
-              densities={[1, 2]}
-              class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700"
-              loading="lazy"
-            />
-          </div>
-          <div class="p-8">
-            <p class="text-xs tracking-[0.3em] uppercase text-sage/80 mb-3 font-light">Individual program</p>
-            <h3 class="font-display font-bold text-3xl text-forest mb-5 leading-tight">One-to-One</h3>
-            <p class="text-forest font-light text-[1.08rem] leading-relaxed mb-8">
-              Tailor-made activities for your individual needs. A personally guided program for maximum support in fulfilling your goals and intentions.
-            </p>
-            <div class="pt-5 border-t border-white">
-              <span class="inline-block text-xs tracking-[0.25em] uppercase font-light text-sage/80 group-hover:text-sage transition-colors duration-300">More →</span>
-            </div>
-          </div>
-        </a>
-
       </div>
     </div>
   </section>
