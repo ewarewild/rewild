@@ -2,6 +2,7 @@
 import { Image, getImage } from 'astro:assets';
 import Layout from '../layouts/Layout.astro';
 import Footer from '../components/Footer.astro';
+import EventCalendar from '../components/EventCalendar.astro';
 import heroNordkollen from '../images/hero-nordkollen.webp';
 import moss from '../images/moss.webp';
 import nordkollen2 from '../images/nordkollen2.webp';
@@ -232,6 +233,13 @@ const heroImage = await getImage({ src: heroNordkollen, width: 2000, format: 'we
           </div>
         </a>
 
+      </div>
+
+      <!-- Upcoming dates -->
+      <div class="mt-24 md:mt-32 max-w-3xl">
+        <p class="text-xs tracking-[0.3em] uppercase text-sage/80 mb-10 font-light">Upcoming</p>
+        <EventCalendar limit={5} />
+        <a href="/calendar" class="inline-block text-xs tracking-[0.25em] uppercase font-light text-sage/80 hover:text-sage transition-colors duration-300">Full calendar →</a>
       </div>
     </div>
   </section>

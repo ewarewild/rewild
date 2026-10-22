@@ -165,6 +165,13 @@ import Footer from '../components/Footer.astro';
     emergencyContactInput.required = !isDeepRest;
   });
 
+  // Pre-select the event when coming from a calendar "Sign up" link
+  const preselect = new URLSearchParams(location.search).get('event');
+  if (preselect && [...eventSelect.options].some(o => o.value === preselect)) {
+    eventSelect.value = preselect;
+    eventSelect.dispatchEvent(new Event('change'));
+  }
+
   const form = document.getElementById('signup-form') as HTMLFormElement;
   const submitButton = document.getElementById('signup-submit') as HTMLButtonElement;
   const statusEl = document.getElementById('signup-status') as HTMLElement;

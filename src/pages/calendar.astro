@@ -1,0 +1,26 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Nav from '../components/Nav.astro';
+import Footer from '../components/Footer.astro';
+import EventCalendar from '../components/EventCalendar.astro';
+---
+
+<Layout title="Calendar - Rewild" description="Upcoming Rewild hikes and courses in Skien, Porsgrunn, Larvik and Sandefjord.">
+
+  <!-- Navigation -->
+  <Nav />
+
+  <!-- Calendar -->
+  <section class="bg-cream min-h-screen pt-32 pb-40 md:pt-44 md:pb-56">
+    <div class="max-w-6xl mx-auto px-6 md:px-12">
+      <div class="max-w-3xl">
+        <h1 class="font-display font-bold text-4xl md:text-5xl text-forest mb-14 leading-tight">Calendar</h1>
+        <EventCalendar filters />
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <Footer />
+
+</Layout>
