@@ -3,7 +3,7 @@
 import type { ImageMetadata } from 'astro';
 import skolapparn from '../images/skolapparn.webp';
 import nordkollen2 from '../images/nordkollen2.webp';
-import rondane2 from '../images/rondane2.webp';
+import heroNordkollen from '../images/hero-nordkollen.webp';
 
 export type EventId = 'evening-reset' | 'rewild-course' | 'deep-dive';
 
@@ -37,7 +37,7 @@ export const events: Record<EventId, EventInfo> = {
     name: 'Rewild Immersion',
     href: '/weekend-course',
     label: 'Hike & movement',
-    image: rondane2,
+    image: heroNordkollen,
     alt: 'Rewild Immersion - training in nature',
     description: 'A day hike to Nordkollen built around injury prevention, functional strength, increasing focus, stress release and building resilience.',
   },
