@@ -51,21 +51,6 @@ const heroImage = await getImage({ src: skolapparn, width: 2000, format: 'webp' 
           <p>
             Welcome to an exciting trip in local nature, designed to help you release stress from the day, improve energy flow and promote better sleep while taking care of your joints as you walk.
           </p>
-          <p class="pt-[20px] md:pt-[28px]">
-            This trip is designed around:
-          </p>
-          <div class="space-y-6 pt-[16px] md:pt-[24px]">
-            {[
-              'Stress release',
-              'Injury prevention',
-              'Improved sleep',
-            ].map(label => (
-              <div class="flex items-start gap-4">
-                <span class="mt-2 w-1.5 h-1.5 rounded-full bg-sage-light flex-shrink-0"></span>
-                <span class="text-[1.08rem] text-forest font-semibold leading-relaxed">{label}</span>
-              </div>
-            ))}
-          </div>
         </div>
       </div>
     </div>
