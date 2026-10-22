@@ -17,10 +17,18 @@
   src: url("/fonts/nunito-italic-latin.woff2") format("woff2");
 }
 
+@font-face {
+  font-family: "Schibsted Grotesk Wordmark";
+  font-style: italic;
+  font-weight: 400 900;
+  font-display: block;
+  src: url("/fonts/schibsted-grotesk-italic-latin.woff2") format("woff2");
+}
+
 @theme {
   --font-display: "Schibsted Grotesk", "Helvetica Neue", Arial, sans-serif;
   --font-sans: "Schibsted Grotesk", "Helvetica Neue", Arial, sans-serif;
-  --font-wordmark: "Nunito", system-ui, sans-serif;
+  --font-wordmark: "Schibsted Grotesk Wordmark", "Helvetica Neue", Arial, sans-serif;
   --font-button: "Sanchez", Georgia, serif;
 
   --color-forest: #111111;
