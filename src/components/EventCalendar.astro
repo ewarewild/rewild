@@ -1,5 +1,4 @@
 ---
-import { Image } from 'astro:assets';
 import { events, sessions } from '../data/events';
 
 interface Props {
@@ -9,7 +8,7 @@ interface Props {
 
 const { limit = 0, filters = false } = Astro.props;
 
-const weekdays = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+const weekdays = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
 const months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
 
 const groups: { key: string; label: string; items: typeof sessions }[] = [];
@@ -42,39 +41,23 @@ const chip = 'cal-filter font-sans px-4 py-2 border border-forest/20 text-xs tra
   )}
 
   {groups.map(g => (
-    <div class="cal-month mb-20">
-      <p class="text-xs tracking-[0.3em] uppercase text-sage/80 mb-10 font-light">{g.label}</p>
-      <div class="grid md:grid-cols-3 gap-16 md:gap-8">
+    <div class="cal-month mb-12">
+      <p class="text-xs tracking-[0.3em] uppercase text-sage/80 mb-4 font-light">{g.label}</p>
+      <div class="border-t border-forest/10">
         {g.items.map(s => {
           const e = events[s.event];
           const day = new Date(`${s.date}T12:00:00`);
           return (
-            <div class="cal-row bg-white group overflow-hidden flex flex-col" data-date={s.date} data-event={s.event} data-place={s.place}>
-              <a href={e.href} class="block">
-                <div class="overflow-hidden h-72">
-                  <Image
-                    src={e.image}
-                    alt={e.alt}
-                    width={1200}
-                    densities={[1, 2]}
-                    class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700"
-                    loading="lazy"
-                  />
-                </div>
-              </a>
-              <div class="p-8 flex flex-col flex-1">
-                <p class="text-xs tracking-[0.3em] uppercase text-sage/80 mb-3 font-light">{e.label}</p>
-                <a href={e.href} class="block">
-                  <h3 class="font-display font-bold text-3xl text-forest mb-5 leading-tight hover:opacity-60 transition-opacity duration-200">{e.name} - {s.place}</h3>
-                </a>
-                <p class="text-forest font-light text-[1.08rem] leading-relaxed mb-8 flex-1">
-                  <span class="text-sage-light font-semibold">{weekdays[day.getDay()]} {day.getDate()} {months[day.getMonth()]}, {s.time}</span> {e.description}
-                </p>
-                <div class="pt-5 border-t border-cream flex justify-between">
-                  <a href={e.href} class="text-xs tracking-[0.25em] uppercase font-light text-sage/80 hover:text-sage transition-colors duration-300">More →</a>
-                  <a href={`/signup?event=${encodeURIComponent(s.signup)}`} class="text-xs tracking-[0.25em] uppercase font-light text-sage/80 hover:text-sage transition-colors duration-300">Sign up →</a>
-                </div>
+            <div class="cal-row flex items-center gap-5 md:gap-8 py-5 border-b border-forest/10" data-date={s.date} data-event={s.event} data-place={s.place}>
+              <div class="w-12 flex-shrink-0 text-center">
+                <p class="text-xs tracking-[0.2em] uppercase text-sage/80 font-light">{weekdays[day.getDay()]}</p>
+                <p class="font-display font-bold text-3xl text-forest leading-none mt-1">{day.getDate()}</p>
               </div>
+              <div class="flex-1 min-w-0">
+                <a href={e.href} class="font-display font-bold text-xl md:text-2xl text-forest leading-tight hover:opacity-60 transition-opacity duration-200">{e.name} - {s.place}</a>
+                <p class="text-forest font-light text-sm mt-1">{s.time} · {e.type} · {e.level}</p>
+              </div>
+              <a href={`/signup?event=${encodeURIComponent(s.signup)}`} class="flex-shrink-0 text-xs tracking-[0.25em] uppercase font-light text-sage/80 hover:text-sage transition-colors duration-300">Sign up →</a>
             </div>
           );
         })}

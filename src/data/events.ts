@@ -1,46 +1,12 @@
-// Single source for calendar dates. Each session is one card in the calendar.
+// Single source for calendar dates. Each session is one line in the calendar.
 // Past dates are hidden automatically in the browser, so old ones can stay here.
-import type { ImageMetadata } from 'astro';
-import skolapparn from '../images/skolapparn.webp';
-import nordkollen2 from '../images/nordkollen2.webp';
-import rondane2 from '../images/rondane2.webp';
 
 export type EventId = 'evening-reset' | 'rewild-course' | 'deep-dive';
 
-type EventInfo = {
-  name: string;
-  href: string;
-  label: string;
-  image: ImageMetadata;
-  alt: string;
-  description: string;
-};
-
-export const events: Record<EventId, EventInfo> = {
-  'evening-reset': {
-    name: 'Evening Reset',
-    href: '/evening-reset',
-    label: 'Hike & movement',
-    image: skolapparn,
-    alt: 'Evening Reset - forest hike',
-    description: 'A trip that helps you shake off the day and reconnect with your body. Focused on stress release, as well as strength and stability for joint-friendly walking.',
-  },
-  'rewild-course': {
-    name: 'Rewild Course',
-    href: '/day-course',
-    label: 'Hike & movement',
-    image: nordkollen2,
-    alt: 'Rewild Course - full-day training',
-    description: 'A day hike to Nordkollen built around injury prevention, functional strength, increasing focus, stress release and building resilience.',
-  },
-  'deep-dive': {
-    name: 'Rewild Deep Dive',
-    href: '/weekend-course',
-    label: 'Hike & movement',
-    image: rondane2,
-    alt: 'Rewild Deep Dive - training in nature',
-    description: 'A day hike to Nordkollen built around injury prevention, functional strength, increasing focus, stress release and building resilience.',
-  },
+export const events: Record<EventId, { name: string; href: string; type: string; level: string }> = {
+  'evening-reset': { name: 'Evening Reset', href: '/evening-reset', type: 'Evening hike', level: 'Easy-medium' },
+  'rewild-course': { name: 'Rewild Course', href: '/day-course', type: 'Day hike', level: 'Easy-medium' },
+  'deep-dive': { name: 'Rewild Deep Dive', href: '/weekend-course', type: 'Day hike', level: 'Easy-medium' },
 };
 
 export type Session = {
