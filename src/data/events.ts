@@ -71,7 +71,7 @@ export const sessions: Session[] = [
   { event: 'rewild-course', date: '2026-11-27', time: '10:00', place: 'Sandefjord', signup: 'Rewild Course Sandefjord' },
   {
     event: 'rewild-immersion', date: '2026-11-15', time: '10:00', place: 'Nordkollen', signup: 'Rewild Immersion',
-    meetingPoint: 'Oklungen', mapUrl: 'https://www.google.com/maps?q=59.18604216274942,9.803863873385133',
+    meetingPoint: 'Parkering for Svarteberget og Nordkollen', mapUrl: 'https://www.google.com/maps?q=59.18604216274942,9.803863873385133',
   },
 ].sort((a, b) => (a.date + a.time).localeCompare(b.date + b.time));
 
