@@ -108,7 +108,7 @@ const chip = 'cal-filter font-sans px-4 py-2 border border-forest/20 text-xs tra
         const matches =
           filter === 'all' ||
           filter === `event:${row.dataset.event}` ||
-          (filter === `place:${row.dataset.place}` && row.dataset.event === 'evening-reset');
+          filter === `place:${row.dataset.place}`;
         const visible = upcoming && matches && (!limit || shown < limit);
         row.hidden = !visible;
         if (visible) shown++;
