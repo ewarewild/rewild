@@ -3,11 +3,11 @@ import { Image, getImage } from 'astro:assets';
 import Layout from '../layouts/Layout.astro';
 import Nav from '../components/Nav.astro';
 import Footer from '../components/Footer.astro';
-import sandefjord from '../images/sandefjord.webp';
+import nordkollen2 from '../images/nordkollen2.webp';
 import skolapparn from '../images/skolapparn.webp';
 import moss from '../images/moss.webp';
 
-const heroImage = await getImage({ src: sandefjord, width: 2000, format: 'webp' });
+const heroImage = await getImage({ src: nordkollen2, width: 2000, format: 'webp' });
 ---
 
 <Layout title="Day Course - Rewild" description="A full day course up Nordkollen, built around five modules: injury prevention, core strength, focus and awareness, stress release & recovery, and building resilience." preloadImage={heroImage.src}>
@@ -19,7 +19,7 @@ const heroImage = await getImage({ src: sandefjord, width: 2000, format: 'webp' 
   <section class="relative mt-[60px] overflow-hidden" style="height: 65vh;">
     <div
       class="absolute inset-0 bg-cover bg-no-repeat"
-      style={`background-image: url('${heroImage.src}'); background-position: center top;`}
+      style={`background-image: url('${heroImage.src}'); background-position: center center;`}
     ></div>
     <div class="absolute inset-0" style="background: linear-gradient(to top, rgba(20,25,14,0.5) 0%, transparent 60%);"></div>
     <a href="/#events" class="absolute top-6 left-6 md:left-12 inline-flex items-center gap-2 text-xs tracking-[0.25em] uppercase font-light text-white/60 hover:text-white transition-colors duration-200">
