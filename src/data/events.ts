@@ -65,6 +65,8 @@ export const sessions: Session[] = [
   ...eveningReset('Porsgrunn', [3, 10, 17, 24]),
   ...eveningReset('Larvik', [4, 11, 18, 25]),
   ...eveningReset('Sandefjord', [5, 12, 19, 26]),
-  { event: 'rewild-course', date: '2026-10-25', time: '10:00', place: 'Nordkollen', signup: 'Rewild Course' },
+  { event: 'rewild-course', date: '2026-11-06', time: '10:00', place: 'Nordkollen', signup: 'Rewild Course' },
+  { event: 'rewild-course', date: '2026-11-13', time: '10:00', place: 'Nordkollen', signup: 'Rewild Course' },
+  { event: 'rewild-course', date: '2026-11-27', time: '10:00', place: 'Nordkollen', signup: 'Rewild Course' },
   { event: 'deep-dive', date: '2026-10-25', time: '10:00', place: 'Nordkollen', signup: 'Rewild Deep Dive' },
 ].sort((a, b) => (a.date + a.time).localeCompare(b.date + b.time));
