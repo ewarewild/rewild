@@ -61,10 +61,10 @@ const eveningReset = (place: string, days: number[]): Session[] =>
   }));
 
 export const sessions: Session[] = [
-  ...eveningReset('Skien', [2, 9, 16, 23]),
-  ...eveningReset('Porsgrunn', [3, 10, 17, 24]),
-  ...eveningReset('Larvik', [4, 11, 18, 25]),
-  ...eveningReset('Sandefjord', [5, 12, 19, 26]),
+  ...eveningReset('Porsgrunn', [3]),
+  ...eveningReset('Skien', [10]),
+  ...eveningReset('Larvik', [17]),
+  ...eveningReset('Sandefjord', [24]),
   { event: 'rewild-course', date: '2026-11-06', time: '10:00', place: 'Porsgrunn', signup: 'Rewild Course Porsgrunn' },
   { event: 'rewild-course', date: '2026-11-13', time: '10:00', place: 'Larvik', signup: 'Rewild Course Larvik' },
   { event: 'rewild-course', date: '2026-11-27', time: '10:00', place: 'Sandefjord', signup: 'Rewild Course Sandefjord' },
