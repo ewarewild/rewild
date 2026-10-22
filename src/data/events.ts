@@ -34,11 +34,11 @@ export const events: Record<EventId, EventInfo> = {
     description: 'A day hike to Nordkollen built around injury prevention, functional strength, increasing focus, stress release and building resilience.',
   },
   'deep-dive': {
-    name: 'Rewild Deep Dive',
+    name: 'Rewild Immersion',
     href: '/weekend-course',
     label: 'Hike & movement',
     image: rondane2,
-    alt: 'Rewild Deep Dive - training in nature',
+    alt: 'Rewild Immersion - training in nature',
     description: 'A day hike to Nordkollen built around injury prevention, functional strength, increasing focus, stress release and building resilience.',
   },
 };
@@ -68,5 +68,5 @@ export const sessions: Session[] = [
   { event: 'rewild-course', date: '2026-11-06', time: '10:00', place: 'Porsgrunn', signup: 'Rewild Course Porsgrunn' },
   { event: 'rewild-course', date: '2026-11-13', time: '10:00', place: 'Larvik', signup: 'Rewild Course Larvik' },
   { event: 'rewild-course', date: '2026-11-27', time: '10:00', place: 'Sandefjord', signup: 'Rewild Course Sandefjord' },
-  { event: 'deep-dive', date: '2026-11-15', time: '10:00', place: 'Nordkollen', signup: 'Rewild Deep Dive' },
+  { event: 'deep-dive', date: '2026-11-15', time: '10:00', place: 'Nordkollen', signup: 'Rewild Immersion' },
 ].sort((a, b) => (a.date + a.time).localeCompare(b.date + b.time));
