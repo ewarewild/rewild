@@ -2,7 +2,7 @@
 import Layout from '../layouts/Layout.astro';
 import Nav from '../components/Nav.astro';
 import Footer from '../components/Footer.astro';
-import { sessions, signupLabel } from '../data/events';
+import { events, sessions, signupLabel } from '../data/events';
 ---
 
 <Layout title="Sign up - Rewild" description="Sign up for the Rewild Course, the Rewild Immersion, an Evening Reset, or a One-to-One program with Rewild.">
@@ -66,7 +66,7 @@ import { sessions, signupLabel } from '../data/events';
               class="w-full bg-white border border-forest/20 px-4 py-3 text-forest font-light text-sm focus:outline-none focus:border-forest transition-colors duration-200 appearance-none cursor-pointer"
             >
               <option value="" disabled selected></option>
-              {sessions.map(s => (
+              {[...sessions].sort((a, b) => events[a.event].name.localeCompare(events[b.event].name)).map(s => (
                 <option value={signupLabel(s)} data-date={s.date}>{signupLabel(s)}</option>
               ))}
               <option value="One-to-One program">One-to-One program</option>
