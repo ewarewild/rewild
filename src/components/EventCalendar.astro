@@ -23,7 +23,6 @@ for (const s of sessions) {
   group.items.push(s);
 }
 
-const places = [...new Set(sessions.filter(s => s.event === 'evening-reset').map(s => s.place))];
 const chip = 'cal-filter font-sans px-4 py-2 border border-forest/20 text-xs tracking-[0.2em] uppercase font-light text-forest hover:border-forest transition-colors duration-200';
 ---
 
@@ -31,8 +30,8 @@ const chip = 'cal-filter font-sans px-4 py-2 border border-forest/20 text-xs tra
   {filters && (
     <div class="flex flex-wrap gap-3 mb-12">
       <button type="button" class={chip} data-filter="all" aria-pressed="true">All</button>
-      {places.map(p => (
-        <button type="button" class={chip} data-filter={`place:${p}`} aria-pressed="false">{p}</button>
+      {Object.entries(events).map(([id, e]) => (
+        <button type="button" class={chip} data-filter={`event:${id}`} aria-pressed="false">{e.name}</button>
       ))}
     </div>
   )}
@@ -45,7 +44,7 @@ const chip = 'cal-filter font-sans px-4 py-2 border border-forest/20 text-xs tra
           const e = events[s.event];
           const day = new Date(`${s.date}T12:00:00`);
           return (
-            <div class="cal-row bg-white group overflow-hidden flex flex-col" data-date={s.date} data-event={s.event} data-place={s.place}>
+            <div class="cal-row bg-white group overflow-hidden flex flex-col" data-date={s.date} data-event={s.event}>
               <a href={tripUrl(s)} class="block">
                 <div class="overflow-hidden h-72">
                   <Image
@@ -103,7 +102,7 @@ const chip = 'cal-filter font-sans px-4 py-2 border border-forest/20 text-xs tra
         const upcoming = row.dataset.date! >= today;
         const matches =
           filter === 'all' ||
-          filter === `place:${row.dataset.place}`;
+          filter === `event:${row.dataset.event}`;
         const visible = upcoming && matches && (!limit || shown < limit);
         row.hidden = !visible;
         if (visible) shown++;
