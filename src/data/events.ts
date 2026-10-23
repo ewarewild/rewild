@@ -65,6 +65,7 @@ export const sessions: Session[] = [
   },
   {
     event: 'evening-reset', date: '2026-11-10', time: '17:00', place: 'Skien', spot: 'Sportskapellet',
+    meetingPoint: 'Ingri turparkering', mapUrl: 'https://maps.app.goo.gl/WS46sDBc4eG9Tg757',
     intro: [
       "Welcome to an evening hike designed to help you release stress and tension, increase energy flow and promote better sleep.",
       "We walk from the parking area at a steady, moderate pace on an easy gravel road towards Lia, then on a shorter forest path up to Skolapparåsen (313m), a 4km round trip. It's a beautiful, quiet mountain with a great view.",
