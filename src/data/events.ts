@@ -49,7 +49,6 @@ export type Session = {
   time: string;
   place: string;
   spot?: string; // shown on the calendar card instead of place, e.g. the mountain
-  signup: string; // value of the matching option in the signup form
   meetingPoint?: string; // shown as "To be announced" until set
   intro?: string[]; // paragraphs replacing the event's shared intro on this trip's page
   mapUrl?: string;
@@ -57,7 +56,7 @@ export type Session = {
 
 export const sessions: Session[] = [
   {
-    event: 'evening-reset', date: '2026-11-03', time: '17:00', place: 'Porsgrunn', spot: 'Skolapparåsen', signup: 'Evening Reset Porsgrunn',
+    event: 'evening-reset', date: '2026-11-03', time: '17:00', place: 'Porsgrunn', spot: 'Skolapparåsen',
     meetingPoint: 'Parkering for Svarteberget og Nordkollen', mapUrl: 'https://www.google.com/maps?q=59.18604216274942,9.803863873385133',
     intro: [
       "Welcome to an evening hike designed to help you release stress and tension, increase energy flow and promote better sleep.",
@@ -65,31 +64,31 @@ export const sessions: Session[] = [
     ],
   },
   {
-    event: 'evening-reset', date: '2026-11-10', time: '17:00', place: 'Skien', spot: 'Vealøskapellet', signup: 'Evening Reset Skien',
+    event: 'evening-reset', date: '2026-11-10', time: '17:00', place: 'Skien', spot: 'Vealøskapellet',
     intro: [
       "Welcome to an evening hike designed to help you release stress and tension, increase energy flow and promote better sleep.",
       "We walk from the parking area at a steady, moderate pace on an easy gravel road towards Lia, then on a shorter forest path up to Skolapparåsen (313m), a 4km round trip. It's a beautiful, quiet mountain with a great view.",
     ],
   },
   {
-    event: 'evening-reset', date: '2026-11-17', time: '17:00', place: 'Larvik', signup: 'Evening Reset Larvik',
+    event: 'evening-reset', date: '2026-11-17', time: '17:00', place: 'Larvik',
     intro: [
       "Welcome to an evening hike designed to help you release stress and tension, increase energy flow and promote better sleep.",
       "We walk from the parking area at a steady, moderate pace on an easy gravel road towards Lia, then on a shorter forest path up to Skolapparåsen (313m), a 4km round trip. It's a beautiful, quiet mountain with a great view.",
     ],
   },
   {
-    event: 'evening-reset', date: '2026-11-24', time: '17:00', place: 'Sandefjord', signup: 'Evening Reset Sandefjord',
+    event: 'evening-reset', date: '2026-11-24', time: '17:00', place: 'Sandefjord',
     intro: [
       "Welcome to an evening hike designed to help you release stress and tension, increase energy flow and promote better sleep.",
       "We walk from the parking area at a steady, moderate pace on an easy gravel road towards Lia, then on a shorter forest path up to Skolapparåsen (313m), a 4km round trip. It's a beautiful, quiet mountain with a great view.",
     ],
   },
-  { event: 'rewild-course', date: '2026-11-06', time: '10:00', place: 'Porsgrunn', signup: 'Rewild Course Porsgrunn' },
-  { event: 'rewild-course', date: '2026-11-13', time: '10:00', place: 'Larvik', signup: 'Rewild Course Larvik' },
-  { event: 'rewild-course', date: '2026-11-27', time: '10:00', place: 'Sandefjord', signup: 'Rewild Course Sandefjord' },
+  { event: 'rewild-course', date: '2026-11-06', time: '10:00', place: 'Porsgrunn' },
+  { event: 'rewild-course', date: '2026-11-13', time: '10:00', place: 'Larvik' },
+  { event: 'rewild-course', date: '2026-11-27', time: '10:00', place: 'Sandefjord' },
   {
-    event: 'rewild-immersion', date: '2026-11-15', time: '10:00', place: 'Nordkollen', signup: 'Rewild Immersion',
+    event: 'rewild-immersion', date: '2026-11-15', time: '10:00', place: 'Nordkollen',
     meetingPoint: 'Parkering for Svarteberget og Nordkollen', mapUrl: 'https://www.google.com/maps?q=59.18604216274942,9.803863873385133',
   },
 ].sort((a, b) => (a.date + a.time).localeCompare(b.date + b.time));
@@ -107,6 +106,10 @@ export const tripUrl = (s: Session) => `${events[s.event].href}/${tripSlug(s)}`;
 // e.g. "Tuesday 3 November"
 export const longDate = (s: Session) =>
   `${weekdays[day(s).getDay()]} ${day(s).getDate()} ${months[day(s).getMonth()]}`;
+
+// e.g. "Evening Reset - Skolapparåsen, Tue 3 Nov" - the trip's option in the signup form
+export const signupLabel = (s: Session) =>
+  `${events[s.event].name} - ${s.spot ?? s.place}, ${weekdays[day(s).getDay()].slice(0, 3)} ${day(s).getDate()} ${months[day(s).getMonth()].slice(0, 3)}`;
 
 export const tripPaths = (event: EventId) =>
   sessions.filter(s => s.event === event).map(session => ({ params: { trip: tripSlug(session) }, props: { session } }));

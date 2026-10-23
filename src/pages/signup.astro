@@ -2,6 +2,7 @@
 import Layout from '../layouts/Layout.astro';
 import Nav from '../components/Nav.astro';
 import Footer from '../components/Footer.astro';
+import { sessions, signupLabel } from '../data/events';
 ---
 
 <Layout title="Sign up - Rewild" description="Sign up for the Rewild Course, the Rewild Immersion, an Evening Reset, or a One-to-One program with Rewild.">
@@ -65,14 +66,9 @@ import Footer from '../components/Footer.astro';
               class="w-full bg-white border border-forest/20 px-4 py-3 text-forest font-light text-sm focus:outline-none focus:border-forest transition-colors duration-200 appearance-none cursor-pointer"
             >
               <option value="" disabled selected></option>
-              <option value="Evening Reset Skien">Evening Reset - Skien</option>
-              <option value="Evening Reset Porsgrunn">Evening Reset - Porsgrunn</option>
-              <option value="Evening Reset Larvik">Evening Reset - Larvik</option>
-              <option value="Evening Reset Sandefjord">Evening Reset - Sandefjord</option>
-              <option value="Rewild Course Porsgrunn">Rewild Course - Porsgrunn</option>
-              <option value="Rewild Course Larvik">Rewild Course - Larvik</option>
-              <option value="Rewild Course Sandefjord">Rewild Course - Sandefjord</option>
-              <option value="Rewild Immersion">Rewild Immersion</option>
+              {sessions.map(s => (
+                <option value={signupLabel(s)} data-date={s.date}>{signupLabel(s)}</option>
+              ))}
               <option value="One-to-One program">One-to-One program</option>
             </select>
             <span class="pointer-events-none absolute right-4 top-[2.85rem] text-forest/40">↓</span>
@@ -165,6 +161,13 @@ import Footer from '../components/Footer.astro';
     ageInput.required = !isDeepRest;
     emergencyContactField.style.display = isDeepRest ? 'none' : 'block';
     emergencyContactInput.required = !isDeepRest;
+  });
+
+  // Drop trips whose date has passed
+  const now = new Date();
+  const today = `${now.getFullYear()}-${String(now.getMonth() + 1).padStart(2, '0')}-${String(now.getDate()).padStart(2, '0')}`;
+  eventSelect.querySelectorAll<HTMLOptionElement>('option[data-date]').forEach(o => {
+    if (o.dataset.date! < today) o.remove();
   });
 
   // Pre-select the event when coming from a calendar "Sign up" link
