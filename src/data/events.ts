@@ -10,7 +10,6 @@ export type EventId = 'evening-reset' | 'rewild-course' | 'rewild-immersion';
 type EventInfo = {
   name: string;
   href: string;
-  label: string;
   image: ImageMetadata;
   alt: string;
   description: string;
@@ -20,7 +19,6 @@ export const events: Record<EventId, EventInfo> = {
   'evening-reset': {
     name: 'Evening Reset',
     href: '/evening-reset',
-    label: 'Hike & movement',
     image: skolapparn,
     alt: 'Evening Reset - forest hike',
     description: 'Shake off the day and reconnect with your body on a local hike that supports stress release, mental and physical balance and better sleep.',
@@ -28,7 +26,6 @@ export const events: Record<EventId, EventInfo> = {
   'rewild-course': {
     name: 'Rewild Course',
     href: '/rewild-course',
-    label: 'Hike & movement',
     image: nordkollen2,
     alt: 'Rewild Course - full-day training',
     description: 'A day hike to Nordkollen built around injury prevention, functional strength, increasing focus, stress release and building resilience.',
@@ -36,7 +33,6 @@ export const events: Record<EventId, EventInfo> = {
   'rewild-immersion': {
     name: 'Rewild Immersion',
     href: '/rewild-immersion',
-    label: 'Hike & movement',
     image: rondane2,
     alt: 'Rewild Immersion - training in nature',
     description: 'A day hike to Nordkollen built around injury prevention, functional strength, increasing focus, stress release and building resilience.',
@@ -47,8 +43,8 @@ export type Session = {
   event: EventId;
   date: string; // YYYY-MM-DD
   time: string;
-  place: string;
-  spot?: string; // shown on the calendar card instead of place, e.g. the mountain
+  place: string; // town, shown above the title on the calendar card
+  spot?: string; // the hike's destination, used in titles instead of place
   meetingPoint?: string; // shown as "To be announced" until set
   intro?: string[]; // paragraphs replacing the event's shared intro on this trip's page
   mapUrl?: string;
@@ -89,7 +85,7 @@ export const sessions: Session[] = [
   { event: 'rewild-course', date: '2026-11-13', time: '10:00', place: 'Larvik' },
   { event: 'rewild-course', date: '2026-11-27', time: '10:00', place: 'Sandefjord' },
   {
-    event: 'rewild-immersion', date: '2026-11-15', time: '10:00', place: 'Nordkollen',
+    event: 'rewild-immersion', date: '2026-11-15', time: '10:00', place: 'Porsgrunn', spot: 'Nordkollen',
     meetingPoint: 'Parkering for Svarteberget og Nordkollen', mapUrl: 'https://www.google.com/maps?q=59.18604216274942,9.803863873385133',
   },
 ].sort((a, b) => (a.date + a.time).localeCompare(b.date + b.time));
