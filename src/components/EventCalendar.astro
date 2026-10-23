@@ -31,9 +31,6 @@ const chip = 'cal-filter font-sans px-4 py-2 border border-forest/20 text-xs tra
   {filters && (
     <div class="flex flex-wrap gap-3 mb-12">
       <button type="button" class={chip} data-filter="all" aria-pressed="true">All</button>
-      {Object.entries(events).map(([id, e]) => (
-        <button type="button" class={chip} data-filter={`event:${id}`} aria-pressed="false">{e.name}</button>
-      ))}
       {places.map(p => (
         <button type="button" class={chip} data-filter={`place:${p}`} aria-pressed="false">{p}</button>
       ))}
@@ -106,7 +103,6 @@ const chip = 'cal-filter font-sans px-4 py-2 border border-forest/20 text-xs tra
         const upcoming = row.dataset.date! >= today;
         const matches =
           filter === 'all' ||
-          filter === `event:${row.dataset.event}` ||
           filter === `place:${row.dataset.place}`;
         const visible = upcoming && matches && (!limit || shown < limit);
         row.hidden = !visible;
