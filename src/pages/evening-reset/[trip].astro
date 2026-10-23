@@ -20,7 +20,7 @@ const name = events['evening-reset'].name;
 const heroImage = await getImage({ src: skolapparn, width: 2000, format: 'webp' });
 ---
 
-<Layout title={`${name} - ${session.place} - Rewild`} description="A headlamp hike through the dark months - breath, silence and the senses. Now in Skien, Porsgrunn, Larvik and Sandefjord." preloadImage={heroImage.src}>
+<Layout title={`${name} - ${session.spot ?? session.place} - Rewild`} description="A headlamp hike through the dark months - breath, silence and the senses. Now in Skien, Porsgrunn, Larvik and Sandefjord." preloadImage={heroImage.src}>
 
   <!-- Navigation -->
   <Nav />
@@ -46,7 +46,7 @@ const heroImage = await getImage({ src: skolapparn, width: 2000, format: 'webp' 
   <section class="bg-cream pt-16 md:pt-24 pb-12 md:pb-[72px]">
     <div class="max-w-6xl mx-auto px-6 md:px-12">
       <div class="max-w-[420px]">
-        <h2 class="font-display font-bold text-4xl md:text-5xl text-forest mb-10 leading-tight">{name} - {session.place}</h2>
+        <h2 class="font-display font-bold text-4xl md:text-5xl text-forest mb-10 leading-tight">{name} - {session.spot ?? session.place}</h2>
         <div class="space-y-5 text-forest font-light leading-relaxed text-[1.08rem]">
           {(session.intro ?? ['Welcome to an exciting hike in local nature, designed to help you shake off the day and reconnect with your body while taking the strain off your joints. The trip is focused on stress release, as well as building strength and stability as you walk.']).map(paragraph => (
             <p>{paragraph}</p>
