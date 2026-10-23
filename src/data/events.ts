@@ -21,7 +21,7 @@ export const events: Record<EventId, EventInfo> = {
     href: '/evening-reset',
     image: skolapparn,
     alt: 'Evening Reset - forest hike',
-    description: 'Shake off the day and reconnect with your body on a fast-paced hike that supports stress release, mental and physical balance and better sleep.',
+    description: 'Shake off the day and reconnect with your body on a fast-paced hike that supports stress release, mental balance and better sleep.',
   },
   'rewild-course': {
     name: 'Rewild Course',
