@@ -4,89 +4,52 @@ import { events, sessions, tripUrl } from '../data/events';
 
 interface Props {
   limit?: number;
-  filters?: boolean;
 }
 
-const { limit = 0, filters = false } = Astro.props;
+const { limit = 0 } = Astro.props;
 
 const months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
-
-const groups: { key: string; label: string; items: typeof sessions }[] = [];
-for (const s of sessions) {
-  const [y, m] = s.date.split('-').map(Number);
-  const key = s.date.slice(0, 7);
-  let group = groups.find(g => g.key === key);
-  if (!group) {
-    group = { key, label: `${months[m - 1]} ${y}`, items: [] };
-    groups.push(group);
-  }
-  group.items.push(s);
-}
-
-const chip = 'cal-filter font-sans px-4 py-2 border border-forest/20 text-xs tracking-[0.2em] uppercase font-light text-forest hover:border-forest transition-colors duration-200';
 ---
 
 <div class="event-calendar" data-limit={limit}>
-  {filters && (
-    <div class="flex flex-wrap gap-3 mb-12">
-      <button type="button" class={chip} data-filter="all" aria-pressed="true">All</button>
-      {Object.entries(events).map(([id, e]) => (
-        <button type="button" class={chip} data-filter={`event:${id}`} aria-pressed="false">{e.name}</button>
-      ))}
-    </div>
-  )}
-
-  {groups.map(g => (
-    <div class="cal-month mb-20">
-      <p class="text-xs tracking-[0.3em] uppercase text-sage/80 mb-10 font-light">{g.label}</p>
-      <div class="grid md:grid-cols-2 gap-16 md:gap-8">
-        {g.items.map(s => {
-          const e = events[s.event];
-          const day = new Date(`${s.date}T12:00:00`);
-          return (
-            <div class="cal-row bg-white group overflow-hidden flex flex-col" data-date={s.date} data-event={s.event}>
-              <a href={tripUrl(s)} class="block">
-                <div class="overflow-hidden h-72">
-                  <Image
-                    src={e.image}
-                    alt={e.alt}
-                    width={1200}
-                    densities={[1, 2]}
-                    class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700"
-                    loading="lazy"
-                  />
-                </div>
-              </a>
-              <div class="p-8 flex flex-col flex-1">
-                <p class="text-xs tracking-[0.3em] uppercase text-sage/80 mb-3 font-light">{e.label}</p>
-                <a href={tripUrl(s)} class="block">
-                  <h3 class="font-display font-bold text-3xl text-forest mb-5 leading-tight hover:opacity-60 transition-opacity duration-200">{e.name} - {s.spot ?? s.place}</h3>
-                </a>
-                <a href={tripUrl(s)} class="self-start mb-5 px-4 py-2 border border-forest/20 text-xs tracking-[0.2em] uppercase font-light text-forest hover:border-forest transition-colors duration-200">{day.getDate()} {months[day.getMonth()]}</a>
-                <p class="text-forest font-light text-[1.08rem] leading-relaxed mb-8 flex-1">
-                  {e.description}
-                </p>
-                <div class="pt-5 border-t border-cream flex justify-between">
-                  <a href={tripUrl(s)} class="text-xs tracking-[0.25em] uppercase font-light text-sage/80 hover:text-sage transition-colors duration-300">More →</a>
-                </div>
-              </div>
+  <div class="grid md:grid-cols-2 gap-16 md:gap-8 mb-20">
+    {sessions.map(s => {
+      const e = events[s.event];
+      const day = new Date(`${s.date}T12:00:00`);
+      return (
+        <div class="cal-row bg-white group overflow-hidden flex flex-col" data-date={s.date} data-event={s.event}>
+          <a href={tripUrl(s)} class="block">
+            <div class="overflow-hidden h-72">
+              <Image
+                src={e.image}
+                alt={e.alt}
+                width={1200}
+                densities={[1, 2]}
+                class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700"
+                loading="lazy"
+              />
             </div>
-          );
-        })}
-      </div>
-    </div>
-  ))}
+          </a>
+          <div class="p-8 flex flex-col flex-1">
+            <p class="text-xs tracking-[0.3em] uppercase text-sage/80 mb-3 font-light">{e.label}</p>
+            <a href={tripUrl(s)} class="block">
+              <h3 class="font-display font-bold text-3xl text-forest mb-5 leading-tight hover:opacity-60 transition-opacity duration-200">{e.name} - {s.spot ?? s.place}</h3>
+            </a>
+            <a href={tripUrl(s)} class="self-start mb-5 px-4 py-2 border border-forest/20 text-xs tracking-[0.2em] uppercase font-light text-forest hover:border-forest transition-colors duration-200">{day.getDate()} {months[day.getMonth()]}</a>
+            <p class="text-forest font-light text-[1.08rem] leading-relaxed mb-8 flex-1">
+              {e.description}
+            </p>
+            <div class="pt-5 border-t border-cream flex justify-between">
+              <a href={tripUrl(s)} class="text-xs tracking-[0.25em] uppercase font-light text-sage/80 hover:text-sage transition-colors duration-300">More →</a>
+            </div>
+          </div>
+        </div>
+      );
+    })}
+  </div>
 
   <p class="cal-empty hidden text-forest font-light text-[1.08rem]">New dates coming soon.</p>
 </div>
-
-<style>
-  .cal-filter[aria-pressed='true'] {
-    background: var(--color-forest);
-    border-color: var(--color-forest);
-    color: white;
-  }
-</style>
 
 <script>
   document.querySelectorAll<HTMLElement>('.event-calendar').forEach(cal => {
@@ -94,32 +57,17 @@ const chip = 'cal-filter font-sans px-4 py-2 border border-forest/20 text-xs tra
     const now = new Date();
     const today = `${now.getFullYear()}-${String(now.getMonth() + 1).padStart(2, '0')}-${String(now.getDate()).padStart(2, '0')}`;
     const rows = [...cal.querySelectorAll<HTMLElement>('.cal-row')];
-    let filter = 'all';
 
     const render = () => {
       let shown = 0;
       rows.forEach(row => {
         const upcoming = row.dataset.date! >= today;
-        const matches =
-          filter === 'all' ||
-          filter === `event:${row.dataset.event}`;
-        const visible = upcoming && matches && (!limit || shown < limit);
+        const visible = upcoming && (!limit || shown < limit);
         row.hidden = !visible;
         if (visible) shown++;
       });
-      cal.querySelectorAll<HTMLElement>('.cal-month').forEach(month => {
-        month.hidden = !month.querySelector('.cal-row:not([hidden])');
-      });
       cal.querySelector('.cal-empty')?.classList.toggle('hidden', shown > 0);
     };
-
-    cal.querySelectorAll<HTMLButtonElement>('.cal-filter').forEach(btn => {
-      btn.addEventListener('click', () => {
-        filter = btn.dataset.filter!;
-        cal.querySelectorAll('.cal-filter').forEach(b => b.setAttribute('aria-pressed', String(b === btn)));
-        render();
-      });
-    });
 
     render();
   });
