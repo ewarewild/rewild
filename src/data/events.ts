@@ -63,9 +63,27 @@ export const sessions: Session[] = [
       "We walk from the parking area at a steady, moderate pace on an easy gravel road towards Lia, then on a shorter forest path up to Skolapparåsen (313m), a 4km round trip. It's a beautiful, quiet mountain with a great view.",
     ],
   },
-  { event: 'evening-reset', date: '2026-11-10', time: '17:00', place: 'Skien', signup: 'Evening Reset Skien' },
-  { event: 'evening-reset', date: '2026-11-17', time: '17:00', place: 'Larvik', signup: 'Evening Reset Larvik' },
-  { event: 'evening-reset', date: '2026-11-24', time: '17:00', place: 'Sandefjord', signup: 'Evening Reset Sandefjord' },
+  {
+    event: 'evening-reset', date: '2026-11-10', time: '17:00', place: 'Skien', signup: 'Evening Reset Skien',
+    intro: [
+      "Welcome to an evening hike designed to help you release stress and tension, increase energy flow and promote better sleep.",
+      "We walk from the parking area at a steady, moderate pace on an easy gravel road towards Lia, then on a shorter forest path up to Skolapparåsen (313m), a 4km round trip. It's a beautiful, quiet mountain with a great view.",
+    ],
+  },
+  {
+    event: 'evening-reset', date: '2026-11-17', time: '17:00', place: 'Larvik', signup: 'Evening Reset Larvik',
+    intro: [
+      "Welcome to an evening hike designed to help you release stress and tension, increase energy flow and promote better sleep.",
+      "We walk from the parking area at a steady, moderate pace on an easy gravel road towards Lia, then on a shorter forest path up to Skolapparåsen (313m), a 4km round trip. It's a beautiful, quiet mountain with a great view.",
+    ],
+  },
+  {
+    event: 'evening-reset', date: '2026-11-24', time: '17:00', place: 'Sandefjord', signup: 'Evening Reset Sandefjord',
+    intro: [
+      "Welcome to an evening hike designed to help you release stress and tension, increase energy flow and promote better sleep.",
+      "We walk from the parking area at a steady, moderate pace on an easy gravel road towards Lia, then on a shorter forest path up to Skolapparåsen (313m), a 4km round trip. It's a beautiful, quiet mountain with a great view.",
+    ],
+  },
   { event: 'rewild-course', date: '2026-11-06', time: '10:00', place: 'Porsgrunn', signup: 'Rewild Course Porsgrunn' },
   { event: 'rewild-course', date: '2026-11-13', time: '10:00', place: 'Larvik', signup: 'Rewild Course Larvik' },
   { event: 'rewild-course', date: '2026-11-27', time: '10:00', place: 'Sandefjord', signup: 'Rewild Course Sandefjord' },
