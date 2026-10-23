@@ -96,19 +96,6 @@ import { sessions, signupLabel } from '../data/events';
             ></textarea>
           </div>
 
-          <div id="emergency-contact-field">
-            <label for="emergency-contact" class="block text-xs tracking-[0.2em] uppercase text-sage/80 font-light mb-3">Emergency contact</label>
-            <input
-              type="text"
-              id="emergency-contact"
-              name="Emergency contact"
-              placeholder="Name and phone number"
-              required
-              class="w-full bg-white border border-forest/20 px-4 py-3 text-forest font-light text-sm focus:outline-none focus:border-forest transition-colors duration-200"
-            />
-            <p class="text-xs text-forest/50 font-light mt-2 leading-relaxed">Someone we can reach if there's an emergency during the hike.</p>
-          </div>
-
           <div class="pt-4">
             <button
               id="signup-submit"
@@ -135,15 +122,11 @@ import { sessions, signupLabel } from '../data/events';
   const eventSelect = document.getElementById('event') as HTMLSelectElement;
   const injuriesField = document.getElementById('injuries-field') as HTMLElement;
   const injuriesTextarea = document.getElementById('injuries') as HTMLTextAreaElement;
-  const emergencyContactField = document.getElementById('emergency-contact-field') as HTMLElement;
-  const emergencyContactInput = document.getElementById('emergency-contact') as HTMLInputElement;
 
   eventSelect?.addEventListener('change', () => {
     const isDeepRest = eventSelect.value.startsWith('Deep Rest');
     injuriesField.style.display = isDeepRest ? 'none' : 'block';
     injuriesTextarea.required = !isDeepRest;
-    emergencyContactField.style.display = isDeepRest ? 'none' : 'block';
-    emergencyContactInput.required = !isDeepRest;
   });
 
   // Drop trips whose date has passed
