@@ -64,7 +64,7 @@ export const sessions: Session[] = [
     ],
   },
   {
-    event: 'evening-reset', date: '2026-11-10', time: '17:00', place: 'Skien', spot: 'Brunlanes Sportskapellet',
+    event: 'evening-reset', date: '2026-11-10', time: '17:00', place: 'Larvik', spot: 'Brunlanes Sportskapellet',
     meetingPoint: 'Ingri turparkering', mapUrl: 'https://maps.app.goo.gl/WS46sDBc4eG9Tg757',
     intro: [
       "Welcome to an evening hike designed to help you release stress and tension, increase energy flow and promote better sleep.",
