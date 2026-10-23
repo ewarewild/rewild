@@ -28,7 +28,7 @@ const ogImageUrl = ogImage ? new URL(ogImage, Astro.site) : undefined;
     {ogImageUrl && <meta property="og:image" content={ogImageUrl} />}
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
     {preloadImage && <link rel="preload" as="image" href={preloadImage} fetchpriority="high" />}
-    {preloadWordmarkFont && <link rel="preload" as="font" type="font/woff2" href="/fonts/montserrat-italic-latin.woff2" crossorigin />}
+    {preloadWordmarkFont && <link rel="preload" as="font" type="font/woff2" href="/fonts/nunito-300-latin.woff2" crossorigin />}
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
