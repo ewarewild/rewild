@@ -60,7 +60,7 @@ export const sessions: Session[] = [
     meetingPoint: 'Parkering for Svarteberget og Nordkollen', mapUrl: 'https://www.google.com/maps?q=59.18604216274942,9.803863873385133',
     intro: [
       "Welcome to an evening hike designed to help you release stress and tension, increase energy flow and promote better sleep.",
-      "We walk from the parking space at a steady, moderately fast pace on an easy gravel road towards Lia, then on a much shorter forest path up to Skolapparåsen (313), 4km round trip. It's a beautiful, quiet mountain with an impressive view and relatively easy to get to.",
+      "We walk from the parking area at a steady, moderately fast pace on an easy gravel road towards Lia, then on a much shorter forest path up to Skolapparåsen (313m), a 4km round trip. It's a beautiful, quiet mountain with an impressive view and relatively easy to get to.",
     ],
   },
   { event: 'evening-reset', date: '2026-11-10', time: '17:00', place: 'Skien', signup: 'Evening Reset Skien' },
