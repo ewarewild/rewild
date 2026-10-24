@@ -82,6 +82,7 @@ export const sessions: Session[] = [
   {
     event: 'rewild-course', date: '2026-11-06', time: '10:00', place: 'Porsgrunn & Skien', spot: 'Østre Vealøs',
     meetingPoint: 'Parkering for Østre Vealøs turområder', mapUrl: 'https://www.google.com/maps?q=59.20275,9.73157',
+    price: '500 NOK',
     image: nordkollen2,
     intro: [
       'Welcome to hands-on, practical training in nature that gives you tools to take the strain off your joints while walking, build strength, balance and stability, and release mental and physical tension.',
