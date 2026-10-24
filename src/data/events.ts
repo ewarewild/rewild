@@ -88,7 +88,7 @@ export const sessions: Session[] = [
       'We hike to <a href="https://ut.no/turforslag/113681/topptur-til-stre-veals" target="_blank" rel="noopener" class="underline hover:text-sage transition-colors duration-200">Østre Vealøs</a> (445.5m) to immerse ourselves in wild nature.',
     ],
     meetUp: 'We meet up at <a href="https://www.google.com/maps?q=59.20275,9.73157" target="_blank" rel="noopener" class="underline hover:text-sage transition-colors duration-200">Parkering for Østre Vealøs turområder</a> and walk from there on a well-marked trail, mostly through forest.',
-    routeInfo: 'Østre Vealøs\' elevation is 445.5m - total distance both ways is 7.6km, moderately demanding.',
+    routeInfo: 'Østre Vealøs\' elevation is 445.5m - total distance both ways is 7.6km, a moderately demanding trail.',
     description: 'Hike to Østre Vealøs and learn how to take the strain off your joints while walking in terrain, simple methods to release stress, increase focus, build strength and stability.',
   },
   { event: 'rewild-course', date: '2026-11-13', time: '10:00', place: 'Larvik' },
