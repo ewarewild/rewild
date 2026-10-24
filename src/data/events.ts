@@ -3,7 +3,6 @@
 import type { ImageMetadata } from 'astro';
 import skolapparn from '../images/skolapparn.webp';
 import nordkollen2 from '../images/nordkollen2.webp';
-import rondane2 from '../images/rondane2.webp';
 
 export type EventId = 'evening-reset' | 'rewild-course';
 
@@ -43,7 +42,6 @@ export type Session = {
   description?: string; // replaces the event's shared description on this trip's calendar card
   mapUrl?: string;
   image?: ImageMetadata; // replaces the event's shared image on this trip's card and page
-  heroImage?: ImageMetadata; // replaces image on this trip's page only
   duration?: string; // course pages only, replaces the shared duration
   price?: string; // course pages only, replaces the shared price
 };
@@ -82,7 +80,7 @@ export const sessions: Session[] = [
   {
     event: 'rewild-course', date: '2026-11-06', time: '10:00', place: 'Porsgrunn & Skien', spot: 'Østre Vealøs',
     meetingPoint: 'Parkering for Østre Vealøs turområder', mapUrl: 'https://www.google.com/maps?q=59.20275,9.73157',
-    image: nordkollen2, heroImage: rondane2,
+    image: nordkollen2,
     intro: [
       'Welcome to hands-on, practical training in nature that gives you tools to take the strain off your joints while walking, build strength, balance and stability, and release mental and physical tension.',
       'We hike to <a href="https://ut.no/turforslag/113681/topptur-til-stre-veals" target="_blank" rel="noopener" class="underline hover:text-sage transition-colors duration-200">Østre Vealøs</a> (307m) to immerse ourselves in wild nature.',
