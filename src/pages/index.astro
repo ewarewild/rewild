@@ -3,10 +3,10 @@ import { Image, getImage } from 'astro:assets';
 import Layout from '../layouts/Layout.astro';
 import Footer from '../components/Footer.astro';
 import EventCalendar from '../components/EventCalendar.astro';
-import heroRond from '../images/rond.webp';
+import heroRondane from '../images/rondane2.webp';
 import eva from '../images/eva.webp';
 
-const heroImage = await getImage({ src: heroRond, width: 2000, format: 'webp' });
+const heroImage = await getImage({ src: heroRondane, width: 2000, format: 'webp' });
 ---
 
 <Layout title="Rewild Yourself" description="Return to yourself through nature" ogTitle="Rewild Yourself" ogDescription="Return to yourself through nature" ogImage="/images/hero-nordkollen.webp" preloadImage={heroImage.src} preloadWordmarkFont>
