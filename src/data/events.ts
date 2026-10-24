@@ -66,20 +66,6 @@ export const sessions: Session[] = [
     ],
   },
   {
-    event: 'evening-reset', date: '2026-11-17', time: '17:00', place: 'Larvik',
-    intro: [
-      "Welcome to an evening hike designed to help you release stress and tension, increase energy flow and promote better sleep.",
-      "We walk from the parking area at a moderate to fast pace (ca. 4.5km/h) on an easy gravel road towards Lia, then on a shorter forest path up to Skolapparåsen (313m), a 4km round trip. It's a beautiful, quiet mountain with a great view.",
-    ],
-  },
-  {
-    event: 'evening-reset', date: '2026-11-24', time: '17:00', place: 'Sandefjord',
-    intro: [
-      "Welcome to an evening hike designed to help you release stress and tension, increase energy flow and promote better sleep.",
-      "We walk from the parking area at a moderate to fast pace (ca. 4.5km/h) on an easy gravel road towards Lia, then on a shorter forest path up to Skolapparåsen (313m), a 4km round trip. It's a beautiful, quiet mountain with a great view.",
-    ],
-  },
-  {
     event: 'rewild-course', date: '2026-11-06', time: '10:00', place: 'Porsgrunn & Skien', spot: 'Østre Vealøs',
     meetingPoint: 'Parkering for Østre Vealøs turområder', mapUrl: 'https://www.google.com/maps?q=59.20275,9.73157',
     price: '500 NOK',
@@ -92,8 +78,6 @@ export const sessions: Session[] = [
     routeInfo: 'The total distance both ways is 7.6km, a moderately demanding trail.',
     description: 'Hike to Østre Vealøs and learn how to take the strain off your joints while walking in terrain, simple methods to release stress, increase focus, build strength and stability.',
   },
-  { event: 'rewild-course', date: '2026-11-13', time: '10:00', place: 'Larvik' },
-  { event: 'rewild-course', date: '2026-11-27', time: '10:00', place: 'Sandefjord' },
   {
     event: 'rewild-course', date: '2026-11-15', time: '10:00', place: 'Porsgrunn', spot: 'Nordkollen',
     image: nordkollen2,
