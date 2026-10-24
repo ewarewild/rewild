@@ -87,7 +87,7 @@ export const sessions: Session[] = [
     event: 'rewild-course', date: '2026-11-06', time: '10:00', place: 'Porsgrunn & Skien', spot: 'Østre Vealøs',
     meetingPoint: 'Parkering for Østre Vealøs turområder', mapUrl: 'https://www.google.com/maps?q=59.20275,9.73157',
     image: rondane2,
-    description: 'Hike to Østre Vealøs and learn how to take the strain off your joints while walking in terrain, simple methods to release stress, build strength and stability.',
+    description: 'Hike to Østre Vealøs and learn how to take the strain off your joints while walking in terrain, simple methods to release stress, increase focus, build strength and stability.',
   },
   { event: 'rewild-course', date: '2026-11-13', time: '10:00', place: 'Larvik' },
   { event: 'rewild-course', date: '2026-11-27', time: '10:00', place: 'Sandefjord' },
