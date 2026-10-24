@@ -5,7 +5,7 @@ import skolapparn from '../images/skolapparn.webp';
 import nordkollen2 from '../images/nordkollen2.webp';
 import rondane2 from '../images/rondane2.webp';
 
-export type EventId = 'evening-reset' | 'rewild-course' | 'rewild-immersion';
+export type EventId = 'evening-reset' | 'rewild-course';
 
 type EventInfo = {
   name: string;
@@ -30,13 +30,6 @@ export const events: Record<EventId, EventInfo> = {
     alt: 'Rewild Course - full-day training',
     description: 'A day hike to Nordkollen built around injury prevention, functional strength, increasing focus, stress release and building resilience.',
   },
-  'rewild-immersion': {
-    name: 'Rewild Immersion',
-    href: '/rewild-immersion',
-    image: rondane2,
-    alt: 'Rewild Immersion - training in nature',
-    description: 'A day hike to Nordkollen built around injury prevention, functional strength, increasing focus, stress release and building resilience.',
-  },
 };
 
 export type Session = {
@@ -50,6 +43,8 @@ export type Session = {
   description?: string; // replaces the event's shared description on this trip's calendar card
   mapUrl?: string;
   image?: ImageMetadata; // replaces the event's shared image on this trip's card and page
+  duration?: string; // course pages only, replaces the shared duration
+  price?: string; // course pages only, replaces the shared price
 };
 
 export const sessions: Session[] = [
@@ -96,9 +91,15 @@ export const sessions: Session[] = [
   { event: 'rewild-course', date: '2026-11-13', time: '10:00', place: 'Larvik' },
   { event: 'rewild-course', date: '2026-11-27', time: '10:00', place: 'Sandefjord' },
   {
-    event: 'rewild-immersion', date: '2026-11-15', time: '10:00', place: 'Porsgrunn', spot: 'Nordkollen',
+    event: 'rewild-course', date: '2026-11-15', time: '10:00', place: 'Porsgrunn', spot: 'Nordkollen',
     image: nordkollen2,
     meetingPoint: 'Parkering for Svarteberget og Nordkollen', mapUrl: 'https://www.google.com/maps?q=59.18604216274942,9.803863873385133',
+    duration: 'Approximately 5 hours', price: '500 NOK',
+    intro: [
+      'Welcome to hands-on, practical training in nature that gives you tools to take the strain off your joints while walking, build strength, balance and stability, and release mental and physical tension.',
+      'We hike to <a href="https://www.google.com/maps?q=59.197427717465644,9.8402239222746" target="_blank" rel="noopener" class="underline hover:text-sage transition-colors duration-200">Nordkollen</a> (353m) to immerse ourselves in wild nature.',
+    ],
+    description: 'Hike to Nordkollen and learn how to take the strain off your joints while walking in terrain, simple methods to release stress, increase focus, build strength and stability.',
   },
 ].sort((a, b) => (a.date + a.time).localeCompare(b.date + b.time));
 

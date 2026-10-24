@@ -8,6 +8,8 @@ export default defineConfig({
     '/evening-reset': '/#events',
     '/day-course': '/#events',
     '/weekend-course': '/#events',
+    '/rewild-immersion': '/#events',
+    '/rewild-immersion/porsgrunn-15-november': '/rewild-course/porsgrunn-15-november',
   },
   vite: {
     plugins: [tailwindcss()],
