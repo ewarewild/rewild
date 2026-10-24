@@ -44,6 +44,8 @@ export type Session = {
   image?: ImageMetadata; // replaces the event's shared image on this trip's card and page
   duration?: string; // course pages only, replaces the shared duration
   price?: string; // course pages only, replaces the shared price
+  meetUp?: string; // course pages only, replaces the Technical info meet-up paragraph (HTML allowed)
+  routeInfo?: string; // course pages only, replaces the Technical info elevation/distance paragraph
 };
 
 export const sessions: Session[] = [
@@ -85,6 +87,8 @@ export const sessions: Session[] = [
       'Welcome to hands-on, practical training in nature that gives you tools to take the strain off your joints while walking, build strength, balance and stability, and release mental and physical tension.',
       'We hike to <a href="https://ut.no/turforslag/113681/topptur-til-stre-veals" target="_blank" rel="noopener" class="underline hover:text-sage transition-colors duration-200">Østre Vealøs</a> (307m) to immerse ourselves in wild nature.',
     ],
+    meetUp: 'We meet up at <a href="https://www.google.com/maps?q=59.20275,9.73157" target="_blank" rel="noopener" class="underline hover:text-sage transition-colors duration-200">Parkering for Østre Vealøs turområder</a> and walk from there on a well-marked trail, mostly through open pine forest.',
+    routeInfo: 'Total distance both ways is 7.6km with 307m of ascent, about 3 hours of walking, moderately demanding.',
     description: 'Hike to Østre Vealøs and learn how to take the strain off your joints while walking in terrain, simple methods to release stress, increase focus, build strength and stability.',
   },
   { event: 'rewild-course', date: '2026-11-13', time: '10:00', place: 'Larvik' },
