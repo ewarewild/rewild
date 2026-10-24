@@ -83,7 +83,7 @@ export const sessions: Session[] = [
     ],
   },
   {
-    event: 'rewild-course', date: '2026-11-06', time: '10:00', place: 'Porsgrunn', spot: 'Østre Vealøs',
+    event: 'rewild-course', date: '2026-11-06', time: '10:00', place: 'Porsgrunn & Skien', spot: 'Østre Vealøs',
     meetingPoint: 'Parkering for Østre Vealøs turområder', mapUrl: 'https://www.google.com/maps?q=59.20275,9.73157',
     description: 'Hike to Østre Vealøs and learn how to take the strain off your joints while walking in terrain, simple methods to release stress, build strength and stability.',
   },
@@ -99,9 +99,9 @@ const weekdays = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Frida
 const months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
 
 const day = (s: Session) => new Date(`${s.date}T12:00:00`);
-
+// Uses only the first town, so "Porsgrunn & Skien" keeps the /porsgrunn-... link.
 export const tripSlug = (s: Session) =>
-  `${s.place}-${day(s).getDate()}-${months[day(s).getMonth()]}`.toLowerCase();
+  `${s.place.split(' & ')[0]}-${day(s).getDate()}-${months[day(s).getMonth()]}`.toLowerCase();
 
 export const tripUrl = (s: Session) => `${events[s.event].href}/${tripSlug(s)}`;
 
