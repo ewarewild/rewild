@@ -48,12 +48,16 @@ const heroImage = await getImage({ src: session.image ?? nordkollen2, width: 200
       <div class="max-w-[420px]">
         <h2 class="font-display font-bold text-4xl md:text-5xl text-forest mb-10 leading-tight">{name} - {session.spot ?? session.place}</h2>
         <div class="space-y-5 text-forest font-light leading-relaxed text-[1.08rem]">
-          <p>
-            Welcome to a day of practical training in nature that gives you tools to move safely, build core strength, and recover better - on the trail, and in everyday life.
-          </p>
-          <p>
-            We hike to <a href="https://www.google.com/maps?q=59.197427717465644,9.8402239222746" target="_blank" rel="noopener" class="underline hover:text-sage transition-colors duration-200">Nordkollen</a>, a mountain near Porsgrunn, to immerse ourselves in wild nature.
-          </p>
+          {session.intro ? session.intro.map(paragraph => <p set:html={paragraph} />) : (
+            <>
+              <p>
+                Welcome to a day of practical training in nature that gives you tools to move safely, build core strength, and recover better - on the trail, and in everyday life.
+              </p>
+              <p>
+                We hike to <a href="https://www.google.com/maps?q=59.197427717465644,9.8402239222746" target="_blank" rel="noopener" class="underline hover:text-sage transition-colors duration-200">Nordkollen</a>, a mountain near Porsgrunn, to immerse ourselves in wild nature.
+              </p>
+            </>
+          )}
           <p>
             We alternate between physically challenging our bodies, and more relaxing practices, taking time to rest and unwind.
           </p>

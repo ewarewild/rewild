@@ -46,7 +46,7 @@ export type Session = {
   place: string; // town, shown above the title on the calendar card
   spot?: string; // the hike's destination, used in titles instead of place
   meetingPoint?: string; // shown as "To be announced" until set
-  intro?: string[]; // paragraphs replacing the event's shared intro on this trip's page
+  intro?: string[]; // paragraphs replacing the event's shared intro on this trip's page (HTML allowed on course pages)
   description?: string; // replaces the event's shared description on this trip's calendar card
   mapUrl?: string;
   image?: ImageMetadata; // replaces the event's shared image on this trip's card and page
@@ -87,6 +87,10 @@ export const sessions: Session[] = [
     event: 'rewild-course', date: '2026-11-06', time: '10:00', place: 'Porsgrunn & Skien', spot: 'Østre Vealøs',
     meetingPoint: 'Parkering for Østre Vealøs turområder', mapUrl: 'https://www.google.com/maps?q=59.20275,9.73157',
     image: rondane2,
+    intro: [
+      'Welcome to hands-on, practical training in nature that gives you tools to take the strain off your joints as you walk, build core strength and release mental and physical tension.',
+      'We hike to <a href="https://ut.no/turforslag/113681/topptur-til-stre-veals" target="_blank" rel="noopener" class="underline hover:text-sage transition-colors duration-200">Østre Vealøs</a> to immerse ourselves in wild nature.',
+    ],
     description: 'Hike to Østre Vealøs and learn how to take the strain off your joints while walking in terrain, simple methods to release stress, increase focus, build strength and stability.',
   },
   { event: 'rewild-course', date: '2026-11-13', time: '10:00', place: 'Larvik' },
