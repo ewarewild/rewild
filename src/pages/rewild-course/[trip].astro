@@ -163,11 +163,26 @@ const heroImage = await getImage({ src: session.image ?? nordkollen2, width: 200
             Please get in touch if you have any questions.
           </p>
           <p>
-            What to bring: Appropriate clothes for the weather, comfortable shoes with a grip, seating mat, minimum 1 litre of water, a packed lunch, a small sweet snack, pen and notepad, and a cup for the tea.
-          </p>
-          <p>
             Full practical details will be sent once you've booked your place.
           </p>
+        </div>
+        <h3 class="font-display font-medium text-3xl md:text-4xl text-forest leading-tight mt-12 mb-6">What to bring:</h3>
+        <div class="space-y-6">
+          {[
+            'Appropriate clothes for the weather',
+            'Comfortable shoes with a grip',
+            'Seating mat',
+            'Minimum 1 litre of water',
+            'A packed lunch',
+            'A small sweet snack',
+            'Pen and notepad',
+            'A cup for the tea',
+          ].map(item => (
+            <div class="flex items-start gap-4">
+              <span class="mt-2 w-1.5 h-1.5 rounded-full bg-sage-light flex-shrink-0"></span>
+              <span class="text-[1.08rem] text-forest font-light leading-relaxed">{item}</span>
+            </div>
+          ))}
         </div>
         <p class="text-forest/60 text-[1.08rem] font-light leading-relaxed mt-12">
           Please note: We hike in all weather. However, if hazardous conditions arise, the hike will be cancelled. You will then receive a full refund.
