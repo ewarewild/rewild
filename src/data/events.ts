@@ -102,6 +102,7 @@ export const sessions: Session[] = [
       'Welcome to hands-on, practical training in nature that gives you tools to take the strain off your joints while walking, build strength, balance and stability, and release mental and physical tension.',
       'We hike to <a href="https://www.google.com/maps?q=59.197427717465644,9.8402239222746" target="_blank" rel="noopener" class="underline hover:text-sage transition-colors duration-200">Nordkollen</a> (353m) to immerse ourselves in wild nature.',
     ],
+    meetUp: 'We meet up at <a href="https://www.google.com/maps?q=59.18604216274942,9.803863873385133" target="_blank" rel="noopener" class="underline hover:text-sage transition-colors duration-200">Parkering for Svarteberget og Nordkollen</a> and walk from there on a gravel road, then on a forest trail.',
     description: 'Hike to Nordkollen and learn how to take the strain off your joints while walking in terrain, simple methods to release stress, increase focus, build strength and stability.',
   },
 ].sort((a, b) => (a.date + a.time).localeCompare(b.date + b.time));
