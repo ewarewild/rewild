@@ -84,7 +84,7 @@ export const sessions: Session[] = [
   },
   {
     event: 'rewild-course', date: '2026-11-06', time: '10:00', place: 'Porsgrunn',
-    description: 'Hike to Nordkollen and learn how to take the strain off your joints in terrain, increase focus, strength and stability.',
+    description: 'Hike to Nordkollen and learn how to take the strain off your joints in terrain and build strength and stability as you walk and stand.',
   },
   { event: 'rewild-course', date: '2026-11-13', time: '10:00', place: 'Larvik' },
   { event: 'rewild-course', date: '2026-11-27', time: '10:00', place: 'Sandefjord' },
