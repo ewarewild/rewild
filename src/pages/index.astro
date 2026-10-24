@@ -77,10 +77,17 @@ const heroImage = await getImage({ src: heroJot, width: 2000, format: 'webp' });
   <!-- How we do it -->
   <section id="return-to-yourself" class="bg-white pt-16 pb-16 md:pt-28 md:pb-24 scroll-mt-24">
     <div class="max-w-6xl mx-auto px-6 md:px-12">
-      <p class="text-forest font-light text-[1.08rem] leading-relaxed md:font-display md:font-medium md:text-[2.4rem] md:leading-snug md:text-balance">
-        <span class="block"><span class="text-sage">Reduce</span> stress and risk of injury</span>
-        <span class="block"><span class="text-sage">Improve</span> stability and mental performance</span>
-      </p>
+      <!-- Option 2: verbs as small labels, benefits large, side by side -->
+      <div class="grid grid-cols-2 gap-6 md:gap-12">
+        <div>
+          <p class="text-xs tracking-[0.3em] uppercase text-sage/80 font-light mb-3">Reduce</p>
+          <p class="font-display font-medium text-forest text-xl md:text-[2.4rem] leading-snug">Stress and<br /> risk of injury</p>
+        </div>
+        <div>
+          <p class="text-xs tracking-[0.3em] uppercase text-sage/80 font-light mb-3">Improve</p>
+          <p class="font-display font-medium text-forest text-xl md:text-[2.4rem] leading-snug">Stability and<br /> mental performance</p>
+        </div>
+      </div>
       {/* Hidden for now (2026-10-24), kept to bring back later:
       <h2 class="mt-16 md:mt-24 font-display font-bold text-forest text-2xl md:text-4xl leading-tight text-balance">
         Nature gives us everything we need to live - and the ideal setting to restore balance in body and mind.
