@@ -54,7 +54,7 @@ export type Session = {
 
 export const sessions: Session[] = [
   {
-    event: 'evening-reset', date: '2026-11-03', time: '17:00', place: 'Porsgrunn', spot: 'Skolapparåsen', difficulty: 'Easy',
+    event: 'evening-reset', date: '2026-11-03', time: '17:00', place: 'Porsgrunn', spot: 'Skolapparåsen', difficulty: 'Moderate',
     meetingPoint: 'Parkering for Svarteberget og Nordkollen', mapUrl: 'https://www.google.com/maps?q=59.18604216274942,9.803863873385133',
     intro: [
       "Welcome to an evening hike designed to help you release stress and tension, increase energy flow and promote better sleep.",
