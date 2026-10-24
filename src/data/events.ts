@@ -79,7 +79,7 @@ export const sessions: Session[] = [
     description: 'Hike to Østre Vealøs and learn how to take the strain off your joints while walking in terrain, simple methods to release stress, increase focus, build strength and stability.',
   },
   {
-    event: 'rewild-course', date: '2026-11-15', time: '10:00', place: 'Porsgrunn, Larvik & Skien', spot: 'Nordkollen',
+    event: 'rewild-course', date: '2026-11-15', time: '10:00', place: 'Porsgrunn & Skien', spot: 'Nordkollen',
     image: nordkollen2,
     meetingPoint: 'Parkering for Svarteberget og Nordkollen', mapUrl: 'https://www.google.com/maps?q=59.18604216274942,9.803863873385133',
     price: '500 NOK',
