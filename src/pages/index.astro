@@ -51,7 +51,7 @@ const heroImage = await getImage({ src: heroJot, width: 2000, format: 'webp' });
   </div>
 
   <!-- Hero -->
-  <section class="relative h-screen flex items-center justify-center overflow-hidden">
+  <section class="relative h-screen md:h-[calc(65vh+60px)] flex items-center justify-center overflow-hidden">
     <div
       class="absolute inset-0 bg-cover bg-center bg-no-repeat"
       style={`background-image: url('${heroImage.src}');`}
