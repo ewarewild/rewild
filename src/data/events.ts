@@ -12,6 +12,7 @@ type EventInfo = {
   image: ImageMetadata;
   alt: string;
   description: string;
+  hours: number; // length, used for the end time on phone calendar cards
 };
 
 export const events: Record<EventId, EventInfo> = {
@@ -20,6 +21,7 @@ export const events: Record<EventId, EventInfo> = {
     href: '/evening-reset',
     image: skolapparn,
     alt: 'Evening Reset - forest hike',
+    hours: 1.5,
     description: 'Shake off the day and reconnect with your body on a fast-paced evening hike that supports stress release, mental balance and better sleep.',
   },
   'rewild-course': {
@@ -27,6 +29,7 @@ export const events: Record<EventId, EventInfo> = {
     href: '/rewild-course',
     image: nordkollen2,
     alt: 'Rewild Course - full-day training',
+    hours: 5,
     description: 'A day hike to Nordkollen built around injury prevention, functional strength, increasing focus, stress release and building resilience.',
   },
 };
@@ -40,6 +43,7 @@ export type Session = {
   meetingPoint?: string; // shown as "To be announced" until set
   intro?: string[]; // paragraphs replacing the event's shared intro on this trip's page (HTML allowed on course pages)
   description?: string; // replaces the event's shared description on this trip's calendar card
+  difficulty?: string; // shown on phone calendar cards, e.g. 'Easy' or 'Moderate'
   mapUrl?: string;
   image?: ImageMetadata; // replaces the event's shared image on this trip's card and page
   duration?: string; // course pages only, replaces the shared duration
@@ -50,7 +54,7 @@ export type Session = {
 
 export const sessions: Session[] = [
   {
-    event: 'evening-reset', date: '2026-11-03', time: '17:00', place: 'Porsgrunn', spot: 'Skolapparåsen',
+    event: 'evening-reset', date: '2026-11-03', time: '17:00', place: 'Porsgrunn', spot: 'Skolapparåsen', difficulty: 'Easy',
     meetingPoint: 'Parkering for Svarteberget og Nordkollen', mapUrl: 'https://www.google.com/maps?q=59.18604216274942,9.803863873385133',
     intro: [
       "Welcome to an evening hike designed to help you release stress and tension, increase energy flow and promote better sleep.",
@@ -58,7 +62,7 @@ export const sessions: Session[] = [
     ],
   },
   {
-    event: 'evening-reset', date: '2026-11-10', time: '17:00', place: 'Larvik', spot: 'Brunlanes Sportskapellet',
+    event: 'evening-reset', date: '2026-11-10', time: '17:00', place: 'Larvik', spot: 'Brunlanes Sportskapellet', difficulty: 'Easy',
     meetingPoint: 'Ingri turparkering', mapUrl: 'https://maps.app.goo.gl/WS46sDBc4eG9Tg757',
     intro: [
       "Welcome to an evening hike designed to help you release stress and tension, increase energy flow and promote better sleep.",
@@ -66,7 +70,7 @@ export const sessions: Session[] = [
     ],
   },
   {
-    event: 'rewild-course', date: '2026-11-06', time: '10:00', place: 'Porsgrunn & Skien', spot: 'Østre Vealøs',
+    event: 'rewild-course', date: '2026-11-06', time: '10:00', place: 'Porsgrunn & Skien', spot: 'Østre Vealøs', difficulty: 'Moderate',
     meetingPoint: 'Parkering for Østre Vealøs turområder', mapUrl: 'https://www.google.com/maps?q=59.20275,9.73157',
     price: '500 NOK',
     image: nordkollen2,
@@ -79,7 +83,7 @@ export const sessions: Session[] = [
     description: 'Hike to Østre Vealøs and learn how to take the strain off your joints while walking in terrain, simple methods to release stress, increase focus, build strength and stability.',
   },
   {
-    event: 'rewild-course', date: '2026-11-15', time: '10:00', place: 'Porsgrunn & Skien', spot: 'Nordkollen',
+    event: 'rewild-course', date: '2026-11-15', time: '10:00', place: 'Porsgrunn & Skien', spot: 'Nordkollen', difficulty: 'Moderate',
     image: nordkollen2,
     meetingPoint: 'Parkering for Svarteberget og Nordkollen', mapUrl: 'https://www.google.com/maps?q=59.18604216274942,9.803863873385133',
     price: '500 NOK',
@@ -109,6 +113,14 @@ export const longDate = (s: Session) =>
 // e.g. "Evening Reset - Skolapparåsen, Tue 3 Nov" - the trip's option in the signup form
 export const signupLabel = (s: Session) =>
   `${events[s.event].name} - ${s.spot ?? s.place}, ${weekdays[day(s).getDay()].slice(0, 3)} ${day(s).getDate()} ${months[day(s).getMonth()].slice(0, 3)}`;
+
+// e.g. "17:00 - 18:30"
+export const timeRange = (s: Session) => {
+  const [h, m] = s.time.split(':').map(Number);
+  const end = h * 60 + m + events[s.event].hours * 60;
+  const pad = (n: number) => String(n).padStart(2, '0');
+  return `${s.time} - ${pad(Math.floor(end / 60) % 24)}:${pad(end % 60)}`;
+};
 
 export const tripPaths = (event: EventId) =>
   sessions.filter(s => s.event === event).map(session => ({ params: { trip: tripSlug(session) }, props: { session } }));

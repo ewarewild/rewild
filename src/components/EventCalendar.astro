@@ -1,6 +1,6 @@
 ---
 import { Image } from 'astro:assets';
-import { events, sessions, tripUrl } from '../data/events';
+import { events, sessions, tripUrl, timeRange } from '../data/events';
 
 interface Props {
   limit?: number;
@@ -12,13 +12,41 @@ const months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 
 ---
 
 <div class="event-calendar" data-limit={limit}>
-  <div class="grid md:grid-cols-2 gap-16 md:gap-8 mb-20">
+  <div class="grid md:grid-cols-2 gap-4 md:gap-8 mb-20">
     {sessions.map(s => {
       const e = events[s.event];
       const day = new Date(`${s.date}T12:00:00`);
       return (
         <div class="cal-row bg-white group overflow-hidden flex flex-col" data-date={s.date} data-event={s.event}>
-          <a href={tripUrl(s)} class="block">
+          {/* Phones: compact row with date badge, difficulty and time, photo on the right */}
+          <a href={tripUrl(s)} class="md:hidden flex h-[176px]">
+            <div class="flex-1 min-w-0 p-4 flex flex-col">
+              <p class="text-[0.7rem] tracking-[0.2em] uppercase text-sage/80 font-light truncate">{s.place}</p>
+              <h3 class="mt-1 font-display font-bold text-[1.1rem] text-forest leading-snug line-clamp-2">{e.name} - {s.spot ?? s.place}</h3>
+              <div class="mt-auto flex items-center gap-3">
+                <div class="w-14 h-14 shrink-0 flex flex-col items-center justify-center bg-cream text-forest">
+                  <span class="font-display font-bold text-xl leading-none">{day.getDate()}</span>
+                  <span class="mt-1 text-[0.7rem] tracking-[0.15em] uppercase font-light leading-none">{months[day.getMonth()].slice(0, 3)}</span>
+                </div>
+                <div class="min-w-0 space-y-1.5 text-[0.85rem] text-forest font-light">
+                  {s.difficulty && (
+                    <p class="flex items-center gap-2 truncate">
+                      <svg class="w-4 h-4 shrink-0 text-sage" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><rect x="1" y="10" width="3" height="5" rx="0.5"/><rect x="6.5" y="6" width="3" height="9" rx="0.5" opacity={s.difficulty === 'Easy' ? 0.3 : 1}/><rect x="12" y="2" width="3" height="13" rx="0.5" opacity={s.difficulty === 'Hard' ? 1 : 0.3}/></svg>
+                      {s.difficulty}
+                    </p>
+                  )}
+                  <p class="flex items-center gap-2 truncate">
+                    <svg class="w-4 h-4 shrink-0 text-sage" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><circle cx="8" cy="8" r="6.5"/><path d="M8 4.5V8l2.5 1.5"/></svg>
+                    {timeRange(s)}
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="w-[38%] shrink-0 overflow-hidden">
+              <Image src={s.image ?? e.image} alt={e.alt} width={600} densities={[1, 2]} class="w-full h-full object-cover object-center" loading="lazy" />
+            </div>
+          </a>
+          <a href={tripUrl(s)} class="hidden md:block">
             <div class="overflow-hidden h-72">
               <Image
                 src={s.image ?? e.image}
@@ -30,7 +58,7 @@ const months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 
               />
             </div>
           </a>
-          <div class="p-8 flex flex-col flex-1">
+          <div class="hidden md:flex p-8 flex-col flex-1">
             <p class="text-xs tracking-[0.3em] uppercase text-sage/80 mb-3 font-light">{s.place}</p>
             <a href={tripUrl(s)} class="block">
               <h3 class="font-display font-bold text-3xl text-forest mb-5 leading-tight hover:opacity-60 transition-opacity duration-200">{e.name} - {s.spot ?? s.place}</h3>
