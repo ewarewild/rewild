@@ -79,7 +79,7 @@ export const sessions: Session[] = [
     description: 'Hike to Østre Vealøs and learn how to take the strain off your joints while walking in terrain, simple methods to release stress, increase focus, build strength and stability.',
   },
   {
-    event: 'rewild-course', date: '2026-11-15', time: '10:00', place: 'Porsgrunn', spot: 'Nordkollen',
+    event: 'rewild-course', date: '2026-11-15', time: '10:00', place: 'Porsgrunn, Larvik & Skien', spot: 'Nordkollen',
     image: nordkollen2,
     meetingPoint: 'Parkering for Svarteberget og Nordkollen', mapUrl: 'https://www.google.com/maps?q=59.18604216274942,9.803863873385133',
     price: '500 NOK',
@@ -98,7 +98,7 @@ const months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 
 const day = (s: Session) => new Date(`${s.date}T12:00:00`);
 // Uses only the first town, so "Porsgrunn & Skien" keeps the /porsgrunn-... link.
 export const tripSlug = (s: Session) =>
-  `${s.place.split(' & ')[0]}-${day(s).getDate()}-${months[day(s).getMonth()]}`.toLowerCase();
+  `${s.place.split(/,| & /)[0]}-${day(s).getDate()}-${months[day(s).getMonth()]}`.toLowerCase();
 
 export const tripUrl = (s: Session) => `${events[s.event].href}/${tripSlug(s)}`;
 
