@@ -14,6 +14,7 @@ const heroImage = await getImage({ src: heroJot, width: 2000, format: 'webp' });
   <!-- Navigation -->
   <nav id="nav" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 px-6 py-5 md:px-12">
     <div class="max-w-6xl mx-auto flex items-center justify-end md:justify-center">
+      <a href="#return-to-yourself" id="nav-wordmark" class="md:hidden absolute left-1/2 -translate-x-1/2 font-wordmark text-[11.75pt] tracking-[0.3em] uppercase font-light text-white transition-colors duration-300">Rewild</a>
       <ul class="hidden md:flex gap-10 text-xs tracking-[0.3em] uppercase font-normal" id="nav-links">
         <li><a href="/" class="text-white hover:opacity-60 transition-opacity duration-200">Home</a></li>
         <li><a href="#events" class="text-white hover:opacity-60 transition-opacity duration-200">Events</a></li>
@@ -57,11 +58,11 @@ const heroImage = await getImage({ src: heroJot, width: 2000, format: 'webp' });
       style={`background-image: url('${heroImage.src}');`}
     ></div>
     <div class="absolute inset-0" style="background: linear-gradient(to top, rgba(20,25,14,0.72) 0%, rgba(20,25,14,0.3) 50%, rgba(20,25,14,0.15) 100%);"></div>
-    <div class="relative top-3 md:top-0 z-10 text-center px-6 max-w-2xl mx-auto">
-      <h1 class="font-light leading-none text-white flex flex-col items-center">
+    <div class="relative z-10 text-center px-6 max-w-2xl mx-auto">
+      <h1 class="hidden md:flex font-light leading-none text-white flex-col items-center">
         <a href="#return-to-yourself" class="font-wordmark block text-[23.5pt] md:text-[36pt] tracking-[0.3em] uppercase hover:opacity-70 transition-opacity duration-200">Rewild</a>
       </h1>
-      <p class="mt-22 md:mt-36 font-display font-bold text-white text-[21.5pt] md:text-3xl leading-tight text-balance">
+      <p class="md:mt-36 font-display font-bold text-white text-[21.5pt] md:text-3xl leading-tight text-balance">
         Build strength and confidence while walking in terrain
       </p>
     </div>
@@ -216,6 +217,7 @@ const heroImage = await getImage({ src: heroJot, width: 2000, format: 'webp' });
   const nav = document.getElementById('nav');
   const navLinks = document.getElementById('nav-links');
   const menuBtn = document.getElementById('menu-btn');
+  const navWordmark = document.getElementById('nav-wordmark');
 
   const updateNav = () => {
     const scrolled = window.scrollY > 80;
@@ -223,10 +225,12 @@ const heroImage = await getImage({ src: heroJot, width: 2000, format: 'webp' });
     if (scrolled) {
       nav?.classList.add('bg-white/95', 'backdrop-blur-sm', 'shadow-sm');
       menuBtn?.classList.replace('text-white', 'text-forest');
+      navWordmark?.classList.replace('text-white', 'text-forest');
       navLinks?.querySelectorAll('a').forEach(a => a.classList.replace('text-white', 'text-forest'));
     } else {
       nav?.classList.remove('bg-white/95', 'backdrop-blur-sm', 'shadow-sm');
       menuBtn?.classList.replace('text-forest', 'text-white');
+      navWordmark?.classList.replace('text-forest', 'text-white');
       navLinks?.querySelectorAll('a').forEach(a => a.classList.replace('text-forest', 'text-white'));
     }
   };
