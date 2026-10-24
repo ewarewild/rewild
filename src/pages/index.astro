@@ -75,13 +75,7 @@ const heroImage = await getImage({ src: heroJot, width: 2000, format: 'webp' });
   <!-- How we do it -->
   <section id="return-to-yourself" class="bg-white pt-10 pb-16 md:pt-16 md:pb-28 scroll-mt-24">
     <div class="max-w-6xl mx-auto px-6 md:px-12">
-      <!-- Phones: one paragraph. Desktop: headline plus a small lead-in. -->
-      <h2 class="text-forest font-medium text-xl leading-relaxed md:font-display md:font-bold md:text-4xl md:leading-tight md:text-balance">
-        Nature gives us everything we need to live - and the ideal setting to restore balance in body and mind.
-        <span class="md:hidden italic">Rewild takes you on local hikes that include:</span>
-      </h2>
-      <p class="hidden md:block mt-8 font-display font-bold text-forest text-4xl leading-tight">Rewild takes you on local hikes that include:</p>
-      <div class="mt-12 md:mt-14 grid md:grid-cols-3 gap-x-12 gap-y-9 md:gap-y-14">
+      <div class="grid md:grid-cols-3 gap-x-12 gap-y-9 md:gap-y-14">
         <div>
           <span class="hidden md:block mb-3 text-xs tracking-[0.25em] font-light text-sage/80">01</span>
           <h3 class="font-display font-bold text-2xl text-forest mb-3 leading-tight">Injury prevention</h3>
@@ -131,6 +125,10 @@ const heroImage = await getImage({ src: heroJot, width: 2000, format: 'webp' });
           <button type="button" class="read-more-btn mt-2 inline-block font-sans text-xs tracking-[0.25em] uppercase font-light text-sage/80 hover:text-sage transition-colors duration-300">More →</button>
         </div>
       </div>
+      <h2 class="mt-16 md:mt-24 font-display font-normal italic text-forest text-[16pt] md:text-[20.5pt] lg:text-[25pt] leading-relaxed text-balance">
+        Nature gives us everything we need to live - and the ideal setting to restore balance in body and mind.
+      </h2>
+      <p class="mt-6 md:mt-8 font-display font-bold text-forest text-2xl md:text-4xl leading-tight">Rewild takes you on local hikes that include:</p>
     </div>
   </section>
 
