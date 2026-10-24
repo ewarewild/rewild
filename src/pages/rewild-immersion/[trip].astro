@@ -17,7 +17,7 @@ interface Props {
 const { session } = Astro.props;
 const name = events['rewild-immersion'].name;
 
-const heroImage = await getImage({ src: rondane2, width: 2000, format: 'webp' });
+const heroImage = await getImage({ src: session.image ?? rondane2, width: 2000, format: 'webp' });
 ---
 
 <Layout title={`${name} - ${session.spot ?? session.place} - Rewild`} description="A full day course up Nordkollen, built around five modules: injury prevention, core strength, focus and awareness, stress release & recovery, and building resilience." preloadImage={heroImage.src}>

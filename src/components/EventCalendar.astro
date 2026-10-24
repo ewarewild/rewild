@@ -21,7 +21,7 @@ const months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 
           <a href={tripUrl(s)} class="block">
             <div class="overflow-hidden h-72">
               <Image
-                src={e.image}
+                src={s.image ?? e.image}
                 alt={e.alt}
                 width={1200}
                 densities={[1, 2]}

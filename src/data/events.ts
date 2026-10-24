@@ -49,6 +49,7 @@ export type Session = {
   intro?: string[]; // paragraphs replacing the event's shared intro on this trip's page
   description?: string; // replaces the event's shared description on this trip's calendar card
   mapUrl?: string;
+  image?: ImageMetadata; // replaces the event's shared image on this trip's card and page
 };
 
 export const sessions: Session[] = [
@@ -85,12 +86,14 @@ export const sessions: Session[] = [
   {
     event: 'rewild-course', date: '2026-11-06', time: '10:00', place: 'Porsgrunn & Skien', spot: 'Østre Vealøs',
     meetingPoint: 'Parkering for Østre Vealøs turområder', mapUrl: 'https://www.google.com/maps?q=59.20275,9.73157',
+    image: rondane2,
     description: 'Hike to Østre Vealøs and learn how to take the strain off your joints while walking in terrain, simple methods to release stress, build strength and stability.',
   },
   { event: 'rewild-course', date: '2026-11-13', time: '10:00', place: 'Larvik' },
   { event: 'rewild-course', date: '2026-11-27', time: '10:00', place: 'Sandefjord' },
   {
     event: 'rewild-immersion', date: '2026-11-15', time: '10:00', place: 'Porsgrunn', spot: 'Nordkollen',
+    image: nordkollen2,
     meetingPoint: 'Parkering for Svarteberget og Nordkollen', mapUrl: 'https://www.google.com/maps?q=59.18604216274942,9.803863873385133',
   },
 ].sort((a, b) => (a.date + a.time).localeCompare(b.date + b.time));
