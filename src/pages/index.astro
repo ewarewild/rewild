@@ -16,7 +16,7 @@ const heroImage = await getImage({ src: heroJot, width: 2000, format: 'webp' });
     <div class="max-w-6xl mx-auto flex items-center justify-end md:justify-center">
       <a href="#return-to-yourself" id="nav-wordmark" class="md:hidden absolute left-1/2 -translate-x-1/2 font-wordmark text-[11.75pt] tracking-[0.3em] uppercase font-light text-white transition-colors duration-300">Rewild</a>
       <ul class="hidden md:flex gap-10 text-xs tracking-[0.3em] uppercase font-normal" id="nav-links">
-        <li><a href="/" class="text-white hover:opacity-60 transition-opacity duration-200">Home</a></li>
+        <li><a href="/" class="font-wordmark text-white hover:opacity-60 transition-opacity duration-200">Rewild</a></li>
         <li><a href="#events" class="text-white hover:opacity-60 transition-opacity duration-200">Events</a></li>
         <li><a href="#about" class="text-white hover:opacity-60 transition-opacity duration-200">About</a></li>
         <li><a href="/the-story" class="text-white hover:opacity-60 transition-opacity duration-200">The Story</a></li>
@@ -59,10 +59,8 @@ const heroImage = await getImage({ src: heroJot, width: 2000, format: 'webp' });
     ></div>
     <div class="absolute inset-0" style="background: linear-gradient(to top, rgba(20,25,14,0.72) 0%, rgba(20,25,14,0.3) 50%, rgba(20,25,14,0.15) 100%);"></div>
     <div class="relative top-12 md:top-0 z-10 text-center px-6 max-w-2xl mx-auto">
-      <h1 class="hidden md:flex font-light leading-none text-white flex-col items-center">
-        <a href="#return-to-yourself" class="font-wordmark block text-[23.5pt] md:text-[36pt] tracking-[0.3em] uppercase hover:opacity-70 transition-opacity duration-200">Rewild</a>
-      </h1>
-      <p class="md:mt-36 font-display font-bold text-white text-[21.5pt] md:text-3xl leading-tight text-balance">
+      <h1 class="sr-only">Rewild</h1>
+      <p class="font-display font-bold text-white text-[21.5pt] md:text-3xl leading-tight text-balance">
         Transform the way you move
       </p>
     </div>
