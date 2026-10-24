@@ -37,7 +37,7 @@ const months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 
             </a>
             <a href={tripUrl(s)} class="self-start mb-5 px-4 py-2 border border-forest/20 text-xs tracking-[0.2em] uppercase font-light text-forest hover:border-forest transition-colors duration-200">{day.getDate()} {months[day.getMonth()]}</a>
             <p class="text-forest font-light text-[1.08rem] leading-relaxed mb-8 flex-1">
-              {e.description}
+              {s.description ?? e.description}
             </p>
             <div class="pt-5 border-t border-cream flex justify-between">
               <a href={tripUrl(s)} class="text-xs tracking-[0.25em] uppercase font-light text-sage/80 hover:text-sage transition-colors duration-300">More →</a>

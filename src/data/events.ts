@@ -47,6 +47,7 @@ export type Session = {
   spot?: string; // the hike's destination, used in titles instead of place
   meetingPoint?: string; // shown as "To be announced" until set
   intro?: string[]; // paragraphs replacing the event's shared intro on this trip's page
+  description?: string; // replaces the event's shared description on this trip's calendar card
   mapUrl?: string;
 };
 
@@ -81,7 +82,10 @@ export const sessions: Session[] = [
       "We walk from the parking area at a moderate to fast pace (ca. 4.5km/h) on an easy gravel road towards Lia, then on a shorter forest path up to Skolapparåsen (313m), a 4km round trip. It's a beautiful, quiet mountain with a great view.",
     ],
   },
-  { event: 'rewild-course', date: '2026-11-06', time: '10:00', place: 'Porsgrunn' },
+  {
+    event: 'rewild-course', date: '2026-11-06', time: '10:00', place: 'Porsgrunn',
+    description: 'Hike to Nordkollen and learn how to take the strain off your joints in terrain, increase focus, strength and stability.',
+  },
   { event: 'rewild-course', date: '2026-11-13', time: '10:00', place: 'Larvik' },
   { event: 'rewild-course', date: '2026-11-27', time: '10:00', place: 'Sandefjord' },
   {
