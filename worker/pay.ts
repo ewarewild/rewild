@@ -40,6 +40,6 @@ export async function pay(request: Request, env: Env) {
     });
     return json({ reference, redirectUrl: payment.redirectUrl });
   } catch (err) {
-    return failure('Could not start the Vipps payment', err, request);
+    return failure('Could not start the Vipps payment', err, request, env);
   }
 }

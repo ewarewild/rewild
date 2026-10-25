@@ -56,7 +56,7 @@ async function accessToken(cfg: Config): Promise<string> {
       client_secret: cfg.clientSecret,
     },
   });
-  if (!res.ok) throw new Error(`Vipps access token failed: ${res.status}`);
+  if (!res.ok) throw new Error(`Vipps access token failed: ${res.status} ${(await res.text()).slice(0, 300)}`);
   const { access_token } = await res.json() as { access_token: string };
   return access_token;
 }
@@ -79,10 +79,12 @@ export async function vipps(cfg: Config, path: string, init: { method?: string; 
 }
 
 // Error body for a failed Vipps call: previews include Vipps' own message to help testing
-export const failure = (message: string, err: unknown, request: Request) => {
+// (plus which VIPPS_ variable names are set - names only, never values)
+export const failure = (message: string, err: unknown, request: Request, env: Env) => {
   console.error(err);
   const live = LIVE_HOSTS.includes(new URL(request.url).hostname);
-  return json({ error: message, ...(live ? {} : { detail: String(err) }) }, 502);
+  const keysSet = Object.keys(env).filter(k => k.startsWith('VIPPS_') && env[k as keyof Env]);
+  return json({ error: message, ...(live ? {} : { detail: String(err), keysSet }) }, 502);
 };
 
 export const json = (data: unknown, status = 200) =>

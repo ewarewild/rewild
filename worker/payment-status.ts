@@ -26,6 +26,6 @@ export async function paymentStatus(request: Request, env: Env) {
     if (state === 'CREATED') return json({ status: 'pending' });
     return json({ status: 'cancelled' }); // ABORTED, EXPIRED or TERMINATED
   } catch (err) {
-    return failure('Could not check the payment', err, request);
+    return failure('Could not check the payment', err, request, env);
   }
 }
