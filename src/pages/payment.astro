@@ -1,0 +1,81 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Nav from '../components/Nav.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<Layout title="Payment - Rewild" description="Your Rewild booking.">
+
+  <!-- Navigation -->
+  <Nav />
+
+  <!-- Vipps sends the customer back here with ?ref=...; the script below asks /api/payment-status -->
+  <section class="bg-cream min-h-screen pt-32 pb-40 md:pt-44 md:pb-56">
+    <div class="max-w-6xl mx-auto px-6 md:px-12">
+      <div class="max-w-xl">
+        <h1 id="payment-title" class="font-display font-bold text-4xl md:text-5xl text-forest mb-10 leading-tight">Checking your payment...</h1>
+        <p id="payment-text" class="text-forest font-light text-[1.08rem] leading-relaxed">This only takes a moment.</p>
+        <a id="payment-link" href="/#events" class="hidden mt-12 px-10 py-4 border border-forest text-forest text-xs tracking-[0.25em] uppercase font-light hover:bg-forest hover:text-white transition-colors duration-300">All events</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <Footer />
+
+</Layout>
+
+<script>
+  const title = document.getElementById('payment-title') as HTMLElement;
+  const text = document.getElementById('payment-text') as HTMLElement;
+  const link = document.getElementById('payment-link') as HTMLAnchorElement;
+  const ref = new URLSearchParams(location.search).get('ref');
+
+  const show = (heading: string, body: string, button?: { href: string; label: string }) => {
+    title.textContent = heading;
+    text.textContent = body;
+    if (button) {
+      link.href = button.href;
+      link.textContent = button.label;
+      link.classList.replace('hidden', 'inline-block');
+    }
+  };
+
+  const notThrough = () => show(
+    "Your payment hasn't come through",
+    "If you paid in Vipps, it may take a few minutes to show up - we'll confirm your place by email. If not, you're welcome to sign up again, or get in touch if you have any questions.",
+    { href: '/contact', label: 'Get in touch' },
+  );
+
+  // Vipps can take a few seconds to register the payment after the customer returns
+  const check = async (attempt = 0): Promise<void> => {
+    try {
+      const res = await fetch(`/api/payment-status?ref=${encodeURIComponent(ref!)}`);
+      const { status } = await res.json();
+      if (status === 'paid') {
+        return show(
+          "Thank you - you're booked!",
+          "Your payment is confirmed. We'll be in touch by email with everything you need before the hike.",
+          { href: '/#events', label: 'All events' },
+        );
+      }
+      if (status === 'cancelled') {
+        return show(
+          'Payment cancelled',
+          'Your payment was cancelled, so your place has not been booked. You can sign up again whenever you like.',
+          { href: '/signup', label: 'Sign up' },
+        );
+      }
+      if (status === 'pending' && attempt < 5) {
+        await new Promise(r => setTimeout(r, 2000));
+        return check(attempt + 1);
+      }
+      notThrough();
+    } catch {
+      notThrough();
+    }
+  };
+
+  if (ref) check();
+  else notThrough();
+</script>

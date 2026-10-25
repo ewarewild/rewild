@@ -13,6 +13,7 @@ type EventInfo = {
   alt: string;
   description: string;
   hours: number; // length, used for the end time on phone calendar cards
+  price: number; // NOK per person, charged through Vipps at sign-up
 };
 
 export const events: Record<EventId, EventInfo> = {
@@ -22,6 +23,7 @@ export const events: Record<EventId, EventInfo> = {
     image: skolapparn,
     alt: 'Evening Reset - forest hike',
     hours: 1.5,
+    price: 200,
     description: 'Shake off the day and reconnect with your body on a fast-paced evening hike that supports stress release, mental balance and better sleep.',
   },
   'rewild-course': {
@@ -30,6 +32,7 @@ export const events: Record<EventId, EventInfo> = {
     image: nordkollen2,
     alt: 'Rewild Course - full-day training',
     hours: 5,
+    price: 300,
     description: 'A day hike to Nordkollen built around injury prevention, functional strength, increasing focus, stress release and building resilience.',
   },
 };
@@ -47,7 +50,7 @@ export type Session = {
   mapUrl?: string;
   image?: ImageMetadata; // replaces the event's shared image on this trip's card and page
   duration?: string; // course pages only, replaces the shared duration
-  price?: string; // course pages only, replaces the shared price
+  price?: number; // NOK, replaces the event's shared price
   meetUp?: string; // course pages only, replaces the Technical info meet-up paragraph (HTML allowed)
   routeInfo?: string; // course pages only, replaces the Technical info elevation/distance paragraph
 };
@@ -72,7 +75,7 @@ export const sessions: Session[] = [
   {
     event: 'rewild-course', date: '2026-11-06', time: '10:00', place: 'Porsgrunn & Skien', spot: 'Østre Vealøs', difficulty: 'Moderate',
     meetingPoint: 'Parkering for Østre Vealøs turområder', mapUrl: 'https://www.google.com/maps?q=59.20275,9.73157',
-    price: '500 NOK',
+    price: 500,
     image: nordkollen2,
     intro: [
       'Welcome to a day of practical training in nature that gives you tools to minimise the risk of injury and restore physical and mental balance - on the trail and in everyday life.',
@@ -86,7 +89,7 @@ export const sessions: Session[] = [
     event: 'rewild-course', date: '2026-11-15', time: '10:00', place: 'Porsgrunn & Skien', spot: 'Nordkollen', difficulty: 'Moderate',
     image: nordkollen2,
     meetingPoint: 'Parkering for Svarteberget og Nordkollen', mapUrl: 'https://www.google.com/maps?q=59.18604216274942,9.803863873385133',
-    price: '500 NOK',
+    price: 500,
     intro: [
       'Welcome to a day of practical training in nature that gives you tools to minimise the risk of injury and restore physical and mental balance - on the trail and in everyday life.',
       'We hike to <a href="https://www.google.com/maps?q=59.197427717465644,9.8402239222746" target="_blank" rel="noopener" class="font-semibold underline hover:text-sage transition-colors duration-200">Nordkollen</a> (353m) to immerse ourselves in wild nature.',
@@ -113,6 +116,9 @@ export const longDate = (s: Session) =>
 // e.g. "Evening Reset - Skolapparåsen, Tue 3 Nov" - the trip's option in the signup form
 export const signupLabel = (s: Session) =>
   `${events[s.event].name} - ${s.spot ?? s.place}, ${weekdays[day(s).getDay()].slice(0, 3)} ${day(s).getDate()} ${months[day(s).getMonth()].slice(0, 3)}`;
+
+// NOK per person for this trip
+export const price = (s: Session) => s.price ?? events[s.event].price;
 
 // e.g. "17:00 - 18:30"
 export const timeRange = (s: Session) => {
