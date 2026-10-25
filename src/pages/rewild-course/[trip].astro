@@ -54,7 +54,7 @@ const heroImage = await getImage({ src: session.image ?? nordkollen2, width: 200
                 Welcome to a day of practical training in nature that gives you tools to move safely, build core strength, and recover better - on the trail, and in everyday life.
               </p>
               <p>
-                We hike to <a href="https://www.google.com/maps?q=59.197427717465644,9.8402239222746" target="_blank" rel="noopener" class="underline hover:text-sage transition-colors duration-200">Nordkollen</a>, a mountain near Porsgrunn, to immerse ourselves in wild nature.
+                We hike to <a href="https://www.google.com/maps?q=59.197427717465644,9.8402239222746" target="_blank" rel="noopener" class="font-semibold underline hover:text-sage transition-colors duration-200">Nordkollen</a>, a mountain near Porsgrunn, to immerse ourselves in wild nature.
               </p>
             </>
           )}
@@ -140,7 +140,7 @@ const heroImage = await getImage({ src: session.image ?? nordkollen2, width: 200
         <div class="space-y-5 text-forest font-light leading-relaxed text-[1.08rem]">
           {session.meetUp ? <p set:html={session.meetUp} /> : (
             <p>
-              We meet up at a parking space in <a href="https://www.google.com/maps?q=59.18604216274942,9.803863873385133" target="_blank" rel="noopener" class="underline hover:text-sage transition-colors duration-200">Oklungen</a> and walk from there on a gravel road, then on a forest trail.
+              We meet up at a parking space in <a href="https://www.google.com/maps?q=59.18604216274942,9.803863873385133" target="_blank" rel="noopener" class="font-semibold underline hover:text-sage transition-colors duration-200">Oklungen</a> and walk from there on a gravel road, then on a forest trail.
             </p>
           )}
           {session.routeInfo ? <p set:html={session.routeInfo} /> : (
@@ -158,7 +158,7 @@ const heroImage = await getImage({ src: session.image ?? nordkollen2, width: 200
             The event is held in English.
           </p>
           <p>
-            Please <a href="/contact" class="underline hover:text-sage transition-colors duration-200">get in touch</a> if you have any questions.
+            Please <a href="/contact" class="font-semibold underline hover:text-sage transition-colors duration-200">get in touch</a> if you have any questions.
           </p>
           <p>
             Full practical details will be sent once you've booked your place.
@@ -212,7 +212,7 @@ const heroImage = await getImage({ src: session.image ?? nordkollen2, width: 200
               <span class="text-xs tracking-[0.2em] uppercase text-sage/80 font-light w-28 flex-shrink-0">Meeting point</span>
               <span class="text-base text-forest font-light">
                 {session.mapUrl
-                  ? <a href={session.mapUrl} target="_blank" rel="noopener" class="underline hover:text-sage transition-colors duration-200">{session.meetingPoint}</a>
+                  ? <a href={session.mapUrl} target="_blank" rel="noopener" class="font-semibold underline hover:text-sage transition-colors duration-200">{session.meetingPoint}</a>
                   : session.meetingPoint ?? 'To be announced'}
               </span>
             </div>

@@ -76,9 +76,9 @@ export const sessions: Session[] = [
     image: nordkollen2,
     intro: [
       'Welcome to a day of practical training in nature that gives you tools to minimise the risk of injury and restore physical and mental balance - on the trail and in everyday life.',
-      'We hike to <a href="https://ut.no/turforslag/113681/topptur-til-stre-veals" target="_blank" rel="noopener" class="underline hover:text-sage transition-colors duration-200">Østre Vealøs</a> (445.5m) to immerse ourselves in wild nature.',
+      'We hike to <a href="https://ut.no/turforslag/113681/topptur-til-stre-veals" target="_blank" rel="noopener" class="font-semibold underline hover:text-sage transition-colors duration-200">Østre Vealøs</a> (445.5m) to immerse ourselves in wild nature.',
     ],
-    meetUp: 'We meet up at <a href="https://www.google.com/maps?q=59.20275,9.73157" target="_blank" rel="noopener" class="underline hover:text-sage transition-colors duration-200">Parkering for Østre Vealøs turområder</a> and walk from there on a well-marked trail, mostly through forest.',
+    meetUp: 'We meet up at <a href="https://www.google.com/maps?q=59.20275,9.73157" target="_blank" rel="noopener" class="font-semibold underline hover:text-sage transition-colors duration-200">Parkering for Østre Vealøs turområder</a> and walk from there on a well-marked trail, mostly through forest.',
     routeInfo: 'The total distance both ways is 7.6km, a moderately demanding trail.',
     description: 'A hands-on course to learn how to take the strain off your joints in terrain, release stress, sharpen focus and increase balance and stability.',
   },
@@ -89,9 +89,9 @@ export const sessions: Session[] = [
     price: '500 NOK',
     intro: [
       'Welcome to a day of practical training in nature that gives you tools to minimise the risk of injury and restore physical and mental balance - on the trail and in everyday life.',
-      'We hike to <a href="https://www.google.com/maps?q=59.197427717465644,9.8402239222746" target="_blank" rel="noopener" class="underline hover:text-sage transition-colors duration-200">Nordkollen</a> (353m) to immerse ourselves in wild nature.',
+      'We hike to <a href="https://www.google.com/maps?q=59.197427717465644,9.8402239222746" target="_blank" rel="noopener" class="font-semibold underline hover:text-sage transition-colors duration-200">Nordkollen</a> (353m) to immerse ourselves in wild nature.',
     ],
-    meetUp: 'We meet up at <a href="https://www.google.com/maps?q=59.18604216274942,9.803863873385133" target="_blank" rel="noopener" class="underline hover:text-sage transition-colors duration-200">Parkering for Svarteberget og Nordkollen</a> and walk from there on a gravel road, then on a forest trail.',
+    meetUp: 'We meet up at <a href="https://www.google.com/maps?q=59.18604216274942,9.803863873385133" target="_blank" rel="noopener" class="font-semibold underline hover:text-sage transition-colors duration-200">Parkering for Svarteberget og Nordkollen</a> and walk from there on a gravel road, then on a forest trail.',
     description: 'A hands-on course to learn how to take the strain off your joints in terrain, release stress, sharpen focus and increase balance and stability.',
   },
 ].sort((a, b) => (a.date + a.time).localeCompare(b.date + b.time));
