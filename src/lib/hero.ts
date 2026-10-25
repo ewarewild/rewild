@@ -12,7 +12,8 @@ export async function heroImage(src: ImageMetadata, heightVh: number) {
   const widths = WIDTHS.filter(w => w <= src.width);
   const coverVh = Math.ceil((heightVh * src.width) / src.height);
   const sizes = `max(100vw, ${coverVh}vh)`;
-  const image = await getImage({ src, widths, sizes, format: 'webp' });
+  // width sets the plain src (for browsers without srcset) to the largest size, not the original
+  const image = await getImage({ src, width: widths[widths.length - 1], widths, sizes, format: 'webp' });
   return { src: image.src, srcset: image.srcSet.attribute, sizes };
 }
 
