@@ -1,7 +1,7 @@
 // POST /api/pay  { offering, name, phone }  ->  { reference, redirectUrl }
 // Starts a Vipps payment for one trip. The price is looked up in /prices.json (built from
 // src/data/events.ts), so the browser only says which trip, never how much.
-import { vipps, json, type Env } from '../../lib/vipps';
+import { vipps, vippsConfig, json, type Env } from './vipps';
 
 type Prices = Record<string, { date: string; nok: number }>;
 
@@ -13,7 +13,7 @@ const vippsPhone = (raw: string) => {
   return undefined;
 };
 
-export const onRequestPost = async ({ request, env }: { request: Request; env: Env }) => {
+export async function pay(request: Request, env: Env) {
   const { offering, name, phone } = await request.json().catch(() => ({})) as Record<string, string>;
 
   const prices = await (await env.ASSETS.fetch(new URL('/prices.json', request.url))).json() as Prices;
@@ -25,7 +25,7 @@ export const onRequestPost = async ({ request, env }: { request: Request; env: E
   const phoneNumber = vippsPhone(phone ?? '');
 
   try {
-    const payment = await vipps(env, '', {
+    const payment = await vipps(vippsConfig(env, request), '', {
       method: 'POST',
       idempotencyKey: reference,
       body: {
@@ -43,4 +43,4 @@ export const onRequestPost = async ({ request, env }: { request: Request; env: E
     console.error(err);
     return json({ error: 'Could not start the Vipps payment' }, 502);
   }
-};
+}
