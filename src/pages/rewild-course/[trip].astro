@@ -4,7 +4,7 @@ import Layout from '../../layouts/Layout.astro';
 import Nav from '../../components/Nav.astro';
 import Footer from '../../components/Footer.astro';
 import nordkollen2 from '../../images/nordkollen2.webp';
-import { events, tripPaths, longDate, signupLabel, price, type Session } from '../../data/events';
+import { events, tripPaths, longDate, signupLabel, price, courseDuration, type Session } from '../../data/events';
 
 export function getStaticPaths() {
   return tripPaths('rewild-course');
@@ -198,7 +198,7 @@ const heroImage = await getImage({ src: session.image ?? nordkollen2, width: 200
           <div class="space-y-4">
             <div class="flex gap-6">
               <span class="text-xs tracking-[0.2em] uppercase text-sage/80 font-light w-28 flex-shrink-0">Duration</span>
-              <span class="text-base text-forest font-light">{session.duration ?? 'Up to 5 hours'}</span>
+              <span class="text-base text-forest font-light">{courseDuration(session)}</span>
             </div>
             <div class="flex gap-6">
               <span class="text-xs tracking-[0.2em] uppercase text-sage/80 font-light w-28 flex-shrink-0">Date</span>

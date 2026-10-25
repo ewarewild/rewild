@@ -13,15 +13,25 @@ export interface Env {
   VIPPS_TEST_CLIENT_SECRET?: string;
   VIPPS_TEST_SUBSCRIPTION_KEY?: string;
   VIPPS_TEST_MSN?: string;
+  VIPPS_WEBHOOK_SECRET?: string; // from /api/setup-webhook; checks webhook calls really come from Vipps
+  RESEND_API_KEY?: string; // booking emails; without it payments still work, just no email
   ASSETS: { fetch: (input: Request | string | URL) => Promise<Response> };
+  BOOKINGS?: KV; // customer details between starting a payment and it going through
 }
 
-type Config = { base: string; clientId: string; clientSecret: string; subscriptionKey: string; msn: string };
+type KV = {
+  get(key: string, type: 'json'): Promise<unknown>;
+  put(key: string, value: string, options?: { expirationTtl?: number }): Promise<void>;
+};
+
+export type Config = { base: string; clientId: string; clientSecret: string; subscriptionKey: string; msn: string };
 
 const LIVE_HOSTS = ['re-wild.no', 'www.re-wild.no'];
 
+export const isLive = (request: Request) => LIVE_HOSTS.includes(new URL(request.url).hostname);
+
 export function vippsConfig(env: Env, request: Request): Config {
-  const live = env.VIPPS_ENV === 'production' && LIVE_HOSTS.includes(new URL(request.url).hostname);
+  const live = env.VIPPS_ENV === 'production' && isLive(request);
   if (live) {
     return {
       base: 'https://api.vipps.no',
@@ -61,9 +71,15 @@ async function accessToken(cfg: Config): Promise<string> {
   return access_token;
 }
 
+type CallInit = { method?: string; body?: unknown; idempotencyKey?: string };
+
 // Calls the ePayment API with a fresh token. Retries with the same Idempotency-Key are safe.
-export async function vipps(cfg: Config, path: string, init: { method?: string; body?: unknown; idempotencyKey?: string } = {}) {
-  const res = await fetch(`${cfg.base}/epayment/v1/payments${path}`, {
+export const vipps = (cfg: Config, path: string, init: CallInit = {}) =>
+  vippsApi(cfg, `/epayment/v1/payments${path}`, init);
+
+// Any Vipps API, e.g. /webhooks/v1/webhooks
+export async function vippsApi(cfg: Config, path: string, init: CallInit = {}) {
+  const res = await fetch(`${cfg.base}${path}`, {
     method: init.method ?? 'GET',
     headers: {
       ...commonHeaders(cfg),
@@ -82,7 +98,7 @@ export async function vipps(cfg: Config, path: string, init: { method?: string; 
 // (plus which VIPPS_ variable names are set - names only, never values)
 export const failure = (message: string, err: unknown, request: Request, env: Env) => {
   console.error(err);
-  const live = LIVE_HOSTS.includes(new URL(request.url).hostname);
+  const live = isLive(request);
   const keysSet = Object.keys(env).filter(k => k.startsWith('VIPPS_') && env[k as keyof Env]);
   return json({ error: message, ...(live ? {} : { detail: String(err), keysSet }) }, 502);
 };

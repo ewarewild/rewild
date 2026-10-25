@@ -120,6 +120,9 @@ export const signupLabel = (s: Session) =>
 // NOK per person for this trip
 export const price = (s: Session) => s.price ?? events[s.event].price;
 
+// e.g. "Up to 5 hours" - course pages and booking emails
+export const courseDuration = (s: Session) => s.duration ?? 'Up to 5 hours';
+
 // e.g. "17:00 - 18:30"
 export const timeRange = (s: Session) => {
   const [h, m] = s.time.split(':').map(Number);
