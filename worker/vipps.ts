@@ -28,8 +28,10 @@ export type Config = { base: string; clientId: string; clientSecret: string; sub
 
 const LIVE_HOSTS = ['re-wild.no', 'www.re-wild.no'];
 
+export const isLive = (request: Request) => LIVE_HOSTS.includes(new URL(request.url).hostname);
+
 export function vippsConfig(env: Env, request: Request): Config {
-  const live = env.VIPPS_ENV === 'production' && LIVE_HOSTS.includes(new URL(request.url).hostname);
+  const live = env.VIPPS_ENV === 'production' && isLive(request);
   if (live) {
     return {
       base: 'https://api.vipps.no',
@@ -96,7 +98,7 @@ export async function vippsApi(cfg: Config, path: string, init: CallInit = {}) {
 // (plus which VIPPS_ variable names are set - names only, never values)
 export const failure = (message: string, err: unknown, request: Request, env: Env) => {
   console.error(err);
-  const live = LIVE_HOSTS.includes(new URL(request.url).hostname);
+  const live = isLive(request);
   const keysSet = Object.keys(env).filter(k => k.startsWith('VIPPS_') && env[k as keyof Env]);
   return json({ error: message, ...(live ? {} : { detail: String(err), keysSet }) }, 502);
 };

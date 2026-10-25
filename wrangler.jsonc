@@ -10,7 +10,9 @@
     // Everything except the Vipps API is served straight from dist/
     "run_worker_first": ["/api/*"]
   },
-  // The Vipps keys are set in the dashboard; don't let a deploy remove them
+  // Customer details between starting a Vipps payment and it going through (worker/booking.ts)
+  "kv_namespaces": [{ "binding": "BOOKINGS", "id": "105991845a8f4dfb871342be6fc84471" }],
+  // The Vipps and Resend keys are set in the dashboard; don't let a deploy remove them
   "keep_vars": true,
   "preview_urls": true
 }

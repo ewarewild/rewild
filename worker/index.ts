@@ -2,7 +2,7 @@
 // Cloudflare as assets; only /api/* reaches this code (see run_worker_first in wrangler.jsonc).
 import { pay } from './pay';
 import { paymentStatus } from './payment-status';
-import { webhook, setupWebhook } from './webhook';
+import { webhook, setupWebhook, testApprove } from './webhook';
 import { json, type Env } from './vipps';
 
 export default {
@@ -13,6 +13,7 @@ export default {
     if (pathname === '/api/payment-status' && request.method === 'GET') return paymentStatus(request, env);
     if (pathname === '/api/vipps-webhook' && request.method === 'POST') return webhook(request, env);
     if (pathname === '/api/setup-webhook' && request.method === 'GET') return setupWebhook(request, env);
+    if (pathname === '/api/test-approve' && request.method === 'GET') return testApprove(request, env);
     if (pathname.startsWith('/api/')) return json({ error: 'Not found' }, 404);
 
     return env.ASSETS.fetch(request);
