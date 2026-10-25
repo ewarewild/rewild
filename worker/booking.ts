@@ -43,8 +43,8 @@ export async function completeBooking(cfg: Config, env: Env, ref: string, origin
   return 'paid';
 }
 
-async function sendConfirmation(env: Env, ref: string, origin: string) {
-  if (!env.BOOKINGS || !env.RESEND_API_KEY) return;
+export async function sendConfirmation(env: Env, ref: string, origin: string) {
+  if (!env.BOOKINGS || !env.RESEND_API_KEY) throw new Error(`Email not set up: ${!env.BOOKINGS ? 'BOOKINGS' : 'RESEND_API_KEY'} missing`);
   const booking = await env.BOOKINGS.get(bookingKey(ref), 'json') as Booking | null;
   if (!booking || booking.emailed) return;
 

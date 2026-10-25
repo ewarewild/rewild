@@ -2,7 +2,7 @@
 // payment is captured and the email sent even if the customer never comes back to /payment.
 // The call is only a nudge - completeBooking() always asks Vipps for the real state.
 import { vippsApi, vippsConfig, json, failure, isReference, isLive, type Env } from './vipps';
-import { completeBooking, saveBooking, loadTrips } from './booking';
+import { completeBooking, saveBooking, sendConfirmation } from './booking';
 
 const EVENTS = ['epayments.payment.authorized.v1'];
 
@@ -67,39 +67,17 @@ const page = (title: string, body: string) =>
     headers: { 'Content-Type': 'text/html; charset=utf-8', 'Cache-Control': 'no-store' },
   });
 
-// GET /api/test-approve?offering=...&email=...&phone=... - previews only. Books a trip
-// end to end in the Vipps test system without the MT app: creates a payment pushed to a
-// test user (phone from the Vipps portal), approves it as the app would, then completes it.
-export async function testApprove(request: Request, env: Env) {
+// GET /api/test-email?offering=...&email=... - previews only. Sends the booking email for
+// that trip without a payment, to check Resend and the wording.
+export async function testEmail(request: Request, env: Env) {
   if (isLive(request)) return json({ error: 'Not found' }, 404);
   const params = new URL(request.url).searchParams;
-  const offering = params.get('offering') ?? '';
-  const phoneNumber = params.get('phone') ?? '';
-  const trip = (await loadTrips(env, request.url))[offering];
-  if (!trip) return json({ error: 'Unknown event' }, 400);
-
-  const cfg = vippsConfig(env, request);
-  const reference = `rewild-${trip.date}-${crypto.randomUUID().slice(0, 8)}`;
+  const ref = `rewild-test-${crypto.randomUUID().slice(0, 8)}`;
   try {
-    await saveBooking(env, reference, { offering, name: params.get('name') ?? 'Test', email: params.get('email') ?? '' });
-    await vippsApi(cfg, '/epayment/v1/payments', {
-      method: 'POST',
-      idempotencyKey: reference,
-      body: {
-        amount: { currency: 'NOK', value: trip.nok * 100 },
-        paymentMethod: { type: 'WALLET' },
-        customer: { phoneNumber },
-        reference,
-        userFlow: 'PUSH_MESSAGE',
-        paymentDescription: `TEST ${offering}`,
-      },
-    });
-    await vippsApi(cfg, `/epayment/v1/test/payments/${reference}/approve`, {
-      method: 'POST',
-      body: { customer: { phoneNumber } },
-    });
-    return json({ reference, status: await completeBooking(cfg, env, reference, request.url) });
+    await saveBooking(env, ref, { offering: params.get('offering') ?? '', name: params.get('name') ?? 'Test', email: params.get('email') ?? '' });
+    await sendConfirmation(env, ref, request.url);
+    return json({ sent: true, ref });
   } catch (err) {
-    return failure('Could not run the test booking', err, request, env);
+    return failure('Could not send the test email', err, request, env);
   }
 }
