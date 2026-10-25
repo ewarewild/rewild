@@ -2,7 +2,7 @@
 import Layout from '../layouts/Layout.astro';
 import Nav from '../components/Nav.astro';
 import Footer from '../components/Footer.astro';
-import { events, sessions, signupLabel } from '../data/events';
+import { events, sessions, signupLabel, price } from '../data/events';
 ---
 
 <Layout title="Sign up - Rewild" description="Sign up for the Rewild Course, an Evening Reset, or a One-to-One program with Rewild.">
@@ -67,7 +67,7 @@ import { events, sessions, signupLabel } from '../data/events';
             >
               <option value="" disabled selected></option>
               {[...sessions].sort((a, b) => events[a.event].name.localeCompare(events[b.event].name)).map(s => (
-                <option value={signupLabel(s)} data-date={s.date}>{signupLabel(s)}</option>
+                <option value={signupLabel(s)} data-date={s.date} data-price={price(s)}>{signupLabel(s)}</option>
               ))}
               <option value="One-to-One program">One-to-One program</option>
             </select>
@@ -104,6 +104,7 @@ import { events, sessions, signupLabel } from '../data/events';
             >
               Send
             </button>
+            <p id="price-note" class="hidden text-base text-forest font-light mt-4"></p>
             <p class="text-base text-sage font-light mt-4">Your privacy is important - your details will not be shared with anyone.</p>
             <p class="text-sm text-forest/60 font-light mt-4 leading-relaxed">The guidance given during Rewild events is not a substitute for medical advice. If you have an injury or health condition, please consult a doctor or physiotherapist before participating.</p>
             <p id="signup-status" class="text-sm font-light mt-4" role="status"></p>
@@ -123,10 +124,22 @@ import { events, sessions, signupLabel } from '../data/events';
   const injuriesField = document.getElementById('injuries-field') as HTMLElement;
   const injuriesTextarea = document.getElementById('injuries') as HTMLTextAreaElement;
 
+  const submitButton = document.getElementById('signup-submit') as HTMLButtonElement;
+  const priceNote = document.getElementById('price-note') as HTMLElement;
+
+  // Trips are paid with Vipps straight after sending the form; 1:1 is a request only
+  const selectedPrice = () => eventSelect.selectedOptions[0]?.dataset.price;
+  const idleLabel = () => (selectedPrice() ? 'Continue to Vipps' : 'Send');
+
   eventSelect?.addEventListener('change', () => {
     const isDeepRest = eventSelect.value.startsWith('Deep Rest');
     injuriesField.style.display = isDeepRest ? 'none' : 'block';
     injuriesTextarea.required = !isDeepRest;
+
+    const nok = selectedPrice();
+    priceNote.textContent = nok ? `Price: ${nok} NOK, paid with Vipps on the next step.` : '';
+    priceNote.classList.toggle('hidden', !nok);
+    submitButton.textContent = idleLabel();
   });
 
   // Drop trips whose date has passed
@@ -144,7 +157,6 @@ import { events, sessions, signupLabel } from '../data/events';
   }
 
   const form = document.getElementById('signup-form') as HTMLFormElement;
-  const submitButton = document.getElementById('signup-submit') as HTMLButtonElement;
   const statusEl = document.getElementById('signup-status') as HTMLElement;
 
   form?.addEventListener('submit', async (e) => {
@@ -155,6 +167,21 @@ import { events, sessions, signupLabel } from '../data/events';
 
     try {
       const formData = new FormData(form);
+
+      // Start the Vipps payment first, so the sign-up email carries its reference
+      let redirectUrl = '';
+      if (selectedPrice()) {
+        const pay = await fetch('/api/pay', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ offering: eventSelect.value, name: formData.get('Name'), phone: formData.get('Telephone') }),
+        });
+        const payment = await pay.json().catch(() => ({}));
+        if (!pay.ok || !payment.redirectUrl) throw new Error('payment');
+        redirectUrl = payment.redirectUrl;
+        formData.append('Payment', `${selectedPrice()} NOK via Vipps, reference ${payment.reference} - check it's paid in the Vipps portal`);
+      }
+
       const response = await fetch('https://api.web3forms.com/submit', {
         method: 'POST',
         headers: { Accept: 'application/json' },
@@ -162,7 +189,10 @@ import { events, sessions, signupLabel } from '../data/events';
       });
       const result = await response.json();
 
-      if (response.ok && result.success) {
+      if (response.ok && result.success && redirectUrl) {
+        location.href = redirectUrl;
+        return;
+      } else if (response.ok && result.success) {
         form.reset();
         statusEl.textContent = "Thank you - we've received your details and will be in touch soon.";
         statusEl.className = 'text-sm font-light mt-4 text-sage';
@@ -173,9 +203,14 @@ import { events, sessions, signupLabel } from '../data/events';
     } catch {
       statusEl.textContent = 'Something went wrong sending your details. Please try again in a moment.';
       statusEl.className = 'text-sm font-light mt-4 text-red-700';
-    } finally {
-      submitButton.disabled = false;
-      submitButton.textContent = 'Send';
     }
+    submitButton.disabled = false;
+    submitButton.textContent = idleLabel();
+  });
+
+  // Coming back from Vipps with the browser's back button restores the page mid-submit
+  window.addEventListener('pageshow', () => {
+    submitButton.disabled = false;
+    submitButton.textContent = idleLabel();
   });
 </script>
