@@ -16,7 +16,7 @@ export type Trip = {
 
 const LAYERS = "Clothes for the weather. It's recommended to dress in layers - lighter for the walk and something warm for when we stop, including a hat and gloves. We'll warm up quickly while walking, but it can be quite cold on the mountain.";
 
-const EXCITED = "I'm excited for you to join me on this trip.";
+const EXCITED = "I'm excited for you to join us on this trip!";
 
 const templates = {
   'evening-reset': {
@@ -72,12 +72,12 @@ export function confirmationEmail(trip: Trip, name: string) {
     EXCITED,
     ['What to bring:', ...tpl.bring.map(b => `- ${b}`)].join('\n'),
     ...closing,
-    'See you on the trail,\nEwa',
+    'See you on the trail! :)\nEwa',
   ].join('\n\n');
 
   const p = (inner: string) => `<p style="margin:0 0 16px">${inner}</p>`;
   const meetingHtml = trip.mapUrl
-    ? `<a href="${escape(trip.mapUrl)}" style="color:#4a6b3a;font-weight:bold;text-decoration:underline">${escape(meeting)}</a> (opens in Google Maps)`
+    ? `<a href="${escape(trip.mapUrl)}" style="color:#4a6b3a;font-weight:bold;text-decoration:none">${escape(meeting)}</a> (opens in Google Maps)`
     : escape(meeting);
   const html = `<div style="font-family:Helvetica,Arial,sans-serif;font-size:16px;line-height:1.6;color:#2f3a24;max-width:560px">
 ${p(`Hi ${escape(firstName)},`)}
@@ -87,7 +87,7 @@ ${p(escape(EXCITED))}
 <p style="margin:0 0 8px"><strong>What to bring:</strong></p>
 <ul style="margin:0 0 16px;padding-left:20px">${tpl.bring.map(b => `<li>${escape(b)}</li>`).join('')}</ul>
 ${closing.map(c => p(escape(c))).join('\n')}
-${p('See you on the trail,<br>Ewa')}
+${p('See you on the trail! :)<br>Ewa')}
 </div>`;
 
   return { subject, text, html };
