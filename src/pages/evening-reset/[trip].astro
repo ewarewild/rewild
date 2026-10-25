@@ -1,5 +1,5 @@
 ---
-import { getImage } from 'astro:assets';
+import { heroImage as heroPhoto } from '../../lib/hero';
 import Layout from '../../layouts/Layout.astro';
 import Nav from '../../components/Nav.astro';
 import Footer from '../../components/Footer.astro';
@@ -17,20 +17,25 @@ interface Props {
 const { session } = Astro.props;
 const name = events['evening-reset'].name;
 
-const heroImage = await getImage({ src: skolapparn, width: 2000, format: 'webp' });
+const heroImage = await heroPhoto(skolapparn, 65);
 ---
 
-<Layout title={`${name} - ${session.spot ?? session.place} - Rewild`} description="A headlamp hike through the dark months - breath, silence and the senses. Now in Skien, Porsgrunn, Larvik and Sandefjord." preloadImage={heroImage.src}>
+<Layout title={`${name} - ${session.spot ?? session.place} - Rewild`} description="A headlamp hike through the dark months - breath, silence and the senses. Now in Skien, Porsgrunn, Larvik and Sandefjord." preloadImage={heroImage}>
 
   <!-- Navigation -->
   <Nav />
 
   <!-- Hero image -->
   <section class="relative mt-[60px] overflow-hidden" style="height: 65vh;">
-    <div
-      class="absolute inset-0 bg-cover bg-no-repeat"
-      style={`background-image: url('${heroImage.src}'); background-position: center 25%;`}
-    ></div>
+    <img
+      src={heroImage.src}
+      srcset={heroImage.srcset}
+      sizes={heroImage.sizes}
+      alt=""
+      fetchpriority="high"
+      decoding="async"
+      class="absolute inset-0 w-full h-full object-cover" style="object-position: center 25%;"
+    />
     <div class="absolute inset-0" style="background: linear-gradient(to top, rgba(20,25,14,0.5) 0%, transparent 60%);"></div>
     <a href="/#events" class="absolute top-6 left-6 md:left-12 inline-flex items-center gap-2 text-xs tracking-[0.25em] uppercase font-light text-white/60 hover:text-white transition-colors duration-200">
       <span>←</span><span>All events</span>

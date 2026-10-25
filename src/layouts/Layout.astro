@@ -1,5 +1,6 @@
 ---
 import '../styles/global.css';
+import type { Hero } from '../lib/hero';
 
 interface Props {
   title: string;
@@ -7,11 +8,10 @@ interface Props {
   ogTitle?: string;
   ogDescription?: string;
   ogImage?: string;
-  preloadImage?: string;
-  preloadWordmarkFont?: boolean;
+  preloadImage?: Hero; // the page's hero photo, fetched first
 }
 
-const { title, description = 'Rewild - come back to yourself through nature', ogTitle, ogDescription, ogImage, preloadImage, preloadWordmarkFont } = Astro.props;
+const { title, description = 'Rewild - come back to yourself through nature', ogTitle, ogDescription, ogImage, preloadImage } = Astro.props;
 const ogImageUrl = ogImage ? new URL(ogImage, Astro.site) : undefined;
 ---
 
@@ -27,8 +27,7 @@ const ogImageUrl = ogImage ? new URL(ogImage, Astro.site) : undefined;
     <meta property="og:url" content={new URL(Astro.url.pathname, Astro.site)} />
     {ogImageUrl && <meta property="og:image" content={ogImageUrl} />}
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
-    {preloadImage && <link rel="preload" as="image" href={preloadImage} fetchpriority="high" />}
-    {preloadWordmarkFont && <link rel="preload" as="font" type="font/woff2" href="/fonts/nunito-300-latin.woff2" crossorigin />}
+    {preloadImage && <link rel="preload" as="image" href={preloadImage.src} imagesrcset={preloadImage.srcset} imagesizes={preloadImage.sizes} fetchpriority="high" />}
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
