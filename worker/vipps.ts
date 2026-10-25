@@ -78,6 +78,13 @@ export async function vipps(cfg: Config, path: string, init: { method?: string; 
   return data;
 }
 
+// Error body for a failed Vipps call: previews include Vipps' own message to help testing
+export const failure = (message: string, err: unknown, request: Request) => {
+  console.error(err);
+  const live = LIVE_HOSTS.includes(new URL(request.url).hostname);
+  return json({ error: message, ...(live ? {} : { detail: String(err) }) }, 502);
+};
+
 export const json = (data: unknown, status = 200) =>
   new Response(JSON.stringify(data), { status, headers: { 'Content-Type': 'application/json' } });
 

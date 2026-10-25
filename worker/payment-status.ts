@@ -2,7 +2,7 @@
 // Called by /payment when the customer comes back from Vipps. A reserved (AUTHORIZED)
 // payment is captured here, which completes the sale. Capturing twice is safe because
 // the Idempotency-Key is tied to the reference.
-import { vipps, vippsConfig, json, isReference, type Env } from './vipps';
+import { vipps, vippsConfig, json, failure, isReference, type Env } from './vipps';
 
 export async function paymentStatus(request: Request, env: Env) {
   const ref = new URL(request.url).searchParams.get('ref');
@@ -26,7 +26,6 @@ export async function paymentStatus(request: Request, env: Env) {
     if (state === 'CREATED') return json({ status: 'pending' });
     return json({ status: 'cancelled' }); // ABORTED, EXPIRED or TERMINATED
   } catch (err) {
-    console.error(err);
-    return json({ error: 'Could not check the payment' }, 502);
+    return failure('Could not check the payment', err, request);
   }
 }
