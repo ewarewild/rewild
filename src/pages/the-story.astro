@@ -22,8 +22,8 @@ import nordsnow from '../images/nordsnow.webp';
           <Image
             src={firesmoke}
             alt="Fire smoke"
-            width={900}
-            densities={[1, 2]}
+            widths={[480, 720, 1080]}
+            sizes="(min-width: 768px) 480px, calc(100vw - 48px)"
             class="w-full h-auto aspect-[4/5] object-cover object-center"
             loading="lazy"
           />
@@ -48,8 +48,8 @@ import nordsnow from '../images/nordsnow.webp';
             <Image
               src={nordsnow}
               alt="Snowy mountain trail"
-              width={900}
-              densities={[1, 2]}
+              widths={[480, 720, 1080, 1440, 1800]}
+              sizes="calc(100vw - 48px)"
               class="md:hidden w-full h-auto aspect-[3/2] object-cover object-center"
               loading="lazy"
             />
@@ -68,8 +68,8 @@ import nordsnow from '../images/nordsnow.webp';
             <Image
               src={skowint}
               alt="Footprints in deep snow on a mountain ridge at sunset"
-              width={900}
-              densities={[1, 2]}
+              widths={[480, 720, 1080, 1440, 1800]}
+              sizes="calc((100vw - 48px) * 1.19)"
               class="md:hidden w-full h-auto aspect-[3/2] object-cover object-center"
               loading="lazy"
             />
@@ -85,8 +85,8 @@ import nordsnow from '../images/nordsnow.webp';
             <Image
               src={boots}
               alt="Boots resting in the snow at sunset"
-              width={700}
-              densities={[1, 2]}
+              widths={[480, 720, 1080, 1400]}
+              sizes="calc(100vw - 48px)"
               class="md:hidden w-full h-auto aspect-[2/3] object-cover object-center"
               loading="lazy"
             />

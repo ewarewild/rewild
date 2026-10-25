@@ -43,7 +43,7 @@ const months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 
               </div>
             </div>
             <div class="w-[38%] shrink-0 overflow-hidden">
-              <Image src={s.image ?? e.image} alt={e.alt} width={600} densities={[1, 2]} class="w-full h-full object-cover object-center" loading="lazy" />
+              <Image src={s.image ?? e.image} alt={e.alt} widths={[320, 480, 640, 960, 1200]} sizes="max(calc(38vw - 18px), 313px)" class="w-full h-full object-cover object-center" loading="lazy" />
             </div>
           </a>
           <a href={tripUrl(s)} class="hidden md:block">
@@ -51,8 +51,8 @@ const months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 
               <Image
                 src={s.image ?? e.image}
                 alt={e.alt}
-                width={1200}
-                densities={[1, 2]}
+                widths={[512, 768, 1024, 1536, 2048, 2400]}
+                sizes="(min-width: 1152px) 512px, calc(50vw - 64px)"
                 class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700"
                 loading="lazy"
               />

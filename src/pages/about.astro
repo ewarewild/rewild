@@ -19,8 +19,8 @@ import eva from '../images/eva.webp';
           <Image
             src={eva}
             alt="Ewa"
-            width={1000}
-            densities={[1, 2]}
+            widths={[480, 720, 960, 1440, 2000]}
+            sizes="(min-width: 768px) 480px, calc(100vw - 48px)"
             class="w-full h-auto aspect-square object-cover object-top"
             loading="lazy"
           />
