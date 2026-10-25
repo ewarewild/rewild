@@ -16,11 +16,10 @@ export type Trip = {
 
 const LAYERS = "Clothes for the weather. It's recommended to dress in layers - lighter for the walk and something warm for when we stop, including a hat and gloves. We'll warm up quickly while walking, but it can be quite cold on the mountain.";
 
-const EXCITED = "I'm excited for you to join us on this trip!";
-
 const templates = {
   'evening-reset': {
     confirmed: 'Thank you for booking - your place is confirmed.',
+    excited: "I'm excited for you to join us on this trip!",
     when: (t: Trip) => `${t.longDate}, ${t.timeRange}`,
     bring: [
       'Headlamp with full batteries',
@@ -34,11 +33,12 @@ const templates = {
   },
   'rewild-course': {
     confirmed: 'Thank you for booking - your place on the Rewild Course is confirmed.',
+    excited: "I'm excited for you to join us on this course!",
     when: (t: Trip) => `${t.longDate}, from ${t.time}, ${(t.duration ?? 'Up to 5 hours').toLowerCase()}`,
     bring: [
       LAYERS,
       'Comfortable shoes with a grip',
-      'Min 1 litre of water',
+      'At least 1 litre of water',
       'A packed lunch',
       'Small notepad and pen',
       'Seating mat',
@@ -69,7 +69,7 @@ export function confirmationEmail(trip: Trip, name: string) {
     `Hi ${firstName},`,
     tpl.confirmed,
     [trip.title, tpl.when(trip), `Meeting point: ${meeting}${trip.mapUrl ? ` (${trip.mapUrl})` : ''}`, `Paid: ${trip.nok} NOK via Vipps`].join('\n'),
-    EXCITED,
+    tpl.excited,
     ['What to bring:', ...tpl.bring.map(b => `- ${b}`)].join('\n'),
     ...closing,
     'See you on the trail! :)\nEwa',
@@ -83,7 +83,7 @@ export function confirmationEmail(trip: Trip, name: string) {
 ${p(`Hi ${escape(firstName)},`)}
 ${p(escape(tpl.confirmed))}
 ${p(`<strong>${escape(trip.title)}</strong><br>${escape(tpl.when(trip))}<br>Meeting point: ${meetingHtml}<br>Paid: ${trip.nok} NOK via Vipps`)}
-${p(escape(EXCITED))}
+${p(escape(tpl.excited))}
 <p style="margin:0 0 8px"><strong>What to bring:</strong></p>
 <ul style="margin:0 0 16px;padding-left:20px">${tpl.bring.map(b => `<li>${escape(b)}</li>`).join('')}</ul>
 ${closing.map(c => p(escape(c))).join('\n')}
