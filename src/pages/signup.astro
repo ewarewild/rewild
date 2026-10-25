@@ -174,7 +174,7 @@ import { events, sessions, signupLabel, price } from '../data/events';
         const pay = await fetch('/api/pay', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ offering: eventSelect.value, name: formData.get('Name'), phone: formData.get('Telephone') }),
+          body: JSON.stringify({ offering: eventSelect.value, name: formData.get('Name'), email: formData.get('Email'), phone: formData.get('Telephone') }),
         });
         const payment = await pay.json().catch(() => ({}));
         if (!pay.ok || !payment.redirectUrl) throw new Error('payment');

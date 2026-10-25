@@ -1,9 +1,8 @@
-// POST /api/pay  { offering, name, phone }  ->  { reference, redirectUrl }
-// Starts a Vipps payment for one trip. The price is looked up in /prices.json (built from
+// POST /api/pay  { offering, name, email, phone }  ->  { reference, redirectUrl }
+// Starts a Vipps payment for one trip. The price is looked up in /trips.json (built from
 // src/data/events.ts), so the browser only says which trip, never how much.
 import { vipps, vippsConfig, json, failure, type Env } from './vipps';
-
-type Prices = Record<string, { date: string; nok: number }>;
+import { saveBooking, loadTrips } from './booking';
 
 // Norwegian mobile numbers only; anything else just isn't prefilled in Vipps
 const vippsPhone = (raw: string) => {
@@ -14,10 +13,9 @@ const vippsPhone = (raw: string) => {
 };
 
 export async function pay(request: Request, env: Env) {
-  const { offering, name, phone } = await request.json().catch(() => ({})) as Record<string, string>;
+  const { offering, name, email, phone } = await request.json().catch(() => ({})) as Record<string, string>;
 
-  const prices = await (await env.ASSETS.fetch(new URL('/prices.json', request.url))).json() as Prices;
-  const trip = offering ? prices[offering] : undefined;
+  const trip = offering ? (await loadTrips(env, request.url))[offering] : undefined;
   const today = new Date().toLocaleDateString('sv-SE', { timeZone: 'Europe/Oslo' }); // YYYY-MM-DD
   if (!trip || trip.date < today) return json({ error: 'Unknown or past event' }, 400);
 
@@ -25,6 +23,9 @@ export async function pay(request: Request, env: Env) {
   const phoneNumber = vippsPhone(phone ?? '');
 
   try {
+    // Kept so the booking email can go out once Vipps confirms the payment
+    if (email) await saveBooking(env, reference, { offering, name: name ?? '', email });
+
     const payment = await vipps(vippsConfig(env, request), '', {
       method: 'POST',
       idempotencyKey: reference,
