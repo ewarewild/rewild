@@ -2,7 +2,7 @@
 // page at /<event>/<place>-<day>-<month>. Past dates are hidden from the calendar.
 import type { ImageMetadata } from 'astro';
 import skolapparn from '../images/skolapparn.webp';
-import nordkollen2 from '../images/nordkollen2.webp';
+import nordkollenHero from '../images/nordkollen-hero.webp';
 
 export type EventId = 'evening-reset' | 'rewild-course';
 
@@ -29,7 +29,7 @@ export const events: Record<EventId, EventInfo> = {
   'rewild-course': {
     name: 'Rewild Course',
     href: '/rewild-course',
-    image: nordkollen2,
+    image: nordkollenHero,
     alt: 'Rewild Course - full-day training',
     hours: 5,
     price: 300,
@@ -76,7 +76,7 @@ export const sessions: Session[] = [
     event: 'rewild-course', date: '2026-11-06', time: '10:00', place: 'Porsgrunn & Skien', spot: 'Østre Vealøs', difficulty: 'Moderate',
     meetingPoint: 'Parkering for Østre Vealøs turområder', mapUrl: 'https://www.google.com/maps?q=59.20275,9.73157',
     price: 500,
-    image: nordkollen2,
+    image: nordkollenHero,
     intro: [
       'Welcome to a day of practical training in nature that gives you tools to minimise the risk of injury and restore physical and mental balance - on the trail and in everyday life.',
       'We hike to <a href="https://ut.no/turforslag/113681/topptur-til-stre-veals" target="_blank" rel="noopener" class="font-semibold underline hover:text-sage transition-colors duration-200">Østre Vealøs</a> (445.5m) to immerse ourselves in wild nature.',
@@ -87,7 +87,7 @@ export const sessions: Session[] = [
   },
   {
     event: 'rewild-course', date: '2026-11-15', time: '10:00', place: 'Porsgrunn & Skien', spot: 'Nordkollen', difficulty: 'Moderate',
-    image: nordkollen2,
+    image: nordkollenHero,
     meetingPoint: 'Parkering for Svarteberget og Nordkollen', mapUrl: 'https://www.google.com/maps?q=59.18604216274942,9.803863873385133',
     price: 500,
     intro: [

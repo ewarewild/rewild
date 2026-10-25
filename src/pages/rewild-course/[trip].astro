@@ -3,7 +3,7 @@ import { heroImage as heroPhoto } from '../../lib/hero';
 import Layout from '../../layouts/Layout.astro';
 import Nav from '../../components/Nav.astro';
 import Footer from '../../components/Footer.astro';
-import nordkollen2 from '../../images/nordkollen2.webp';
+import nordkollenHero from '../../images/nordkollen-hero.webp';
 import { events, tripPaths, longDate, signupLabel, price, courseDuration, type Session } from '../../data/events';
 
 export function getStaticPaths() {
@@ -17,7 +17,7 @@ interface Props {
 const { session } = Astro.props;
 const name = events['rewild-course'].name;
 
-const heroImage = await heroPhoto(session.image ?? nordkollen2, 65);
+const heroImage = await heroPhoto(session.image ?? nordkollenHero, 65);
 ---
 
 <Layout title={`${name} - ${session.spot ?? session.place} - Rewild`} description="A full day course up Nordkollen, built around five modules: injury prevention, core strength, focus and awareness, stress release & recovery, and building resilience." preloadImage={heroImage}>
