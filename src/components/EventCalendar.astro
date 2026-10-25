@@ -63,7 +63,24 @@ const months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 
             <a href={tripUrl(s)} class="block">
               <h3 class="font-display font-bold text-3xl text-forest mb-5 leading-tight hover:opacity-60 transition-opacity duration-200">{e.name} - {s.spot ?? s.place}</h3>
             </a>
-            <a href={tripUrl(s)} class="self-start mb-5 px-4 py-2 border border-forest/20 text-xs tracking-[0.2em] uppercase font-light text-forest hover:border-forest transition-colors duration-200">{day.getDate()} {months[day.getMonth()]}</a>
+            <a href={tripUrl(s)} class="mb-6 flex items-center gap-5">
+              <div class="w-20 h-20 shrink-0 flex flex-col items-center justify-center bg-cream text-forest">
+                <span class="font-display font-bold text-3xl leading-none">{day.getDate()}</span>
+                <span class="mt-1.5 text-xs tracking-[0.15em] uppercase font-light leading-none">{months[day.getMonth()].slice(0, 3)}</span>
+              </div>
+              <div class="min-w-0 space-y-2 text-[0.95rem] text-forest font-light">
+                {s.difficulty && (
+                  <p class="flex items-center gap-2">
+                    <svg class="w-4 h-4 shrink-0 text-sage" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><rect x="1" y="10" width="3" height="5" rx="0.5"/><rect x="6.5" y="6" width="3" height="9" rx="0.5" opacity={s.difficulty === 'Easy' ? 0.3 : 1}/><rect x="12" y="2" width="3" height="13" rx="0.5" opacity={s.difficulty === 'Hard' ? 1 : 0.3}/></svg>
+                    {s.difficulty}
+                  </p>
+                )}
+                <p class="flex items-center gap-2">
+                  <svg class="w-4 h-4 shrink-0 text-sage" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><circle cx="8" cy="8" r="6.5"/><path d="M8 4.5V8l2.5 1.5"/></svg>
+                  {timeRange(s)}
+                </p>
+              </div>
+            </a>
             <p class="text-forest font-light text-[1.08rem] leading-relaxed mb-8 flex-1">
               {s.description ?? e.description}
             </p>
