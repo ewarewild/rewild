@@ -75,7 +75,7 @@ export const sessions: Session[] = [
     ],
   },
   {
-    event: 'rewild-course', date: '2026-11-08', time: '10:00', place: 'Porsgrunn & Skien', spot: 'Østre Vealøs', difficulty: 'Moderate',
+    event: 'rewild-course', date: '2026-11-15', time: '10:00', place: 'Porsgrunn & Skien', spot: 'Østre Vealøs', difficulty: 'Moderate',
     meetingPoint: 'Parkering for Østre Vealøs turområder', mapUrl: 'https://www.google.com/maps?q=59.20275,9.73157',
     price: 500,
     image: nordkollenHero,
@@ -88,7 +88,7 @@ export const sessions: Session[] = [
     description: 'A hands-on course to learn how to take the strain off your joints in terrain, release stress, sharpen focus and improve balance and stability.',
   },
   {
-    event: 'rewild-course', date: '2026-11-15', time: '10:00', place: 'Porsgrunn & Skien', spot: 'Nordkollen', difficulty: 'Moderate',
+    event: 'rewild-course', date: '2026-11-08', time: '10:00', place: 'Porsgrunn & Skien', spot: 'Nordkollen', difficulty: 'Moderate',
     image: nordkollenHero,
     meetingPoint: 'Parkering for Svarteberget og Nordkollen', mapUrl: 'https://www.google.com/maps?q=59.18604216274942,9.803863873385133',
     price: 500,
