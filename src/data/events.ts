@@ -49,7 +49,8 @@ export type Session = {
   difficulty?: string; // shown on phone calendar cards, e.g. 'Easy' or 'Moderate'
   mapUrl?: string;
   image?: ImageMetadata; // replaces the event's shared image on this trip's card and page
-  duration?: string; // course pages only, replaces the shared duration
+  duration?: string; // replaces the shared duration text on this trip's page
+  hours?: number; // replaces the event's length, for the end time
   price?: number; // NOK, replaces the event's shared price
   meetUp?: string; // course pages only, replaces the Technical info meet-up paragraph (HTML allowed)
   routeInfo?: string; // course pages only, replaces the Technical info elevation/distance paragraph
@@ -58,6 +59,7 @@ export type Session = {
 export const sessions: Session[] = [
   {
     event: 'evening-reset', date: '2026-11-03', time: '17:00', place: 'Porsgrunn', spot: 'Skolapparåsen', difficulty: 'Moderate',
+    hours: 1.75, duration: 'Approx 1 hour 45 min',
     meetingPoint: 'Parkering for Svarteberget og Nordkollen', mapUrl: 'https://www.google.com/maps?q=59.18604216274942,9.803863873385133',
     intro: [
       "Welcome to an evening hike designed to help you release stress and tension, increase energy flow and promote better sleep.",
@@ -126,7 +128,7 @@ export const courseDuration = (s: Session) => s.duration ?? 'Up to 5 hours';
 // e.g. "17:00 - 18:30"
 export const timeRange = (s: Session) => {
   const [h, m] = s.time.split(':').map(Number);
-  const end = h * 60 + m + events[s.event].hours * 60;
+  const end = h * 60 + m + (s.hours ?? events[s.event].hours) * 60;
   const pad = (n: number) => String(n).padStart(2, '0');
   return `${s.time} - ${pad(Math.floor(end / 60) % 24)}:${pad(end % 60)}`;
 };
