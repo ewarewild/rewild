@@ -32,7 +32,13 @@ const months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 
                   {s.difficulty && (
                     <p class="flex items-center gap-2 truncate">
                       <svg class="w-4 h-4 shrink-0 text-sage" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><rect x="1" y="10" width="3" height="5" rx="0.5"/><rect x="6.5" y="6" width="3" height="9" rx="0.5" opacity={s.difficulty === 'Easy' ? 0.3 : 1}/><rect x="12" y="2" width="3" height="13" rx="0.5" opacity={s.difficulty === 'Hard' ? 1 : 0.3}/></svg>
-                      {s.difficulty}{s.difficulty === 'Moderate' && ', joint-friendly'}
+                      {s.difficulty}
+                    </p>
+                  )}
+                  {s.difficulty === 'Moderate' && (
+                    <p class="flex items-center gap-2 truncate">
+                      <svg class="w-4 h-4 shrink-0 text-sage" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><circle cx="8" cy="8" r="6.5"/><path d="M5 8.2l2 2 4-4.2"/></svg>
+                      Joint-friendly
                     </p>
                   )}
                   <p class="flex items-center gap-2 truncate">
@@ -72,7 +78,13 @@ const months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 
                 {s.difficulty && (
                   <p class="flex items-center gap-2">
                     <svg class="w-4 h-4 shrink-0 text-sage" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><rect x="1" y="10" width="3" height="5" rx="0.5"/><rect x="6.5" y="6" width="3" height="9" rx="0.5" opacity={s.difficulty === 'Easy' ? 0.3 : 1}/><rect x="12" y="2" width="3" height="13" rx="0.5" opacity={s.difficulty === 'Hard' ? 1 : 0.3}/></svg>
-                    {s.difficulty}{s.difficulty === 'Moderate' && ', joint-friendly'}
+                    {s.difficulty}
+                  </p>
+                )}
+                {s.difficulty === 'Moderate' && (
+                  <p class="flex items-center gap-2">
+                    <svg class="w-4 h-4 shrink-0 text-sage" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><circle cx="8" cy="8" r="6.5"/><path d="M5 8.2l2 2 4-4.2"/></svg>
+                    Joint-friendly
                   </p>
                 )}
                 <p class="flex items-center gap-2">
