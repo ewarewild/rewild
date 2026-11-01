@@ -22,7 +22,7 @@ export const events: Record<EventId, EventInfo> = {
     href: '/evening-reset',
     image: skolapparn,
     alt: 'Evening Reset - forest hike',
-    hours: 1.5,
+    hours: 2,
     price: 200,
     description: 'Shake off the day and reconnect with your body on an evening hike that supports stress release, mental balance and better sleep.',
   },
@@ -59,7 +59,6 @@ export type Session = {
 export const sessions: Session[] = [
   {
     event: 'evening-reset', date: '2026-11-03', time: '17:00', place: 'Porsgrunn', spot: 'Skolapparåsen', difficulty: 'Moderate',
-    hours: 1.75, duration: 'Approx 1 hour 45 min',
     meetingPoint: 'Parkering for Svarteberget og Nordkollen', mapUrl: 'https://www.google.com/maps?q=59.18604216274942,9.803863873385133',
     intro: [
       "Welcome to an evening hike designed to help you release stress and tension, increase energy flow and promote better sleep.",
