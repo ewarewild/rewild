@@ -62,7 +62,7 @@ export function confirmationEmail(trip: Trip, name: string) {
   const meeting = trip.meetingPoint ?? 'To be announced';
   const closing = [
     `We hike in most weather. If conditions are hazardous, the ${tpl.cancelled} will be cancelled. You'll receive a full refund or the option to rebook.`,
-    "You'll hear from me again closer to the date. If you have any questions, just reply to this email.",
+    'If you have any questions, just reply to this email.',
   ];
 
   const text = [
