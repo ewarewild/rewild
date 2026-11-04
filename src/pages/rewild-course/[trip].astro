@@ -20,7 +20,7 @@ const name = events['rewild-course'].name;
 const heroImage = await heroPhoto(session.image ?? nordkollenHero, 65);
 ---
 
-<Layout title={`${name} - ${session.spot ?? session.place} - Rewild`} description="A full-day course in nature, built around five modules: injury prevention, core strength, focus and awareness, stress release & recovery, and building resilience." preloadImage={heroImage}>
+<Layout title={`${name} - ${session.spot ?? session.place} - Rewild`} description="A full-day course in nature, built around four modules: injury prevention, building stability, focus and awareness, and stress release & recovery." preloadImage={heroImage}>
 
   <!-- Navigation -->
   <Nav />
@@ -67,15 +67,14 @@ const heroImage = await heroPhoto(session.image ?? nordkollenHero, 65);
             We alternate between physically challenging our bodies and more relaxing practices, taking time to rest and unwind.
           </p>
           <h3 class="pt-[28px] md:pt-[36px] mb-6 font-display font-medium text-3xl md:text-4xl text-forest leading-tight">
-            Five modules:
+            Four modules:
           </h3>
           <div class="space-y-6">
             {[
               'Injury prevention',
-              'Core strength',
+              'Building stability',
               'Focus and awareness',
               'Stress release & recovery',
-              'Building resilience',
             ].map(item => (
               <div class="flex items-start gap-4">
                 <span class="mt-2 w-1.5 h-1.5 rounded-full bg-sage-light flex-shrink-0"></span>
