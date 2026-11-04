@@ -82,7 +82,7 @@ export const sessions: Session[] = [
     ],
   },
   {
-    event: 'rewild-course', date: '2026-11-15', time: '10:00', place: 'Porsgrunn & Skien', spot: 'Østre Vealøs', difficulty: 'Moderate',
+    event: 'rewild-course', date: '2026-11-14', time: '10:00', place: 'Porsgrunn & Skien', spot: 'Østre Vealøs', difficulty: 'Moderate',
     meetingPoint: 'Parkering for Østre Vealøs turområder', mapUrl: 'https://www.google.com/maps?q=59.20275,9.73157',
     price: 500,
     image: nordkollenHero,
