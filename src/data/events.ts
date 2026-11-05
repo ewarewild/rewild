@@ -98,7 +98,7 @@ export const sessions: Session[] = [
     event: 'rewild-course', date: '2026-11-08', time: '10:00', place: 'Porsgrunn & Skien', spot: 'Nordkollen', difficulty: 'Moderate',
     image: nordkollenHero,
     meetingPoint: 'Parkering for Svarteberget og Nordkollen', mapUrl: 'https://www.google.com/maps?q=59.18604216274942,9.803863873385133',
-    price: 500,
+    price: 0,
     intro: [
       'Welcome to a day of practical training in nature that gives you tools to minimise the risk of injury and restore physical and mental balance - on the trail and in everyday life.',
       'We hike to <a href="https://www.google.com/maps?q=59.197427717465644,9.8402239222746" target="_blank" rel="noopener" class="font-semibold underline hover:text-sage transition-colors duration-200">Nordkollen</a> (353m) to immerse ourselves in wild nature.',
