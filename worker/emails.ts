@@ -30,7 +30,7 @@ const templates = {
       'Snack (optional)',
     ],
     cancelled: 'hike',
-    notes: [] as string[],
+    notes: ['This event is not suitable for bringing a dog.'],
   },
   'rewild-course': {
     confirmed: 'Thank you for booking - your place on the Rewild Course is confirmed.',
