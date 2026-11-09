@@ -82,7 +82,7 @@ export const sessions: Session[] = [
     ],
   },
   {
-    event: 'rewild-course', date: '2026-11-14', time: '10:00', place: 'Porsgrunn, Skien and Larvik', spot: 'Nordkollen', difficulty: 'Moderate',
+    event: 'rewild-course', date: '2026-11-14', time: '10:00', place: 'Porsgrunn, Skien, Larvik', spot: 'Nordkollen', difficulty: 'Moderate',
     meetingPoint: 'Parkering for Svarteberget og Nordkollen', mapUrl: 'https://www.google.com/maps?q=59.18604216274942,9.803863873385133',
     price: 500,
     image: nordkollenHero,
@@ -94,7 +94,7 @@ export const sessions: Session[] = [
     description: 'A hands-on course to learn how to reduce the strain on your joints in terrain, increase strength and stability while walking, and get more mental and physical benefits from being in nature.',
   },
   {
-    event: 'rewild-course', date: '2026-11-08', time: '10:00', place: 'Porsgrunn, Skien and Larvik', spot: 'Nordkollen', difficulty: 'Moderate',
+    event: 'rewild-course', date: '2026-11-08', time: '10:00', place: 'Porsgrunn, Skien, Larvik', spot: 'Nordkollen', difficulty: 'Moderate',
     image: nordkollenHero,
     meetingPoint: 'Parkering for Svarteberget og Nordkollen', mapUrl: 'https://www.google.com/maps?q=59.18604216274942,9.803863873385133',
     price: 0,
