@@ -30,21 +30,23 @@ const templates = {
       'Snack (optional)',
     ],
     cancelled: 'hike',
+    notes: [] as string[],
   },
   'rewild-course': {
     confirmed: 'Thank you for booking - your place on the Rewild Course is confirmed.',
     excited: "I'm excited for you to join us on this course!",
     when: (t: Trip) => `${t.longDate}, from ${t.time}, ${(t.duration ?? 'Up to 5 hours').toLowerCase()}`,
     bring: [
-      LAYERS,
-      'Comfortable shoes with a grip',
+      'Appropriate clothes for the weather, plus warm, windproof layers, a hat and gloves for the top of the mountain',
+      'Comfortable shoes with good grip',
       'At least 1 litre of water',
       'A packed lunch',
       'Seating mat',
-      'Hot tea (recommended)',
       'Walking poles (optional)',
+      'Hot tea (recommended)',
     ],
     cancelled: 'course',
+    notes: ['This event is not suitable for bringing a dog.'],
   },
 };
 
@@ -61,6 +63,7 @@ export function confirmationEmail(trip: Trip, name: string) {
   const meeting = trip.meetingPoint ?? 'To be announced';
   const closing = [
     `We hike in most weather. If conditions are hazardous, the ${tpl.cancelled} will be cancelled. You'll receive a full refund or the option to rebook.`,
+    ...tpl.notes,
     'If you have any questions, just reply to this email.',
   ];
 
