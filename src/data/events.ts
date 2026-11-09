@@ -24,7 +24,7 @@ export const events: Record<EventId, EventInfo> = {
     alt: 'Evening Reset - forest hike',
     hours: 2,
     price: 200,
-    description: 'Shake off the day and reconnect with your body on an evening hike that supports stress release, focus, and reducing strain on your joints.',
+    description: 'Shake off the day and reconnect with your body on an evening hike that supports stress release, focus and reduced strain on your joints.',
   },
   'rewild-course': {
     name: 'Rewild Course',
