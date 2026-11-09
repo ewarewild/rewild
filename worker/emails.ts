@@ -42,6 +42,7 @@ const templates = {
       'At least 1 litre of water',
       'A packed lunch',
       'Seating mat',
+      'Small pack of paper tissues',
       'Walking poles (optional)',
       'Hot tea (recommended)',
     ],
