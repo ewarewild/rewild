@@ -40,7 +40,6 @@ const templates = {
       'Comfortable shoes with a grip',
       'At least 1 litre of water',
       'A packed lunch',
-      'Small notepad and pen',
       'Seating mat',
       'Hot tea (recommended)',
       'Walking poles (optional)',
