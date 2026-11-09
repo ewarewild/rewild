@@ -70,7 +70,7 @@ export const sessions: Session[] = [
     meetingPoint: 'Ingri turparkering', mapUrl: 'https://maps.app.goo.gl/WS46sDBc4eG9Tg757',
     intro: [
       "Welcome to an evening hike designed to help you release tension, build strength and joint stability, and promote better sleep.",
-      "We walk from the parking area at a moderate to fast pace (ca. 4.5km/h) on an easy forest trail towards Brunlanes Sportskapellet (205m), a 3.1km round trip. It's a lovely, quiet spot just outside of town.",
+      "We walk from the parking area at a moderate to fast pace (ca. 4.5km/h) on a forest trail towards Brunlanes Sportskapellet (205m), a 3.1km round trip. It's a lovely, quiet spot just outside of town.",
     ],
   },
   {
