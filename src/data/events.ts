@@ -61,7 +61,7 @@ export const sessions: Session[] = [
     event: 'evening-reset', date: '2026-11-03', time: '17:00', place: 'Porsgrunn', spot: 'Skolapparåsen', difficulty: 'Moderate',
     meetingPoint: 'Parkering for Svarteberget og Nordkollen', mapUrl: 'https://www.google.com/maps?q=59.18604216274942,9.803863873385133',
     intro: [
-      "Welcome to an evening hike designed to help you release tension, build strength, joint stability and increase energy flow.",
+      "Welcome to an evening hike designed to help you release tension, build strength, joint stability and promote better sleep.",
       "We walk from the parking area at a moderate to fast pace (ca. 4.5km/h) on an easy gravel road towards Lia, then on a shorter forest path up to Skolapparåsen (313m), a 4km round trip. It's a beautiful, quiet mountain with a great view.",
     ],
   },
@@ -69,7 +69,7 @@ export const sessions: Session[] = [
     event: 'evening-reset', date: '2026-11-10', time: '17:00', place: 'Larvik', spot: 'Brunlanes Sportskapellet', difficulty: 'Easy',
     meetingPoint: 'Ingri turparkering', mapUrl: 'https://maps.app.goo.gl/WS46sDBc4eG9Tg757',
     intro: [
-      "Welcome to an evening hike designed to help you release tension, build strength, joint stability and increase energy flow.",
+      "Welcome to an evening hike designed to help you release tension, build strength, joint stability and promote better sleep.",
       "We walk from the parking area at a moderate to fast pace (ca. 4.5km/h) on an easy forest trail towards Brunlanes Sportskapellet (205m), a 3.1km round trip. It's a lovely, quiet spot just outside of town.",
     ],
   },
@@ -77,7 +77,7 @@ export const sessions: Session[] = [
     event: 'evening-reset', date: '2026-11-12', time: '17:00', place: 'Porsgrunn', spot: 'Skolapparåsen', difficulty: 'Moderate',
     meetingPoint: 'Parkering for Svarteberget og Nordkollen', mapUrl: 'https://www.google.com/maps?q=59.18604216274942,9.803863873385133',
     intro: [
-      "Welcome to an evening hike designed to help you release tension, build strength, joint stability and increase energy flow.",
+      "Welcome to an evening hike designed to help you release tension, build strength, joint stability and promote better sleep.",
       "We walk from the parking area at a moderate to fast pace (ca. 4.5km/h) on an easy gravel road towards Lia, then on a shorter forest path up to Skolapparåsen (313m), a 4km round trip. It's a beautiful, quiet mountain with a great view.",
     ],
   },
