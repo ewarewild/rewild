@@ -26,6 +26,7 @@ const templates = {
       LAYERS,
       'Walking shoes with a good grip',
       'Water',
+      'Small pack of paper tissues',
       'Hiking poles (optional)',
       'Snack (optional)',
     ],
