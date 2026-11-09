@@ -46,7 +46,7 @@ const templates = {
       'Hot tea (recommended)',
     ],
     cancelled: 'course',
-    notes: ['This event is not suitable for bringing a dog.'],
+    notes: ['If you have a recent or current injury, please check with your doctor or physio before participating.', 'This event is not suitable for bringing a dog.'],
   },
 };
 
