@@ -168,7 +168,12 @@ const heroImage = await heroPhoto(skolapparn, 65);
             </div>
             <div class="flex gap-6">
               <span class="text-xs tracking-[0.2em] uppercase text-sage/80 font-light w-28 flex-shrink-0">Meet up</span>
-              <span class="text-base text-forest font-light">{session.time}</span>
+              <span class="text-base text-forest font-light">{(() => {
+                // Meet up 5 minutes before the start time (e.g. 17:00 -> 16:55)
+                const [h, m] = session.time.split(':').map(Number);
+                const t = h * 60 + m - 5;
+                return `${String(Math.floor(t / 60)).padStart(2, '0')}:${String(t % 60).padStart(2, '0')}`;
+              })()}</span>
             </div>
             <div class="flex gap-6">
               <span class="text-xs tracking-[0.2em] uppercase text-sage/80 font-light w-28 flex-shrink-0">Meeting point</span>
