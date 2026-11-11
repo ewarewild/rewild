@@ -82,7 +82,7 @@ export const sessions: Session[] = [
     ],
   },
   {
-    event: 'rewild-course', date: '2026-11-14', time: '10:00', place: 'Larvik, Porsgrunn, Skien', spot: 'Nordkollen', difficulty: 'Moderate',
+    event: 'rewild-course', date: '2026-11-21', time: '10:00', place: 'Larvik, Porsgrunn, Skien', spot: 'Nordkollen', difficulty: 'Moderate',
     meetingPoint: 'Parkering for Svarteberget og Nordkollen', mapUrl: 'https://www.google.com/maps?q=59.18604216274942,9.803863873385133',
     price: 500,
     image: nordkollenHero,
