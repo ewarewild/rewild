@@ -115,6 +115,14 @@ const day = (s: Session) => new Date(`${s.date}T12:00:00`);
 export const tripSlug = (s: Session) =>
   `${s.place.split(/,| & /)[0]}-${day(s).getDate()}-${months[day(s).getMonth()]}`.toLowerCase();
 
+// Meet up a few minutes before the start time (Evening Reset 17:00 -> 16:55, Rewild Course 10:00 -> 09:50).
+// Only shown on trip pages, not event cards.
+export const meetUpTime = (s: Session, minutesBefore = 5) => {
+  const [h, m] = s.time.split(':').map(Number);
+  const t = h * 60 + m - minutesBefore;
+  return `${String(Math.floor(t / 60)).padStart(2, '0')}:${String(t % 60).padStart(2, '0')}`;
+};
+
 export const tripUrl = (s: Session) => `${events[s.event].href}/${tripSlug(s)}`;
 
 // e.g. "Tuesday 3 November"
