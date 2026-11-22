@@ -67,7 +67,7 @@ const t = lang === 'no'
       injury: 'Har du en fersk eller pågående skade, bør du snakke med legen eller fysioterapeuten din før du blir med.',
       dog: 'Denne turen passer ikke for hund.',
       duration: 'Varighet', date: 'Dato', meetUpLabel: 'Oppmøte', meetingPoint: 'Møtested', tba: 'Kommer senere', price: 'Pris',
-      signup: 'Meld deg på',
+      signup: 'Meld deg på', limited: 'Begrenset antall plasser.',
     }
   : {
       description: 'A hands-on day to learn how to reduce the strain on your joints in terrain, increase strength and stability while walking, and get more mental and physical benefits from being in nature.',
@@ -116,7 +116,7 @@ const t = lang === 'no'
       injury: '{t.injury}',
       dog: '{t.dog}',
       duration: 'Duration', date: 'Date', meetUpLabel: 'Meet up', meetingPoint: 'Meeting point', tba: 'To be announced', price: 'Price',
-      signup: 'Sign up',
+      signup: 'Sign up', limited: 'Places are limited.',
     };
 
 const heroImage = await heroPhoto(session.image ?? nordkollenHero, 65);
@@ -277,7 +277,8 @@ const heroImage = await heroPhoto(session.image ?? nordkollenHero, 65);
               </span>
             </div>
 
-            <div class="pt-12">
+            <p class="pt-2 text-sm text-sage font-light">{t.limited}</p>
+            <div class="pt-10">
               <a
                 href={`${p('/signup')}?event=${encodeURIComponent(signupLabel(session))}`}
                 class="inline-block px-10 py-4 bg-forest text-white text-xs tracking-[0.25em] uppercase font-light hover:bg-sage transition-colors duration-300"

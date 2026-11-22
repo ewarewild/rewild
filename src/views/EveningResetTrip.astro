@@ -46,7 +46,7 @@ const t = lang === 'no'
       injury: 'Har du en fersk eller pågående skade, bør du snakke med legen eller fysioterapeuten din før du blir med.',
       dog: 'Denne turen passer ikke for hund.',
       duration: 'Varighet', durationValue: 'Ca. 2 timer', date: 'Dato', meetUp: 'Oppmøte', meetingPoint: 'Møtested', tba: 'Kommer senere', price: 'Pris',
-      signup: 'Meld deg på',
+      signup: 'Meld deg på', limited: 'Begrenset antall plasser.',
     }
   : {
       description: 'A headlamp hike through the dark months - breath, silence and the senses. Now in Skien, Porsgrunn, Larvik and Sandefjord.',
@@ -76,7 +76,7 @@ const t = lang === 'no'
       injury: 'If you have a recent or current injury, please check with your doctor or physio before participating.',
       dog: 'This event is not suitable for bringing a dog.',
       duration: 'Duration', durationValue: 'Approx 2 hours', date: 'Date', meetUp: 'Meet up', meetingPoint: 'Meeting point', tba: 'To be announced', price: 'Price',
-      signup: 'Sign up',
+      signup: 'Sign up', limited: 'Places are limited.',
     };
 
 const heroImage = await heroPhoto(skolapparn, 65);
@@ -224,7 +224,8 @@ const heroImage = await heroPhoto(skolapparn, 65);
                 {priceText(session, lang)}
               </span>
             </div>
-            <div class="pt-12">
+            <p class="pt-2 text-sm text-sage font-light">{t.limited}</p>
+            <div class="pt-10">
               <a
                 href={`${p('/signup')}?event=${encodeURIComponent(signupLabel(session))}`}
                 class="inline-block px-10 py-4 bg-forest text-white text-xs tracking-[0.25em] uppercase font-light hover:bg-sage transition-colors duration-300"
