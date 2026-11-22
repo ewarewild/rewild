@@ -56,7 +56,6 @@ const t = lang === 'no'
       contactBefore: 'Send en e-post til',
       contactAfter: 'eller bruk kontaktskjemaet.',
       contactButton: 'Ta kontakt',
-      disclaimer: 'Øktene er trening og bevegelse, ikke behandling. De erstatter ikke medisinsk vurdering, og deltakere med skader eller helseplager bør snakke med lege eller fysioterapeut før de blir med.',
     }
   : {
       title: 'For Business - Rewild',
@@ -98,7 +97,6 @@ const t = lang === 'no'
       contactBefore: 'Email',
       contactAfter: 'or use the contact form.',
       contactButton: 'Get in touch',
-      disclaimer: 'The sessions are exercise and movement, not treatment. They don\'t replace medical assessment, and anyone with an injury or health condition should talk to a doctor or physiotherapist before taking part.',
     };
 ---
 
@@ -207,9 +205,6 @@ const t = lang === 'no'
           {t.contactAfter}
         </p>
         <a href={localePath(lang, '/contact')} class="inline-block mt-10 px-10 py-4 bg-forest text-white text-xs tracking-[0.25em] uppercase font-light hover:bg-sage transition-colors duration-300">{t.contactButton}</a>
-        <p class="mt-14 text-sm text-forest/60 font-light leading-relaxed">
-          {t.disclaimer}
-        </p>
       </div>
     </div>
   </section>
