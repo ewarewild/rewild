@@ -1,6 +1,7 @@
 ---
 import '../styles/global.css';
 import type { Hero } from '../lib/hero';
+import { langFromPath, otherLangPath, norwegianOnly } from '../i18n';
 
 interface Props {
   title: string;
@@ -11,15 +12,22 @@ interface Props {
   preloadImage?: Hero; // the page's hero photo, fetched first
 }
 
-const { title, description = 'Rewild - come back to yourself through nature', ogTitle, ogDescription, ogImage, preloadImage } = Astro.props;
+const lang = langFromPath(Astro.url.pathname);
+const { title, description = lang === 'no' ? 'Rewild - guidede turer og kurs i naturen i Telemark og Vestfold' : 'Rewild - come back to yourself through nature', ogTitle, ogDescription, ogImage, preloadImage } = Astro.props;
+// The page's Norwegian and English addresses, for search engines (none on Norwegian-only pages)
+const pathname = Astro.url.pathname;
+const alternates = norwegianOnly(pathname) ? [] : [
+  { hreflang: 'nb', href: new URL(lang === 'no' ? pathname : otherLangPath(pathname), Astro.site) },
+  { hreflang: 'en', href: new URL(lang === 'en' ? pathname : otherLangPath(pathname), Astro.site) },
+];
 // Link previews (Facebook, Messenger etc.): a 1200x630 JPG unless a page passes its own
 const SHARE_IMAGE = '/images/share-hero.jpg'; // made from the homepage hero (src/images/jot.webp)
-const ogImageAlt = 'Rocky mountain ridge above a valley with lakes and drifting cloud';
+const ogImageAlt = lang === 'no' ? 'Steinete fjellrygg over en dal med innsjøer og drivende skyer' : 'Rocky mountain ridge above a valley with lakes and drifting cloud';
 const ogImageUrl = new URL(ogImage ?? SHARE_IMAGE, Astro.site);
 ---
 
 <!doctype html>
-<html lang="en">
+<html lang={lang === 'no' ? 'nb' : 'en'}>
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -27,6 +35,8 @@ const ogImageUrl = new URL(ogImage ?? SHARE_IMAGE, Astro.site);
     <meta property="og:title" content={ogTitle ?? title} />
     <meta property="og:description" content={ogDescription ?? description} />
     <meta property="og:type" content="website" />
+    <meta property="og:locale" content={lang === 'no' ? 'nb_NO' : 'en_GB'} />
+    {alternates.map(a => <link rel="alternate" hreflang={a.hreflang} href={a.href} />)}
     <meta property="og:url" content={new URL(Astro.url.pathname, Astro.site)} />
     <meta property="og:image" content={ogImageUrl} />
     {!ogImage && <meta property="og:image:type" content="image/jpeg" />}

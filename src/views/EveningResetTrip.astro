@@ -1,0 +1,242 @@
+---
+import { heroImage as heroPhoto } from '../lib/hero';
+import Layout from '../layouts/Layout.astro';
+import Nav from '../components/Nav.astro';
+import Footer from '../components/Footer.astro';
+import skolapparn from '../images/skolapparn.webp';
+import { localePath, langFromPath } from '../i18n';
+import { events, longDate, signupLabel, priceText, text, meetUpTime, type Session } from '../data/events';
+
+
+interface Props {
+  session: Session;
+}
+
+const { session } = Astro.props;
+const lang = langFromPath(Astro.url.pathname);
+const p = (path: string) => localePath(lang, path);
+const name = events['evening-reset'].name;
+
+const t = lang === 'no'
+  ? {
+      description: 'En hodelyktstur gjennom den mørke årstiden - pust, stillhet og sansene. Nå i Skien, Porsgrunn, Larvik og Sandefjord.',
+      back: 'Alle turer',
+      tagline: 'Med en gang du kommer inn blant trærne, skjer det noe. Tankene stilner. Du senker garden, spenninger slipper taket, noe åpner seg. Du blir mer våken.',
+      intro: ['Velkommen til en spennende tur i nærnaturen, laget for å hjelpe deg å riste av deg dagen og komme i kontakt med kroppen igjen, samtidig som du avlaster leddene. Turen handler om å slippe stress og om å bygge styrke og stabilitet mens du går.'],
+      doHeading: 'Dette gjør vi:',
+      do: [
+        'Bruker pusten og sansene til å samle oppmerksomheten i kroppen og løse opp spenninger',
+        'Gjør øvelser underveis som styrker muskler og ledd og trener koordinasjonen - for bedre stabilitet i terrenget og for å motvirke følgene av mye stillesitting, som smerter i korsryggen',
+        'Bruker gangteknikker som reduserer belastningen på leddene i terrenget - i oppoverbakke, nedoverbakke og på flat mark',
+      ],
+      whoHeading: 'Hvem passer det for?',
+      who: [
+        'Deg som liker å være i naturen og vil koble av etter arbeidsdagen',
+        'Deg som ikke har tid til å trene i løpet av dagen',
+        'Deg som vil få mer ut av turene i naturen, både fysisk og mentalt',
+        'Deg som sliter med holdningsplager etter mye stillesitting',
+      ],
+      infoHeading: 'Praktisk info:',
+      experience: 'Du trenger ingen erfaring, men du bør klare å holde et raskere tempo på vei opp.',
+      language: 'Turen foregår på engelsk.',
+      questions: 'Ta gjerne <a href="/contact" class="font-semibold underline hover:text-sage transition-colors duration-200">kontakt</a> hvis du har spørsmål.',
+      bringHeading: 'Ta med:',
+      bring: ['Hodelykt', 'Tursko med godt grep', 'Klær etter været', 'Vann', 'En liten pakke papirlommetørklær', 'Staver (valgfritt)', 'Noe å spise (valgfritt)'],
+      weather: 'Vi går i de fleste værforhold, men blir forholdene farlige, avlyses turen. Du får da pengene tilbake eller kan booke en ny tur.',
+      injury: 'Har du en fersk eller pågående skade, bør du snakke med legen eller fysioterapeuten din før du blir med.',
+      dog: 'Denne turen passer ikke for hund.',
+      duration: 'Varighet', durationValue: 'Ca. 2 timer', date: 'Dato', meetUp: 'Oppmøte', meetingPoint: 'Møtested', tba: 'Kommer senere', price: 'Pris',
+      signup: 'Meld deg på',
+    }
+  : {
+      description: 'A headlamp hike through the dark months - breath, silence and the senses. Now in Skien, Porsgrunn, Larvik and Sandefjord.',
+      back: 'All events',
+      tagline: 'The moment you step into trees, something shifts. The mind quietens. Your guard drops, tension releasing, something opening. You feel more awake.',
+      intro: ['Welcome to an exciting hike in local nature, designed to help you shake off the day and reconnect with your body while taking the strain off your joints. The trip is focused on stress release, as well as building strength and stability as you walk.'],
+      doHeading: "What we'll do:",
+      do: [
+        'Use breath and the senses to focus attention in the body and release tensions',
+        'Do walking exercises to strengthen muscles, joints and train coordination to provide stability in terrain and counteract the effects of prolonged sitting, such as lower back pain',
+        'Use walking techniques that reduce the strain on your joints in terrain - uphill, downhill and on flat ground',
+      ],
+      whoHeading: 'Who is it for?',
+      who: [
+        'People who enjoy being in nature and want to decompress at the end of the day',
+        "People who don't have the time to exercise during the day",
+        'People looking to get more physical and mental benefits out of walking in nature',
+        'People dealing with postural issues from prolonged sitting',
+      ],
+      infoHeading: 'Technical info:',
+      experience: 'No previous experience is needed, though you should be comfortable maintaining a faster pace on the way up.',
+      language: 'The event is held in English.',
+      questions: 'Please <a href="/en/contact" class="font-semibold underline hover:text-sage transition-colors duration-200">get in touch</a> if you have any questions.',
+      bringHeading: 'What to bring:',
+      bring: ['Headlamp', 'Walking shoes with a good grip', 'Appropriate clothes for the weather', 'Water', 'Small pack of paper tissues', 'Hiking poles (optional)', 'Snack (optional)'],
+      weather: 'We hike in most weather, however, if hazardous conditions arise, the hike will be cancelled. You will receive a full refund or an option to rebook your trip.',
+      injury: 'If you have a recent or current injury, please check with your doctor or physio before participating.',
+      dog: 'This event is not suitable for bringing a dog.',
+      duration: 'Duration', durationValue: 'Approx 2 hours', date: 'Date', meetUp: 'Meet up', meetingPoint: 'Meeting point', tba: 'To be announced', price: 'Price',
+      signup: 'Sign up',
+    };
+
+const heroImage = await heroPhoto(skolapparn, 65);
+---
+
+<Layout title={`${name} - ${session.spot ?? session.place} - Rewild`} description={t.description} preloadImage={heroImage}>
+
+  <!-- Navigation -->
+  <Nav />
+
+  <!-- Hero image -->
+  <section class="relative mt-[60px] overflow-hidden" style="height: 65vh;">
+    <img
+      src={heroImage.src}
+      srcset={heroImage.srcset}
+      sizes={heroImage.sizes}
+      alt=""
+      fetchpriority="high"
+      decoding="async"
+      class="absolute inset-0 w-full h-full object-cover" style="object-position: center 25%;"
+    />
+    <div class="absolute inset-0" style="background: linear-gradient(to top, rgba(20,25,14,0.5) 0%, transparent 60%);"></div>
+    <a href={p('/#events')} class="absolute top-6 left-6 md:left-12 inline-flex items-center gap-2 text-xs tracking-[0.25em] uppercase font-light text-white hover:opacity-70 transition-opacity duration-200">
+      <span>←</span><span>{t.back}</span>
+    </a>
+  </section>
+
+  <!-- Title strip (bg-white) -->
+  <div class="bg-white py-10 px-6 text-center">
+    <p class="font-display font-normal italic text-forest text-[16pt] md:text-[20.5pt] lg:text-[25pt] leading-relaxed max-w-2xl mx-auto">{t.tagline}</p>
+  </div>
+
+  <!-- Intro section (bg-cream, matching 'You were built for this') -->
+  <section class="bg-cream pt-16 md:pt-24 pb-12 md:pb-[72px]">
+    <div class="max-w-6xl mx-auto px-6 md:px-12">
+      <div class="max-w-[420px]">
+        <h2 class="font-display font-bold text-4xl md:text-5xl text-forest mb-10 leading-tight">{name} - {session.spot ?? session.place}</h2>
+        <div class="space-y-5 text-forest font-light leading-relaxed text-[1.08rem]">
+          {(text(session, 'intro', lang) ?? t.intro).map(paragraph => (
+            <p>{paragraph}</p>
+          ))}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- What we'll do strip (bg-white, full width) -->
+  <div class="bg-white pt-12 md:pt-[72px] pb-12 md:pb-[72px]">
+    <div class="max-w-6xl mx-auto px-6 md:px-12">
+      <div class="max-w-[420px]">
+        <h3 class="font-display font-medium text-3xl md:text-4xl text-forest leading-tight mb-6">{t.doHeading}</h3>
+        <div class="space-y-6">
+          {t.do.map(item => (
+            <div class="flex items-start gap-4">
+              <span class="mt-2 w-1.5 h-1.5 rounded-full bg-sage-light flex-shrink-0"></span>
+              <span class="text-[1.08rem] text-forest font-light leading-relaxed">{item}</span>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <section class="bg-cream pt-12 md:pt-[72px] pb-12 md:pb-[72px]">
+    <div class="max-w-6xl mx-auto px-6 md:px-12">
+      <div class="max-w-[420px]">
+        <div class="space-y-5 text-forest font-light leading-relaxed text-[1.08rem]">
+          <h3 class="font-display font-medium text-3xl md:text-4xl text-forest leading-tight">{t.whoHeading}</h3>
+          <div class="space-y-6">
+            {t.who.map(item => (
+              <div class="flex items-start gap-4">
+                <span class="mt-2 w-1.5 h-1.5 rounded-full bg-sage-light flex-shrink-0"></span>
+                <span class="text-[1.08rem] text-forest font-light leading-relaxed">{item}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Practical info (bg-white) -->
+  <section class="bg-white pt-12 md:pt-[72px] pb-12 md:pb-[72px]">
+    <div class="max-w-6xl mx-auto px-6 md:px-12">
+      <div class="max-w-[420px]">
+        <h3 class="font-display font-medium text-3xl md:text-4xl text-forest mb-10 leading-tight">{t.infoHeading}</h3>
+        <div class="space-y-5 text-forest font-light leading-relaxed text-[1.08rem]">
+          <p>{t.experience}</p>
+          <p>{t.language}</p>
+          <p set:html={t.questions} />
+        </div>
+        <h3 class="font-display font-medium text-3xl md:text-4xl text-forest leading-tight mt-12 mb-6">{t.bringHeading}</h3>
+        <div class="space-y-6">
+          {t.bring.map(item => (
+            <div class="flex items-start gap-4">
+              <span class="mt-2 w-1.5 h-1.5 rounded-full bg-sage-light flex-shrink-0"></span>
+              <span class="text-[1.08rem] text-forest font-light leading-relaxed">{item}</span>
+            </div>
+          ))}
+        </div>
+        <p class="text-forest text-[1.08rem] font-light leading-relaxed mt-5">
+          {t.weather}
+        </p>
+        <p class="text-forest text-[1.08rem] font-light leading-relaxed mt-5">
+          {t.injury}
+        </p>
+        <p class="text-forest text-[1.08rem] font-light leading-relaxed mt-5">
+          {t.dog}
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Details (bg-cream) -->
+  <section class="bg-cream pt-12 md:pt-[72px] pb-14 md:pb-20">
+    <div class="max-w-6xl mx-auto px-6 md:px-12">
+      <div class="grid md:grid-cols-[5fr_7fr] gap-16 md:gap-24">
+        <div>
+          <!-- Details -->
+          <div class="space-y-4">
+            <div class="flex gap-6">
+              <span class="text-xs tracking-[0.2em] uppercase text-sage/80 font-light w-28 flex-shrink-0">{t.duration}</span>
+              <span class="text-base text-forest font-light">{text(session, 'duration', lang) ?? t.durationValue}</span>
+            </div>
+            <div class="flex gap-6">
+              <span class="text-xs tracking-[0.2em] uppercase text-sage/80 font-light w-28 flex-shrink-0">{t.date}</span>
+              <span class="text-base text-forest font-light">{longDate(session, lang)}</span>
+            </div>
+            <div class="flex gap-6">
+              <span class="text-xs tracking-[0.2em] uppercase text-sage/80 font-light w-28 flex-shrink-0">{t.meetUp}</span>
+              <span class="text-base text-forest font-light">{meetUpTime(session)}</span>
+            </div>
+            <div class="flex gap-6">
+              <span class="text-xs tracking-[0.2em] uppercase text-sage/80 font-light w-28 flex-shrink-0">{t.meetingPoint}</span>
+              <span class="text-base text-forest font-light">
+                {session.mapUrl
+                  ? <a href={session.mapUrl} target="_blank" rel="noopener" class="font-semibold underline hover:text-sage transition-colors duration-200">{session.meetingPoint}</a>
+                  : session.meetingPoint ?? t.tba}
+              </span>
+            </div>
+            <div class="flex gap-6">
+              <span class="text-xs tracking-[0.2em] uppercase text-sage/80 font-light w-28 flex-shrink-0">{t.price}</span>
+              <span class="text-base text-forest font-light">{priceText(session, lang)}</span>
+            </div>
+            <div class="pt-12">
+              <a
+                href={`${p('/signup')}?event=${encodeURIComponent(signupLabel(session))}`}
+                class="inline-block px-10 py-4 bg-forest text-white text-xs tracking-[0.25em] uppercase font-light hover:bg-sage transition-colors duration-300"
+              >
+                {t.signup}
+              </a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <Footer />
+
+</Layout>

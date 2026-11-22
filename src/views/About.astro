@@ -1,0 +1,48 @@
+---
+import { Image } from 'astro:assets';
+import Layout from '../layouts/Layout.astro';
+import Nav from '../components/Nav.astro';
+import Footer from '../components/Footer.astro';
+import eva from '../images/eva.webp';
+import { bio } from '../data/bio';
+import { langFromPath } from '../i18n';
+
+const lang = langFromPath(Astro.url.pathname);
+const about = bio(lang);
+---
+
+<Layout title={lang === 'no' ? 'Om meg - Rewild' : 'About - Rewild'} description={lang === 'no' ? 'Møt Ewa, guiden din i Rewild - forankret i naturen og i praksis.' : 'Meet Ewa, your guide at Rewild - grounded in nature, rooted in practice.'}>
+
+  <!-- Navigation -->
+  <Nav />
+
+  <!-- About -->
+  <section class="bg-white pt-36 pb-24 md:pt-44 md:pb-36">
+    <div class="max-w-6xl mx-auto px-6 md:px-12">
+      <div class="grid gap-6 md:grid-cols-2 md:gap-24 items-stretch">
+        <div class="md:order-1 md:sticky md:top-32 self-start">
+          <Image
+            src={eva}
+            alt="Ewa"
+            widths={[480, 720, 960, 1440, 2000]}
+            sizes="(min-width: 768px) 480px, calc(100vw - 48px)"
+            class="w-full h-auto aspect-square object-cover object-top"
+            loading="lazy"
+          />
+        </div>
+        <div class="md:order-2">
+          <h2 class="font-display font-medium text-3xl md:text-4xl text-forest mb-6 md:mb-10 leading-tight">
+            {about.heading}
+          </h2>
+          <div class="space-y-6 text-forest font-light leading-relaxed text-[1.08rem]">
+            {about.paragraphs.map(paragraph => <p set:html={paragraph} />)}
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <Footer />
+
+</Layout>

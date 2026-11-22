@@ -1,0 +1,117 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Nav from '../components/Nav.astro';
+import Footer from '../components/Footer.astro';
+import { langFromPath } from '../i18n';
+
+const lang = langFromPath(Astro.url.pathname);
+
+type Section = { heading: string; text?: string; bullets?: string[] };
+const t: { title: string; description: string; heading: string; sections: Section[] } = lang === 'no'
+  ? {
+      title: 'Salgsvilkår - Rewild',
+      description: 'Salgsvilkår for bestillinger hos Rewild.',
+      heading: 'Salgsvilkår',
+      sections: [
+        {
+          heading: 'Om Rewild',
+          bullets: [
+            'Rewild drives av Rewild Stewart-Simonsen, et enkeltpersonforetak registrert i Norge, org.nr. 938 483 833',
+            'Forretningsadresse: Bjørkedalvegen 694, 3948 Porsgrunn',
+            'Kontakt: ewa@re-wild.no',
+          ],
+        },
+        {
+          heading: 'Betaling',
+          text: 'Alle priser er oppgitt i norske kroner (NOK) og står på siden til hvert arrangement. Du betaler hele beløpet med Vipps når du bestiller, med mindre noe annet er avtalt. Bestillingen er bekreftet når betalingen er mottatt.',
+        },
+        {
+          heading: 'Angrerett',
+          text: 'Etter angrerettloven § 22 bokstav n gjelder ikke den vanlige angreretten på 14 dager for bestillinger av fritidsaktiviteter som skal finne sted på en bestemt dato eller i en bestemt periode, slik som Rewilds turer og økter. Avbestillinger behandles i stedet etter reglene nedenfor.',
+        },
+        {
+          heading: 'Avbestilling',
+          bullets: [
+            'Hvis Rewild avlyser en økt på grunn av farlig vær eller andre forhold utenfor vår kontroll, får du tilbud om full refusjon eller gratis ombooking',
+            'Hvis du må avbestille selv, ta kontakt så tidlig som mulig på ewa@re-wild.no, så forteller vi deg hvilke muligheter du har',
+          ],
+        },
+        {
+          heading: 'Klager',
+          text: 'Hvis du har en klage på en bestilling eller en økt, ta kontakt på ewa@re-wild.no, så gjør vi vårt beste for å løse det direkte. Kommer vi ikke til enighet, kan du ta saken videre til Forbrukerrådet eller Forbrukertilsynet.',
+        },
+      ],
+    }
+  : {
+      title: 'Terms of Sale - Rewild',
+      description: 'Terms of sale for bookings made with Rewild.',
+      heading: 'Terms of sale',
+      sections: [
+        {
+          heading: 'About Rewild',
+          bullets: [
+            'Rewild is operated by Rewild Stewart-Simonsen, a sole proprietorship (enkeltpersonforetak) registered in Norway, organisation number 938 483 833',
+            'Registered address: Bjørkedalvegen 694, 3948 Porsgrunn, Norway',
+            'Contact: ewa@re-wild.no',
+          ],
+        },
+        {
+          heading: 'Payment',
+          text: "All prices are listed in Norwegian kroner (NOK) and are shown on each event's page. Payment is made in full via Vipps at the time of booking, unless otherwise agreed. Your booking is confirmed once payment has been received.",
+        },
+        {
+          heading: 'Right of withdrawal',
+          text: "Under the Norwegian Right of Cancellation Act (angrerettloven) §22 letter n, the standard 14-day right of withdrawal does not apply to bookings for leisure activities that are to take place on a specific date or within a specific period, such as Rewild's hikes and sessions. Cancellations are instead handled under the policy below.",
+        },
+        {
+          heading: 'Cancellations',
+          bullets: [
+            'If Rewild cancels a session due to hazardous weather or other conditions outside our control, you will be offered a full refund or a free rebooking',
+            'If you need to cancel your own booking, please contact us as early as possible at ewa@re-wild.no so we can let you know your options',
+          ],
+        },
+        {
+          heading: 'Complaints',
+          text: "If you have a complaint about a booking or session, please contact us at ewa@re-wild.no and we will do our best to resolve it directly. If we're unable to reach an agreement, you may bring the matter to the Norwegian Consumer Council (Forbrukerrådet) or the Consumer Authority (Forbrukertilsynet).",
+        },
+      ],
+    };
+---
+
+<Layout title={t.title} description={t.description}>
+
+  <!-- Navigation -->
+  <Nav />
+
+  <!-- Terms of sale -->
+  <section class="bg-cream min-h-screen pt-32 pb-40 md:pt-44 md:pb-56">
+    <div class="max-w-6xl mx-auto px-6 md:px-12">
+      <div class="max-w-3xl">
+        <h1 class="font-display font-medium text-4xl md:text-5xl text-forest mb-14 leading-tight">{t.heading}</h1>
+
+        <div class="space-y-12 text-forest font-light leading-relaxed text-[1.08rem]">
+          {t.sections.map(section => (
+            <div>
+              <h2 class="font-display font-medium text-2xl md:text-3xl text-forest mb-6 leading-tight">{section.heading}</h2>
+              {section.text && <p>{section.text}</p>}
+              {section.bullets && (
+                <div class="space-y-6">
+                  {section.bullets.map(item => (
+                    <div class="flex items-start gap-4">
+                      <span class="mt-2 w-1.5 h-1.5 rounded-full bg-sage-light flex-shrink-0"></span>
+                      <span class="text-[1.08rem] text-forest font-light leading-relaxed">{item}</span>
+                    </div>
+                  ))}
+                </div>
+              )}
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <Footer />
+
+</Layout>

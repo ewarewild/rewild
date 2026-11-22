@@ -1,0 +1,145 @@
+---
+import { Image } from 'astro:assets';
+import Layout from '../layouts/Layout.astro';
+import Nav from '../components/Nav.astro';
+import Footer from '../components/Footer.astro';
+import firesmoke from '../images/firesmoke.webp';
+import skowint from '../images/skowint.webp';
+import boots from '../images/boots.webp';
+import nordsnow from '../images/nordsnow.webp';
+import { langFromPath, localePath } from '../i18n';
+
+const lang = langFromPath(Astro.url.pathname);
+const p = (path: string) => localePath(lang, path);
+// Paragraphs in order; the phone-only photos sit after paragraphs 4, 8 and 11
+const t = lang === 'no'
+  ? {
+      title: 'Historien - Rewild',
+      description: 'Historien om Rewild, og tankene bak.',
+      heading: 'Historien om Rewild',
+      alt: { fire: 'Røyk fra bålet', snow: 'Snødekt fjellsti', footprints: 'Fotspor i dyp snø på en fjellrygg i solnedgang', boots: 'Støvler i snøen i solnedgang' },
+      paragraphs: [
+        "Mens jeg bygde opp livet mitt igjen etter en krise, havnet jeg et sted jeg ikke lenger hadde kapasitet til å være. Påkjenningene var så store at jeg ble skadet og utbrent.",
+        "Brystet verket hele tiden av opphopet stress og følelser. Jeg hadde en skade i kneet og i skulderen som ikke ville gro. Jeg følte meg deprimert, fanget og isolert, og så ingen åpenbar vei ut av situasjonen jeg var i.",
+        "Instinktet mitt sa at jeg måtte ut. Få det ut av systemet.",
+        "Jeg begynte å gå opp på toppene i nærheten, som om jeg gispet etter luft mens jeg holdt på å kveles. Først forsiktig, så mer intenst. Rett fra jobb, i all slags vær, hele året.",
+        "Jeg tok imot elementene som en vei inn i nærværet. Alene og langt unna alle. Noen ganger gikk jeg opp i dyp snø.",
+        "Lungene jobbet hardt for å holde meg i bevegelse. For hvert åndedrag slapp spenningene. Hver del av kroppen våknet. Hver celle fyltes med liv.",
+        "Jeg tok inn naturen med alle sansene. Neseborene frøs sammen i den kalde lufta og fanget den sitrusaktige duften av granbar. En påminnelse om livet rundt meg.",
+        "Den myke susingen av snøkrystaller som drysset fra trærne. Ned på bakken, dekket av glitter.",
+        "Jeg ble overveldet av takknemlighet. For å få være vitne til dette skuespillet. For å føle meg hjemme her. Og i meg selv.",
+        "Plassen stresset hadde tatt, ble ryddet. Og så fylt opp igjen med rent liv. Igjen og igjen, og igjen...",
+        "Selv om turene var fysisk krevende, ble de avhengighetsskapende. Motstanden mot å gjøre noe som virket så tungt, forsvant, og igjen satt jeg med glede, ro og en dyp takknemlighet over å være i live. Full av ærefrykt for hvor utrolig vakker naturen er.",
+        "Effekten varte. Jeg ble bedre til å takle stress i hverdagen. Perspektivet mitt endret seg. Jeg ble mer robust.",
+        "Kroppen kjentes sterk og kapabel. Kneet og skulderen grodde.",
+        "Til og med livet mitt begynte å forandre seg. Jeg fikk kjøpt meg et hus, og jeg begynte å følge en vei i tråd med mitt indre kompass. Jeg fant meg selv i et kjærlig forhold, slik jeg alltid hadde ønsket meg.",
+        "Stress var ikke lenger utgangspunktet mitt. Overlevelsesmodus ga plass til kreativitet og en følelse av frihet.",
+        "Forvandlingen inspirerte meg enormt til å dele disse verktøyene med andre. Så de kan kjenne den samme lettelsen og styrken i sine egne liv.",
+        `Disse turene viste seg å være den aller første, organiske formen for <a href="${p('/#events')}" class="font-semibold underline decoration-forest/40 hover:decoration-forest transition-colors duration-200">Evening Reset</a>. Nå mer gjennomarbeidet, mer tilgjengelig og i stadig utvikling.`,
+        "Sammen med deg.",
+      ],
+    }
+  : {
+      title: 'The Story - Rewild',
+      description: 'The story of Rewild, and the philosophy behind it.',
+      heading: 'The Story of Rewild',
+      alt: { fire: 'Fire smoke', snow: 'Snowy mountain trail', footprints: 'Footprints in deep snow on a mountain ridge at sunset', boots: 'Boots resting in the snow at sunset' },
+      paragraphs: [
+        "While rebuilding my life from a crisis, I found myself in a place I no longer had the capacity to be in. The intensity of challenges left me injured and burnt out.",
+        "My chest was in constant physical pain from accumulated stress and emotions. I had a knee and shoulder injury that wouldn't heal. I felt depressed, trapped and isolated, seeing no apparent solution to my life situation.",
+        "My instincts were telling me to get out. To move it out of my system.",
+        "I began to walk up local mountains, as if to grasp for air while suffocating. At first gently, then it intensified. Straight from work, in all weather, every season.",
+        "I welcomed the elements as a gateway into presence. Alone and far from anyone. Sometimes hiking up in deep snow.",
+        "My lungs working hard to keep me moving. With each breath, tensions releasing. Every part of my body coming online. Every cell filling with life.",
+        "Immersing in nature with all of my senses. Nostrils sticking from the cold air, picking up the citrusy scent of spruce needles. Reminding me of life all around.",
+        "The soft hiss of snow crystals flowing from trees. Onto the ground covered in glitter.",
+        "I felt overwhelmed by gratitude. For witnessing this spectacle. For feeling at home here. And inside of myself.",
+        "Where spaces inhabited by stress were cleared. Then re-filled with pure life. Again and again, and again...",
+        "Even though physically challenging, the trips became addictive. Resistance to doing this seemingly hard thing disappeared, leaving me with joy, peace and deep appreciation of being alive. In awe of the incredible beauty of nature.",
+        "The effects lingered. My capacity to deal with stress in daily life expanded. My perspective shifted. Resilience increased.",
+        "My body felt strong and capable. My knee and shoulder healed.",
+        "Even my life began to change. I was able to buy a house, I started to pursue a path aligned with my inner compass. I found myself in a loving relationship that I always wanted.",
+        "Stress was no longer my baseline. Survival mode gave way to creativity and a sense of freedom.",
+        "The transformation wildly inspired me to share these tools with others. So they can feel the same relief and strength in their own lives.",
+        `These trips turned out to be the very first, organic form of the <a href="${p('/#events')}" class="font-semibold underline decoration-forest/40 hover:decoration-forest transition-colors duration-200">Evening Reset</a>. Now more refined, accessible, and constantly evolving.`,
+        "With you.",
+      ],
+    };
+---
+
+<Layout title={t.title} description={t.description}>
+
+  <!-- Navigation -->
+  <Nav />
+
+  <!-- Story -->
+  <section class="bg-white pt-[92px] pb-24 md:pt-44 md:pb-36">
+    <div class="max-w-6xl mx-auto px-6 md:px-12">
+      <div class="grid gap-14 md:grid-cols-2 md:gap-24">
+        <div class="md:order-1 md:sticky md:top-32 self-start">
+          <Image
+            src={firesmoke}
+            alt={t.alt.fire}
+            widths={[480, 720, 1080]}
+            sizes="(min-width: 768px) 480px, calc(100vw - 48px)"
+            class="w-full h-auto aspect-[4/5] object-cover object-center"
+            loading="lazy"
+          />
+        </div>
+        <div class="md:order-2">
+          <h1 class="font-display font-bold text-3xl md:text-4xl text-forest mb-6 md:mb-10 leading-tight">
+            {t.heading}
+          </h1>
+          <div class="space-y-6 text-forest font-light leading-relaxed text-[1.08rem]">
+            <p set:html={t.paragraphs[0]} />
+            <p set:html={t.paragraphs[1]} />
+            <p set:html={t.paragraphs[2]} />
+            <p set:html={t.paragraphs[3]} />
+            <Image
+              src={nordsnow}
+              alt={t.alt.snow}
+              widths={[480, 720, 1080, 1440, 1800]}
+              sizes="calc(100vw - 48px)"
+              class="md:hidden w-full h-auto aspect-[3/2] object-cover object-center"
+              loading="lazy"
+            />
+            <p set:html={t.paragraphs[4]} />
+            <p set:html={t.paragraphs[5]} />
+            <p set:html={t.paragraphs[6]} />
+            <p set:html={t.paragraphs[7]} />
+            <Image
+              src={skowint}
+              alt={t.alt.footprints}
+              widths={[480, 720, 1080, 1440, 1800]}
+              sizes="calc((100vw - 48px) * 1.19)"
+              class="md:hidden w-full h-auto aspect-[3/2] object-cover object-center"
+              loading="lazy"
+            />
+            <p set:html={t.paragraphs[8]} />
+            <p set:html={t.paragraphs[9]} />
+            <p set:html={t.paragraphs[10]} />
+            <Image
+              src={boots}
+              alt={t.alt.boots}
+              widths={[480, 720, 1080, 1400]}
+              sizes="calc(100vw - 48px)"
+              class="md:hidden w-full h-auto aspect-[2/3] object-cover object-center"
+              loading="lazy"
+            />
+            <p set:html={t.paragraphs[11]} />
+            <p set:html={t.paragraphs[12]} />
+            <p set:html={t.paragraphs[13]} />
+            <p set:html={t.paragraphs[14]} />
+            <p set:html={t.paragraphs[15]} />
+            <p set:html={t.paragraphs[16]} />
+            <p set:html={t.paragraphs[17]} />
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <Footer />
+
+</Layout>

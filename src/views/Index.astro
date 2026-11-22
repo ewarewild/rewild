@@ -1,0 +1,148 @@
+---
+import { heroImage as heroPhoto } from '../lib/hero';
+import { Image } from 'astro:assets';
+import Layout from '../layouts/Layout.astro';
+import Nav from '../components/Nav.astro';
+import Footer from '../components/Footer.astro';
+import EventCalendar from '../components/EventCalendar.astro';
+import heroJot from '../images/jot.webp';
+import eva from '../images/eva.webp';
+import { bio } from '../data/bio';
+import { langFromPath, localePath } from '../i18n';
+
+const heroImage = await heroPhoto(heroJot, 100);
+const lang = langFromPath(Astro.url.pathname);
+const p = (path: string) => localePath(lang, path);
+const about = bio(lang);
+
+// Hero copy from the strategy brief (INFO/Documents/rewild-strategy-and-website-brief.md, section 4)
+const t = lang === 'no'
+  ? {
+      title: 'Rewild - guidede turer og kurs i Telemark og Vestfold',
+      description: 'Guidede turer og kurs i Telemark og Vestfold - for styrke, stabilitet og mindre slitasje på leddene.',
+      headline: 'Ut av hodet, ut i terrenget',
+      subline: 'Guidede turer og kurs i Telemark og Vestfold - for styrke, stabilitet og mindre slitasje på leddene.',
+      cta: 'Bli med',
+      scroll: 'Scroll',
+      intro: 'Vi går i stillhet, løser opp spenninger og trener oppmerksomheten underveis. Du lærer å bevege deg i terrenget med mindre belastning - og kommer hjem med mer ro enn da du dro.',
+      events: 'Turer',
+      more: 'Mer →',
+      less: 'Mindre ↑',
+      tailored: 'Vil du ha noe skreddersydd for deg?',
+    }
+  : {
+      title: 'Rewild Yourself',
+      description: 'Return to yourself through nature',
+      headline: 'Out of your head, into the terrain',
+      subline: 'Guided walks and courses in Telemark and Vestfold - for strength, stability and less wear on your joints.',
+      cta: 'Join',
+      scroll: 'Scroll',
+      intro: 'We walk in silence, release tension, and train attention as we go. You learn to move in terrain with less strain - and you come home with more calm than when you left.',
+      events: 'Events',
+      more: 'More →',
+      less: 'Less ↑',
+      tailored: 'Want something tailored to you?',
+    };
+---
+
+<Layout title={t.title} description={t.description} ogTitle={t.title} ogDescription={t.description} preloadImage={heroImage}>
+
+  <!-- Navigation -->
+  <Nav transparent />
+
+  <!-- Hero -->
+  <section class="relative h-screen flex items-center justify-center overflow-hidden">
+    <img
+      src={heroImage.src}
+      srcset={heroImage.srcset}
+      sizes={heroImage.sizes}
+      alt=""
+      fetchpriority="high"
+      decoding="async"
+      class="absolute inset-0 w-full h-full object-cover"
+    />
+    <div class="absolute inset-0" style="background: linear-gradient(to top, rgba(20,25,14,0.72) 0%, rgba(20,25,14,0.3) 50%, rgba(20,25,14,0.15) 100%);"></div>
+    <div class="relative top-[92px] md:top-[80px] z-10 text-left w-full max-w-6xl mx-auto px-6 md:px-12">
+      <h1 class="font-display font-bold text-white text-[25pt] md:text-[2.75rem] leading-tight text-balance">
+        {t.headline}
+      </h1>
+      <p class="mt-4 md:mt-5 max-w-xl md:max-w-2xl font-display font-normal italic text-white/90 text-[15pt] md:text-[20pt] leading-relaxed text-balance">
+        {t.subline}
+      </p>
+      <a href="#events" class="inline-block mt-8 md:mt-10 px-10 py-4 border border-white text-white text-xs tracking-[0.25em] uppercase font-light hover:bg-white hover:text-black transition-colors duration-300">{t.cta}</a>
+    </div>
+    <div class="absolute bottom-8 right-8 md:right-12 text-white/40 flex items-center gap-3">
+      <span class="w-10 h-px bg-white/30"></span>
+      <span class="text-xs tracking-widest uppercase font-light">{t.scroll}</span>
+    </div>
+  </section>
+
+  <!-- How we do it -->
+  <section id="return-to-yourself" class="bg-white pt-14 pb-16 md:pt-24 md:pb-24 scroll-mt-24">
+    <div class="max-w-6xl mx-auto px-6 md:px-12">
+      <p class="max-w-4xl text-forest font-light md:font-medium text-[1.25rem] leading-relaxed md:font-display md:text-[2.25rem] md:leading-snug text-balance">
+        {t.intro}
+      </p>
+      {/* Previous intro, replaced 2026-11-22 with the brief's copy:
+      Rewild takes you into nature, to <strong>restore balance</strong> and <strong>vitality</strong> while <strong>reducing</strong> the <strong>risk of injury</strong>
+      Previous hero: "Transform the way you move" / "Build strength and resilience through any terrain in life."
+      */}
+    </div>
+  </section>
+
+  <!-- Events -->
+  <section id="events" class="bg-cream pt-10 pb-4 md:pt-24 md:pb-16">
+    <div class="max-w-6xl mx-auto px-6 md:px-12">
+      <p class="text-xs tracking-[0.3em] uppercase text-sage/80 mb-10 font-light">{t.events}</p>
+      <EventCalendar />
+    </div>
+  </section>
+
+  <!-- About -->
+  <section id="about" class="bg-white py-24 md:py-36">
+    <div class="max-w-6xl mx-auto px-6 md:px-12">
+      <div class="grid gap-10 md:grid-cols-2 md:gap-24 items-stretch">
+        <div class="md:order-1 md:sticky md:top-32 self-start">
+          <Image
+            src={eva}
+            alt="Ewa"
+            widths={[480, 720, 960, 1440, 2000]}
+            sizes="(min-width: 768px) 480px, calc(100vw - 48px)"
+            class="w-full h-auto aspect-square object-cover object-top"
+            loading="lazy"
+          />
+        </div>
+        <div class="md:order-2 md:flex md:flex-col">
+          <h2 class="font-display font-bold text-3xl md:text-4xl text-forest mb-6 md:mb-10 leading-tight">
+            {about.heading}
+          </h2>
+          <div class="space-y-6 text-forest font-light leading-relaxed text-[1.08rem]">
+            {about.paragraphs.slice(0, 2).map(paragraph => <p set:html={paragraph} />)}
+            <div class="read-more-text hidden space-y-6">
+              {about.paragraphs.slice(2).map(paragraph => <p set:html={paragraph} />)}
+            </div>
+            <button type="button" class="read-more-btn inline-block font-sans text-xs tracking-[0.25em] uppercase font-light text-sage/80 hover:text-sage transition-colors duration-300" data-more={t.more} data-less={t.less}>{t.more}</button>
+          </div>
+          {/* Desktop: pushed to the bottom of the column so it lines up with the bottom of the bio pic */}
+          <div class="mt-12 md:mt-auto md:pt-16 flex flex-col items-start">
+            <p class="font-display font-normal italic text-forest text-[16pt] md:text-[20.5pt] leading-relaxed">{t.tailored}</p>
+            <a href={p('/one-to-one')} class="inline-block mt-6 px-10 py-4 border border-forest text-forest text-xs tracking-[0.25em] uppercase font-light hover:bg-forest hover:text-white transition-colors duration-300">1:1</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <Footer />
+
+</Layout>
+
+<script>
+  document.querySelectorAll<HTMLElement>('.read-more-btn').forEach((btn) => {
+    btn.addEventListener('click', () => {
+      const hidden = btn.previousElementSibling!.classList.toggle('hidden');
+      btn.textContent = hidden ? btn.dataset.more! : btn.dataset.less!;
+    });
+  });
+</script>

@@ -3,6 +3,7 @@
 import type { ImageMetadata } from 'astro';
 import skolapparn from '../images/skolapparn.webp';
 import nordkollenHero from '../images/nordkollen-hero.webp';
+import type { Lang } from '../i18n';
 
 export type EventId = 'evening-reset' | 'rewild-course';
 
@@ -14,6 +15,7 @@ type EventInfo = {
   description: string;
   hours: number; // length, used for the end time on phone calendar cards
   price: number; // NOK per person, charged through Vipps at sign-up
+  no: { alt: string; description: string }; // Norwegian text (the main site); the fields above are English
 };
 
 export const events: Record<EventId, EventInfo> = {
@@ -25,6 +27,10 @@ export const events: Record<EventId, EventInfo> = {
     hours: 2,
     price: 200,
     description: 'Shake off the day and reconnect with your body on an evening hike that supports stress release, increased focus and reduced strain on your joints.',
+    no: {
+      alt: 'Evening Reset - tur i skogen',
+      description: 'Rist av deg dagen og kom i kontakt med kroppen igjen på en kveldstur som hjelper deg å slippe stress, skjerpe fokuset og avlaste leddene.',
+    },
   },
   'rewild-course': {
     name: 'Rewild Course',
@@ -34,6 +40,10 @@ export const events: Record<EventId, EventInfo> = {
     hours: 5,
     price: 300,
     description: 'A day hike to Nordkollen built around injury prevention, functional strength, increasing focus, stress release and building resilience.',
+    no: {
+      alt: 'Rewild Course - kurs over en hel dag',
+      description: 'En dagstur til Nordkollen bygget rundt skadeforebygging, funksjonell styrke, økt fokus, avspenning og motstandskraft.',
+    },
   },
 };
 
@@ -54,6 +64,18 @@ export type Session = {
   price?: number; // NOK, replaces the event's shared price
   meetUp?: string; // course pages only, replaces the Technical info meet-up paragraph (HTML allowed)
   routeInfo?: string; // course pages only, replaces the Technical info elevation/distance paragraph
+  // Norwegian versions of the text fields above (the main site). The fields above are the English page.
+  no?: { intro?: string[]; description?: string; duration?: string; meetUp?: string; routeInfo?: string };
+};
+
+type TextField = 'intro' | 'description' | 'duration' | 'meetUp' | 'routeInfo';
+// A trip's own text in the page's language (Norwegian falls back to English if it's missing)
+export const text = <K extends TextField>(s: Session, field: K, lang: Lang): Session[K] =>
+  (lang === 'no' ? (s.no?.[field] as Session[K]) : undefined) ?? s[field];
+
+export const eventText = (id: EventId, lang: Lang) => {
+  const e = events[id];
+  return lang === 'no' ? { ...e, ...e.no } : e;
 };
 
 export const sessions: Session[] = [
@@ -64,6 +86,12 @@ export const sessions: Session[] = [
       "Welcome to an evening hike designed to help you release tension, build strength and joint stability, and promote better sleep.",
       "We walk from the parking area at a moderate to fast pace (ca. 4.5km/h) on an easy gravel road towards Lia, then on a shorter forest path up to Skolapparåsen (313m), a 4km round trip. It's a beautiful, quiet mountain with a great view.",
     ],
+    no: {
+      intro: [
+        "Velkommen til en kveldstur som hjelper deg å løse opp spenninger, bygge styrke og stabilitet i leddene, og sove bedre.",
+        "Vi går fra parkeringen i moderat til raskt tempo (ca. 4,5 km/t) på en lett grusvei mot Lia, og deretter en kortere skogssti opp til Skolapparåsen (313 moh.) - 4 km tur-retur. Det er en vakker og stille topp med flott utsikt.",
+      ],
+    },
   },
   {
     event: 'evening-reset', date: '2026-11-11', time: '17:00', place: 'Larvik', spot: 'Brunlanes Sportskapellet', difficulty: 'Easy',
@@ -72,6 +100,12 @@ export const sessions: Session[] = [
       "Welcome to an evening hike designed to help you release tension, build strength and joint stability, and promote better sleep.",
       "We walk from the parking area at a moderate to fast pace (ca. 4.5km/h) on a forest trail towards Brunlanes Sportskapellet (205m), then continue back down gently on a path along the Ulfsbakktjern - a 3.1km round trip. It's a lovely, quiet spot just outside of town.",
     ],
+    no: {
+      intro: [
+        "Velkommen til en kveldstur som hjelper deg å løse opp spenninger, bygge styrke og stabilitet i leddene, og sove bedre.",
+        "Vi går fra parkeringen i moderat til raskt tempo (ca. 4,5 km/t) på en skogssti mot Brunlanes Sportskapellet (205 moh.), og fortsetter rolig ned igjen på en sti langs Ulfsbakktjern - 3,1 km tur-retur. Et fint og stille sted like utenfor byen.",
+      ],
+    },
   },
   {
     event: 'evening-reset', date: '2026-11-12', time: '17:00', place: 'Porsgrunn', spot: 'Skolapparåsen', difficulty: 'Moderate',
@@ -80,6 +114,12 @@ export const sessions: Session[] = [
       "Welcome to an evening hike designed to help you release tension, build strength and joint stability, and promote better sleep.",
       "We walk from the parking area at a moderate to fast pace (ca. 4.5km/h) on an easy gravel road towards Lia, then on a shorter forest path up to Skolapparåsen (313m), a 4km round trip. It's a beautiful, quiet mountain with a great view.",
     ],
+    no: {
+      intro: [
+        "Velkommen til en kveldstur som hjelper deg å løse opp spenninger, bygge styrke og stabilitet i leddene, og sove bedre.",
+        "Vi går fra parkeringen i moderat til raskt tempo (ca. 4,5 km/t) på en lett grusvei mot Lia, og deretter en kortere skogssti opp til Skolapparåsen (313 moh.) - 4 km tur-retur. Det er en vakker og stille topp med flott utsikt.",
+      ],
+    },
   },
   {
     event: 'rewild-course', date: '2026-11-21', time: '10:00', place: 'Larvik, Porsgrunn, Skien', spot: 'Nordkollen', difficulty: 'Moderate',
@@ -92,6 +132,14 @@ export const sessions: Session[] = [
     ],
     meetUp: 'We meet up at <a href="https://www.google.com/maps?q=59.18604216274942,9.803863873385133" target="_blank" rel="noopener" class="font-semibold underline hover:text-sage transition-colors duration-200">Parkering for Svarteberget og Nordkollen</a> and walk from there on a gravel road, then on a forest trail.',
     description: 'A hands-on course to learn how to reduce the strain on your joints in terrain, increase strength and stability while walking, and get more mental and physical benefits from being in nature.',
+    no: {
+      intro: [
+        'Velkommen til en dag med praktisk trening i naturen som gir deg verktøy til å redusere skaderisikoen og gjenvinne fysisk og mental balanse - på stien og i hverdagen.',
+        'Vi går opp til <a href="https://www.google.com/maps?q=59.197427717465644,9.8402239222746" target="_blank" rel="noopener" class="font-semibold underline hover:text-sage transition-colors duration-200">Nordkollen</a> (353 moh.) og kommer oss skikkelig ut i naturen.',
+      ],
+      meetUp: 'Vi møtes på <a href="https://www.google.com/maps?q=59.18604216274942,9.803863873385133" target="_blank" rel="noopener" class="font-semibold underline hover:text-sage transition-colors duration-200">Parkering for Svarteberget og Nordkollen</a> og går derfra først på grusvei, så på skogssti.',
+      description: 'Et praktisk kurs der du lærer å redusere belastningen på leddene i terrenget, bygge styrke og stabilitet mens du går, og få mer ut av turen - både fysisk og mentalt.',
+    },
   },
   {
     event: 'rewild-course', date: '2026-11-08', time: '10:00', place: 'Larvik, Porsgrunn, Skien', spot: 'Nordkollen', difficulty: 'Moderate',
@@ -104,11 +152,21 @@ export const sessions: Session[] = [
     ],
     meetUp: 'We meet up at <a href="https://www.google.com/maps?q=59.18604216274942,9.803863873385133" target="_blank" rel="noopener" class="font-semibold underline hover:text-sage transition-colors duration-200">Parkering for Svarteberget og Nordkollen</a> and walk from there on a gravel road, then on a forest trail.',
     description: 'A hands-on course to learn how to reduce the strain on your joints in terrain, increase strength and stability while walking, and get more mental and physical benefits from being in nature.',
+    no: {
+      intro: [
+        'Velkommen til en dag med praktisk trening i naturen som gir deg verktøy til å redusere skaderisikoen og gjenvinne fysisk og mental balanse - på stien og i hverdagen.',
+        'Vi går opp til <a href="https://www.google.com/maps?q=59.197427717465644,9.8402239222746" target="_blank" rel="noopener" class="font-semibold underline hover:text-sage transition-colors duration-200">Nordkollen</a> (353 moh.) og kommer oss skikkelig ut i naturen.',
+      ],
+      meetUp: 'Vi møtes på <a href="https://www.google.com/maps?q=59.18604216274942,9.803863873385133" target="_blank" rel="noopener" class="font-semibold underline hover:text-sage transition-colors duration-200">Parkering for Svarteberget og Nordkollen</a> og går derfra først på grusvei, så på skogssti.',
+      description: 'Et praktisk kurs der du lærer å redusere belastningen på leddene i terrenget, bygge styrke og stabilitet mens du går, og få mer ut av turen - både fysisk og mentalt.',
+    },
   },
 ].sort((a, b) => (a.date + a.time).localeCompare(b.date + b.time));
 
 const weekdays = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
-const months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+export const months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+const weekdaysNo = ['søndag', 'mandag', 'tirsdag', 'onsdag', 'torsdag', 'fredag', 'lørdag'];
+export const monthsNo = ['januar', 'februar', 'mars', 'april', 'mai', 'juni', 'juli', 'august', 'september', 'oktober', 'november', 'desember'];
 
 const day = (s: Session) => new Date(`${s.date}T12:00:00`);
 // Uses only the first town, so "Porsgrunn & Skien" keeps the /porsgrunn-... link.
@@ -123,21 +181,40 @@ export const meetUpTime = (s: Session, minutesBefore = 5) => {
   return `${String(Math.floor(t / 60)).padStart(2, '0')}:${String(t % 60).padStart(2, '0')}`;
 };
 
-export const tripUrl = (s: Session) => `${events[s.event].href}/${tripSlug(s)}`;
+// Same slug in both languages; English pages sit under /en
+export const tripUrl = (s: Session, lang: Lang = 'no') => `${lang === 'en' ? '/en' : ''}${events[s.event].href}/${tripSlug(s)}`;
 
-// e.g. "Tuesday 3 November"
-export const longDate = (s: Session) =>
-  `${weekdays[day(s).getDay()]} ${day(s).getDate()} ${months[day(s).getMonth()]}`;
+// e.g. "Tuesday 3 November" (English, also used in booking emails) / "tirsdag 3. november"
+export const longDate = (s: Session, lang: Lang = 'en') =>
+  lang === 'no'
+    ? `${weekdaysNo[day(s).getDay()]} ${day(s).getDate()}. ${monthsNo[day(s).getMonth()]}`
+    : `${weekdays[day(s).getDay()]} ${day(s).getDate()} ${months[day(s).getMonth()]}`;
 
-// e.g. "Evening Reset - Skolapparåsen, Tue 3 Nov" - the trip's option in the signup form
+// e.g. "Evening Reset - Skolapparåsen, Tue 3 Nov" - the trip's option value in the signup form.
+// Always English: the Worker looks trips up by this label in /trips.json.
 export const signupLabel = (s: Session) =>
   `${events[s.event].name} - ${s.spot ?? s.place}, ${weekdays[day(s).getDay()].slice(0, 3)} ${day(s).getDate()} ${months[day(s).getMonth()].slice(0, 3)}`;
+
+// What the signup form shows for the trip, e.g. "Evening Reset - Skolapparåsen, tir. 3. nov."
+export const signupText = (s: Session, lang: Lang) =>
+  lang === 'no'
+    ? `${events[s.event].name} - ${s.spot ?? s.place}, ${weekdaysNo[day(s).getDay()].slice(0, 3)}. ${day(s).getDate()}. ${monthsNo[day(s).getMonth()].slice(0, 3)}.`
+    : signupLabel(s);
+
+const difficultiesNo: Record<string, string> = { Easy: 'Lett', Moderate: 'Middels', Hard: 'Krevende' };
+export const difficultyText = (s: Session, lang: Lang) =>
+  s.difficulty && lang === 'no' ? difficultiesNo[s.difficulty] ?? s.difficulty : s.difficulty;
+
+// "200 NOK" / "200 kr", or Free / Gratis
+export const priceText = (s: Session, lang: Lang) =>
+  price(s) ? `${price(s)} ${lang === 'no' ? 'kr' : 'NOK'}` : lang === 'no' ? 'Gratis' : 'Free';
 
 // NOK per person for this trip
 export const price = (s: Session) => s.price ?? events[s.event].price;
 
-// e.g. "Up to 5 hours" - course pages and booking emails
-export const courseDuration = (s: Session) => s.duration ?? 'Up to 5 hours';
+// e.g. "Up to 5 hours" - course pages and booking emails (English by default)
+export const courseDuration = (s: Session, lang: Lang = 'en') =>
+  text(s, 'duration', lang) ?? (lang === 'no' ? 'Opptil 5 timer' : 'Up to 5 hours');
 
 // e.g. "17:00 - 18:30"
 export const timeRange = (s: Session) => {

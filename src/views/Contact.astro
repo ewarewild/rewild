@@ -1,0 +1,166 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Nav from '../components/Nav.astro';
+import Footer from '../components/Footer.astro';
+import { langFromPath } from '../i18n';
+
+const lang = langFromPath(Astro.url.pathname);
+const t = lang === 'no'
+  ? {
+      title: 'Ta kontakt - Rewild', description: 'Ta kontakt med Rewild.', heading: 'Ta kontakt',
+      name: 'Navn', first: 'Fornavn', last: 'Etternavn', email: 'E-postadresse', subject: 'Emne', message: 'Melding',
+      send: 'Send', sending: 'Sender...', direct: 'Eller send meg en e-post direkte på',
+      ok: 'Takk - meldingen din er sendt. Vi tar kontakt snart.',
+      error: 'Noe gikk galt da meldingen skulle sendes. Prøv igjen om litt.',
+    }
+  : {
+      title: 'Get in touch - Rewild', description: 'Get in touch with Rewild.', heading: 'Get in touch',
+      name: 'Name', first: 'First name', last: 'Last name', email: 'Email address', subject: 'Subject', message: 'Message',
+      send: 'Send', sending: 'Sending...', direct: 'Or email me directly at',
+      ok: "Thank you - your message has been sent. We'll be in touch soon.",
+      error: 'Something went wrong sending your message. Please try again in a moment.',
+    };
+---
+
+<Layout title={t.title} description={t.description}>
+
+  <!-- Navigation -->
+  <Nav />
+
+  <!-- Form section -->
+  <section class="bg-cream min-h-screen pt-32 pb-40 md:pt-44 md:pb-56">
+    <div class="max-w-6xl mx-auto px-6 md:px-12">
+      <div class="max-w-xl">
+        <h1 class="font-display font-bold text-4xl md:text-5xl text-forest mb-14 leading-tight">{t.heading}</h1>
+
+        <form
+          id="contact-form"
+          data-sending={t.sending}
+          data-ok={t.ok}
+          data-error={t.error}
+          class="space-y-6"
+        >
+          <input type="hidden" name="access_key" value="ee1b8b87-7dbe-406e-b5e5-3bb4cabe5ec4" />
+          <input type="checkbox" name="botcheck" class="hidden" style="display: none;" tabindex="-1" autocomplete="off" />
+
+          <div>
+            <label class="block text-xs tracking-[0.2em] uppercase text-sage/80 font-light mb-3">{t.name}</label>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <input
+                type="text"
+                id="firstName"
+                name="First name"
+                placeholder={t.first}
+                aria-label={t.first}
+                required
+                class="w-full bg-white border border-forest/20 px-4 py-3 text-forest font-light text-sm focus:outline-none focus:border-forest transition-colors duration-200"
+              />
+              <input
+                type="text"
+                id="lastName"
+                name="Last name"
+                placeholder={t.last}
+                aria-label={t.last}
+                required
+                class="w-full bg-white border border-forest/20 px-4 py-3 text-forest font-light text-sm focus:outline-none focus:border-forest transition-colors duration-200"
+              />
+            </div>
+          </div>
+
+          <div>
+            <label for="email" class="block text-xs tracking-[0.2em] uppercase text-sage/80 font-light mb-3">{t.email}</label>
+            <input
+              type="email"
+              id="email"
+              name="Email"
+              required
+              class="w-full bg-white border border-forest/20 px-4 py-3 text-forest font-light text-sm focus:outline-none focus:border-forest transition-colors duration-200"
+            />
+          </div>
+
+          <div>
+            <label for="subject" class="block text-xs tracking-[0.2em] uppercase text-sage/80 font-light mb-3">{t.subject}</label>
+            <input
+              type="text"
+              id="subject"
+              name="subject"
+              required
+              class="w-full bg-white border border-forest/20 px-4 py-3 text-forest font-light text-sm focus:outline-none focus:border-forest transition-colors duration-200"
+            />
+          </div>
+
+          <div>
+            <label for="message" class="block text-xs tracking-[0.2em] uppercase text-sage/80 font-light mb-3">{t.message}</label>
+            <textarea
+              id="message"
+              name="Message"
+              rows="5"
+              required
+              class="w-full bg-white border border-forest/20 px-4 py-3 text-forest font-light text-sm focus:outline-none focus:border-forest transition-colors duration-200 resize-none"
+            ></textarea>
+          </div>
+
+          <div class="pt-4">
+            <button
+              id="contact-submit"
+              type="submit"
+              class="inline-block px-10 py-4 bg-forest text-white text-xs tracking-[0.25em] uppercase font-light hover:bg-sage transition-colors duration-300"
+            >
+              {t.send}
+            </button>
+            <p id="contact-status" class="text-sm font-light mt-4" role="status"></p>
+          </div>
+        </form>
+
+        <p class="text-forest/70 font-light text-sm mt-14">
+          {t.direct}
+          <a href="mailto:ewa@re-wild.no" class="text-forest underline underline-offset-4 hover:opacity-60 transition-opacity duration-200">ewa@re-wild.no</a>
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <Footer />
+
+</Layout>
+
+<script>
+  const form = document.getElementById('contact-form') as HTMLFormElement;
+  const submitButton = document.getElementById('contact-submit') as HTMLButtonElement;
+  const statusEl = document.getElementById('contact-status') as HTMLElement;
+  const idleLabel = submitButton.textContent!.trim();
+  const msg = form.dataset;
+
+  form?.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    submitButton.disabled = true;
+    submitButton.textContent = msg.sending!;
+    statusEl.textContent = '';
+
+    try {
+      const formData = new FormData(form);
+      const response = await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        headers: { Accept: 'application/json' },
+        body: formData,
+      });
+      const result = await response.json();
+
+      if (response.ok && result.success) {
+        form.reset();
+        statusEl.textContent = msg.ok!;
+        statusEl.className = 'text-sm font-light mt-4 text-sage';
+      } else {
+        statusEl.textContent = msg.error!;
+        statusEl.className = 'text-sm font-light mt-4 text-red-700';
+      }
+    } catch {
+      statusEl.textContent = msg.error!;
+      statusEl.className = 'text-sm font-light mt-4 text-red-700';
+    } finally {
+      submitButton.disabled = false;
+      submitButton.textContent = idleLabel;
+    }
+  });
+</script>
