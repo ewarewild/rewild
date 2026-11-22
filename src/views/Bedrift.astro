@@ -28,9 +28,9 @@ const t = lang === 'no'
       offerHeading: 'Tilbud',
       bestForLabel: 'Passer best for:',
       formats: [
-        { name: '90 minutter', text: 'Vi møtes på en sti ca. 10 minutters kjøring fra sentrum, vanligvis kl. 15.00, slik at økta går over slutten av arbeidsdagen. 8-15 deltakere.', bestFor: 'en smakebit, eller team som ikke kan sette av en hel dag. Det viktigste i én økt.' },
-        { name: 'Halv dag', text: 'Hele programmet, på en topp eller sti maks 25 minutters kjøring fra sentrum.', bestFor: 'en fagdag eller HMS-dag. Tid til å gå dypere i teknikk og styrke, med en lengre stund i stillhet.' },
-        { name: 'Fire ukers serie', text: 'Én økt i uka, på en sti ca. 10 minutters kjøring fra sentrum, med øvelser de ansatte kan ta med seg inn i arbeidsdagen.', bestFor: 'varig endring. Én ting om gangen, øvd på mellom øktene så det blir en vane.' },
+        { name: '90 minutter', text: 'Vi møtes på en sti ca. 10 minutters kjøring fra sentrum, vanligvis kl. 15.00, slik at økta går over slutten av arbeidsdagen. Opptil 15 deltakere.', bestFor: 'en smakebit, eller team som ikke kan sette av en hel dag. Det viktigste i én økt.' },
+        { name: 'Halv dag', text: 'Hele programmet, på en topp eller sti maks 25 minutters kjøring fra sentrum. Opptil 15 deltakere.', bestFor: 'en fagdag eller HMS-dag. Tid til å gå dypere i teknikk og styrke, med en lengre stund i stillhet.' },
+        { name: 'Fire ukers serie', text: 'Én økt i uka, på en sti ca. 10 minutters kjøring fra sentrum, med øvelser de ansatte kan ta med seg inn i arbeidsdagen. Opptil 15 deltakere.', bestFor: 'varig endring. Én ting om gangen, øvd på mellom øktene så det blir en vane.' },
       ],
       outcomesHeading: 'Hva de ansatte får ut av det',
       // Agreed in English 2026-11-22, translated
@@ -42,6 +42,7 @@ const t = lang === 'no'
         { label: 'Noe å ta med seg', text: 'korte øvelser de kan bruke i arbeidsdagen, uten utstyr' },
       ],
       languages: 'Øktene holdes på norsk, engelsk eller polsk.',
+      largerGroups: 'Større grupper deles over flere økter.',
       price: 'Pris etter avtale - og jeg sier ærlig fra om det dere ønsker, er noe jeg kan levere.',
       aboutHeading: 'Om meg',
       about: [
@@ -68,9 +69,9 @@ const t = lang === 'no'
       offerHeading: 'What I offer',
       bestForLabel: 'Best for:',
       formats: [
-        { name: '90 minutes', text: 'We meet on a trail about a 10-minute drive from the town centre, usually at 15:00, so the session straddles the end of the working day. 8-15 people.', bestFor: 'a first taste, or teams that can\'t set aside a whole day. The essentials in one session.' },
-        { name: 'Half day', text: 'The full programme, on a hilltop or trail within a 25-minute drive of the town centre.', bestFor: 'a training day or HMS day. Time to go deeper into technique and strength, with a longer stretch in quiet.' },
-        { name: 'Four-week series', text: 'One session a week, on a trail about a 10-minute drive from the town centre, with practices your staff can carry into the working day.', bestFor: 'lasting change. One thing at a time, practised between sessions so it becomes habit.' },
+        { name: '90 minutes', text: 'We meet on a trail about a 10-minute drive from the town centre, usually at 15:00, so the session straddles the end of the working day. Up to 15 people.', bestFor: 'a first taste, or teams that can\'t set aside a whole day. The essentials in one session.' },
+        { name: 'Half day', text: 'The full programme, on a hilltop or trail within a 25-minute drive of the town centre. Up to 15 people.', bestFor: 'a training day or HMS day. Time to go deeper into technique and strength, with a longer stretch in quiet.' },
+        { name: 'Four-week series', text: 'One session a week, on a trail about a 10-minute drive from the town centre, with practices your staff can carry into the working day. Up to 15 people.', bestFor: 'lasting change. One thing at a time, practised between sessions so it becomes habit.' },
       ],
       outcomesHeading: 'What your team gets out of it',
       outcomes: [
@@ -81,6 +82,7 @@ const t = lang === 'no'
         { label: 'Something to take home', text: 'short practices they can use in the working day, with no equipment needed' },
       ],
       languages: 'Sessions are held in Norwegian, English or Polish.',
+      largerGroups: 'Larger groups are split across several sessions.',
       price: 'Price on request - and I\'ll tell you honestly whether what you\'re asking for is something I can deliver.',
       aboutHeading: 'About me',
       about: [
@@ -157,6 +159,7 @@ const t = lang === 'no'
         </div>
       </div>
       <div class="mt-10 max-w-2xl space-y-5 text-forest font-light leading-relaxed text-[1.08rem]">
+        <p>{t.largerGroups}</p>
         <p>{t.languages}</p>
         {/* Add "Forsikret." here once the ansvarsforsikring is in place - the brief says buyers look for it */}
         <p>{t.price}</p>
