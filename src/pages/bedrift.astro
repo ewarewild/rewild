@@ -17,6 +17,15 @@ const formats = [
   { name: 'Halv dag', text: 'Hele programmet, på Nordkollen eller et sted nær dere.' },
   { name: 'Fire ukers serie', text: 'Én økt i uka, med øvelser de ansatte kan ta med seg inn i arbeidsdagen.' },
 ];
+
+// What staff get out of it (agreed in English 2026-11-22, translated)
+const outcomes = [
+  { label: 'En ordentlig pause fra sittingen', text: 'bevegelse kroppen ikke får i løpet av en arbeidsdag ved pulten' },
+  { label: 'Mindre belastning på kroppen', text: 'gangteknikk som fordeler belastningen og avlaster ledd, rygg og hofter' },
+  { label: 'Et hode som får koble av', text: 'enkle øvelser for å legge jobbtankene bak seg, så hodet får hente seg inn' },
+  { label: 'Skarpere fokus', text: 'trening i å flytte og samle oppmerksomheten - en ferdighet de tar med seg tilbake til pulten' },
+  { label: 'Noe å ta med seg', text: 'korte øvelser de kan bruke ved pulten dagen etter, uten utstyr' },
+];
 ---
 
 <Layout
@@ -78,6 +87,17 @@ const formats = [
             <p class="text-forest font-light leading-relaxed text-[1.08rem]">{f.text}</p>
           </div>
         ))}
+      </div>
+      <div class="mt-14 md:mt-16 max-w-2xl">
+        <h3 class="font-display font-medium text-2xl md:text-3xl text-forest leading-tight mb-6">Hva de ansatte får ut av det</h3>
+        <div class="space-y-6">
+          {outcomes.map(o => (
+            <div class="flex items-start gap-4">
+              <span class="mt-2 w-1.5 h-1.5 rounded-full bg-sage-light flex-shrink-0"></span>
+              <span class="text-[1.08rem] text-forest font-light leading-relaxed"><strong class="font-semibold">{o.label}:</strong> {o.text}</span>
+            </div>
+          ))}
+        </div>
       </div>
       <div class="mt-10 max-w-2xl space-y-5 text-forest font-light leading-relaxed text-[1.08rem]">
         <p>Øktene holdes på norsk, engelsk eller polsk.</p>
