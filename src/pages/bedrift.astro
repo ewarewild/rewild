@@ -1,0 +1,153 @@
+---
+// Business page, Norwegian only. Self-contained: a buyer linked here from an email should find
+// everything without going elsewhere. Copy from the strategy brief, section 6
+// (INFO/Documents/rewild-strategy-and-website-brief.md), translated.
+import { heroImage as heroPhoto } from '../lib/hero';
+import { Image } from 'astro:assets';
+import Layout from '../layouts/Layout.astro';
+import Nav from '../components/Nav.astro';
+import Footer from '../components/Footer.astro';
+import forestsun from '../images/forestsun.webp';
+import eva from '../images/eva.webp';
+
+const heroImage = await heroPhoto(forestsun, 65);
+
+const formats = [
+  { name: '90 minutter', text: 'Vanligvis fra kl. 15.00, slik at økta går over slutten av arbeidsdagen. 8-15 deltakere.' },
+  { name: 'Halv dag', text: 'Hele programmet, på Nordkollen eller et sted nær dere.' },
+  { name: 'Fire ukers serie', text: 'Én økt i uka, med øvelser de ansatte kan ta med seg inn i arbeidsdagen.' },
+];
+---
+
+<Layout
+  title="Bedriftsopplegg - Rewild"
+  description="Utendørs økter for ansatte i Grenland og Vestfold: bevegelse med mer variasjon, mindre belastning og bedre restitusjon. Vi starter rett utenfor bygget deres."
+  preloadImage={heroImage}
+>
+
+  <!-- Navigation -->
+  <Nav />
+
+  <!-- Hero image -->
+  <section class="relative mt-[60px] overflow-hidden" style="height: 65vh;">
+    <img
+      src={heroImage.src}
+      srcset={heroImage.srcset}
+      sizes={heroImage.sizes}
+      alt=""
+      fetchpriority="high"
+      decoding="async"
+      class="absolute inset-0 w-full h-full object-cover" style="object-position: center 40%;"
+    />
+    <div class="absolute inset-0" style="background: linear-gradient(to top, rgba(20,25,14,0.6) 0%, transparent 60%);"></div>
+    <div class="absolute bottom-0 left-0 right-0">
+      <div class="max-w-6xl mx-auto px-6 md:px-12 pb-10 md:pb-14">
+        <p class="text-xs tracking-[0.3em] uppercase text-white/80 font-light mb-4">For bedrifter</p>
+        <h1 class="font-display font-bold text-white text-[25pt] md:text-[2.75rem] leading-tight text-balance">
+          Færre skader. Bedre restitusjon. Utendørs.
+        </h1>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why -->
+  <section class="bg-white pt-16 md:pt-24 pb-12 md:pb-[72px]">
+    <div class="max-w-6xl mx-auto px-6 md:px-12">
+      <div class="max-w-2xl space-y-5 text-forest font-light leading-relaxed text-[1.08rem]">
+        <p>
+          Muskel- og skjelettplager er den største enkeltårsaken til sykefravær i Norge. Mye av det som selges inn for å gjøre noe med det - holdningskorrigering, ergonomiske løsninger, «sitting er den nye røykingen» - hviler på svakere forskning enn man skulle tro. Hvor mye vi sitter, sier lite om hvem som får vondt i ryggen. Holdningskorrigering har svak dokumentasjon. Og «dead butt syndrome» er ingen diagnose.
+        </p>
+        <p>
+          Det som faktisk holder, er enklere. Vev som belastes på samme måte hele dagen, samler opp slitasje. Vev som belastes variert, fordeler den. Det gjelder like mye for en rygg i en kontorstol som for et kne i en motbakke.
+        </p>
+        <p>
+          Jeg holder økter utendørs der de ansatte lærer å bevege seg med mer variasjon - i terrenget og ved pulten. Vi starter rett utenfor bygget deres. Ingen møterom, ingen matter, ikke noe utstyr.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Formats -->
+  <section class="bg-cream pt-12 md:pt-[72px] pb-12 md:pb-[72px]">
+    <div class="max-w-6xl mx-auto px-6 md:px-12">
+      <h2 class="font-display font-medium text-3xl md:text-4xl text-forest leading-tight mb-10">Opplegg</h2>
+      <div class="grid gap-4 md:grid-cols-3 md:gap-8">
+        {formats.map(f => (
+          <div class="bg-white p-8">
+            <h3 class="font-display font-bold text-2xl text-forest leading-tight mb-4">{f.name}</h3>
+            <p class="text-forest font-light leading-relaxed text-[1.08rem]">{f.text}</p>
+          </div>
+        ))}
+      </div>
+      <div class="mt-10 max-w-2xl space-y-5 text-forest font-light leading-relaxed text-[1.08rem]">
+        <p>Øktene holdes på norsk, engelsk eller polsk.</p>
+        {/* Add "Forsikret." here once the ansvarsforsikring is in place - the brief says buyers look for it */}
+        <p>Pris etter avtale - og jeg sier ærlig fra om det dere ønsker, er noe jeg kan levere.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- What I won't promise -->
+  <section class="bg-white pt-12 md:pt-[72px] pb-12 md:pb-[72px]">
+    <div class="max-w-6xl mx-auto px-6 md:px-12">
+      <div class="max-w-2xl">
+        <h2 class="font-display font-medium text-3xl md:text-4xl text-forest leading-tight mb-8">Det jeg ikke kommer til å love dere</h2>
+        <p class="font-display font-normal italic text-forest text-[16pt] md:text-[20.5pt] leading-relaxed">
+          Jeg kommer ikke til å påstå at dette retter opp holdningen, øker hjertefrekvensvariabiliteten (HRV) eller «nullstiller» nervesystemet. Forskningen på det meste av dette er tynnere enn markedsføringen gir inntrykk av. Det jeg viser dere, har bedre støtte og er mer nyttig - og jeg sier fra hvor dokumentasjonen slutter.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section class="bg-cream pt-12 md:pt-[72px] pb-12 md:pb-[72px]">
+    <div class="max-w-6xl mx-auto px-6 md:px-12">
+      <div class="grid gap-10 md:grid-cols-2 md:gap-24 items-start">
+        <Image
+          src={eva}
+          alt="Ewa"
+          widths={[480, 720, 960, 1440]}
+          sizes="(min-width: 768px) 480px, calc(100vw - 48px)"
+          class="w-full h-auto aspect-square object-cover object-top"
+          loading="lazy"
+        />
+        <div>
+          <h2 class="font-display font-medium text-3xl md:text-4xl text-forest leading-tight mb-8">Om meg</h2>
+          <div class="space-y-5 text-forest font-light leading-relaxed text-[1.08rem]">
+            <p>
+              Jeg heter Ewa. Jeg har utdanning i kroppsøving, med biomekanikk og skadeforebygging, og er utdannet yogalærer i London. Jeg har en avansert sertifisering i traumebevisst undervisning - et seksdagers intensivkurs - og det preger hvordan jeg leder grupper: alt er frivillig, og hver deltaker lytter til sin egen kropp i stedet for å følge instruksjoner.
+            </p>
+            <p>
+              Jeg har bakgrunn fra mange idretter og mange års erfaring med å bevege meg utenfor stiene i norsk terreng i all slags forhold, også vinter og mørke. Jeg underviser på norsk, engelsk og polsk.
+            </p>
+            <p>
+              Rewild holder til i Porsgrunn og har økter i hele Grenland og Vestfold.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section class="bg-white pt-12 md:pt-[72px] pb-14 md:pb-20">
+    <div class="max-w-6xl mx-auto px-6 md:px-12">
+      <div class="max-w-2xl">
+        <h2 class="font-display font-medium text-3xl md:text-4xl text-forest leading-tight mb-8">Vil dere høre mer?</h2>
+        <p class="text-forest font-light leading-relaxed text-[1.08rem]">
+          Send en e-post til
+          <a href="mailto:ewa@re-wild.no" class="font-semibold underline hover:text-sage transition-colors duration-200">ewa@re-wild.no</a>
+          eller bruk kontaktskjemaet.
+        </p>
+        <a href="/contact" class="inline-block mt-10 px-10 py-4 bg-forest text-white text-xs tracking-[0.25em] uppercase font-light hover:bg-sage transition-colors duration-300">Ta kontakt</a>
+        <p class="mt-14 text-sm text-forest/60 font-light leading-relaxed">
+          Øktene er trening og bevegelse, ikke behandling. De erstatter ikke medisinsk vurdering, og deltakere med skader eller helseplager bør snakke med lege eller fysioterapeut før de blir med.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <Footer />
+
+</Layout>
