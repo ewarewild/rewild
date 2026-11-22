@@ -43,7 +43,8 @@ const t = lang === 'no'
       ],
       languages: 'Øktene holdes på norsk eller engelsk.',
       largerGroups: 'Større grupper deles over flere økter.',
-      price: 'Prisen avhenger av opplegg og gruppestørrelse. Ta kontakt for et tilbud.',
+      price: 'Prisen avhenger av opplegg og gruppestørrelse.',
+      priceLink: 'Ta kontakt for et tilbud.',
       aboutHeading: 'Om meg',
       about: [
         'Jeg heter Ewa. Jeg har studert kroppsøving, er utdannet yogalærer i London og har spesialisert meg på aktiviteter som minimerer risikoen for skader. En avansert sertifisering i traumebevisst undervisning fra Nordic Maha Yoga preger hvordan jeg leder grupper: alt er selvstyrt, og deltakerne lytter til sin egen kropp i stedet for bare å følge instruksjoner.',
@@ -83,7 +84,8 @@ const t = lang === 'no'
       ],
       languages: 'Sessions are held in Norwegian or English.',
       largerGroups: 'Larger groups are split across several sessions.',
-      price: 'Price depends on the format and group size. Get in touch for a quote.',
+      price: 'Price depends on the format and group size.',
+      priceLink: 'Get in touch for a quote.',
       aboutHeading: 'About me',
       about: [
         'My name is Ewa. I studied physical education, trained as a yoga teacher in London and specialise in activities that minimise the risk of injury. An advanced trauma-aware certification from Nordic Maha Yoga shapes how I run groups: everything is self-directed, and people read their own bodies rather than simply following instructions.',
@@ -162,7 +164,7 @@ const t = lang === 'no'
         <p>{t.largerGroups}</p>
         <p>{t.languages}</p>
         {/* Add "Forsikret." here once the ansvarsforsikring is in place - the brief says buyers look for it */}
-        <p>{t.price}</p>
+        <p>{t.price} <a href={localePath(lang, '/contact')} class="font-semibold underline hover:text-sage transition-colors duration-200">{t.priceLink}</a></p>
       </div>
     </div>
   </section>
