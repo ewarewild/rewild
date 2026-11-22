@@ -29,6 +29,8 @@ const t = lang === 'no'
       more: 'Mer →',
       less: 'Mindre ↑',
       tailored: 'Vil du ha noe skreddersydd for deg?',
+      businessQuestion: 'Arbeider du med HMS eller personal?',
+      businessLink: 'Se bedriftsopplegg →',
     }
   : {
       title: 'Rewild Yourself',
@@ -42,6 +44,8 @@ const t = lang === 'no'
       more: 'More →',
       less: 'Less ↑',
       tailored: 'Want something tailored to you?',
+      businessQuestion: 'Do you work in HMS or HR?',
+      businessLink: 'See programmes for businesses →',
     };
 ---
 
@@ -70,12 +74,10 @@ const t = lang === 'no'
         {t.subline}
       </p>
       <a href="#events" class="inline-block mt-8 md:mt-10 px-10 py-4 border border-white text-white text-xs tracking-[0.25em] uppercase font-normal [text-shadow:0_1px_6px_rgba(0,0,0,0.45)] hover:[text-shadow:none] hover:bg-white hover:text-black transition-colors duration-300">{t.cta}</a>
-      {/* Business visitors: a quiet way to /bedrift (Norwegian only, so not on the English page) */}
-      {lang === 'no' && (
-        <p class="mt-6 text-white font-normal text-[0.95rem] md:text-base [text-shadow:0_1px_6px_rgba(0,0,0,0.45)]">
-          Arbeider du med HMS eller personal? <a href="/bedrift" class="whitespace-nowrap underline underline-offset-4 decoration-white/70 hover:decoration-white hover:opacity-80 transition-colors duration-200">Se bedriftsopplegg →</a>
+      {/* Business visitors: a quiet way to /bedrift */}
+      <p class="mt-6 text-white font-normal text-[0.95rem] md:text-base [text-shadow:0_1px_6px_rgba(0,0,0,0.45)]">
+        {t.businessQuestion} <a href={p('/bedrift')} class="whitespace-nowrap underline underline-offset-4 decoration-white/70 hover:decoration-white hover:opacity-80 transition-colors duration-200">{t.businessLink}</a>
         </p>
-      )}
     </div>
     <div class="absolute bottom-8 right-8 md:right-12 text-white/40 flex items-center gap-3">
       <span class="w-10 h-px bg-white/30"></span>
