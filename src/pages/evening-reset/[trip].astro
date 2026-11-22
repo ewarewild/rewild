@@ -4,7 +4,7 @@ import Layout from '../../layouts/Layout.astro';
 import Nav from '../../components/Nav.astro';
 import Footer from '../../components/Footer.astro';
 import skolapparn from '../../images/skolapparn.webp';
-import { events, tripPaths, longDate, signupLabel, price, meetUpTime, type Session } from '../../data/events';
+import { events, tripPaths, longDate, signupLabel, price, freeOffer, meetUpTime, type Session } from '../../data/events';
 
 export function getStaticPaths() {
   return tripPaths('evening-reset');
@@ -180,7 +180,10 @@ const heroImage = await heroPhoto(skolapparn, 65);
             </div>
             <div class="flex gap-6">
               <span class="text-xs tracking-[0.2em] uppercase text-sage/80 font-light w-28 flex-shrink-0">Price</span>
-              <span class="text-base text-forest font-light">{price(session) ? `${price(session)} NOK` : 'Free'}</span>
+              <span class="text-base text-forest font-light">
+                {freeOffer(session) && <s class="text-forest/50 mr-2">{events[session.event].price} NOK</s>}
+                {price(session) ? `${price(session)} NOK` : 'Free'}
+              </span>
             </div>
             <div class="pt-12">
               <a

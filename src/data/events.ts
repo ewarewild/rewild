@@ -23,7 +23,7 @@ export const events: Record<EventId, EventInfo> = {
     image: skolapparn,
     alt: 'Evening Reset - forest hike',
     hours: 2,
-    price: 200,
+    price: 300,
     description: 'Shake off the day and reconnect with your body on an evening hike that supports stress release, increased focus and reduced strain on your joints.',
   },
   'rewild-course': {
@@ -82,7 +82,7 @@ export const sessions: Session[] = [
     ],
   },
   {
-    event: 'evening-reset', date: '2026-11-24', time: '17:00', place: 'Porsgrunn', spot: 'Skolapparåsen', difficulty: 'Moderate',
+    event: 'evening-reset', date: '2026-11-24', time: '17:00', place: 'Porsgrunn', spot: 'Skolapparåsen', difficulty: 'Moderate', price: 0, // free for now, to build references
     meetingPoint: 'Parkering for Svarteberget og Nordkollen', mapUrl: 'https://www.google.com/maps?q=59.18604216274942,9.803863873385133',
     intro: [
       "Welcome to an evening hike designed to help you release tension, build strength and joint stability, and promote better sleep.",
@@ -90,7 +90,7 @@ export const sessions: Session[] = [
     ],
   },
   {
-    event: 'evening-reset', date: '2026-11-26', time: '17:00', place: 'Porsgrunn', spot: 'Skolapparåsen', difficulty: 'Moderate',
+    event: 'evening-reset', date: '2026-11-26', time: '17:00', place: 'Porsgrunn', spot: 'Skolapparåsen', difficulty: 'Moderate', price: 0, // free for now, to build references
     meetingPoint: 'Parkering for Svarteberget og Nordkollen', mapUrl: 'https://www.google.com/maps?q=59.18604216274942,9.803863873385133',
     intro: [
       "Welcome to an evening hike designed to help you release tension, build strength and joint stability, and promote better sleep.",
@@ -98,7 +98,7 @@ export const sessions: Session[] = [
     ],
   },
   {
-    event: 'evening-reset', date: '2026-12-03', time: '17:00', place: 'Larvik', spot: 'Brunlanes Sportskapellet', difficulty: 'Easy',
+    event: 'evening-reset', date: '2026-12-03', time: '17:00', place: 'Larvik', spot: 'Brunlanes Sportskapellet', difficulty: 'Easy', price: 0, // free for now, to build references
     meetingPoint: 'Ingri turparkering', mapUrl: 'https://maps.app.goo.gl/WS46sDBc4eG9Tg757',
     intro: [
       "Welcome to an evening hike designed to help you release tension, build strength and joint stability, and promote better sleep.",
@@ -159,6 +159,9 @@ export const signupLabel = (s: Session) =>
 
 // NOK per person for this trip
 export const price = (s: Session) => s.price ?? events[s.event].price;
+
+// A free trip of an event that's normally paid: shown as "~~300 NOK~~ Free"
+export const freeOffer = (s: Session) => price(s) === 0 && events[s.event].price > 0;
 
 // e.g. "Up to 5 hours" - course pages and booking emails
 export const courseDuration = (s: Session) => s.duration ?? 'Up to 5 hours';
