@@ -9,9 +9,15 @@ export default defineConfig({
     '/day-course': '/#events',
     '/weekend-course': '/#events',
     '/rewild-immersion': '/#events',
-    '/rewild-immersion/porsgrunn-15-november': '/rewild-course/porsgrunn-15-november',
+    '/rewild-immersion/porsgrunn-15-november': '/#events',
+    // Rewild Course was renamed Rewild Trip (2026-11-22); its past trip pages go to the calendar
+    '/rewild-course': '/#events',
+    '/rewild-course/larvik-8-november': '/#events',
+    '/rewild-course/larvik-21-november': '/#events',
+    '/rewild-trip': '/#events',
     '/en/evening-reset': '/en/#events',
     '/en/rewild-course': '/en/#events',
+    '/en/rewild-trip': '/en/#events',
   },
   vite: {
     plugins: [tailwindcss()],

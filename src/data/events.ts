@@ -25,7 +25,7 @@ export const events: Record<EventId, EventInfo> = {
     image: skolapparn,
     alt: 'Evening Reset - forest hike',
     hours: 2,
-    price: 200,
+    price: 300,
     description: 'Shake off the day and reconnect with your body on an evening hike that supports stress release, increased focus and reduced strain on your joints.',
     no: {
       alt: 'Evening Reset - tur i skogen',
@@ -33,15 +33,15 @@ export const events: Record<EventId, EventInfo> = {
     },
   },
   'rewild-course': {
-    name: 'Rewild Course',
-    href: '/rewild-course',
+    name: 'Rewild Trip',
+    href: '/rewild-trip',
     image: nordkollenHero,
-    alt: 'Rewild Course - full-day training',
+    alt: 'Rewild Trip - full-day training',
     hours: 5,
-    price: 300,
+    price: 500,
     description: 'A day hike to Nordkollen built around injury prevention, functional strength, increasing focus, stress release and building resilience.',
     no: {
-      alt: 'Rewild Course - kurs over en hel dag',
+      alt: 'Rewild Trip - tur over en hel dag',
       description: 'En dagstur til Nordkollen bygget rundt skadeforebygging, funksjonell styrke, økt fokus, avspenning og motstandskraft.',
     },
   },
@@ -122,7 +122,7 @@ export const sessions: Session[] = [
     },
   },
   {
-    event: 'evening-reset', date: '2026-11-24', time: '17:00', place: 'Porsgrunn', spot: 'Skolapparåsen', difficulty: 'Moderate',
+    event: 'evening-reset', date: '2026-11-24', time: '17:00', place: 'Porsgrunn', spot: 'Skolapparåsen', difficulty: 'Moderate', price: 0, // free for now, to build references
     meetingPoint: 'Parkering for Svarteberget og Nordkollen', mapUrl: 'https://www.google.com/maps?q=59.18604216274942,9.803863873385133',
     intro: [
       "Welcome to an evening hike designed to help you release tension, build strength and joint stability, and promote better sleep.",
@@ -136,7 +136,7 @@ export const sessions: Session[] = [
     },
   },
   {
-    event: 'evening-reset', date: '2026-11-26', time: '17:00', place: 'Porsgrunn', spot: 'Skolapparåsen', difficulty: 'Moderate',
+    event: 'evening-reset', date: '2026-11-26', time: '17:00', place: 'Porsgrunn', spot: 'Skolapparåsen', difficulty: 'Moderate', price: 0, // free for now, to build references
     meetingPoint: 'Parkering for Svarteberget og Nordkollen', mapUrl: 'https://www.google.com/maps?q=59.18604216274942,9.803863873385133',
     intro: [
       "Welcome to an evening hike designed to help you release tension, build strength and joint stability, and promote better sleep.",
@@ -150,7 +150,7 @@ export const sessions: Session[] = [
     },
   },
   {
-    event: 'evening-reset', date: '2026-12-03', time: '17:00', place: 'Larvik', spot: 'Brunlanes Sportskapellet', difficulty: 'Easy',
+    event: 'evening-reset', date: '2026-12-03', time: '17:00', place: 'Larvik', spot: 'Brunlanes Sportskapellet', difficulty: 'Easy', price: 0, // free for now, to build references
     meetingPoint: 'Ingri turparkering', mapUrl: 'https://maps.app.goo.gl/WS46sDBc4eG9Tg757',
     intro: [
       "Welcome to an evening hike designed to help you release tension, build strength and joint stability, and promote better sleep.",
@@ -173,14 +173,14 @@ export const sessions: Session[] = [
       'We hike to <a href="https://www.google.com/maps?q=59.197427717465644,9.8402239222746" target="_blank" rel="noopener" class="font-semibold underline hover:text-sage transition-colors duration-200">Nordkollen</a> (353m) to immerse ourselves in wild nature.',
     ],
     meetUp: 'We meet up at <a href="https://www.google.com/maps?q=59.18604216274942,9.803863873385133" target="_blank" rel="noopener" class="font-semibold underline hover:text-sage transition-colors duration-200">Parkering for Svarteberget og Nordkollen</a> and walk from there on a gravel road, then on a forest trail.',
-    description: 'A hands-on course to learn how to reduce the strain on your joints in terrain, increase strength and stability while walking, and get more mental and physical benefits from being in nature.',
+    description: 'A hands-on day to learn how to reduce the strain on your joints in terrain, increase strength and stability while walking, and get more mental and physical benefits from being in nature.',
     no: {
       intro: [
         'Velkommen til en dag med praktisk trening i naturen som gir deg verktøy til å redusere skaderisikoen og gjenvinne fysisk og mental balanse - på stien og i hverdagen.',
         'Vi går opp til <a href="https://www.google.com/maps?q=59.197427717465644,9.8402239222746" target="_blank" rel="noopener" class="font-semibold underline hover:text-sage transition-colors duration-200">Nordkollen</a> (353 moh.) og kommer oss skikkelig ut i naturen.',
       ],
       meetUp: 'Vi møtes på <a href="https://www.google.com/maps?q=59.18604216274942,9.803863873385133" target="_blank" rel="noopener" class="font-semibold underline hover:text-sage transition-colors duration-200">Parkering for Svarteberget og Nordkollen</a> og går derfra først på grusvei, så på skogssti.',
-      description: 'Et praktisk kurs der du lærer å redusere belastningen på leddene i terrenget, bygge styrke og stabilitet mens du går, og få mer ut av turen - både fysisk og mentalt.',
+      description: 'En praktisk dag der du lærer å redusere belastningen på leddene i terrenget, bygge styrke og stabilitet mens du går, og få mer ut av turen - både fysisk og mentalt.',
     },
   },
   {
@@ -193,14 +193,56 @@ export const sessions: Session[] = [
       'We hike to <a href="https://www.google.com/maps?q=59.197427717465644,9.8402239222746" target="_blank" rel="noopener" class="font-semibold underline hover:text-sage transition-colors duration-200">Nordkollen</a> (353m) to immerse ourselves in wild nature.',
     ],
     meetUp: 'We meet up at <a href="https://www.google.com/maps?q=59.18604216274942,9.803863873385133" target="_blank" rel="noopener" class="font-semibold underline hover:text-sage transition-colors duration-200">Parkering for Svarteberget og Nordkollen</a> and walk from there on a gravel road, then on a forest trail.',
-    description: 'A hands-on course to learn how to reduce the strain on your joints in terrain, increase strength and stability while walking, and get more mental and physical benefits from being in nature.',
+    description: 'A hands-on day to learn how to reduce the strain on your joints in terrain, increase strength and stability while walking, and get more mental and physical benefits from being in nature.',
     no: {
       intro: [
         'Velkommen til en dag med praktisk trening i naturen som gir deg verktøy til å redusere skaderisikoen og gjenvinne fysisk og mental balanse - på stien og i hverdagen.',
         'Vi går opp til <a href="https://www.google.com/maps?q=59.197427717465644,9.8402239222746" target="_blank" rel="noopener" class="font-semibold underline hover:text-sage transition-colors duration-200">Nordkollen</a> (353 moh.) og kommer oss skikkelig ut i naturen.',
       ],
       meetUp: 'Vi møtes på <a href="https://www.google.com/maps?q=59.18604216274942,9.803863873385133" target="_blank" rel="noopener" class="font-semibold underline hover:text-sage transition-colors duration-200">Parkering for Svarteberget og Nordkollen</a> og går derfra først på grusvei, så på skogssti.',
-      description: 'Et praktisk kurs der du lærer å redusere belastningen på leddene i terrenget, bygge styrke og stabilitet mens du går, og få mer ut av turen - både fysisk og mentalt.',
+      description: 'En praktisk dag der du lærer å redusere belastningen på leddene i terrenget, bygge styrke og stabilitet mens du går, og få mer ut av turen - både fysisk og mentalt.',
+    },
+  },
+  {
+    event: 'rewild-course', date: '2026-11-28', time: '10:00', place: 'Larvik, Porsgrunn, Skien', spot: 'Nordkollen', difficulty: 'Moderate',
+    meetingPoint: 'Parkering for Svarteberget og Nordkollen', mapUrl: 'https://www.google.com/maps?q=59.18604216274942,9.803863873385133',
+    price: 0, // free for now, to build references
+    image: nordkollenHero,
+    intro: [
+      'Welcome to a day of practical training in nature that gives you tools to minimise the risk of injury and restore physical and mental balance - on the trail and in everyday life.',
+      'We hike to <a href="https://www.google.com/maps?q=59.197427717465644,9.8402239222746" target="_blank" rel="noopener" class="font-semibold underline hover:text-sage transition-colors duration-200">Nordkollen</a> (353m) to immerse ourselves in wild nature.',
+    ],
+    meetUp: 'We meet up at <a href="https://www.google.com/maps?q=59.18604216274942,9.803863873385133" target="_blank" rel="noopener" class="font-semibold underline hover:text-sage transition-colors duration-200">Parkering for Svarteberget og Nordkollen</a> and walk from there on a gravel road, then on a forest trail.',
+    description: 'A hands-on day to learn how to reduce the strain on your joints in terrain, increase strength and stability while walking, and get more mental and physical benefits from being in nature.',
+    no: {
+      intro: [
+        'Velkommen til en dag med praktisk trening i naturen som gir deg verktøy til å redusere skaderisikoen og gjenvinne fysisk og mental balanse - på stien og i hverdagen.',
+        'Vi går opp til <a href="https://www.google.com/maps?q=59.197427717465644,9.8402239222746" target="_blank" rel="noopener" class="font-semibold underline hover:text-sage transition-colors duration-200">Nordkollen</a> (353 moh.) og kommer oss skikkelig ut i naturen.',
+      ],
+      meetUp: 'Vi møtes på <a href="https://www.google.com/maps?q=59.18604216274942,9.803863873385133" target="_blank" rel="noopener" class="font-semibold underline hover:text-sage transition-colors duration-200">Parkering for Svarteberget og Nordkollen</a> og går derfra først på grusvei, så på skogssti.',
+      description: 'En praktisk dag der du lærer å redusere belastningen på leddene i terrenget, bygge styrke og stabilitet mens du går, og få mer ut av turen - både fysisk og mentalt.',
+    },
+  },
+  {
+    event: 'rewild-course', date: '2026-11-29', time: '10:00', place: 'Porsgrunn & Skien', spot: 'Østre Vealøs', difficulty: 'Moderate',
+    meetingPoint: 'Parkering for Østre Vealøs turområder', mapUrl: 'https://www.google.com/maps?q=59.20275,9.73157',
+    price: 0, // free for now, to build references
+    image: nordkollenHero,
+    intro: [
+      'Welcome to a day of practical training in nature that gives you tools to minimise the risk of injury and restore physical and mental balance - on the trail and in everyday life.',
+      'We hike to <a href="https://ut.no/turforslag/113681/topptur-til-stre-veals" target="_blank" rel="noopener" class="font-semibold underline hover:text-sage transition-colors duration-200">Østre Vealøs</a> (445.5m) to immerse ourselves in wild nature.',
+    ],
+    meetUp: 'We meet up at <a href="https://www.google.com/maps?q=59.20275,9.73157" target="_blank" rel="noopener" class="font-semibold underline hover:text-sage transition-colors duration-200">Parkering for Østre Vealøs turområder</a> and walk from there on a well-marked trail, mostly through forest.',
+    routeInfo: 'The total distance both ways is 7.6km, a moderately demanding trail.',
+    description: 'A hands-on day to learn how to reduce the strain on your joints in terrain, increase strength and stability while walking, and get more mental and physical benefits from being in nature.',
+    no: {
+      intro: [
+        'Velkommen til en dag med praktisk trening i naturen som gir deg verktøy til å redusere skaderisikoen og gjenvinne fysisk og mental balanse - på stien og i hverdagen.',
+        'Vi går opp til <a href="https://ut.no/turforslag/113681/topptur-til-stre-veals" target="_blank" rel="noopener" class="font-semibold underline hover:text-sage transition-colors duration-200">Østre Vealøs</a> (445,5 moh.) og kommer oss skikkelig ut i naturen.',
+      ],
+      meetUp: 'Vi møtes på <a href="https://www.google.com/maps?q=59.20275,9.73157" target="_blank" rel="noopener" class="font-semibold underline hover:text-sage transition-colors duration-200">Parkering for Østre Vealøs turområder</a> og går derfra på en godt merket sti, for det meste gjennom skog.',
+      routeInfo: 'Turen er 7,6 km tur-retur, på en middels krevende sti.',
+      description: 'En praktisk dag der du lærer å redusere belastningen på leddene i terrenget, bygge styrke og stabilitet mens du går, og få mer ut av turen - både fysisk og mentalt.',
     },
   },
 ].sort((a, b) => (a.date + a.time).localeCompare(b.date + b.time));
@@ -215,7 +257,7 @@ const day = (s: Session) => new Date(`${s.date}T12:00:00`);
 export const tripSlug = (s: Session) =>
   `${s.place.split(/,| & /)[0]}-${day(s).getDate()}-${months[day(s).getMonth()]}`.toLowerCase();
 
-// Meet up a few minutes before the start time (Evening Reset 17:00 -> 16:55, Rewild Course 10:00 -> 09:50).
+// Meet up a few minutes before the start time (Evening Reset 17:00 -> 16:55, Rewild Trip 10:00 -> 09:50).
 // Only shown on trip pages, not event cards.
 export const meetUpTime = (s: Session, minutesBefore = 5) => {
   const [h, m] = s.time.split(':').map(Number);
@@ -253,6 +295,10 @@ export const priceText = (s: Session, lang: Lang) =>
 
 // NOK per person for this trip
 export const price = (s: Session) => s.price ?? events[s.event].price;
+
+// A free trip of an event that's normally paid: shown as "~~300 NOK~~ Free"
+export const freeOffer = (s: Session) => price(s) === 0 && events[s.event].price > 0;
+export const regularPriceText = (s: Session, lang: Lang) => `${events[s.event].price} ${lang === 'no' ? 'kr' : 'NOK'}`;
 
 // e.g. "Up to 5 hours" - course pages and booking emails (English by default)
 export const courseDuration = (s: Session, lang: Lang = 'en') =>

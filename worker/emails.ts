@@ -8,7 +8,7 @@ export type Trip = {
   longDate: string; // e.g. "Tuesday 3 November"
   time: string;
   timeRange: string; // e.g. "17:00 - 18:30"
-  duration?: string; // courses only, e.g. "Up to 5 hours"
+  duration?: string; // Rewild Trips only, e.g. "Up to 5 hours"
   meetingPoint?: string;
   mapUrl?: string;
   nok: number;
@@ -34,8 +34,8 @@ const templates = {
     notes: ['This event is not suitable for bringing a dog.'],
   },
   'rewild-course': {
-    confirmed: 'Thank you for booking - your place on the Rewild Course is confirmed.',
-    excited: "I'm excited for you to join us on this course!",
+    confirmed: 'Thank you for booking - your place on the Rewild Trip is confirmed.',
+    excited: "I'm excited for you to join us on this trip!",
     when: (t: Trip) => `${t.longDate}, from ${t.time}, ${(t.duration ?? 'Up to 5 hours').toLowerCase()}`,
     bring: [
       'Appropriate clothes for the weather, plus warm, windproof layers, a hat and gloves for the top of the mountain',
@@ -47,7 +47,7 @@ const templates = {
       'Walking poles (optional)',
       'Hot tea (recommended)',
     ],
-    cancelled: 'course',
+    cancelled: 'trip',
     notes: ['If you have a recent or current injury, please check with your doctor or physio before participating.', 'This event is not suitable for bringing a dog.'],
   },
 };

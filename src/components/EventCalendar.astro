@@ -1,6 +1,6 @@
 ---
 import { Image } from 'astro:assets';
-import { sessions, tripUrl, timeRange, months as monthsEn, monthsNo, eventText, text, difficultyText } from '../data/events';
+import { sessions, tripUrl, timeRange, months as monthsEn, monthsNo, eventText, text, difficultyText, freeOffer } from '../data/events';
 import { langFromPath } from '../i18n';
 
 interface Props {
@@ -12,8 +12,8 @@ const { limit = 0 } = Astro.props;
 const lang = langFromPath(Astro.url.pathname);
 const months = lang === 'no' ? monthsNo : monthsEn;
 const t = lang === 'no'
-  ? { fast: 'Delvis raskt tempo', varied: 'Variert tempo', more: 'Mer →', empty: 'Nye datoer kommer snart.' }
-  : { fast: 'Partly fast pace', varied: 'Varied pace', more: 'More →', empty: 'New dates coming soon.' };
+  ? { fast: 'Delvis raskt tempo', varied: 'Variert tempo', more: 'Mer →', free: 'Gratis', empty: 'Nye datoer kommer snart.' }
+  : { fast: 'Partly fast pace', varied: 'Varied pace', more: 'More →', free: 'Free', empty: 'New dates coming soon.' };
 ---
 
 <div class="event-calendar" data-limit={limit}>
@@ -52,12 +52,14 @@ const t = lang === 'no'
                 </div>
               </div>
             </div>
-            <div class="w-[38%] shrink-0 overflow-hidden">
+            <div class="relative w-[38%] shrink-0 overflow-hidden">
+              {freeOffer(s) && <span class="absolute top-3 left-3 z-10 bg-forest text-white text-[0.7rem] tracking-[0.2em] uppercase font-light px-3 py-1.5">{t.free}</span>}
               <Image src={s.image ?? e.image} alt={e.alt} widths={[320, 480, 640, 960, 1200]} sizes="max(calc(38vw - 18px), 313px)" class="w-full h-full object-cover object-center" loading="lazy" />
             </div>
           </a>
           <a href={url} class="hidden md:block">
-            <div class="overflow-hidden h-72">
+            <div class="relative overflow-hidden h-72">
+              {freeOffer(s) && <span class="absolute top-3 left-3 z-10 bg-forest text-white text-[0.7rem] tracking-[0.2em] uppercase font-light px-3 py-1.5">{t.free}</span>}
               <Image
                 src={s.image ?? e.image}
                 alt={e.alt}

@@ -5,7 +5,7 @@ import Nav from '../components/Nav.astro';
 import Footer from '../components/Footer.astro';
 import nordkollenHero from '../images/nordkollen-hero.webp';
 import { localePath, langFromPath } from '../i18n';
-import { events, longDate, signupLabel, priceText, text, courseDuration, meetUpTime, type Session } from '../data/events';
+import { events, longDate, signupLabel, priceText, freeOffer, regularPriceText, text, courseDuration, meetUpTime, type Session } from '../data/events';
 
 
 interface Props {
@@ -21,7 +21,7 @@ const nordkollenLink = '<a href="https://www.google.com/maps?q=59.19742771746564
 const oklungenLink = '<a href="https://www.google.com/maps?q=59.18604216274942,9.803863873385133" target="_blank" rel="noopener" class="font-semibold underline hover:text-sage transition-colors duration-200">Oklungen</a>';
 const t = lang === 'no'
   ? {
-      description: 'Et praktisk kurs der du lærer å redusere belastningen på leddene i terrenget, bygge styrke og stabilitet mens du går, og få mer ut av turen - både fysisk og mentalt.',
+      description: 'En praktisk dag der du lærer å redusere belastningen på leddene i terrenget, bygge styrke og stabilitet mens du går, og få mer ut av turen - både fysisk og mentalt.',
       back: 'Alle turer',
       tagline: 'Gå i naturen, lær ferdigheter for livet.',
       intro: [
@@ -49,7 +49,7 @@ const t = lang === 'no'
       route: 'Turen er 9 km tur-retur, for det meste lett, men middels krevende i den lengste stigningen.',
       totalTime: 'Med øvelser og pauser tar turen opptil 5 timer.',
       experience: 'Du trenger ingen erfaring, men du bør være komfortabel med å gå 9 km i terrenget med øvelser underveis, også i brattere oppoverbakker.',
-      language: 'Kurset foregår på engelsk.',
+      language: 'Turen foregår på engelsk.',
       questions: 'Ta gjerne <a href="/contact" class="font-semibold underline hover:text-sage transition-colors duration-200">kontakt</a> hvis du har spørsmål.',
       details: 'Du får all praktisk informasjon når du har booket plassen din.',
       bringHeading: 'Ta med:',
@@ -65,12 +65,12 @@ const t = lang === 'no'
       ],
       weather: 'Vi går i de fleste værforhold. Blir forholdene farlige, avlyses likevel turen. Du får da pengene tilbake eller kan booke en ny tur.',
       injury: 'Har du en fersk eller pågående skade, bør du snakke med legen eller fysioterapeuten din før du blir med.',
-      dog: 'Dette kurset passer ikke for hund.',
+      dog: 'Denne turen passer ikke for hund.',
       duration: 'Varighet', date: 'Dato', meetUpLabel: 'Oppmøte', meetingPoint: 'Møtested', tba: 'Kommer senere', price: 'Pris',
       signup: 'Meld deg på',
     }
   : {
-      description: 'A hands-on course to learn how to reduce the strain on your joints in terrain, increase strength and stability while walking, and get more mental and physical benefits from being in nature.',
+      description: 'A hands-on day to learn how to reduce the strain on your joints in terrain, increase strength and stability while walking, and get more mental and physical benefits from being in nature.',
       back: 'All events',
       tagline: 'Walk through nature, learn skills for life.',
       intro: [
@@ -271,7 +271,10 @@ const heroImage = await heroPhoto(session.image ?? nordkollenHero, 65);
             </div>
             <div class="flex gap-6">
               <span class="text-xs tracking-[0.2em] uppercase text-sage/80 font-light w-28 flex-shrink-0">{t.price}</span>
-              <span class="text-base text-forest font-light">{priceText(session, lang)}</span>
+              <span class="text-base text-forest font-light">
+                {freeOffer(session) && <s class="text-forest/50 mr-2">{regularPriceText(session, lang)}</s>}
+                {priceText(session, lang)}
+              </span>
             </div>
 
             <div class="pt-12">
