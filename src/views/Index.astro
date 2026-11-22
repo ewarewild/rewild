@@ -70,6 +70,12 @@ const t = lang === 'no'
         {t.subline}
       </p>
       <a href="#events" class="inline-block mt-8 md:mt-10 px-10 py-4 border border-white text-white text-xs tracking-[0.25em] uppercase font-light hover:bg-white hover:text-black transition-colors duration-300">{t.cta}</a>
+      {/* Business visitors: a quiet way to /bedrift (Norwegian only, so not on the English page) */}
+      {lang === 'no' && (
+        <p class="mt-6 text-white/80 font-light text-[0.95rem] md:text-base">
+          Arbeider du med HMS eller personal? <a href="/bedrift" class="whitespace-nowrap underline underline-offset-4 decoration-white/40 hover:decoration-white hover:text-white transition-colors duration-200">Se bedriftsopplegg →</a>
+        </p>
+      )}
     </div>
     <div class="absolute bottom-8 right-8 md:right-12 text-white/40 flex items-center gap-3">
       <span class="w-10 h-px bg-white/30"></span>
