@@ -37,7 +37,7 @@ const t = lang === 'no'
       subline: 'Guided walks and courses in Vestfold and Telemark - for strength and stability, while being gentle on your joints.',
       cta: 'Join',
       scroll: 'Scroll',
-      intro: 'We walk in silence, release tension, and train attention as we go. You learn to move in terrain with less strain - and you come home with more calm than when you left.',
+      intro: 'We walk <strong class="font-bold">in silence</strong>, <strong class="font-bold">let go of tension</strong> and <strong class="font-bold">train our attention</strong> along the way.<br class="hidden md:inline"> You\'ll learn to move through terrain with <strong class="font-bold">less strain</strong> - and come home <strong class="font-bold">calmer</strong> than when you left.',
       events: 'Events',
       more: 'More →',
       less: 'Less ↑',
@@ -81,7 +81,7 @@ const t = lang === 'no'
   <section id="return-to-yourself" class="bg-white pt-14 pb-16 md:pt-24 md:pb-24 scroll-mt-24">
     <div class="max-w-6xl mx-auto px-6 md:px-12">
       <p class="max-w-4xl text-forest font-light md:font-medium text-[1.25rem] leading-relaxed md:font-display md:text-[2.25rem] md:leading-snug text-balance">
-        {t.intro}
+        <Fragment set:html={t.intro} />
       </p>
       {/* Previous intro, replaced 2026-11-22 with the brief's copy:
       Rewild takes you into nature, to <strong>restore balance</strong> and <strong>vitality</strong> while <strong>reducing</strong> the <strong>risk of injury</strong>
