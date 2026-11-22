@@ -8,14 +8,14 @@ const lang = langFromPath(Astro.url.pathname);
 const t = lang === 'no'
   ? {
       title: 'Ta kontakt - Rewild', description: 'Ta kontakt med Rewild.', heading: 'Ta kontakt',
-      name: 'Navn', first: 'Fornavn', last: 'Etternavn', email: 'E-postadresse', subject: 'Emne', message: 'Melding',
+      name: 'Navn', company: 'Bedrift (valgfritt)', first: 'Fornavn', last: 'Etternavn', email: 'E-postadresse', subject: 'Emne', message: 'Melding',
       send: 'Send', sending: 'Sender...', direct: 'Eller send meg en e-post direkte på',
       ok: 'Takk - meldingen din er sendt. Vi tar kontakt snart.',
       error: 'Noe gikk galt da meldingen skulle sendes. Prøv igjen om litt.',
     }
   : {
       title: 'Get in touch - Rewild', description: 'Get in touch with Rewild.', heading: 'Get in touch',
-      name: 'Name', first: 'First name', last: 'Last name', email: 'Email address', subject: 'Subject', message: 'Message',
+      name: 'Name', company: 'Company (optional)', first: 'First name', last: 'Last name', email: 'Email address', subject: 'Subject', message: 'Message',
       send: 'Send', sending: 'Sending...', direct: 'Or email me directly at',
       ok: "Thank you - your message has been sent. We'll be in touch soon.",
       error: 'Something went wrong sending your message. Please try again in a moment.',
@@ -65,6 +65,17 @@ const t = lang === 'no'
                 class="w-full bg-white border border-forest/20 px-4 py-3 text-forest font-light text-sm focus:outline-none focus:border-forest transition-colors duration-200"
               />
             </div>
+          </div>
+
+          <div>
+            <label for="company" class="block text-xs tracking-[0.2em] uppercase text-sage/80 font-light mb-3">{t.company}</label>
+            <input
+              type="text"
+              id="company"
+              name="Company"
+              autocomplete="organization"
+              class="w-full bg-white border border-forest/20 px-4 py-3 text-forest font-light text-sm focus:outline-none focus:border-forest transition-colors duration-200"
+            />
           </div>
 
           <div>
