@@ -82,6 +82,30 @@ export const sessions: Session[] = [
     ],
   },
   {
+    event: 'evening-reset', date: '2026-11-24', time: '17:00', place: 'Porsgrunn', spot: 'Skolapparåsen', difficulty: 'Moderate',
+    meetingPoint: 'Parkering for Svarteberget og Nordkollen', mapUrl: 'https://www.google.com/maps?q=59.18604216274942,9.803863873385133',
+    intro: [
+      "Welcome to an evening hike designed to help you release tension, build strength and joint stability, and promote better sleep.",
+      "We walk from the parking area at a moderate to fast pace (ca. 4.5km/h) on an easy gravel road towards Lia, then on a shorter forest path up to Skolapparåsen (313m), a 4km round trip. It's a beautiful, quiet mountain with a great view.",
+    ],
+  },
+  {
+    event: 'evening-reset', date: '2026-11-26', time: '17:00', place: 'Porsgrunn', spot: 'Skolapparåsen', difficulty: 'Moderate',
+    meetingPoint: 'Parkering for Svarteberget og Nordkollen', mapUrl: 'https://www.google.com/maps?q=59.18604216274942,9.803863873385133',
+    intro: [
+      "Welcome to an evening hike designed to help you release tension, build strength and joint stability, and promote better sleep.",
+      "We walk from the parking area at a moderate to fast pace (ca. 4.5km/h) on an easy gravel road towards Lia, then on a shorter forest path up to Skolapparåsen (313m), a 4km round trip. It's a beautiful, quiet mountain with a great view.",
+    ],
+  },
+  {
+    event: 'evening-reset', date: '2026-12-03', time: '17:00', place: 'Larvik', spot: 'Brunlanes Sportskapellet', difficulty: 'Easy',
+    meetingPoint: 'Ingri turparkering', mapUrl: 'https://maps.app.goo.gl/WS46sDBc4eG9Tg757',
+    intro: [
+      "Welcome to an evening hike designed to help you release tension, build strength and joint stability, and promote better sleep.",
+      "We walk from the parking area at a moderate to fast pace (ca. 4.5km/h) on a forest trail towards Brunlanes Sportskapellet (205m), then continue back down gently on a path along the Ulfsbakktjern - a 3.1km round trip. It's a lovely, quiet spot just outside of town.",
+    ],
+  },
+  {
     event: 'rewild-course', date: '2026-11-21', time: '10:00', place: 'Larvik, Porsgrunn, Skien', spot: 'Nordkollen', difficulty: 'Moderate',
     meetingPoint: 'Parkering for Svarteberget og Nordkollen', mapUrl: 'https://www.google.com/maps?q=59.18604216274942,9.803863873385133',
     price: 500,
