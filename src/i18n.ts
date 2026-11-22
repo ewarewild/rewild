@@ -12,6 +12,3 @@ export const otherLangPath = (pathname: string) => {
   if (langFromPath(pathname) === 'en') return pathname.replace(/^\/en/, '') || '/';
   return `/en${pathname}`;
 };
-
-// Pages that only exist in Norwegian (no language switch, no hreflang)
-export const norwegianOnly = (pathname: string) => /^\/bedrift\/?$/.test(pathname);

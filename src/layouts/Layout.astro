@@ -1,7 +1,7 @@
 ---
 import '../styles/global.css';
 import type { Hero } from '../lib/hero';
-import { langFromPath, otherLangPath, norwegianOnly } from '../i18n';
+import { langFromPath, otherLangPath } from '../i18n';
 
 interface Props {
   title: string;
@@ -14,9 +14,9 @@ interface Props {
 
 const lang = langFromPath(Astro.url.pathname);
 const { title, description = lang === 'no' ? 'Rewild - guidede turer og kurs i naturen i Telemark og Vestfold' : 'Rewild - come back to yourself through nature', ogTitle, ogDescription, ogImage, preloadImage } = Astro.props;
-// The page's Norwegian and English addresses, for search engines (none on Norwegian-only pages)
+// The page's Norwegian and English addresses, for search engines
 const pathname = Astro.url.pathname;
-const alternates = norwegianOnly(pathname) ? [] : [
+const alternates = [
   { hreflang: 'nb', href: new URL(lang === 'no' ? pathname : otherLangPath(pathname), Astro.site) },
   { hreflang: 'en', href: new URL(lang === 'en' ? pathname : otherLangPath(pathname), Astro.site) },
 ];

@@ -1,7 +1,7 @@
 ---
 // Top menu for every page. On the homepage (transparent) it sits over the hero photo in white
 // and turns solid once you scroll.
-import { langFromPath, localePath, otherLangPath, norwegianOnly } from '../i18n';
+import { langFromPath, localePath, otherLangPath } from '../i18n';
 
 interface Props {
   transparent?: boolean;
@@ -29,12 +29,11 @@ const links = lang === 'no'
       { href: '/one-to-one', label: '1:1' },
       { href: '/contact', label: 'Contact' },
     ].map(l => ({ ...l, href: p(l.href) }));
-// The business page is Norwegian only, so it's linked from both languages
-links.push({ href: '/bedrift', label: lang === 'no' ? 'For bedrifter' : 'For business' });
+links.push({ href: p('/bedrift'), label: lang === 'no' ? 'For bedrifter' : 'For business' });
 
-// The same page in the other language; Norwegian-only pages offer the English homepage
+// The same page in the other language
 const switchTo = lang === 'no'
-  ? { href: norwegianOnly(pathname) ? '/en/' : otherLangPath(pathname), label: 'EN', title: 'English', hreflang: 'en' }
+  ? { href: otherLangPath(pathname), label: 'EN', title: 'English', hreflang: 'en' }
   : { href: otherLangPath(pathname), label: 'NO', title: 'Norsk', hreflang: 'nb' };
 
 const tone = transparent ? 'text-white' : 'text-forest';
