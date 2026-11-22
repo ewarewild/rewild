@@ -32,7 +32,7 @@ export const events: Record<EventId, EventInfo> = {
     image: nordkollenHero,
     alt: 'Rewild Trip - full-day training',
     hours: 5,
-    price: 500,
+    price: 600,
     description: 'A day hike to Nordkollen built around injury prevention, functional strength, increasing focus, stress release and building resilience.',
   },
 };
