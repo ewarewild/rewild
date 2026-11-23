@@ -150,6 +150,11 @@ Bioen er ferdig gjennomgått.
 - Nå: Når du kommer inn blant trærne, skjer det noe. Tankene stilner. Du senker garden, spenninger slipper taket, noe åpner seg. Du våkner.
 - Hvorfor: "Når" (Ewas forslag) er roligere enn "med en gang" og passer tonen - noe som skjer hver gang, uten fart. "Mer" dempet avslutningen. "Du våkner." er kortere og sterkere - bilde på å komme ut av autopiloten. Resten var godt og ble beholdt. Den norske teksten står på egne ben; engelsk ("You feel more awake") er ikke endret.
 
+**Introtekst, første setning** (felles for alle Evening Reset-turene, i `src/data/events.ts` - hver tur har egen intro; reserveteksten i `EveningResetTrip.astro` vises ikke)
+- Før: Velkommen til en kveldstur som hjelper deg å løse opp spenninger, bygge styrke og stabilitet i leddene, og sove bedre.
+- Nå: Velkommen til en kveldstur som hjelper deg å løse opp spenninger, bygge styrke og stabilitet og sove bedre.
+- Hvorfor: "I leddene" gjorde stabiliteten smal, og kommaet før "og" var unødvendig. "Hjelper deg å" beholdt med vilje - forsiktig med helseløfter (søvn). Leddene står på kalenderkortet og i "Dette gjør vi"-lista. Vurderte en mer direkte versjon med leddene og "for en bedre natts søvn", men den lovet mer og logikken haket.
+
 ## Notert til senere
 
 - Engelsk Evening Reset-tekst: "step into trees" -> "into the trees"; "tension releasing, something opening" leses ujevnt. Tas i en egen engelsk gjennomgang.

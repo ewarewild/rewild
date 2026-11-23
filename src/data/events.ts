@@ -88,7 +88,7 @@ export const sessions: Session[] = [
     ],
     no: {
       intro: [
-        "Velkommen til en kveldstur som hjelper deg å løse opp spenninger, bygge styrke og stabilitet i leddene, og sove bedre.",
+        "Velkommen til en kveldstur som hjelper deg å løse opp spenninger, bygge styrke og stabilitet og sove bedre.",
         "Vi går fra parkeringen i moderat til raskt tempo (ca. 4,5 km/t) på en lett grusvei mot Lia, og deretter en kortere skogssti opp til Skolapparåsen (313 moh.) - 4 km tur-retur. Det er en vakker og stille topp med flott utsikt.",
       ],
     },
@@ -102,7 +102,7 @@ export const sessions: Session[] = [
     ],
     no: {
       intro: [
-        "Velkommen til en kveldstur som hjelper deg å løse opp spenninger, bygge styrke og stabilitet i leddene, og sove bedre.",
+        "Velkommen til en kveldstur som hjelper deg å løse opp spenninger, bygge styrke og stabilitet og sove bedre.",
         "Vi går fra parkeringen i moderat til raskt tempo (ca. 4,5 km/t) på en skogssti mot Brunlanes Sportskapellet (205 moh.), og fortsetter rolig ned igjen på en sti langs Ulfsbakktjern - 3,1 km tur-retur. Et fint og stille sted like utenfor byen.",
       ],
     },
@@ -116,7 +116,7 @@ export const sessions: Session[] = [
     ],
     no: {
       intro: [
-        "Velkommen til en kveldstur som hjelper deg å løse opp spenninger, bygge styrke og stabilitet i leddene, og sove bedre.",
+        "Velkommen til en kveldstur som hjelper deg å løse opp spenninger, bygge styrke og stabilitet og sove bedre.",
         "Vi går fra parkeringen i moderat til raskt tempo (ca. 4,5 km/t) på en lett grusvei mot Lia, og deretter en kortere skogssti opp til Skolapparåsen (313 moh.) - 4 km tur-retur. Det er en vakker og stille topp med flott utsikt.",
       ],
     },
@@ -130,7 +130,7 @@ export const sessions: Session[] = [
     ],
     no: {
       intro: [
-        "Velkommen til en kveldstur som hjelper deg å løse opp spenninger, bygge styrke og stabilitet i leddene, og sove bedre.",
+        "Velkommen til en kveldstur som hjelper deg å løse opp spenninger, bygge styrke og stabilitet og sove bedre.",
         "Vi går fra parkeringen i moderat til raskt tempo (ca. 4,5 km/t) på en lett grusvei mot Lia, og deretter en kortere skogssti opp til Skolapparåsen (313 moh.) - 4 km tur-retur. Det er en vakker og stille topp med flott utsikt.",
       ],
     },
@@ -144,7 +144,7 @@ export const sessions: Session[] = [
     ],
     no: {
       intro: [
-        "Velkommen til en kveldstur som hjelper deg å løse opp spenninger, bygge styrke og stabilitet i leddene, og sove bedre.",
+        "Velkommen til en kveldstur som hjelper deg å løse opp spenninger, bygge styrke og stabilitet og sove bedre.",
         "Vi går fra parkeringen i moderat til raskt tempo (ca. 4,5 km/t) på en lett grusvei mot Lia, og deretter en kortere skogssti opp til Skolapparåsen (313 moh.) - 4 km tur-retur. Det er en vakker og stille topp med flott utsikt.",
       ],
     },
@@ -158,7 +158,7 @@ export const sessions: Session[] = [
     ],
     no: {
       intro: [
-        "Velkommen til en kveldstur som hjelper deg å løse opp spenninger, bygge styrke og stabilitet i leddene, og sove bedre.",
+        "Velkommen til en kveldstur som hjelper deg å løse opp spenninger, bygge styrke og stabilitet og sove bedre.",
         "Vi går fra parkeringen i moderat til raskt tempo (ca. 4,5 km/t) på en skogssti mot Brunlanes Sportskapellet (205 moh.), og fortsetter rolig ned igjen på en sti langs Ulfsbakktjern - 3,1 km tur-retur. Et fint og stille sted like utenfor byen.",
       ],
     },
