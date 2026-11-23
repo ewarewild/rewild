@@ -407,6 +407,7 @@ Kontakt-siden er ferdig.
 - Fire ukers serie før: Én økt på 2 timer i uka, på en sti ca. 10 minutters kjøring fra sentrum, med øvelser de ansatte kan ta med seg inn i arbeidsdagen. Opptil 15 deltakere.
 - Fire ukers serie nå: Én økt på 2 timer i uka på en sti ca. 10 minutters kjøring fra sentrum, der de ansatte lærer øvelser de kan ta med seg inn i arbeidsdagen. Opptil 15 deltakere.
 - Hvorfor: Færre komma. "Der" binder stien og øvelsene sammen (Ewa: å dele det opp forenklet opplegget). "Lærer" viser at det er en ferdighet.
+- Fire ukers serie, "Passer best for": "øvd på mellom øktene så det blir en vane" -> "som de øver på mellom øktene til det blir en vane" (manglet subjekt, haltet).
 
 ## Notert til senere
 
