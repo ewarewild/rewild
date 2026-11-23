@@ -10,8 +10,8 @@ Startet 23. november 2026 (branch `norsk-og-bedrift`).
 2. Om meg / bio (`src/data/bio.ts`) - ferdig
 3. Turer (ferdig, med noen punkter på vent): Evening Reset og Rewild Trip (`src/views/EveningResetTrip.astro`, `src/views/RewildCourseTrip.astro`, `src/data/events.ts`)
 4. Historien (`src/views/TheStory.astro`) - ferdig
-5. 1:1 (`src/views/OneToOne.astro`) - pågår
-6. Kontakt (`src/views/Contact.astro`)
+5. 1:1 (`src/views/OneToOne.astro`) - ferdig
+6. Kontakt (`src/views/Contact.astro`) - neste
 7. Bedrift (`src/views/Bedrift.astro`)
 8. Påmelding og betaling (`src/views/Signup.astro`, `src/views/Payment.astro`)
 9. Vilkår (`src/views/Vilkar.astro`)
@@ -361,6 +361,13 @@ Skader, hund og infoboksen uendret (identisk med Evening Reset). Rewild Trip-sid
 **Avsnitt 5** - uendret.
 
 **Priser:** "5 eller flere" -> "5 økter eller flere" (tydelig også for den som skummer). Resten uendret.
+
+**Google-beskrivelse**
+- Før: Skreddersydde aktiviteter etter dine behov. Et personlig opplegg med tett oppfølging, slik at du når målene dine.
+- Nå: En-til-en-økter ute i naturen i Telemark og Vestfold. Et personlig opplegg med tett oppfølging, i ditt tempo.
+- Hvorfor: "Skreddersydde aktiviteter" var brosjyrespråk og vagt. Nå står det hva og hvor (søkeord). "I ditt tempo" passer for alle, ikke bare dem med mål.
+
+1:1-siden er ferdig.
 
 ## Notert til senere
 
