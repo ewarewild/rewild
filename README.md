@@ -49,9 +49,13 @@ Startet 23. november 2026 (branch `norsk-og-bedrift`).
 - Nå: Jobber du med HMS eller HR? Se tilbud til bedrifter →
 - Hvorfor: "Arbeider" og "personal" var stivt og gammeldags. "Tilbud til bedrifter" er enklere enn det lange "bedriftsopplegg". Vurderte å åpne for daglige ledere/teamledere, men valgte å holde målgruppen HMS og HR.
 
+**Nederst i hjørnet av toppbildet**
+- Før: Scroll
+- Nå: Bla ned
+- Hvorfor: Helt norsk. (Skrives "bla", ikke "blad" - blad er et papirark eller løv.)
+
 ## Gjenstår på forsiden
 
-- "Scroll" nederst i hjørnet (beholde, eller "Bla ned")
 - Over 1:1-knappen: "Vil du ha noe skreddersydd for deg?" (forslag: "Vil du ha et opplegg tilpasset deg?")
 
 ## Notert til senere
