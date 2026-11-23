@@ -155,6 +155,11 @@ Bioen er ferdig gjennomgått.
 - Nå: Velkommen til en kveldstur som hjelper deg å løse opp spenninger, bygge styrke og stabilitet og sove bedre.
 - Hvorfor: "I leddene" gjorde stabiliteten smal, og kommaet før "og" var unødvendig. "Hjelper deg å" beholdt med vilje - forsiktig med helseløfter (søvn). Leddene står på kalenderkortet og i "Dette gjør vi"-lista. Vurderte en mer direkte versjon med leddene og "for en bedre natts søvn", men den lovet mer og logikken haket.
 
+**Ruten til Skolapparåsen** (alle Skolapparåsen-turene)
+- Før: Vi går fra parkeringen i moderat til raskt tempo (ca. 4,5 km/t) på en lett grusvei mot Lia, og deretter en kortere skogssti opp til Skolapparåsen (313 moh.) - 4 km tur-retur. Det er en vakker og stille topp med flott utsikt.
+- Nå: Vi går fra parkeringen i moderat til raskt tempo (ca. 4,5 km/t), først på en lettgått grusvei mot Lia og så på en kortere skogssti opp til Skolapparåsen (313 moh.). Ruten er 4 km tur-retur. Toppen er vakker og stille, med flott utsikt.
+- Hvorfor: Manglet "på" før skogssti. "Først ... og så ..." gjør ruten lett å følge. "Lett grusvei" -> "lettgått". Lengden fikk egen setning ("Ruten", ikke "Turen ... tur-retur"). "Kortere" beholdt (= ganske kort).
+
 ## Notert til senere
 
 - Engelsk Evening Reset-tekst: "step into trees" -> "into the trees"; "tension releasing, something opening" leses ujevnt. Tas i en egen engelsk gjennomgang.
