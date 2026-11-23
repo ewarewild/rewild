@@ -343,6 +343,11 @@ Skader, hund og infoboksen uendret (identisk med Evening Reset). Rewild Trip-sid
 - Nå: Øktene tar utgangspunkt i der du er. Kanskje er du på vei tilbake etter en skade eller utbrenthet, trener mot et bestemt mål eller vil bare bevege deg og ha det bedre i hverdagen.
 - Hvorfor: Poenget først i en kort setning. Feil komma før "eller" fjernet, "hvor du er" -> "der du er". "Kanskje er du ..." snakker direkte til leseren.
 
+**Avsnitt 2**
+- Før: Vi starter med en konsultasjon - for å forstå hvor du er fysisk og mentalt, og hva du jobber mot.
+- Nå: Vi starter med en konsultasjon - for å forstå hvor du står fysisk og mentalt og hva du jobber mot.
+- Hvorfor: "Hvor du er" gjentok "der du er" i avsnitt 1. Unødvendig komma fjernet.
+
 ## Notert til senere
 
 - Rewild Trip praktisk info: "Turen foregår på engelsk", spørsmålslinjen og "Du får all praktisk informasjon når du har booket plassen din." ble hoppet over. Den siste har "booket" (vurder "meldt deg på", likt med knappen).
