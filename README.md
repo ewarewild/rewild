@@ -216,6 +216,11 @@ Resten av Evening Reset-siden (skader, hund, infoboksen) uendret. All felles tek
 
 **Introtekst, andre setning** (egen for hver tur) - uendret ("Vi går opp til Nordkollen (353 moh.) og kommer oss skikkelig ut i naturen." / Østre Vealøs (445,5 moh.)). Vurderte å runde av til 446 moh., Ewa valgte å beholde.
 
+**Veksling og hvile**
+- Før: Vi veksler mellom å utfordre kroppen fysisk og roligere øvelser, og tar oss tid til å hvile og senke skuldrene.
+- Nå: Vi veksler mellom å utfordre kroppen og å gjøre roligere øvelser. Vi tar oss god tid til å hvile og senke skuldrene.
+- Hvorfor: "Veksler mellom å utfordre ... og øvelser" var ulike ledd. Feil komma før "og tar". Delt i to. "Innimellom" og "også" forkastet - hvilen skal stå like sterkt som treningen. "God tid" gjør hvilen bevisst.
+
 ## Notert til senere
 
 - Engelsk Evening Reset-tekst: "step into trees" -> "into the trees"; "tension releasing, something opening" leses ujevnt. Tas i en egen engelsk gjennomgang.
