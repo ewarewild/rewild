@@ -238,6 +238,12 @@ Resten av Evening Reset-siden (skader, hund, infoboksen) uendret. All felles tek
 - Nå: På toppen slår vi oss ned, prater og nyter matpakken og en kopp te.
 - Hvorfor: "Tar oss tid til å hvile" gjentok setningen om veksling og hvile rett over. "Slår oss ned" viser hvilen uten å gjenta ordet.
 
+**"Hvem passer det for?"-lista**
+- Overskrift og punkt 1 uendret ("Deg som vil trene smartere på tur, ikke bare gå").
+- Punkt 2 før: Deg som liker å være ute og vil skåne leddene i terrenget
+- Punkt 2 nå: Deg som liker å være ute og vil ta vare på leddene
+- Hvorfor: "Ta vare på" (omsorg over tid) som på forsiden, ikke "skåne". "I terrenget" tatt ut - å ta vare på leddene gjelder generelt.
+
 ## Notert til senere
 
 - Engelsk Evening Reset-tekst: "step into trees" -> "into the trees"; "tension releasing, something opening" leses ujevnt. Tas i en egen engelsk gjennomgang.
