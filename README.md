@@ -477,3 +477,5 @@ Språket er godt, og i juridisk tekst er presisjon viktigere enn flyt. "Vi" og "
 - Engelsk Evening Reset-tekst: "step into trees" -> "into the trees"; "tension releasing, something opening" leses ujevnt. Tas i en egen engelsk gjennomgang.
 - Google-beskrivelse for Evening Reset sier "Nå i Skien, Porsgrunn, Larvik og Sandefjord" - kalenderen har bare Porsgrunn og Larvik nå. Sjekk med Ewa.
 
+- Bekreftelses-e-postene etter Vipps-betaling (`worker/emails.ts`) finnes bare på engelsk - norske deltakere får norsk side, men engelsk e-post.
+- Den engelske siden er ikke oppdatert tilsvarende (bortsett fra sertifiseringene i bioen). Bl.a. overskrift på bedriftssiden ("Fewer injuries. Better recovery."), "Hvem passer det for"-lista på Evening Reset (4 vs 5 punkter). Tas i en egen engelsk gjennomgang.
