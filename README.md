@@ -392,6 +392,11 @@ Kontakt-siden er ferdig.
 - Nå: Muskel- og skjelettplager og stressrelaterte psykiske plager er de største årsakene til sykefravær i Norge.
 - Hvorfor: Engelsk innskudd ("er, sammen med ..., de største") fjernet. "Helseproblemer" var oversatt. "Plager" (Ewas valg, ikke "lidelser") knytter an til overskriften "Færre plager" og viser at den gjelder både kropp og hode. Resten av avsnittet uendret.
 
+**Andre avsnitt**
+- Før: ... Det samme gjelder hodet: Det som tærer mest, ...
+- Nå: ... Hodet fungerer på samme måte: Det som tærer mest, ...
+- Hvorfor: Unngår "Det gjelder ... Det samme gjelder" i to setninger på rad. Like stram og saklig, og "Hodet" først får trykk. Resten uendret.
+
 ## Notert til senere
 
 - Rewild Trip praktisk info: "Turen foregår på engelsk", spørsmålslinjen og "Du får all praktisk informasjon når du har booket plassen din." ble hoppet over. Den siste har "booket" (vurder "meldt deg på", likt med knappen).
