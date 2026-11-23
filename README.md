@@ -214,6 +214,8 @@ Resten av Evening Reset-siden (skader, hund, infoboksen) uendret. All felles tek
 - Nå: Velkommen til en dag der du får verktøy til å forebygge skader og gjenvinne fysisk og mental balanse - på stien og i hverdagen.
 - Hvorfor: "Naturen som gir deg" pekte grammatisk på naturen. "Praktisk trening" gjentok kalenderkortet, og "en praktisk dag" alene høres ut som "lettvint dag". "Forebygge skader" er aktivt i stedet for problemordet "redusere skaderisikoen". Det praktiske vises av "verktøy" og resten av siden.
 
+**Introtekst, andre setning** (egen for hver tur) - uendret ("Vi går opp til Nordkollen (353 moh.) og kommer oss skikkelig ut i naturen." / Østre Vealøs (445,5 moh.)). Vurderte å runde av til 446 moh., Ewa valgte å beholde.
+
 ## Notert til senere
 
 - Engelsk Evening Reset-tekst: "step into trees" -> "into the trees"; "tension releasing, something opening" leses ujevnt. Tas i en egen engelsk gjennomgang.
