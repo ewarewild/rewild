@@ -104,6 +104,11 @@ Samme tekst brukes på forsiden (avsnitt 1-2 synlige, resten under "Mer →") og
 - Nå: Noen tiår senere havnet jeg i en krise og ble utbrent, både fysisk og psykisk.
 - Hvorfor: "Møtte utfordringer" var oversatt og et slitt jobbord som holder leseren på avstand. "Havnet i" viser at det skjedde med henne. "Krise" er Ewas eget ord fra Historien-siden. "Ble utbrent" er direkte, ikke klinisk.
 
+**Avsnitt 7**
+- Før: Jeg begynte å gå opp på toppene i nærheten, i all slags vær, og kombinerte fysisk trening med sansende kontakt med naturen.
+- Nå: Jeg begynte å gå opp på toppene i nærheten, i all slags vær. Jeg trente kroppen og tok inn naturen med alle sansene.
+- Hvorfor: "Sansende kontakt" er ikke vanlig norsk, "kombinerte fysisk trening med" var stivt, og det sto "med ... med". "Tok inn naturen med alle sansene" er Ewas eget uttrykk fra Historien-siden.
+
 ## Notert til senere
 
 - Kurssidene sier "Turen foregår på engelsk." - sjekk om det fortsatt stemmer nå som siden er norsk først.
