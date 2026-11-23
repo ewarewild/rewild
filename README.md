@@ -143,6 +143,16 @@ Bioen er ferdig gjennomgått.
 - Nå: En hel dag med praktisk trening i terrenget. Du lærer gangteknikker som tar vare på leddene, og øvelser underveis som gir styrke og stabilitet - både fysisk og mentalt.
 - Hvorfor: Lang liste etter "lærer å" delt opp. "Redusere belastningen" (problemord) -> "tar vare på". "Få mer ut av turen" var vagt. "En hel dag" viser forskjellen fra Evening Reset. Beholdt "praktisk" og "underveis" (treningen skjer mens man går) fra originalen, og "både fysisk og mentalt" - stabilitet gjelder hele mennesket.
 
+### Evening Reset-siden (`src/views/EveningResetTrip.astro`)
+
+**Teksten under tittelen**
+- Før: ... Du senker garden, spenninger slipper taket, noe åpner seg. Du blir mer våken.
+- Nå: ... Du senker garden, spenninger slipper taket, noe åpner seg. Du våkner.
+- Hvorfor: "Mer" dempet avslutningen. "Du våkner." er kortere og sterkere - bilde på å komme ut av autopiloten. Resten var godt og ble beholdt. Den norske teksten står på egne ben; engelsk ("You feel more awake") er ikke endret.
+
 ## Notert til senere
+
+- Engelsk Evening Reset-tekst: "step into trees" -> "into the trees"; "tension releasing, something opening" leses ujevnt. Tas i en egen engelsk gjennomgang.
+- Google-beskrivelse for Evening Reset sier "Nå i Skien, Porsgrunn, Larvik og Sandefjord" - kalenderen har bare Porsgrunn og Larvik nå. Sjekk med Ewa.
 
 - Kurssidene sier "Turen foregår på engelsk." - sjekk om det fortsatt stemmer nå som siden er norsk først.
