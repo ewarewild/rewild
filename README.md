@@ -269,6 +269,8 @@ Skader, hund og infoboksen uendret (identisk med Evening Reset). Rewild Trip-sid
 
 ### Historien (`src/views/TheStory.astro`)
 
+**Google-beskrivelse:** "Historien om Rewild, og tankene bak." -> "Historien om Rewild og tankene bak." (unødvendig komma). Overskriften "Historien om Rewild" uendret.
+
 **Avsnitt 1**
 - Før: Mens jeg bygde opp livet mitt igjen etter en krise, havnet jeg et sted jeg ikke lenger hadde kapasitet til å være. Påkjenningene var så store at jeg ble skadet og utbrent.
 - Nå: Mens jeg bygde opp livet mitt igjen etter en krise, havnet jeg i en situasjon jeg ikke lenger klarte å stå i. Påkjenningene var så store at jeg ble skadet og utbrent.
