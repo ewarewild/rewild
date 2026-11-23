@@ -260,6 +260,11 @@ Resten av Evening Reset-siden (skader, hund, infoboksen) uendret. All felles tek
 - "Gode sko med godt grep" -> "Tursko med godt grep" (gode/godt, likt med Evening Reset).
 - Resten uendret.
 
+**Vær**
+- Før: Vi går i de fleste værforhold. Blir forholdene farlige, avlyses likevel turen. Du får da pengene tilbake eller kan booke en ny tur.
+- Nå: Vi går i nesten all slags vær, men blir forholdene farlige, avlyses turen. Du får da pengene tilbake eller kan melde deg på en annen tur.
+- Hvorfor: Samme som Evening Reset. "Likevel" tatt ut.
+
 ## Notert til senere
 
 - Rewild Trip praktisk info: "Turen foregår på engelsk", spørsmålslinjen og "Du får all praktisk informasjon når du har booket plassen din." ble hoppet over. Den siste har "booket" (vurder "meldt deg på", likt med knappen).
