@@ -109,6 +109,11 @@ Samme tekst brukes på forsiden (avsnitt 1-2 synlige, resten under "Mer →") og
 - Nå: Jeg begynte å gå opp på toppene i nærheten, i all slags vær. Jeg trente kroppen og tok inn naturen med alle sansene.
 - Hvorfor: "Sansende kontakt" er ikke vanlig norsk, "kombinerte fysisk trening med" var stivt, og det sto "med ... med". "Tok inn naturen med alle sansene" er Ewas eget uttrykk fra Historien-siden.
 
+**Avsnitt 8**
+- Før: Effekten kom med en gang, og det forandret livet mitt fullstendig. Du kan lese mer om denne prosessen her.
+- Nå: Jeg kjente forskjellen med en gang, og livet mitt forandret seg fullstendig. Du kan lese hele historien her.
+- Hvorfor: "Det" pekte feil (effekten = den), "effekten kom" var klinisk, og "denne prosessen" stivt. "Jeg kjente forskjellen" er personlig og kroppslig. "Hele historien" leder naturlig til Historien-siden.
+
 ## Notert til senere
 
 - Kurssidene sier "Turen foregår på engelsk." - sjekk om det fortsatt stemmer nå som siden er norsk først.

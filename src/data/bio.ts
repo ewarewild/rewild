@@ -17,7 +17,7 @@ export const bio = (lang: Lang) =>
           'Historien om Rewild begynner egentlig på 80-tallet, da naturen var en del av hverdagen - trening, sanking og frihet til å leke vilt.',
           'Noen tiår senere havnet jeg i en krise og ble utbrent, både fysisk og psykisk.',
           'Jeg begynte å gå opp på toppene i nærheten, i all slags vær. Jeg trente kroppen og tok inn naturen med alle sansene.',
-          `Effekten kom med en gang, og det forandret livet mitt fullstendig. Du kan lese mer om denne prosessen ${link('/the-story', 'her')}.`,
+          `Jeg kjente forskjellen med en gang, og livet mitt forandret seg fullstendig. Du kan lese hele historien ${link('/the-story', 'her')}.`,
           'I undervisningen min legger jeg vekt på trygg, bevisst bevegelse i terrenget. Jeg bruker pusten, sansene og kontakten med naturen, og øvelser inspirert av yoga, pilates, qigong og funksjonell styrketrening, for å koble sammen kropp og sinn igjen.',
           'Jeg tilbringer mye tid i naturen - sover ute, trener, lærer, går utenfor stiene og bare er. Det gir meg balansen tilbake og fyller meg med energi og inspirasjon.',
         ],
