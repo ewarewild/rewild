@@ -400,7 +400,7 @@ Kontakt-siden er ferdig.
 **Tredje avsnitt**
 - Før: Jeg holder økter utendørs der de ansatte lærer å bevege seg med mer variasjon, og gir kroppen det den ikke får av en dag med sitting. De får også større frihet til å skifte fokus når det trengs. ...
 - Nå: Jeg holder økter utendørs der de ansatte lærer å bevege seg med mer variasjon og gi kroppen det den ikke får av en dag med sitting. De trener også opp evnen til å flytte fokus, både mellom oppgaver og fra jobb til hvile. ...
-- Hvorfor: Uklart subjekt ("og gir") rettet. "Større frihet til å skifte fokus når det trengs" var oversatt og vagt. Ewas presisering: evnen til å flytte fokus mellom oppgaver og mellom jobb og hvile - konkret nytte for arbeidsgiver, og svarer på "koble av" i avsnittet før. Merk: "Skarpere fokus"-punktet i lista lenger ned bør justeres så det ikke gjentar dette.
+- Hvorfor: Uklart subjekt ("og gir") rettet. "Større frihet til å skifte fokus når det trengs" var oversatt og vagt. Ewas presisering: evnen til å flytte fokus mellom oppgaver og mellom jobb og hvile - konkret nytte for arbeidsgiver, og svarer på "koble av" i avsnittet før. ("Skarpere fokus"-punktet i lista er justert så det ikke gjentar dette.)
 
 **Tilbud** - overskrift og "Passer best for:" uendret.
 - Halv dag: "maks 25 minutters kjøring" -> "innen 25 minutters kjøring" (roligere, mindre muntlig). "Passer best for" uendret.
@@ -421,6 +421,9 @@ Kontakt-siden er ferdig.
 - Punkt 2 nå: Mindre slitasje på kroppen: gangteknikk som fordeler belastningen og avlaster knær, rygg og hofter
 - Hvorfor: "Belastning" sto to ganger. "Slitasje" er forskningens ord fra avsnitt 2 (problemord er greit på bedriftssiden). Hofter er ledd - "knær, rygg og hofter" er tre konkrete steder og speiler "et kne i en motbakke".
 - Punkt 3: "enkle øvelser for å legge jobbtankene bak seg, så hodet får hente seg inn" -> "enkle øvelser for å legge jobbtankene bak seg og hente seg inn" ("hode" og "får" sto to ganger). Merkelappen "Et hode som får koble av" uendret.
+- Punkt 4 før: Skarpere fokus: trening i å flytte og samle oppmerksomheten - en ferdighet de tar med seg tilbake til pulten
+- Punkt 4 nå: Skarpere fokus: de lærer å samle oppmerksomheten om én ting, også på travle dager
+- Hvorfor: Overlappet med avsnitt 3 ("trener ... flytte fokus") og punkt 5 ("ta med seg"). Nå handler det om å samle oppmerksomheten, som avsnitt 3 ikke dekker. "De lærer" beholder at det er en ferdighet.
 
 ## Notert til senere
 
