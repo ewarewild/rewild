@@ -9,8 +9,8 @@ Startet 23. november 2026 (branch `norsk-og-bedrift`).
 1. Forsiden (`src/views/Index.astro`) - ferdig
 2. Om meg / bio (`src/data/bio.ts`) - ferdig
 3. Turer (ferdig, med noen punkter på vent): Evening Reset og Rewild Trip (`src/views/EveningResetTrip.astro`, `src/views/RewildCourseTrip.astro`, `src/data/events.ts`)
-4. Historien (`src/views/TheStory.astro`) - pågår
-5. 1:1 (`src/views/OneToOne.astro`)
+4. Historien (`src/views/TheStory.astro`) - ferdig
+5. 1:1 (`src/views/OneToOne.astro`) - neste
 6. Kontakt (`src/views/Contact.astro`)
 7. Bedrift (`src/views/Bedrift.astro`)
 8. Påmelding og betaling (`src/views/Signup.astro`, `src/views/Payment.astro`)
@@ -326,6 +326,8 @@ Skader, hund og infoboksen uendret (identisk med Evening Reset). Rewild Trip-sid
 - Før: Disse turene viste seg å være den aller første, organiske formen for Evening Reset. Nå mer gjennomarbeidet, mer tilgjengelig og i stadig utvikling.
 - Nå: Disse turene ble spiren til Evening Reset. Nå mer gjennomarbeidet, mer tilgjengelig og i stadig utvikling.
 - Hvorfor: "Organisk" var oversatt. "Spiren til" er et vanlig norsk uttrykk og et naturbilde som henger sammen med "i stadig utvikling".
+
+**Avsnitt 18** ("Sammen med deg.") - uendret. Historien er ferdig gjennomgått.
 
 ## Notert til senere
 
