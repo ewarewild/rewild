@@ -480,6 +480,12 @@ Språket er godt, og i juridisk tekst er presisjon viktigere enn flyt. "Vi" og "
 - Bekreftelses-e-postene etter Vipps-betaling (`worker/emails.ts`) finnes bare på engelsk - norske deltakere får norsk side, men engelsk e-post.
 - Den engelske siden er ikke oppdatert tilsvarende (bortsett fra sertifiseringene i bioen). Bl.a. overskrift på bedriftssiden ("Fewer injuries. Better recovery."), "Hvem passer det for"-lista på Evening Reset (4 vs 5 punkter). Tas i en egen engelsk gjennomgang.
 
+## Helhetlig gjennomgang av forsiden
+
+Kalenderkortene justert så forsiden ikke gjentar seg ("tar vare på leddene" sto 3 ganger, "styrke og stabilitet" 2 ganger). Hvert kort sier nå det som er særegent for turen, kun med innhold fra turens egen side.
+- Evening Reset-kortet nå: Rist av deg dagen og kom i kontakt med kroppen igjen på en kveldstur. Vi slipper stresset og skjerper fokuset.
+- Rewild Trip-kortet (og Google-beskrivelse) nå: En hel dag med praktisk trening i terrenget. Du lærer gangteknikker og øvelser underveis som forebygger skader og gir balanse - både fysisk og mentalt.
+
 ## Rettet feil (engelsk side)
 
 - Engelsk Rewild Trip-side viste `{t.totalTime}`, `{t.experience}`, `{t.language}`, `{t.details}`, `{t.weather}`, `{t.injury}` og `{t.dog}` som tekst (oppsto i commit 76459df da siden ble delt i norsk/engelsk). Opprinnelig engelsk tekst satt tilbake ordrett fra historikken. NB: engelsk erfaringstekst sier fortsatt "9km" (feil for Østre Vealøs) - tas i engelsk gjennomgang.
