@@ -35,6 +35,8 @@ Startet 23. november 2026 (branch `norsk-og-bedrift`).
 - Før: Guidede turer og kurs i Telemark og Vestfold - for styrke, stabilitet og mindre slitasje på leddene.
 - Nå: Guidede turer og kurs i Telemark og Vestfold - for en sterk og stødig gange som tar vare på leddene.
 - Hvorfor: "Mindre slitasje" var problem-orientert og medisinsk. "En sterk og stødig gange" antyder at man lærer en ny måte å gå på, uten å si "lær å".
+- Endret igjen: Guidede turer og kurs i Telemark og Vestfold - for styrke og stabilitet i kropp og sinn.
+- Hvorfor: "Gange" gjorde stabiliteten smal og bare fysisk. I Rewild betyr stabilitet hele mennesket - fysisk, mentalt og følelsesmessig. "Kropp og sinn" dekker det. Leddene flyttes ned i introteksten.
 
 **Google-beskrivelse** (commit `507d632`) - egen tekst, så søkeordene "styrke" og "stabilitet" beholdes
 - Nå: Guidede turer og kurs i Telemark og Vestfold. Bygg styrke og stabilitet i terrenget, og ta vare på leddene.
