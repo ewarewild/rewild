@@ -191,6 +191,14 @@ Bioen er ferdig gjennomgått.
 **Praktisk info**
 - Overskrift og erfaring uendret ("Du trenger ingen erfaring, men du bør klare å holde et raskere tempo på vei opp." - "raskere" = ganske raskt, naturlig norsk).
 - "Turen foregår på engelsk." - uendret. Bekreftet av Ewa: turene går på engelsk (gjelder også Rewild Trip).
+- "Ta gjerne kontakt hvis du har spørsmål." - uendret.
+
+**Ta med-lista** - uendret.
+
+**Vær**
+- Før: Vi går i de fleste værforhold, men blir forholdene farlige, avlyses turen. Du får da pengene tilbake eller kan booke en ny tur.
+- Nå: Vi går i nesten all slags vær, men blir forholdene farlige, avlyses turen. Du får da pengene tilbake eller kan melde deg på en annen tur.
+- Hvorfor: Fjernet "værforhold ... forholdene". "Forholdene" beholdt - dekker is, glatte stier og flom, ikke bare været. "Booke" -> "melde deg på", likt med knappen. Rewild Trip har nesten lik tekst - bruk samme der.
 
 ## Notert til senere
 
