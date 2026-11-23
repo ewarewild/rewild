@@ -233,6 +233,11 @@ Resten av Evening Reset-siden (skader, hund, infoboksen) uendret. All felles tek
 - Punkt 4 nå: Gangteknikker som reduserer belastningen på leddene - i oppoverbakke, nedoverbakke og på flat mark
 - Hvorfor: Samme som Evening Reset punkt 3 - "i terrenget" tatt ut (dobbel "i", og punkt 3 slutter med "i terrenget").
 
+**Lunsj**
+- Før: På toppen tar vi oss tid til å hvile, prate og nyte matpakken og en kopp te.
+- Nå: På toppen slår vi oss ned, prater og nyter matpakken og en kopp te.
+- Hvorfor: "Tar oss tid til å hvile" gjentok setningen om veksling og hvile rett over. "Slår oss ned" viser hvilen uten å gjenta ordet.
+
 ## Notert til senere
 
 - Engelsk Evening Reset-tekst: "step into trees" -> "into the trees"; "tension releasing, something opening" leses ujevnt. Tas i en egen engelsk gjennomgang.
