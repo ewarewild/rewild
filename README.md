@@ -417,6 +417,9 @@ Kontakt-siden er ferdig.
 - Punkt 1 før: En ordentlig pause fra sittingen: bevegelse kroppen ikke får i løpet av en arbeidsdag ved pulten
 - Punkt 1 nå: En ordentlig pause fra sittingen: variert bevegelse ute, i stedet for samme stilling ved pulten hele dagen
 - Hvorfor: Gjentok nesten ordrett avsnitt 3 ("gi kroppen det den ikke får av en dag med sitting"). "Samme stilling hele dagen" speiler forskningen i avsnitt 2. "Ved pulten" beholdt.
+- Punkt 2 før: Mindre belastning på kroppen: gangteknikk som fordeler belastningen og avlaster ledd, rygg og hofter
+- Punkt 2 nå: Mindre slitasje på kroppen: gangteknikk som fordeler belastningen og avlaster knær, rygg og hofter
+- Hvorfor: "Belastning" sto to ganger. "Slitasje" er forskningens ord fra avsnitt 2 (problemord er greit på bedriftssiden). Hofter er ledd - "knær, rygg og hofter" er tre konkrete steder og speiler "et kne i en motbakke".
 
 ## Notert til senere
 
