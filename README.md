@@ -13,8 +13,8 @@ Startet 23. november 2026 (branch `norsk-og-bedrift`).
 5. 1:1 (`src/views/OneToOne.astro`) - ferdig
 6. Kontakt (`src/views/Contact.astro`) - ferdig
 7. Bedrift (`src/views/Bedrift.astro`) - ferdig
-8. Påmelding og betaling (`src/views/Signup.astro`, `src/views/Payment.astro`) - neste
-9. Vilkår (`src/views/Vilkar.astro`)
+8. Påmelding og betaling (`src/views/Signup.astro`, `src/views/Payment.astro`) - ferdig
+9. Vilkår (`src/views/Vilkar.astro`) - neste
 10. Meny og bunntekst (`src/components/Nav.astro`, `src/components/Footer.astro`)
 
 ## Prinsipper vi har landet på
@@ -451,6 +451,13 @@ Bedriftssiden er ferdig.
 - Merkelapper, spørsmål, personvern, pris, knapper og feilmelding uendret.
 - Ansvarsfraskrivelse: "Veiledningen på Rewild-arrangementer" -> "Veiledningen i Rewild" (kort, og dekker turer, kurs og 1:1; "på turene" ble forkastet fordi skjemaet også brukes til 1:1).
 - Beskjed etter innsending: "Takk - vi har mottatt ..." -> "Takk - jeg har mottatt ..." (resten av siden sier "jeg").
+
+### Betaling (`src/views/Payment.astro`)
+
+- "Sjekker"- og "Betalt"-beskjedene uendret.
+- Avbrutt: "Betalingen ble avbrutt, så plassen din er ikke booket." -> "Plassen din er derfor ikke reservert." (gjentok overskriften ordrett, "booket" er lånord).
+- Ikke kommet gjennom: "vi bekrefter" -> "jeg bekrefter", unødvendig komma før "eller" fjernet.
+- Google-beskrivelse: "Bookingen din hos Rewild." -> "Påmeldingen din hos Rewild."
 
 ## Notert til senere
 

@@ -9,15 +9,15 @@ const p = (path: string) => localePath(lang, path);
 // Messages for the script below, which picks one once it knows the payment's status
 const t = lang === 'no'
   ? {
-      title: 'Betaling - Rewild', description: 'Bookingen din hos Rewild.',
+      title: 'Betaling - Rewild', description: 'Påmeldingen din hos Rewild.',
       checking: 'Sjekker betalingen din...', moment: 'Dette tar bare et øyeblikk.', events: 'Alle turer',
       notThroughTitle: 'Betalingen din har ikke kommet gjennom',
-      notThroughText: 'Hvis du har betalt i Vipps, kan det ta noen minutter før den dukker opp - vi bekrefter plassen din på e-post. Hvis ikke, kan du gjerne melde deg på igjen, eller ta kontakt hvis du har spørsmål.',
+      notThroughText: 'Hvis du har betalt i Vipps, kan det ta noen minutter før den dukker opp - jeg bekrefter plassen din på e-post. Hvis ikke, kan du gjerne melde deg på igjen eller ta kontakt hvis du har spørsmål.',
       contact: 'Ta kontakt',
       paidTitle: 'Takk - du er påmeldt!',
       paidText: 'Betalingen er bekreftet. Du får en e-post med alt du trenger å vite før turen.',
       cancelledTitle: 'Betalingen ble avbrutt',
-      cancelledText: 'Betalingen ble avbrutt, så plassen din er ikke booket. Du kan melde deg på igjen når du vil.',
+      cancelledText: 'Plassen din er derfor ikke reservert. Du kan melde deg på igjen når du vil.',
       signup: 'Meld deg på',
     }
   : {
