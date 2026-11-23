@@ -446,6 +446,12 @@ Kontakt-siden er ferdig.
 
 Bedriftssiden er ferdig.
 
+### Påmelding (`src/views/Signup.astro`)
+
+- Merkelapper, spørsmål, personvern, pris, knapper og feilmelding uendret.
+- Ansvarsfraskrivelse: "Veiledningen på Rewild-arrangementer" -> "Veiledningen på turene" ("arrangementer" brukes ikke ellers på siden).
+- Beskjed etter innsending: "Takk - vi har mottatt ..." -> "Takk - jeg har mottatt ..." (resten av siden sier "jeg").
+
 ## Notert til senere
 
 - Rewild Trip praktisk info: "Turen foregår på engelsk", spørsmålslinjen og "Du får all praktisk informasjon når du har booket plassen din." ble hoppet over. Den siste har "booket" (vurder "meldt deg på", likt med knappen).
