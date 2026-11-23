@@ -435,6 +435,7 @@ Kontakt-siden er ferdig.
 - Avsnitt 3 før: Bakgrunnen min er fra flere idretter, og jeg har mange års erfaring med å bevege meg utenfor stiene, også i vintermørket. Jeg underviser på norsk og engelsk.
 - Avsnitt 3 nå: Jeg har bakgrunn fra flere idretter og mange års erfaring med å bevege meg utenfor stien, også i vintermørket.
 - Hvorfor: "Jeg har bakgrunn fra" er vanlig norsk. "Stien" likt med bioen. Språksetningen tatt ut - står allerede i tilbudsdelen.
+- Avsnitt 4 ("Rewild holder til ved Porsgrunn og har økter i hele Grenland og Vestfold.") uendret. "Grenland" (ikke "Telemark") er bevisst på bedriftssiden.
 
 ## Notert til senere
 
