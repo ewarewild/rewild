@@ -160,6 +160,11 @@ Bioen er ferdig gjennomgått.
 - Nå: Vi går fra parkeringen i moderat til raskt tempo (ca. 4,5 km/t), først på en lettgått grusvei mot Lia og så på en kortere skogssti opp til Skolapparåsen (313 moh.). Ruten er 4 km tur-retur. Toppen er vakker og stille, med flott utsikt.
 - Hvorfor: Manglet "på" før skogssti. "Først ... og så ..." gjør ruten lett å følge. "Lett grusvei" -> "lettgått". Lengden fikk egen setning ("Ruten", ikke "Turen ... tur-retur"). "Kortere" beholdt (= ganske kort).
 
+**Ruten til Brunlanes Sportskapellet** (begge Larvik-turene)
+- Før: Vi går fra parkeringen i moderat til raskt tempo (ca. 4,5 km/t) på en skogssti mot Brunlanes Sportskapellet (205 moh.), og fortsetter rolig ned igjen på en sti langs Ulfsbakktjern - 3,1 km tur-retur. Et fint og stille sted like utenfor byen.
+- Nå: Vi går fra parkeringen i moderat til raskt tempo (ca. 4,5 km/t) på en skogssti opp til Brunlanes Sportskapellet (205 moh.), og fortsetter rolig ned igjen på en sti langs Ulfsbakktjern. Ruten er en rundtur på 3,1 km. Det er et fint og stille sted like utenfor byen.
+- Hvorfor: Opp én sti og ned en annen = rundtur, ikke tur-retur. "Mot" -> "opp til" (tydelig mål). Lengden i egen setning og sluttsetning med verb, likt med Skolapparåsen. "Fortsetter rolig ned igjen" beholdt fra originalen.
+
 ## Notert til senere
 
 - Engelsk Evening Reset-tekst: "step into trees" -> "into the trees"; "tension releasing, something opening" leses ujevnt. Tas i en egen engelsk gjennomgang.
