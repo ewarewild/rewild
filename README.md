@@ -165,6 +165,12 @@ Bioen er ferdig gjennomgått.
 - Nå: Vi går fra parkeringen i moderat til raskt tempo (ca. 4,5 km/t) på en skogssti opp til Brunlanes Sportskapellet (205 moh.), og fortsetter rolig ned igjen på en sti langs Ulfsbakktjern. Ruten er en rundtur på 3,1 km. Det er et fint og stille sted like utenfor byen.
 - Hvorfor: Opp én sti og ned en annen = rundtur, ikke tur-retur. "Mot" -> "opp til" (tydelig mål). Lengden i egen setning og sluttsetning med verb, likt med Skolapparåsen. "Fortsetter rolig ned igjen" beholdt fra originalen.
 
+**"Dette gjør vi:"-lista**
+- Overskrift og punkt 1 uendret ("Bruker pusten og sansene til å samle oppmerksomheten i kroppen og løse opp spenninger" - godt som det er).
+- Punkt 2 før: Gjør øvelser underveis som styrker muskler og ledd og trener koordinasjonen - for bedre stabilitet i terrenget og for å motvirke følgene av mye stillesitting, som smerter i korsryggen
+- Punkt 2 nå: Gjør øvelser underveis som styrker kroppen og trener koordinasjonen - for bedre stabilitet i terrenget og for å motvirke følgene av mye stillesitting, som vondt i korsryggen
+- Hvorfor: Bare to rettelser: "muskler og ledd" -> "kroppen" (fjerner dobbel "og"), "smerter" -> "vondt" (hverdagslig, ikke medisinsk). Aktive verb og positiv formulering ("motvirke følgene") beholdt - forkortede versjoner mistet energien eller fikk problemord ("mindre plager"). Leddene dekkes av punkt 3.
+
 ## Notert til senere
 
 - Engelsk Evening Reset-tekst: "step into trees" -> "into the trees"; "tension releasing, something opening" leses ujevnt. Tas i en egen engelsk gjennomgang.
