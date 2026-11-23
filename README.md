@@ -243,6 +243,9 @@ Resten av Evening Reset-siden (skader, hund, infoboksen) uendret. All felles tek
 - Punkt 2 før: Deg som liker å være ute og vil skåne leddene i terrenget
 - Punkt 2 nå: Deg som liker å være ute og vil ta vare på leddene
 - Hvorfor: "Ta vare på" (omsorg over tid) som på forsiden, ikke "skåne". "I terrenget" tatt ut - å ta vare på leddene gjelder generelt.
+- Punkt 3 før: Deg som vil senke stressnivået og få mer energi i hverdagen
+- Punkt 3 nå: Deg som vil stresse ned og få mer energi i hverdagen
+- Hvorfor: "Senke stressnivået" var klinisk. "Stresse ned" er det folk sier.
 
 ## Notert til senere
 
