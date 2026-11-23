@@ -180,7 +180,7 @@ export const sessions: Session[] = [
         'Vi går opp til <a href="https://www.google.com/maps?q=59.197427717465644,9.8402239222746" target="_blank" rel="noopener" class="font-semibold underline hover:text-sage transition-colors duration-200">Nordkollen</a> (353 moh.) og kommer oss skikkelig ut i naturen.',
       ],
       meetUp: 'Vi møtes på <a href="https://www.google.com/maps?q=59.18604216274942,9.803863873385133" target="_blank" rel="noopener" class="font-semibold underline hover:text-sage transition-colors duration-200">Parkering for Svarteberget og Nordkollen</a> og går derfra først på grusvei, så på skogssti.',
-      description: 'En praktisk dag der du lærer å redusere belastningen på leddene i terrenget, bygge styrke og stabilitet mens du går, og få mer ut av turen - både fysisk og mentalt.',
+      description: 'En hel dag med praktisk trening i terrenget. Du lærer gangteknikker som tar vare på leddene, og øvelser underveis som gir styrke og stabilitet - både fysisk og mentalt.',
     },
   },
   {
@@ -200,7 +200,7 @@ export const sessions: Session[] = [
         'Vi går opp til <a href="https://www.google.com/maps?q=59.197427717465644,9.8402239222746" target="_blank" rel="noopener" class="font-semibold underline hover:text-sage transition-colors duration-200">Nordkollen</a> (353 moh.) og kommer oss skikkelig ut i naturen.',
       ],
       meetUp: 'Vi møtes på <a href="https://www.google.com/maps?q=59.18604216274942,9.803863873385133" target="_blank" rel="noopener" class="font-semibold underline hover:text-sage transition-colors duration-200">Parkering for Svarteberget og Nordkollen</a> og går derfra først på grusvei, så på skogssti.',
-      description: 'En praktisk dag der du lærer å redusere belastningen på leddene i terrenget, bygge styrke og stabilitet mens du går, og få mer ut av turen - både fysisk og mentalt.',
+      description: 'En hel dag med praktisk trening i terrenget. Du lærer gangteknikker som tar vare på leddene, og øvelser underveis som gir styrke og stabilitet - både fysisk og mentalt.',
     },
   },
   {
@@ -220,7 +220,7 @@ export const sessions: Session[] = [
         'Vi går opp til <a href="https://www.google.com/maps?q=59.197427717465644,9.8402239222746" target="_blank" rel="noopener" class="font-semibold underline hover:text-sage transition-colors duration-200">Nordkollen</a> (353 moh.) og kommer oss skikkelig ut i naturen.',
       ],
       meetUp: 'Vi møtes på <a href="https://www.google.com/maps?q=59.18604216274942,9.803863873385133" target="_blank" rel="noopener" class="font-semibold underline hover:text-sage transition-colors duration-200">Parkering for Svarteberget og Nordkollen</a> og går derfra først på grusvei, så på skogssti.',
-      description: 'En praktisk dag der du lærer å redusere belastningen på leddene i terrenget, bygge styrke og stabilitet mens du går, og få mer ut av turen - både fysisk og mentalt.',
+      description: 'En hel dag med praktisk trening i terrenget. Du lærer gangteknikker som tar vare på leddene, og øvelser underveis som gir styrke og stabilitet - både fysisk og mentalt.',
     },
   },
   {
@@ -242,7 +242,7 @@ export const sessions: Session[] = [
       ],
       meetUp: 'Vi møtes på <a href="https://www.google.com/maps?q=59.20275,9.73157" target="_blank" rel="noopener" class="font-semibold underline hover:text-sage transition-colors duration-200">Parkering for Østre Vealøs turområder</a> og går derfra på en godt merket sti, for det meste gjennom skog.',
       routeInfo: 'Turen er 7,6 km tur-retur, på en middels krevende sti.',
-      description: 'En praktisk dag der du lærer å redusere belastningen på leddene i terrenget, bygge styrke og stabilitet mens du går, og få mer ut av turen - både fysisk og mentalt.',
+      description: 'En hel dag med praktisk trening i terrenget. Du lærer gangteknikker som tar vare på leddene, og øvelser underveis som gir styrke og stabilitet - både fysisk og mentalt.',
     },
   },
 ].sort((a, b) => (a.date + a.time).localeCompare(b.date + b.time));

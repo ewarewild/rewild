@@ -138,6 +138,11 @@ Bioen er ferdig gjennomgått.
 - Nå: Rist av deg dagen og kom i kontakt med kroppen igjen på en kveldstur. Vi slipper stresset, skjerper fokuset og tar vare på leddene.
 - Hvorfor: Én lang setning delt i to. "Som hjelper deg å" var omstendelig. "Vi" tar leseren med, som på forsiden. "Tar vare på leddene" likt med forsiden (ikke "avlaste"). Vurderte "i nærnaturen" (byråkratisk), "i skogen" og "i mørket" - valgte ingenting, kortet viser allerede sted.
 
+**Rewild Trip-kortet** (alle Rewild Trip-datoene, og Google-beskrivelsen for tursidene)
+- Før: En praktisk dag der du lærer å redusere belastningen på leddene i terrenget, bygge styrke og stabilitet mens du går, og få mer ut av turen - både fysisk og mentalt.
+- Nå: En hel dag med praktisk trening i terrenget. Du lærer gangteknikker som tar vare på leddene, og øvelser underveis som gir styrke og stabilitet - både fysisk og mentalt.
+- Hvorfor: Lang liste etter "lærer å" delt opp. "Redusere belastningen" (problemord) -> "tar vare på". "Få mer ut av turen" var vagt. "En hel dag" viser forskjellen fra Evening Reset. Beholdt "praktisk" og "underveis" (treningen skjer mens man går) fra originalen, og "både fysisk og mentalt" - stabilitet gjelder hele mennesket.
+
 ## Notert til senere
 
 - Kurssidene sier "Turen foregår på engelsk." - sjekk om det fortsatt stemmer nå som siden er norsk først.
