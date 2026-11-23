@@ -353,6 +353,11 @@ Skader, hund og infoboksen uendret (identisk med Evening Reset). Rewild Trip-sid
 - Nå: Så bygger vi et opplegg helt rundt deg: aktiviteten, bevegelsene, terrenget og tempoet som støtter deg best.
 - Hvorfor: "Ut fra det" var stivt og vagt - "Så" fortsetter fra "Vi starter med". Lista hadde ulik form og "riktig"/"best" to ganger hver. "Støtter deg best" beholdt (Ewas valg) og gjelder nå alle fire.
 
+**Avsnitt 4**
+- Før: Øktene foregår ute, ansikt til ansikt, i Telemark og Vestfold - i naturen nærmest deg.
+- Nå: Vi møtes ute i naturen nær deg, i Telemark eller Vestfold.
+- Hvorfor: For mange innskudd. "Ansikt til ansikt" var oversatt og unødvendig - "vi møtes" sier det. "Eller", fordi en økt er ett sted.
+
 ## Notert til senere
 
 - Rewild Trip praktisk info: "Turen foregår på engelsk", spørsmålslinjen og "Du får all praktisk informasjon når du har booket plassen din." ble hoppet over. Den siste har "booket" (vurder "meldt deg på", likt med knappen).
