@@ -8,7 +8,7 @@ Startet 23. november 2026 (branch `norsk-og-bedrift`).
 
 1. Forsiden (`src/views/Index.astro`) - ferdig
 2. Om meg / bio (`src/data/bio.ts`) - ferdig
-3. Turer (neste): Evening Reset og Rewild Trip (`src/views/EveningResetTrip.astro`, `src/views/RewildCourseTrip.astro`, `src/data/events.ts`)
+3. Turer (pågår): Evening Reset og Rewild Trip (`src/views/EveningResetTrip.astro`, `src/views/RewildCourseTrip.astro`, `src/data/events.ts`)
 4. Historien (`src/views/TheStory.astro`)
 5. 1:1 (`src/views/OneToOne.astro`)
 6. Kontakt (`src/views/Contact.astro`)
@@ -130,6 +130,13 @@ Bioen er ferdig gjennomgått.
 - Før: Møt Ewa, guiden din i Rewild - forankret i naturen og i praksis.
 - Nå: Møt Ewa, guiden din i Rewild - med bakgrunn i idrett, yoga og et liv i naturen.
 - Hvorfor: "Forankret i praksis" var oversatt og abstrakt. Tre konkrete ting som oppsummerer bioen.
+
+### Turer - kalenderkortene på forsiden (`src/data/events.ts`)
+
+**Evening Reset-kortet** (felles tekst for alle Evening Reset-datoene)
+- Før: Rist av deg dagen og kom i kontakt med kroppen igjen på en kveldstur som hjelper deg å slippe stress, skjerpe fokuset og avlaste leddene.
+- Nå: Rist av deg dagen og kom i kontakt med kroppen igjen på en kveldstur. Vi slipper stresset, skjerper fokuset og tar vare på leddene.
+- Hvorfor: Én lang setning delt i to. "Som hjelper deg å" var omstendelig. "Vi" tar leseren med, som på forsiden. "Tar vare på leddene" likt med forsiden (ikke "avlaste"). Vurderte "i nærnaturen" (byråkratisk), "i skogen" og "i mørket" - valgte ingenting, kortet viser allerede sted.
 
 ## Notert til senere
 
