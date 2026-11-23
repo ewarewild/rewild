@@ -226,6 +226,9 @@ Resten av Evening Reset-siden (skader, hund, infoboksen) uendret. All felles tek
 - Punkt 2 før: Øvelser underveis som styrker muskler og ledd og motvirker følgene av mye stillesitting, som smerter i korsryggen
 - Punkt 2 nå: Øvelser underveis som styrker kroppen og motvirker følgene av mye stillesitting, som vondt i korsryggen
 - Hvorfor: Samme løsning som Evening Reset punkt 2 - fjerner dobbel "og", "vondt" i stedet for "smerter".
+- Punkt 3 før: Å trene koordinasjon og kroppsbevissthet (propriosepsjon) for bedre balanse, mindre skaderisiko og lettere bevegelse i terrenget
+- Punkt 3 nå: Å trene koordinasjon og kroppsbevissthet (propriosepsjon), så du får bedre balanse og beveger deg tryggere i terrenget
+- Hvorfor: Liste på tre gjort om til to aktive ledd ("får", "beveger deg"). "Mindre skaderisiko" (problemord) -> "tryggere". "(Propriosepsjon)" beholdt for faglig tyngde.
 
 ## Notert til senere
 
