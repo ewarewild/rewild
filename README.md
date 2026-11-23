@@ -188,9 +188,12 @@ Bioen er ferdig gjennomgått.
 - Nytt punkt 5: Deg som allerede trener, men vil lære å bruke kroppen smartere i terrenget
 - Hvorfor: "Holdningsplager" krasjet med bedriftssiden (holdningskorrigering har svak støtte i forskningen; ensidig belastning er problemet). "Mer variasjon" er bedriftssidens eget ord. "Få kroppen i gang igjen" ble forkastet fordi det antydet inaktivitet. Punkt 5 lagt til så lista også treffer folk som allerede trener, og viser at man lærer noe. Ulempe: folk med plager nevnes ikke direkte lenger.
 
+**Praktisk info**
+- Overskrift og erfaring uendret ("Du trenger ingen erfaring, men du bør klare å holde et raskere tempo på vei opp." - "raskere" = ganske raskt, naturlig norsk).
+- "Turen foregår på engelsk." - uendret. Bekreftet av Ewa: turene går på engelsk (gjelder også Rewild Trip).
+
 ## Notert til senere
 
 - Engelsk Evening Reset-tekst: "step into trees" -> "into the trees"; "tension releasing, something opening" leses ujevnt. Tas i en egen engelsk gjennomgang.
 - Google-beskrivelse for Evening Reset sier "Nå i Skien, Porsgrunn, Larvik og Sandefjord" - kalenderen har bare Porsgrunn og Larvik nå. Sjekk med Ewa.
 
-- Kurssidene sier "Turen foregår på engelsk." - sjekk om det fortsatt stemmer nå som siden er norsk først.
