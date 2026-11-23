@@ -241,7 +241,7 @@ export const sessions: Session[] = [
         'Vi går opp til <a href="https://ut.no/turforslag/113681/topptur-til-stre-veals" target="_blank" rel="noopener" class="font-semibold underline hover:text-sage transition-colors duration-200">Østre Vealøs</a> (445,5 moh.) og kommer oss skikkelig ut i naturen.',
       ],
       meetUp: 'Vi møtes på <a href="https://www.google.com/maps?q=59.20275,9.73157" target="_blank" rel="noopener" class="font-semibold underline hover:text-sage transition-colors duration-200">Parkering for Østre Vealøs turområder</a> og går derfra på en godt merket sti, for det meste gjennom skog.',
-      routeInfo: 'Turen er 7,6 km tur-retur, på en middels krevende sti.',
+      routeInfo: 'Ruten er 7,6 km tur-retur, på en middels krevende sti.',
       description: 'En hel dag med praktisk trening i terrenget. Du lærer gangteknikker som tar vare på leddene, og øvelser underveis som gir styrke og stabilitet - både fysisk og mentalt.',
     },
   },

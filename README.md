@@ -247,6 +247,10 @@ Resten av Evening Reset-siden (skader, hund, infoboksen) uendret. All felles tek
 - Punkt 3 nå: Deg som vil stresse ned og få mer energi i hverdagen
 - Hvorfor: "Senke stressnivået" var klinisk. "Stresse ned" er det folk sier.
 
+**Praktisk info**
+- Overskrift og oppmøtetekstene (Nordkollen og Østre Vealøs) uendret.
+- Lengde: "Turen er 9 km tur-retur ..." / "Turen er 7,6 km tur-retur ..." -> "Ruten er ...". Unngår "tur ... tur-retur ... turen" på to linjer; ruten = distansen, turen = hele dagen.
+
 ## Notert til senere
 
 - Rewild Trip "Hvem passer det for?" punkt 4: "Alle som har vondt i ledd eller rygg etter mange timer med sitting" - venter. Bryter "Deg som"-mønsteret, og påstanden om sitting -> vondt krasjer med bedriftssiden. Forslag: a) "Deg som har vondt i ledd eller rygg etter mange timer med sitting", b) "Deg som sitter mye og kjenner det i ledd og rygg" (anbefalt), c) "Deg som sitter mye på jobb og vil gi kroppen mer variasjon".
