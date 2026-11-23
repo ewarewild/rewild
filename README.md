@@ -8,8 +8,8 @@ Startet 23. november 2026 (branch `norsk-og-bedrift`).
 
 1. Forsiden (`src/views/Index.astro`) - ferdig
 2. Om meg / bio (`src/data/bio.ts`) - ferdig
-3. Turer (pågår - Evening Reset ferdig, Rewild Trip pågår): Evening Reset og Rewild Trip (`src/views/EveningResetTrip.astro`, `src/views/RewildCourseTrip.astro`, `src/data/events.ts`)
-4. Historien (`src/views/TheStory.astro`)
+3. Turer (ferdig, med noen punkter på vent): Evening Reset og Rewild Trip (`src/views/EveningResetTrip.astro`, `src/views/RewildCourseTrip.astro`, `src/data/events.ts`)
+4. Historien (`src/views/TheStory.astro`) - neste
 5. 1:1 (`src/views/OneToOne.astro`)
 6. Kontakt (`src/views/Contact.astro`)
 7. Bedrift (`src/views/Bedrift.astro`)
@@ -264,6 +264,8 @@ Resten av Evening Reset-siden (skader, hund, infoboksen) uendret. All felles tek
 - Før: Vi går i de fleste værforhold. Blir forholdene farlige, avlyses likevel turen. Du får da pengene tilbake eller kan booke en ny tur.
 - Nå: Vi går i nesten all slags vær, men blir forholdene farlige, avlyses turen. Du får da pengene tilbake eller kan melde deg på en annen tur.
 - Hvorfor: Samme som Evening Reset. "Likevel" tatt ut.
+
+Skader, hund og infoboksen uendret (identisk med Evening Reset). Rewild Trip-siden er ferdig, bortsett fra punktene under "Notert til senere".
 
 ## Notert til senere
 
