@@ -281,6 +281,13 @@ Skader, hund og infoboksen uendret (identisk med Evening Reset). Rewild Trip-sid
 - Nå: Brystet verket hele tiden av oppdemmet stress og følelser. Jeg hadde skader i kneet og skulderen som ikke ville gro. Jeg følte meg deprimert, fanget og isolert og så ingen vei ut.
 - Hvorfor: "Oppdemmet" (Ewas valg) er et sterkere bilde. "En skade" på to steder -> "skader". "Ingen åpenbar vei ut av situasjonen jeg var i" var oversatt og gjentok "situasjon" fra avsnitt 1 - "ingen vei ut" er kort og tungt. Feil komma fjernet.
 
+**Avsnitt 3 og 4** - uendret (korte, rytmiske, fungerer).
+
+**Avsnitt 5**
+- Før: Jeg tok imot elementene som en vei inn i nærværet. ...
+- Nå: Jeg tok imot elementene som en vei inn i nuet. ...
+- Hvorfor: "Inn i nærværet" (bestemt form) var oversatt fra "into presence" og uvanlig norsk. "Nuet" er det vanlige uttrykket.
+
 ## Notert til senere
 
 - Rewild Trip praktisk info: "Turen foregår på engelsk", spørsmålslinjen og "Du får all praktisk informasjon når du har booket plassen din." ble hoppet over. Den siste har "booket" (vurder "meldt deg på", likt med knappen).
