@@ -11,8 +11,8 @@ Startet 23. november 2026 (branch `norsk-og-bedrift`).
 3. Turer (ferdig, med noen punkter på vent): Evening Reset og Rewild Trip (`src/views/EveningResetTrip.astro`, `src/views/RewildCourseTrip.astro`, `src/data/events.ts`)
 4. Historien (`src/views/TheStory.astro`) - ferdig
 5. 1:1 (`src/views/OneToOne.astro`) - ferdig
-6. Kontakt (`src/views/Contact.astro`) - neste
-7. Bedrift (`src/views/Bedrift.astro`)
+6. Kontakt (`src/views/Contact.astro`) - ferdig
+7. Bedrift (`src/views/Bedrift.astro`) - neste
 8. Påmelding og betaling (`src/views/Signup.astro`, `src/views/Payment.astro`)
 9. Vilkår (`src/views/Vilkar.astro`)
 10. Meny og bunntekst (`src/components/Nav.astro`, `src/components/Footer.astro`)
@@ -368,6 +368,15 @@ Skader, hund og infoboksen uendret (identisk med Evening Reset). Rewild Trip-sid
 - Hvorfor: "Skreddersydde aktiviteter" var brosjyrespråk og vagt. Nå står det hva og hvor (søkeord). "I ditt tempo" passer for alle, ikke bare dem med mål.
 
 1:1-siden er ferdig.
+
+### Kontakt (`src/views/Contact.astro`)
+
+- Overskrift, skjemafelt, knapp og beskjeder uendret (godt og naturlig norsk).
+- Google-beskrivelse før: Ta kontakt med Rewild.
+- Google-beskrivelse nå: Spørsmål om turer, en-til-en eller tilbud til bedrifter? Ta kontakt med Ewa i Rewild.
+- Hvorfor: Gjentok bare overskriften. Nå sier den hva man kan spørre om, med samme ord som forsiden og 1:1.
+
+Kontakt-siden er ferdig.
 
 ## Notert til senere
 
