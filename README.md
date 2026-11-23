@@ -126,6 +126,11 @@ Samme tekst brukes på forsiden (avsnitt 1-2 synlige, resten under "Mer →") og
 
 Bioen er ferdig gjennomgått.
 
+**Google-beskrivelse for Om meg-siden** (`src/views/About.astro`)
+- Før: Møt Ewa, guiden din i Rewild - forankret i naturen og i praksis.
+- Nå: Møt Ewa, guiden din i Rewild - med bakgrunn i idrett, yoga og et liv i naturen.
+- Hvorfor: "Forankret i praksis" var oversatt og abstrakt. Tre konkrete ting som oppsummerer bioen.
+
 ## Notert til senere
 
 - Kurssidene sier "Turen foregår på engelsk." - sjekk om det fortsatt stemmer nå som siden er norsk først.
