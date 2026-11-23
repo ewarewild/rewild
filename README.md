@@ -449,7 +449,7 @@ Bedriftssiden er ferdig.
 ### Påmelding (`src/views/Signup.astro`)
 
 - Merkelapper, spørsmål, personvern, pris, knapper og feilmelding uendret.
-- Ansvarsfraskrivelse: "Veiledningen på Rewild-arrangementer" -> "Veiledningen på turene" ("arrangementer" brukes ikke ellers på siden).
+- Ansvarsfraskrivelse: "Veiledningen på Rewild-arrangementer" -> "Veiledningen i Rewild" (kort, og dekker turer, kurs og 1:1; "på turene" ble forkastet fordi skjemaet også brukes til 1:1).
 - Beskjed etter innsending: "Takk - vi har mottatt ..." -> "Takk - jeg har mottatt ..." (resten av siden sier "jeg").
 
 ## Notert til senere
