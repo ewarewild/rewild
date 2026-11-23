@@ -7,7 +7,7 @@ Startet 23. november 2026 (branch `norsk-og-bedrift`).
 ## Rekkefølge
 
 1. Forsiden (`src/views/Index.astro`) - ferdig
-2. Om meg / bio (`src/data/bio.ts`) - neste
+2. Om meg / bio (`src/data/bio.ts`) - pågår
 3. Turer: Evening Reset og Rewild Trip (`src/views/EveningResetTrip.astro`, `src/views/RewildCourseTrip.astro`, `src/data/events.ts`)
 4. Historien (`src/views/TheStory.astro`)
 5. 1:1 (`src/views/OneToOne.astro`)
@@ -66,6 +66,15 @@ Startet 23. november 2026 (branch `norsk-og-bedrift`).
 ## Forsiden ferdig
 
 Toppen, introteksten, bedriftslinjen og 1:1-linjen er gjennomgått. Om meg-teksten (bio) tas som neste del.
+
+### Om meg / bio (`src/data/bio.ts`)
+
+Samme tekst brukes på forsiden (avsnitt 1-2 synlige, resten under "Mer →") og på Om meg-siden.
+
+**Avsnitt 1**
+- Før: Jeg underviser i naturbasert bevegelse i Rewild.
+- Nå: Jeg står bak Rewild og er guiden din på turene.
+- Hvorfor: "Underviser i naturbasert bevegelse" hørtes ut som et høyskolefag, og "i Rewild" som en arbeidsplass. "Står bak" viser at Rewild er Ewas eget. "Guide" er ordet resten av siden bruker ("guidede turer", "guiden din i Rewild"). Hva hun underviser i, står allerede i avsnitt 9.
 
 ## Notert til senere
 

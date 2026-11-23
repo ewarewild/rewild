@@ -10,7 +10,7 @@ export const bio = (lang: Lang) =>
     ? {
         heading: 'Hei! Jeg er Ewa',
         paragraphs: [
-          'Jeg underviser i naturbasert bevegelse i Rewild.',
+          'Jeg står bak Rewild og er guiden din på turene.',
           'Jeg vokste opp i fjellene i Sør-Polen med foreldre som jobbet med idrett, og trente mange ulike idretter helt fra jeg var liten.',
           'Jeg studerte kroppsøving i Storbritannia, der jeg ble kjent med yoga, pilates og biomekanikken bak skadeforebygging.',
           'Jeg er sertifisert hathayogalærer fra London, har sertifiseringen Advanced Trauma-Informed Academy fra Nordic Maha Yoga i Oslo, og diplom som Outdoor Yoga Guide in Wild Nature hos Marian Papp.',
