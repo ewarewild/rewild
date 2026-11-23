@@ -229,6 +229,9 @@ Resten av Evening Reset-siden (skader, hund, infoboksen) uendret. All felles tek
 - Punkt 3 før: Å trene koordinasjon og kroppsbevissthet (propriosepsjon) for bedre balanse, mindre skaderisiko og lettere bevegelse i terrenget
 - Punkt 3 nå: Å trene koordinasjon og kroppsbevissthet (propriosepsjon), så du får bedre balanse og beveger deg tryggere i terrenget
 - Hvorfor: Liste på tre gjort om til to aktive ledd ("får", "beveger deg"). "Mindre skaderisiko" (problemord) -> "tryggere". "(Propriosepsjon)" beholdt for faglig tyngde.
+- Punkt 4 før: Gangteknikker som reduserer belastningen på leddene i terrenget - i oppoverbakke, nedoverbakke og på flat mark
+- Punkt 4 nå: Gangteknikker som reduserer belastningen på leddene - i oppoverbakke, nedoverbakke og på flat mark
+- Hvorfor: Samme som Evening Reset punkt 3 - "i terrenget" tatt ut (dobbel "i", og punkt 3 slutter med "i terrenget").
 
 ## Notert til senere
 
