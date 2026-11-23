@@ -255,6 +255,11 @@ Resten av Evening Reset-siden (skader, hund, infoboksen) uendret. All felles tek
 - Erfaring nå: Du trenger ingen erfaring, men du bør klare å gå opptil 9 km i terrenget, med øvelser underveis - også i oppoverbakke.
 - Hvorfor: "9 km" var feil for Østre Vealøs (7,6 km) - teksten er felles, så "opptil 9 km". "Komfortabel med" var oversatt -> "klare å" (likt med Evening Reset). "Brattere" tatt ut - øvelsene er i oppoverbakke, men det er ikke så ille.
 
+**Ta med-lista**
+- "Klær etter været, og i tillegg varme, vindtette lag, lue og votter til toppen" delt i to: "Klær etter været" + "Ekstra varme og vindtette lag, lue og votter til toppen" ("og i tillegg" dobbelt, komma mellom adjektiver er engelsk stil).
+- "Gode sko med godt grep" -> "Tursko med godt grep" (gode/godt, likt med Evening Reset).
+- Resten uendret.
+
 ## Notert til senere
 
 - Rewild Trip praktisk info: "Turen foregår på engelsk", spørsmålslinjen og "Du får all praktisk informasjon når du har booket plassen din." ble hoppet over. Den siste har "booket" (vurder "meldt deg på", likt med knappen).
