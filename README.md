@@ -12,7 +12,7 @@ Startet 23. november 2026 (branch `norsk-og-bedrift`).
 4. Historien (`src/views/TheStory.astro`) - ferdig
 5. 1:1 (`src/views/OneToOne.astro`) - ferdig
 6. Kontakt (`src/views/Contact.astro`) - ferdig
-7. Bedrift (`src/views/Bedrift.astro`) - neste
+7. Bedrift (`src/views/Bedrift.astro`) - pågår
 8. Påmelding og betaling (`src/views/Signup.astro`, `src/views/Payment.astro`)
 9. Vilkår (`src/views/Vilkar.astro`)
 10. Meny og bunntekst (`src/components/Nav.astro`, `src/components/Footer.astro`)
@@ -377,6 +377,10 @@ Skader, hund og infoboksen uendret (identisk med Evening Reset). Rewild Trip-sid
 - Hvorfor: Gjentok bare overskriften. Nå sier den hva man kan spørre om, med samme ord som forsiden og 1:1.
 
 Kontakt-siden er ferdig.
+
+### Bedrift (`src/views/Bedrift.astro`)
+
+**Fanen i nettleseren:** "Bedriftsopplegg - Rewild" -> "For bedrifter - Rewild" (likt med menyen). "For bedrifter" over overskriften uendret.
 
 ## Notert til senere
 
