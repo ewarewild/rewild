@@ -7,8 +7,8 @@ Startet 23. november 2026 (branch `norsk-og-bedrift`).
 ## Rekkefølge
 
 1. Forsiden (`src/views/Index.astro`) - ferdig
-2. Om meg / bio (`src/data/bio.ts`) - pågår
-3. Turer: Evening Reset og Rewild Trip (`src/views/EveningResetTrip.astro`, `src/views/RewildCourseTrip.astro`, `src/data/events.ts`)
+2. Om meg / bio (`src/data/bio.ts`) - ferdig
+3. Turer (neste): Evening Reset og Rewild Trip (`src/views/EveningResetTrip.astro`, `src/views/RewildCourseTrip.astro`, `src/data/events.ts`)
 4. Historien (`src/views/TheStory.astro`)
 5. 1:1 (`src/views/OneToOne.astro`)
 6. Kontakt (`src/views/Contact.astro`)
@@ -118,6 +118,13 @@ Samme tekst brukes på forsiden (avsnitt 1-2 synlige, resten under "Mer →") og
 - Før: I undervisningen min legger jeg vekt på trygg, bevisst bevegelse i terrenget. Jeg bruker pusten, sansene og kontakten med naturen, og øvelser inspirert av yoga, pilates, qigong og funksjonell styrketrening, for å koble sammen kropp og sinn igjen.
 - Nå: I undervisningen min legger jeg vekt på trygg og bevisst bevegelse i terrenget. Jeg bruker pusten, sansene og naturen rundt oss, sammen med øvelser inspirert av yoga, pilates, qigong og funksjonell styrketrening. Slik kobler vi kropp og sinn sammen igjen.
 - Hvorfor: Andre setning hadde liste i liste (fire "og", tre komma). Delt opp, poenget fikk egen kort sluttsetning med "vi". "Trygg, bevisst" -> "trygg og bevisst" (komma var engelsk). "I undervisningen min" beholdt for å understreke at Ewa underviser.
+
+**Avsnitt 10**
+- Før: Jeg tilbringer mye tid i naturen - sover ute, trener, lærer, går utenfor stiene og bare er. Det gir meg balansen tilbake og fyller meg med energi og inspirasjon.
+- Nå: ... går utenfor stien og bare er. ... (resten uendret)
+- Hvorfor: "Utenfor stien" i entall er mer naturlig norsk. Resten fungerte godt og ble beholdt.
+
+Bioen er ferdig gjennomgått.
 
 ## Notert til senere
 

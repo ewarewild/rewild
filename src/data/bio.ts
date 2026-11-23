@@ -19,7 +19,7 @@ export const bio = (lang: Lang) =>
           'Jeg begynte å gå opp på toppene i nærheten, i all slags vær. Jeg trente kroppen og tok inn naturen med alle sansene.',
           `Jeg kjente forskjellen med en gang, og livet mitt forandret seg fullstendig. Du kan lese hele historien ${link('/the-story', 'her')}.`,
           'I undervisningen min legger jeg vekt på trygg og bevisst bevegelse i terrenget. Jeg bruker pusten, sansene og naturen rundt oss, sammen med øvelser inspirert av yoga, pilates, qigong og funksjonell styrketrening. Slik kobler vi kropp og sinn sammen igjen.',
-          'Jeg tilbringer mye tid i naturen - sover ute, trener, lærer, går utenfor stiene og bare er. Det gir meg balansen tilbake og fyller meg med energi og inspirasjon.',
+          'Jeg tilbringer mye tid i naturen - sover ute, trener, lærer, går utenfor stien og bare er. Det gir meg balansen tilbake og fyller meg med energi og inspirasjon.',
         ],
       }
     : {
