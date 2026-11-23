@@ -15,7 +15,7 @@ Startet 23. november 2026 (branch `norsk-og-bedrift`).
 7. Bedrift (`src/views/Bedrift.astro`) - ferdig
 8. Påmelding og betaling (`src/views/Signup.astro`, `src/views/Payment.astro`) - ferdig
 9. Vilkår (`src/views/Vilkar.astro`) - ferdig (uendret)
-10. Meny og bunntekst (`src/components/Nav.astro`, `src/components/Footer.astro`) - neste
+10. Meny og bunntekst (`src/components/Nav.astro`, `src/components/Footer.astro`) - ferdig
 
 ## Prinsipper vi har landet på
 
@@ -462,6 +462,13 @@ Bedriftssiden er ferdig.
 ### Vilkår (`src/views/Vilkar.astro`) - uendret
 
 Språket er godt, og i juridisk tekst er presisjon viktigere enn flyt. "Vi" og "ombooking" beholdt - vanlig og presist i vilkår.
+
+### Meny og bunntekst (`src/components/Nav.astro`, `src/components/Footer.astro`)
+
+- Menyen og bunntekstens lenker uendret.
+- Ansvarsfraskrivelse i bunnteksten: "naturbaserte aktiviteter" -> "aktiviteter i naturen". Resten urørt.
+
+**Hele den norske siden er gjennomgått** (23. november 2026). Se punktene under for det som gjenstår.
 
 ## Notert til senere
 
