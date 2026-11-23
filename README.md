@@ -12,8 +12,8 @@ Startet 23. november 2026 (branch `norsk-og-bedrift`).
 4. Historien (`src/views/TheStory.astro`) - ferdig
 5. 1:1 (`src/views/OneToOne.astro`) - ferdig
 6. Kontakt (`src/views/Contact.astro`) - ferdig
-7. Bedrift (`src/views/Bedrift.astro`) - pågår
-8. Påmelding og betaling (`src/views/Signup.astro`, `src/views/Payment.astro`)
+7. Bedrift (`src/views/Bedrift.astro`) - ferdig
+8. Påmelding og betaling (`src/views/Signup.astro`, `src/views/Payment.astro`) - neste
 9. Vilkår (`src/views/Vilkar.astro`)
 10. Meny og bunntekst (`src/components/Nav.astro`, `src/components/Footer.astro`)
 
@@ -436,6 +436,15 @@ Kontakt-siden er ferdig.
 - Avsnitt 3 nå: Jeg har bakgrunn fra flere idretter og mange års erfaring med å bevege meg utenfor stien, også i vintermørket.
 - Hvorfor: "Jeg har bakgrunn fra" er vanlig norsk. "Stien" likt med bioen. Språksetningen tatt ut - står allerede i tilbudsdelen.
 - Avsnitt 4 ("Rewild holder til ved Porsgrunn og har økter i hele Grenland og Vestfold.") uendret. "Grenland" (ikke "Telemark") er bevisst på bedriftssiden.
+
+**Kontaktdelen** ("Vil dere høre mer?" osv.) uendret.
+
+**Google-beskrivelse**
+- Før: Utendørs økter for ansatte i Grenland og Vestfold: bevegelse med mer variasjon, mindre belastning og bedre restitusjon - på stier i nærheten av arbeidsplassen.
+- Nå: Utendørs økter for ansatte i Grenland og Vestfold, på stier nær arbeidsplassen: mer variasjon, mindre belastning og bedre restitusjon.
+- Hvorfor: Ryddet (kolon + liste + tankestrek). Ewa valgte å beholde det faglige innholdet framfor å speile overskriften.
+
+Bedriftssiden er ferdig.
 
 ## Notert til senere
 
