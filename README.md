@@ -94,6 +94,11 @@ Samme tekst brukes på forsiden (avsnitt 1-2 synlige, resten under "Mer →") og
 - Til slutt delt i to setninger for å få plass til hvem Marian Papp er. Fra marianpapp.se: utdanningen heter "Naturyogaguide/coach i vild/orörd natur" (gir intyg/diplom) -> norsk "naturyogaguide i vill natur". "Studert til" fungerer med tittel (som "studere til lege"). Hun er yogaterapeut med PhD fra Karolinska Institutet (2017, om hathayoga) og beskriver seg med "evidensbaserte yogaprogram" - doktorgraden fra Karolinska viser det evidensbaserte konkret, uten fagord.
 - Engelsk versjon oppdatert til samme innhold: "I qualified as a Hatha Yoga teacher in London and hold an Advanced Trauma-Informed Academy certification from Nordic Maha Yoga in Oslo. I also trained as an Outdoor Yoga Guide in Wild Nature with Marian Papp, a yoga therapist with a PhD from Karolinska Institutet." (Offisielle engelske navn beholdt på engelsk.)
 
+**Avsnitt 5**
+- Før: Den egentlige historien om Rewild går tilbake til 80-tallet, da naturen var en del av hverdagen - trening, sanking og mye frihet til å leke vilt.
+- Nå: Historien om Rewild begynner egentlig på 80-tallet, da naturen var en del av hverdagen - trening, sanking og frihet til å leke vilt.
+- Hvorfor: "Den egentlige historien" var oversatt fra "the actual story" og kunne antyde en falsk historie. "Egentlig" inni setningen er muntlig og naturlig. "Begynner" er mer levende enn "går tilbake til". "Mye" tatt ut - "frihet til å leke vilt" står sterkere alene.
+
 ## Notert til senere
 
 - Kurssidene sier "Turen foregår på engelsk." - sjekk om det fortsatt stemmer nå som siden er norsk først.
