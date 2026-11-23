@@ -295,6 +295,11 @@ Skader, hund og infoboksen uendret (identisk med Evening Reset). Rewild Trip-sid
 - Nå: Plassen stresset hadde tatt, ble ryddet. Og så fylt med rent liv. Igjen og igjen, og igjen...
 - Hvorfor: "Igjen" sto fire ganger. Den bevisste gjentakelsen til slutt får nå fullt trykk.
 
+**Avsnitt 11**
+- Før: ... forsvant, og igjen satt jeg med glede, ro og en dyp takknemlighet over å være i live. ...
+- Nå: ... forsvant, og tilbake satt jeg med glede, ro og en dyp takknemlighet for å være i live. ...
+- Hvorfor: "Igjen satt jeg med" kunne leses som "nok en gang" etter "Igjen og igjen" i avsnitt 10. "Takknemlighet for", ikke "over". "Avhengighetsskapende" beholdt (vurderte "hekta").
+
 ## Notert til senere
 
 - Rewild Trip praktisk info: "Turen foregår på engelsk", spørsmålslinjen og "Du får all praktisk informasjon når du har booket plassen din." ble hoppet over. Den siste har "booket" (vurder "meldt deg på", likt med knappen).
