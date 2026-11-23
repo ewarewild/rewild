@@ -322,6 +322,11 @@ Skader, hund og infoboksen uendret (identisk med Evening Reset). Rewild Trip-sid
 - Nå: Forvandlingen inspirerte meg til å dele disse verktøyene med andre. Så de også kan kjenne den samme lettelsen og styrken i sitt eget liv.
 - Hvorfor: "Enormt" var oversatt og sto rart. "Sine egne liv" er engelsk stil -> "sitt eget liv". "Også" knytter leseren til Ewas erfaring. To korte setninger beholdt.
 
+**Avsnitt 17**
+- Før: Disse turene viste seg å være den aller første, organiske formen for Evening Reset. Nå mer gjennomarbeidet, mer tilgjengelig og i stadig utvikling.
+- Nå: Disse turene ble spiren til Evening Reset. Nå mer gjennomarbeidet, mer tilgjengelig og i stadig utvikling.
+- Hvorfor: "Organisk" var oversatt. "Spiren til" er et vanlig norsk uttrykk og et naturbilde som henger sammen med "i stadig utvikling".
+
 ## Notert til senere
 
 - Rewild Trip praktisk info: "Turen foregår på engelsk", spørsmålslinjen og "Du får all praktisk informasjon når du har booket plassen din." ble hoppet over. Den siste har "booket" (vurder "meldt deg på", likt med knappen).
