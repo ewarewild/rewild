@@ -428,6 +428,10 @@ Kontakt-siden er ferdig.
 
 **Språk, gruppestørrelse og pris** - "Større grupper deles over flere økter." -> "Større grupper fordeles på flere økter." Språk og pris uendret.
 
+**Om meg (bedrift)** - overskrift uendret.
+- Avsnitt 1: lagt til "Jeg har også studert til naturyogaguide hos Marian Papp, yogaterapeut med doktorgrad fra Karolinska Institutet."
+- Hvorfor: Bedriftssiden argumenterer med forskning - doktorgraden fra Karolinska gir mest faglig tyngde for HMS. Forenklet fra bioen (uten "i vill natur").
+
 ## Notert til senere
 
 - Rewild Trip praktisk info: "Turen foregår på engelsk", spørsmålslinjen og "Du får all praktisk informasjon når du har booket plassen din." ble hoppet over. Den siste har "booket" (vurder "meldt deg på", likt med knappen).
