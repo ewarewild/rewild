@@ -288,6 +288,13 @@ Skader, hund og infoboksen uendret (identisk med Evening Reset). Rewild Trip-sid
 - Nå: Jeg tok imot elementene som en vei inn i nuet. ...
 - Hvorfor: "Inn i nærværet" (bestemt form) var oversatt fra "into presence" og uvanlig norsk. "Nuet" er det vanlige uttrykket.
 
+**Avsnitt 6-9** - uendret (rytmiske, sanselige, fungerer).
+
+**Avsnitt 10**
+- Før: Plassen stresset hadde tatt, ble ryddet. Og så fylt opp igjen med rent liv. Igjen og igjen, og igjen...
+- Nå: Plassen stresset hadde tatt, ble ryddet. Og så fylt med rent liv. Igjen og igjen, og igjen...
+- Hvorfor: "Igjen" sto fire ganger. Den bevisste gjentakelsen til slutt får nå fullt trykk.
+
 ## Notert til senere
 
 - Rewild Trip praktisk info: "Turen foregår på engelsk", spørsmålslinjen og "Du får all praktisk informasjon når du har booket plassen din." ble hoppet over. Den siste har "booket" (vurder "meldt deg på", likt med knappen).
