@@ -413,6 +413,11 @@ Kontakt-siden er ferdig.
 - Helgekurs, "Passer best for" nå: en samling eller kickoff med faglig innhold. Rom for å hente seg inn, øve til teknikkene sitter og ta med felles verktøy tilbake til jobben.
 - Hvorfor: "Vaner som varer" overlappet med Fire ukers serie ("varig endring") og var lite troverdig etter to dager. Nå sier den hva som er unikt: tid til at teknikkene sitter, og felles verktøy for hele gruppen. "Hente seg inn" beholdt. ("Bli kjent med hverandre" forkastet - ikke knyttet til kurset.)
 
+**"Hva de ansatte får ut av det"** - overskrift uendret.
+- Punkt 1 før: En ordentlig pause fra sittingen: bevegelse kroppen ikke får i løpet av en arbeidsdag ved pulten
+- Punkt 1 nå: En ordentlig pause fra sittingen: variert bevegelse ute, i stedet for samme stilling ved pulten hele dagen
+- Hvorfor: Gjentok nesten ordrett avsnitt 3 ("gi kroppen det den ikke får av en dag med sitting"). "Samme stilling hele dagen" speiler forskningen i avsnitt 2. "Ved pulten" beholdt.
+
 ## Notert til senere
 
 - Rewild Trip praktisk info: "Turen foregår på engelsk", spørsmålslinjen og "Du får all praktisk informasjon når du har booket plassen din." ble hoppet over. Den siste har "booket" (vurder "meldt deg på", likt med knappen).
