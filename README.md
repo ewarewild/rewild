@@ -87,9 +87,10 @@ Samme tekst brukes på forsiden (avsnitt 1-2 synlige, resten under "Mer →") og
 
 **Avsnitt 4** (sertifiseringene)
 - Før: Jeg er sertifisert hathayogalærer fra London, har sertifiseringen Advanced Trauma-Informed Academy fra Nordic Maha Yoga i Oslo, og diplom som Outdoor Yoga Guide in Wild Nature hos Marian Papp.
-- Nå: Jeg er utdannet hathayogalærer i London, har avansert sertifisering i traumebevisst undervisning fra Nordic Maha Yoga i Oslo og har diplom som Outdoor Yoga Guide in Wild Nature hos Marian Papp.
+- Nå: Jeg er utdannet hathayogalærer i London, har avansert sertifisering i traumebevisst undervisning fra Nordic Maha Yoga i Oslo og har studert yoga i vill natur hos Marian Papp.
 - Hvorfor: Fjernet "sertifisert/sertifiseringen", "fra London" -> "i London", ingen komma før "og" med samme subjekt. Tre ledd som starter med verb (er / har / har) gir jevn rytme. Ikke noe tidsord ("senere") - det stemmer ikke med når utdanningene skjedde.
-- "Advanced Trauma-Informed Academy" er beskrevet på norsk ("avansert sertifisering i traumebevisst undervisning") så leserne forstår hva det er - og det viser kompetansen på mental og emosjonell stabilitet. Mellomversjonen "har fullført" ble forkastet fordi den svekket den faglige tyngden. "Outdoor Yoga Guide in Wild Nature" beholdes på engelsk som offisiell tittel, fordi den er lett å forstå.
+- "Advanced Trauma-Informed Academy" er beskrevet på norsk ("avansert sertifisering i traumebevisst undervisning") så leserne forstår hva det er - og det viser kompetansen på mental og emosjonell stabilitet. Mellomversjonen "har fullført" ble forkastet fordi den svekket den faglige tyngden.
+- "Diplom som Outdoor Yoga Guide in Wild Nature" byttet til "studert yoga i vill natur hos Marian Papp" (Ewas ønske): viser at hun har lært av en lærer, helt norsk, og "vill natur" klinger med Rewild. "Hos", ikke "med" (anglisisme). Det formelle er dekket av "utdannet" og "avansert sertifisering".
 
 ## Notert til senere
 
