@@ -10,7 +10,7 @@ Startet 23. november 2026 (branch `norsk-og-bedrift`).
 2. Om meg / bio (`src/data/bio.ts`) - ferdig
 3. Turer (ferdig, med noen punkter på vent): Evening Reset og Rewild Trip (`src/views/EveningResetTrip.astro`, `src/views/RewildCourseTrip.astro`, `src/data/events.ts`)
 4. Historien (`src/views/TheStory.astro`) - ferdig
-5. 1:1 (`src/views/OneToOne.astro`) - neste
+5. 1:1 (`src/views/OneToOne.astro`) - pågår
 6. Kontakt (`src/views/Contact.astro`)
 7. Bedrift (`src/views/Bedrift.astro`)
 8. Påmelding og betaling (`src/views/Signup.astro`, `src/views/Payment.astro`)
@@ -328,6 +328,15 @@ Skader, hund og infoboksen uendret (identisk med Evening Reset). Rewild Trip-sid
 - Hvorfor: "Organisk" var oversatt. "Spiren til" er et vanlig norsk uttrykk og et naturbilde som henger sammen med "i stadig utvikling".
 
 **Avsnitt 18** ("Sammen med deg.") - uendret. Historien er ferdig gjennomgått.
+
+### 1:1 (`src/views/OneToOne.astro`)
+
+**Overskrift** "En-til-en" - uendret.
+
+**Teksten under overskriften**
+- Før: Din vei, i ditt tempo.
+- Nå: Vi finner veien sammen, i ditt tempo.
+- Hvorfor: Originalen var stakkato. "Din (egen) vei" går mot hva 1:1 er - "gå sin egen vei" betyr å klare seg uten andre. "Sammen" viser veiledningen og speiler slutten av Historien ("Sammen med deg.").
 
 ## Notert til senere
 
