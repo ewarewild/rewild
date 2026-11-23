@@ -6,8 +6,8 @@ Startet 23. november 2026 (branch `norsk-og-bedrift`).
 
 ## Rekkefølge
 
-1. Forsiden (`src/views/Index.astro`) - pågår
-2. Om meg / bio (`src/data/bio.ts`)
+1. Forsiden (`src/views/Index.astro`) - ferdig
+2. Om meg / bio (`src/data/bio.ts`) - neste
 3. Turer: Evening Reset og Rewild Trip (`src/views/EveningResetTrip.astro`, `src/views/RewildCourseTrip.astro`, `src/data/events.ts`)
 4. Historien (`src/views/TheStory.astro`)
 5. 1:1 (`src/views/OneToOne.astro`)
@@ -54,9 +54,14 @@ Startet 23. november 2026 (branch `norsk-og-bedrift`).
 - Nå: Bla ned
 - Hvorfor: Helt norsk. (Skrives "bla", ikke "blad" - blad er et papirark eller løv.)
 
-## Gjenstår på forsiden
+**Over 1:1-knappen** (nederst i Om meg-delen)
+- Før: Vil du ha noe skreddersydd for deg?
+- Nå: Vil du ha et opplegg bare for deg?
+- Hvorfor: "Noe ... for deg" var vagt og direkte oversatt fra engelsk. "Et opplegg bare for deg" er varmt og konkret.
 
-- Over 1:1-knappen: "Vil du ha noe skreddersydd for deg?" (forslag: "Vil du ha et opplegg tilpasset deg?")
+## Forsiden ferdig
+
+Toppen, introteksten, bedriftslinjen og 1:1-linjen er gjennomgått. Om meg-teksten (bio) tas som neste del.
 
 ## Notert til senere
 
