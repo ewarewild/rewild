@@ -387,6 +387,11 @@ Kontakt-siden er ferdig.
 - Nå: Færre plager. Mer overskudd.
 - Hvorfor: Kontoransatte får plager, ikke skader (teksten under snakker om muskel- og skjelettplager). "Overskudd" dekker både kropp og hode - stress er like viktig i teksten under. Avveining: mister litt faglig presisjon ("restitusjon") og koblingen til skadeforebygging. Engelsk overskrift ikke endret.
 
+**Første avsnitt, første setning**
+- Før: Muskel- og skjelettplager er, sammen med stressrelaterte psykiske helseproblemer, de største årsakene til sykefravær i Norge.
+- Nå: Muskel- og skjelettplager og stressrelaterte psykiske plager er de største årsakene til sykefravær i Norge.
+- Hvorfor: Engelsk innskudd ("er, sammen med ..., de største") fjernet. "Helseproblemer" var oversatt. "Plager" (Ewas valg, ikke "lidelser") knytter an til overskriften "Færre plager" og viser at den gjelder både kropp og hode. Resten av avsnittet uendret.
+
 ## Notert til senere
 
 - Rewild Trip praktisk info: "Turen foregår på engelsk", spørsmålslinjen og "Du får all praktisk informasjon når du har booket plassen din." ble hoppet over. Den siste har "booket" (vurder "meldt deg på", likt med knappen).
