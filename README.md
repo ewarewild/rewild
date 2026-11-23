@@ -250,6 +250,10 @@ Resten av Evening Reset-siden (skader, hund, infoboksen) uendret. All felles tek
 **Praktisk info**
 - Overskrift og oppmøtetekstene (Nordkollen og Østre Vealøs) uendret.
 - Lengde: "Turen er 9 km tur-retur ..." / "Turen er 7,6 km tur-retur ..." -> "Ruten er ...". Unngår "tur ... tur-retur ... turen" på to linjer; ruten = distansen, turen = hele dagen.
+- Tid ("Med øvelser og pauser tar turen opptil 5 timer.") uendret.
+- Erfaring før: Du trenger ingen erfaring, men du bør være komfortabel med å gå 9 km i terrenget med øvelser underveis, også i brattere oppoverbakker.
+- Erfaring nå: Du trenger ingen erfaring, men du bør klare å gå opptil 9 km i terrenget, med øvelser underveis - også i oppoverbakke.
+- Hvorfor: "9 km" var feil for Østre Vealøs (7,6 km) - teksten er felles, så "opptil 9 km". "Komfortabel med" var oversatt -> "klare å" (likt med Evening Reset). "Brattere" tatt ut - øvelsene er i oppoverbakke, men det er ikke så ille.
 
 ## Notert til senere
 
