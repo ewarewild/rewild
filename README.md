@@ -170,6 +170,9 @@ Bioen er ferdig gjennomgått.
 - Punkt 2 før: Gjør øvelser underveis som styrker muskler og ledd og trener koordinasjonen - for bedre stabilitet i terrenget og for å motvirke følgene av mye stillesitting, som smerter i korsryggen
 - Punkt 2 nå: Gjør øvelser underveis som styrker kroppen og trener koordinasjonen - for bedre stabilitet i terrenget og for å motvirke følgene av mye stillesitting, som vondt i korsryggen
 - Hvorfor: Bare to rettelser: "muskler og ledd" -> "kroppen" (fjerner dobbel "og"), "smerter" -> "vondt" (hverdagslig, ikke medisinsk). Aktive verb og positiv formulering ("motvirke følgene") beholdt - forkortede versjoner mistet energien eller fikk problemord ("mindre plager"). Leddene dekkes av punkt 3.
+- Punkt 3 før: Bruker gangteknikker som reduserer belastningen på leddene i terrenget - i oppoverbakke, nedoverbakke og på flat mark
+- Punkt 3 nå: Lærer gangteknikker som reduserer belastningen på leddene - i oppoverbakke, nedoverbakke og på flat mark
+- Hvorfor: "Lærer" viser at det er en ferdighet man tar med seg, og lista får tre ulike verb (Bruker, Gjør, Lærer). "I terrenget" tatt ut (dobbel "i", bakkene sier det samme). "Reduserer belastningen" beholdt - i en teknikkliste er det presist og faglig, ikke en salgstekst.
 
 ## Notert til senere
 
