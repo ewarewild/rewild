@@ -174,6 +174,12 @@ Bioen er ferdig gjennomgått.
 - Punkt 3 nå: Lærer gangteknikker som reduserer belastningen på leddene - i oppoverbakke, nedoverbakke og på flat mark
 - Hvorfor: "Lærer" viser at det er en ferdighet man tar med seg, og lista får tre ulike verb (Bruker, Gjør, Lærer). "I terrenget" tatt ut (dobbel "i", bakkene sier det samme). "Reduserer belastningen" beholdt - i en teknikkliste er det presist og faglig, ikke en salgstekst.
 
+**"Hvem passer det for?"-lista**
+- Overskrift og punkt 1 uendret ("Deg som liker å være i naturen og vil koble av etter arbeidsdagen").
+- Punkt 2 før: Deg som ikke har tid til å trene i løpet av dagen
+- Punkt 2 nå: Deg som ikke rekker å trene i løpet av dagen
+- Hvorfor: "Rekker" er mer muntlig norsk og får frem travelheten.
+
 ## Notert til senere
 
 - Engelsk Evening Reset-tekst: "step into trees" -> "into the trees"; "tension releasing, something opening" leses ujevnt. Tas i en egen engelsk gjennomgang.
