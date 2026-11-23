@@ -249,6 +249,7 @@ Resten av Evening Reset-siden (skader, hund, infoboksen) uendret. All felles tek
 
 ## Notert til senere
 
+- Rewild Trip "Hvem passer det for?" punkt 4: "Alle som har vondt i ledd eller rygg etter mange timer med sitting" - venter. Bryter "Deg som"-mønsteret, og påstanden om sitting -> vondt krasjer med bedriftssiden. Forslag: a) "Deg som har vondt i ledd eller rygg etter mange timer med sitting", b) "Deg som sitter mye og kjenner det i ledd og rygg" (anbefalt), c) "Deg som sitter mye på jobb og vil gi kroppen mer variasjon".
 - Engelsk Evening Reset-tekst: "step into trees" -> "into the trees"; "tension releasing, something opening" leses ujevnt. Tas i en egen engelsk gjennomgang.
 - Google-beskrivelse for Evening Reset sier "Nå i Skien, Porsgrunn, Larvik og Sandefjord" - kalenderen har bare Porsgrunn og Larvik nå. Sjekk med Ewa.
 
