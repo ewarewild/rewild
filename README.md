@@ -408,7 +408,10 @@ Kontakt-siden er ferdig.
 - Fire ukers serie nå: Én økt på 2 timer i uka på en sti ca. 10 minutters kjøring fra sentrum, der de ansatte lærer øvelser de kan ta med seg inn i arbeidsdagen. Opptil 15 deltakere.
 - Hvorfor: Færre komma. "Der" binder stien og øvelsene sammen (Ewa: å dele det opp forenklet opplegget). "Lærer" viser at det er en ferdighet.
 - Fire ukers serie, "Passer best for": "øvd på mellom øktene så det blir en vane" -> "som de øver på mellom øktene til det blir en vane" (manglet subjekt, haltet).
-- Helgekurs: "borte fra arbeidsdagen" flyttet fra slutten til rett etter "To dager i naturen" - beskriver stedet, og innholdet (teknikk, styrke, pust og oppmerksomhet) får trykk til slutt. "Dere booker stedet, jeg står for programmet." beholdt ("booker" er tydelig på at bedriften bestiller). "Passer best for" uendret.
+- Helgekurs: "borte fra arbeidsdagen" flyttet fra slutten til rett etter "To dager i naturen" - beskriver stedet, og innholdet (teknikk, styrke, pust og oppmerksomhet) får trykk til slutt. "Dere booker stedet, jeg står for programmet." beholdt ("booker" er tydelig på at bedriften bestiller).
+- Helgekurs, "Passer best for" før: en samling eller kickoff med faglig innhold. Rom for å øve, hente seg inn og bygge vaner som varer.
+- Helgekurs, "Passer best for" nå: en samling eller kickoff med faglig innhold. Rom for å hente seg inn, øve til teknikkene sitter og ta med felles verktøy tilbake til jobben.
+- Hvorfor: "Vaner som varer" overlappet med Fire ukers serie ("varig endring") og var lite troverdig etter to dager. Nå sier den hva som er unikt: tid til at teknikkene sitter, og felles verktøy for hele gruppen. "Hente seg inn" beholdt. ("Bli kjent med hverandre" forkastet - ikke knyttet til kurset.)
 
 ## Notert til senere
 
