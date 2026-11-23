@@ -9,7 +9,7 @@ Startet 23. november 2026 (branch `norsk-og-bedrift`).
 1. Forsiden (`src/views/Index.astro`) - ferdig
 2. Om meg / bio (`src/data/bio.ts`) - ferdig
 3. Turer (ferdig, med noen punkter på vent): Evening Reset og Rewild Trip (`src/views/EveningResetTrip.astro`, `src/views/RewildCourseTrip.astro`, `src/data/events.ts`)
-4. Historien (`src/views/TheStory.astro`) - neste
+4. Historien (`src/views/TheStory.astro`) - pågår
 5. 1:1 (`src/views/OneToOne.astro`)
 6. Kontakt (`src/views/Contact.astro`)
 7. Bedrift (`src/views/Bedrift.astro`)
@@ -266,6 +266,13 @@ Resten av Evening Reset-siden (skader, hund, infoboksen) uendret. All felles tek
 - Hvorfor: Samme som Evening Reset. "Likevel" tatt ut.
 
 Skader, hund og infoboksen uendret (identisk med Evening Reset). Rewild Trip-siden er ferdig, bortsett fra punktene under "Notert til senere".
+
+### Historien (`src/views/TheStory.astro`)
+
+**Avsnitt 1**
+- Før: Mens jeg bygde opp livet mitt igjen etter en krise, havnet jeg et sted jeg ikke lenger hadde kapasitet til å være. Påkjenningene var så store at jeg ble skadet og utbrent.
+- Nå: Mens jeg bygde opp livet mitt igjen etter en krise, havnet jeg i en situasjon jeg ikke lenger klarte å stå i. Påkjenningene var så store at jeg ble skadet og utbrent.
+- Hvorfor: "Hadde kapasitet til" var oversatt fra engelsk. "Klarte å stå i" er et vanlig norsk uttrykk for å tåle noe tungt.
 
 ## Notert til senere
 
