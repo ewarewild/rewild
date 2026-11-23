@@ -8,7 +8,7 @@ Startet 23. november 2026 (branch `norsk-og-bedrift`).
 
 1. Forsiden (`src/views/Index.astro`) - ferdig
 2. Om meg / bio (`src/data/bio.ts`) - ferdig
-3. Turer (pågår): Evening Reset og Rewild Trip (`src/views/EveningResetTrip.astro`, `src/views/RewildCourseTrip.astro`, `src/data/events.ts`)
+3. Turer (pågår - Evening Reset ferdig, Rewild Trip pågår): Evening Reset og Rewild Trip (`src/views/EveningResetTrip.astro`, `src/views/RewildCourseTrip.astro`, `src/data/events.ts`)
 4. Historien (`src/views/TheStory.astro`)
 5. 1:1 (`src/views/OneToOne.astro`)
 6. Kontakt (`src/views/Contact.astro`)
@@ -199,6 +199,15 @@ Bioen er ferdig gjennomgått.
 - Før: Vi går i de fleste værforhold, men blir forholdene farlige, avlyses turen. Du får da pengene tilbake eller kan booke en ny tur.
 - Nå: Vi går i nesten all slags vær, men blir forholdene farlige, avlyses turen. Du får da pengene tilbake eller kan melde deg på en annen tur.
 - Hvorfor: Fjernet "værforhold ... forholdene". "Forholdene" beholdt - dekker is, glatte stier og flom, ikke bare været. "Booke" -> "melde deg på", likt med knappen. Rewild Trip har nesten lik tekst - bruk samme der.
+
+Resten av Evening Reset-siden (skader, hund, infoboksen) uendret. All felles tekst gjelder både Skolapparåsen og Brunlanes Sportskapellet. Evening Reset-siden er ferdig.
+
+### Rewild Trip-siden (`src/views/RewildCourseTrip.astro`)
+
+**Teksten under tittelen**
+- Før: Gå i naturen, lær ferdigheter for livet.
+- Nå: Ferdigheter for livet, lært i naturen.
+- Hvorfor: To ordrer på rad ga belærende tone. "Ferdigheter for livet" var godt og fikk stå først.
 
 ## Notert til senere
 
