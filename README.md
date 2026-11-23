@@ -146,9 +146,9 @@ Bioen er ferdig gjennomgått.
 ### Evening Reset-siden (`src/views/EveningResetTrip.astro`)
 
 **Teksten under tittelen**
-- Før: ... Du senker garden, spenninger slipper taket, noe åpner seg. Du blir mer våken.
-- Nå: ... Du senker garden, spenninger slipper taket, noe åpner seg. Du våkner.
-- Hvorfor: "Mer" dempet avslutningen. "Du våkner." er kortere og sterkere - bilde på å komme ut av autopiloten. Resten var godt og ble beholdt. Den norske teksten står på egne ben; engelsk ("You feel more awake") er ikke endret.
+- Før: Med en gang du kommer inn blant trærne, skjer det noe. Tankene stilner. Du senker garden, spenninger slipper taket, noe åpner seg. Du blir mer våken.
+- Nå: Når du kommer inn blant trærne, skjer det noe. Tankene stilner. Du senker garden, spenninger slipper taket, noe åpner seg. Du våkner.
+- Hvorfor: "Når" (Ewas forslag) er roligere enn "med en gang" og passer tonen - noe som skjer hver gang, uten fart. "Mer" dempet avslutningen. "Du våkner." er kortere og sterkere - bilde på å komme ut av autopiloten. Resten var godt og ble beholdt. Den norske teksten står på egne ben; engelsk ("You feel more awake") er ikke endret.
 
 ## Notert til senere
 
