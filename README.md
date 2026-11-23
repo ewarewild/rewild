@@ -348,6 +348,11 @@ Skader, hund og infoboksen uendret (identisk med Evening Reset). Rewild Trip-sid
 - Nå: Vi starter med en konsultasjon - for å forstå hvor du står fysisk og mentalt og hva du jobber mot.
 - Hvorfor: "Hvor du er" gjentok "der du er" i avsnitt 1. Unødvendig komma fjernet.
 
+**Avsnitt 3**
+- Før: Ut fra det bygger vi et opplegg helt rundt deg: riktig aktivitet, bevegelsene som støtter deg best, det beste terrenget og riktig tempo.
+- Nå: Så bygger vi et opplegg helt rundt deg: aktiviteten, bevegelsene, terrenget og tempoet som støtter deg best.
+- Hvorfor: "Ut fra det" var stivt og vagt - "Så" fortsetter fra "Vi starter med". Lista hadde ulik form og "riktig"/"best" to ganger hver. "Støtter deg best" beholdt (Ewas valg) og gjelder nå alle fire.
+
 ## Notert til senere
 
 - Rewild Trip praktisk info: "Turen foregår på engelsk", spørsmålslinjen og "Du får all praktisk informasjon når du har booket plassen din." ble hoppet over. Den siste har "booket" (vurder "meldt deg på", likt med knappen).
