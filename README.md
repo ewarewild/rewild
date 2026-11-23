@@ -358,6 +358,10 @@ Skader, hund og infoboksen uendret (identisk med Evening Reset). Rewild Trip-sid
 - Nå: Vi møtes ute i naturen nær deg, i Telemark eller Vestfold.
 - Hvorfor: For mange innskudd. "Ansikt til ansikt" var oversatt og unødvendig - "vi møtes" sier det. "Eller", fordi en økt er ett sted.
 
+**Avsnitt 5** - uendret.
+
+**Priser:** "5 eller flere" -> "5 økter eller flere" (tydelig også for den som skummer). Resten uendret.
+
 ## Notert til senere
 
 - Rewild Trip praktisk info: "Turen foregår på engelsk", spørsmålslinjen og "Du får all praktisk informasjon når du har booket plassen din." ble hoppet over. Den siste har "booket" (vurder "meldt deg på", likt med knappen).
