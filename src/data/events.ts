@@ -176,7 +176,7 @@ export const sessions: Session[] = [
     description: 'A hands-on day to learn how to reduce the strain on your joints in terrain, increase strength and stability while walking, and get more mental and physical benefits from being in nature.',
     no: {
       intro: [
-        'Velkommen til en dag med praktisk trening i naturen som gir deg verktøy til å redusere skaderisikoen og gjenvinne fysisk og mental balanse - på stien og i hverdagen.',
+        'Velkommen til en dag der du får verktøy til å forebygge skader og gjenvinne fysisk og mental balanse - på stien og i hverdagen.',
         'Vi går opp til <a href="https://www.google.com/maps?q=59.197427717465644,9.8402239222746" target="_blank" rel="noopener" class="font-semibold underline hover:text-sage transition-colors duration-200">Nordkollen</a> (353 moh.) og kommer oss skikkelig ut i naturen.',
       ],
       meetUp: 'Vi møtes på <a href="https://www.google.com/maps?q=59.18604216274942,9.803863873385133" target="_blank" rel="noopener" class="font-semibold underline hover:text-sage transition-colors duration-200">Parkering for Svarteberget og Nordkollen</a> og går derfra først på grusvei, så på skogssti.',
@@ -196,7 +196,7 @@ export const sessions: Session[] = [
     description: 'A hands-on day to learn how to reduce the strain on your joints in terrain, increase strength and stability while walking, and get more mental and physical benefits from being in nature.',
     no: {
       intro: [
-        'Velkommen til en dag med praktisk trening i naturen som gir deg verktøy til å redusere skaderisikoen og gjenvinne fysisk og mental balanse - på stien og i hverdagen.',
+        'Velkommen til en dag der du får verktøy til å forebygge skader og gjenvinne fysisk og mental balanse - på stien og i hverdagen.',
         'Vi går opp til <a href="https://www.google.com/maps?q=59.197427717465644,9.8402239222746" target="_blank" rel="noopener" class="font-semibold underline hover:text-sage transition-colors duration-200">Nordkollen</a> (353 moh.) og kommer oss skikkelig ut i naturen.',
       ],
       meetUp: 'Vi møtes på <a href="https://www.google.com/maps?q=59.18604216274942,9.803863873385133" target="_blank" rel="noopener" class="font-semibold underline hover:text-sage transition-colors duration-200">Parkering for Svarteberget og Nordkollen</a> og går derfra først på grusvei, så på skogssti.',
@@ -216,7 +216,7 @@ export const sessions: Session[] = [
     description: 'A hands-on day to learn how to reduce the strain on your joints in terrain, increase strength and stability while walking, and get more mental and physical benefits from being in nature.',
     no: {
       intro: [
-        'Velkommen til en dag med praktisk trening i naturen som gir deg verktøy til å redusere skaderisikoen og gjenvinne fysisk og mental balanse - på stien og i hverdagen.',
+        'Velkommen til en dag der du får verktøy til å forebygge skader og gjenvinne fysisk og mental balanse - på stien og i hverdagen.',
         'Vi går opp til <a href="https://www.google.com/maps?q=59.197427717465644,9.8402239222746" target="_blank" rel="noopener" class="font-semibold underline hover:text-sage transition-colors duration-200">Nordkollen</a> (353 moh.) og kommer oss skikkelig ut i naturen.',
       ],
       meetUp: 'Vi møtes på <a href="https://www.google.com/maps?q=59.18604216274942,9.803863873385133" target="_blank" rel="noopener" class="font-semibold underline hover:text-sage transition-colors duration-200">Parkering for Svarteberget og Nordkollen</a> og går derfra først på grusvei, så på skogssti.',
@@ -237,7 +237,7 @@ export const sessions: Session[] = [
     description: 'A hands-on day to learn how to reduce the strain on your joints in terrain, increase strength and stability while walking, and get more mental and physical benefits from being in nature.',
     no: {
       intro: [
-        'Velkommen til en dag med praktisk trening i naturen som gir deg verktøy til å redusere skaderisikoen og gjenvinne fysisk og mental balanse - på stien og i hverdagen.',
+        'Velkommen til en dag der du får verktøy til å forebygge skader og gjenvinne fysisk og mental balanse - på stien og i hverdagen.',
         'Vi går opp til <a href="https://ut.no/turforslag/113681/topptur-til-stre-veals" target="_blank" rel="noopener" class="font-semibold underline hover:text-sage transition-colors duration-200">Østre Vealøs</a> (445,5 moh.) og kommer oss skikkelig ut i naturen.',
       ],
       meetUp: 'Vi møtes på <a href="https://www.google.com/maps?q=59.20275,9.73157" target="_blank" rel="noopener" class="font-semibold underline hover:text-sage transition-colors duration-200">Parkering for Østre Vealøs turområder</a> og går derfra på en godt merket sti, for det meste gjennom skog.',

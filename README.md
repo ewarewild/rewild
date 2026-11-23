@@ -209,6 +209,11 @@ Resten av Evening Reset-siden (skader, hund, infoboksen) uendret. All felles tek
 - Nå: Ferdigheter for livet, lært i naturen.
 - Hvorfor: To ordrer på rad ga belærende tone. "Ferdigheter for livet" var godt og fikk stå først.
 
+**Introtekst, første setning** (felles for alle Rewild Trip-turene, i `src/data/events.ts`)
+- Før: Velkommen til en dag med praktisk trening i naturen som gir deg verktøy til å redusere skaderisikoen og gjenvinne fysisk og mental balanse - på stien og i hverdagen.
+- Nå: Velkommen til en dag der du får verktøy til å forebygge skader og gjenvinne fysisk og mental balanse - på stien og i hverdagen.
+- Hvorfor: "Naturen som gir deg" pekte grammatisk på naturen. "Praktisk trening" gjentok kalenderkortet, og "en praktisk dag" alene høres ut som "lettvint dag". "Forebygge skader" er aktivt i stedet for problemordet "redusere skaderisikoen". Det praktiske vises av "verktøy" og resten av siden.
+
 ## Notert til senere
 
 - Engelsk Evening Reset-tekst: "step into trees" -> "into the trees"; "tension releasing, something opening" leses ujevnt. Tas i en egen engelsk gjennomgang.
