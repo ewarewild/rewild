@@ -300,6 +300,13 @@ Skader, hund og infoboksen uendret (identisk med Evening Reset). Rewild Trip-sid
 - Nå: ... forsvant, og tilbake satt jeg med glede, ro og en dyp takknemlighet for å være i live. ...
 - Hvorfor: "Igjen satt jeg med" kunne leses som "nok en gang" etter "Igjen og igjen" i avsnitt 10. "Takknemlighet for", ikke "over". "Avhengighetsskapende" beholdt (vurderte "hekta").
 
+**Avsnitt 12** - uendret.
+
+**Avsnitt 13**
+- Før: Kroppen kjentes sterk og kapabel. Kneet og skulderen grodde.
+- Nå: Kroppen kjentes sterk og sprek. Kneet og skulderen grodde.
+- Hvorfor: "Kapabel" er formelt og oversatt fra "capable". "Sterk og sprek" er hverdagslig og klinger godt.
+
 ## Notert til senere
 
 - Rewild Trip praktisk info: "Turen foregår på engelsk", spørsmålslinjen og "Du får all praktisk informasjon når du har booket plassen din." ble hoppet over. Den siste har "booket" (vurder "meldt deg på", likt med knappen).
