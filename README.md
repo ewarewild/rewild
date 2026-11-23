@@ -404,6 +404,9 @@ Kontakt-siden er ferdig.
 
 **Tilbud** - overskrift og "Passer best for:" uendret.
 - Halv dag: "maks 25 minutters kjøring" -> "innen 25 minutters kjøring" (roligere, mindre muntlig). "Passer best for" uendret.
+- Fire ukers serie før: Én økt på 2 timer i uka, på en sti ca. 10 minutters kjøring fra sentrum, med øvelser de ansatte kan ta med seg inn i arbeidsdagen. Opptil 15 deltakere.
+- Fire ukers serie nå: Én økt på 2 timer i uka på en sti ca. 10 minutters kjøring fra sentrum, der de ansatte lærer øvelser de kan ta med seg inn i arbeidsdagen. Opptil 15 deltakere.
+- Hvorfor: Færre komma. "Der" binder stien og øvelsene sammen (Ewa: å dele det opp forenklet opplegget). "Lærer" viser at det er en ferdighet.
 
 ## Notert til senere
 
