@@ -432,6 +432,9 @@ Kontakt-siden er ferdig.
 - Avsnitt 1: lagt til "Jeg har også studert til naturyogaguide hos Marian Papp, yogaterapeut med doktorgrad fra Karolinska Institutet."
 - Hvorfor: Bedriftssiden argumenterer med forskning - doktorgraden fra Karolinska gir mest faglig tyngde for HMS. Forenklet fra bioen (uten "i vill natur").
 - Avsnitt 2: "naturbaserte aktiviteter" -> "aktiviteter i naturen", "praktiske verktøy" -> "praktiske teknikker" ("verktøy" står i Helgekurs). Ellers uendret - stress beholder sin egen setning, viktig for HMS.
+- Avsnitt 3 før: Bakgrunnen min er fra flere idretter, og jeg har mange års erfaring med å bevege meg utenfor stiene, også i vintermørket. Jeg underviser på norsk og engelsk.
+- Avsnitt 3 nå: Jeg har bakgrunn fra flere idretter og mange års erfaring med å bevege meg utenfor stien, også i vintermørket.
+- Hvorfor: "Jeg har bakgrunn fra" er vanlig norsk. "Stien" likt med bioen. Språksetningen tatt ut - står allerede i tilbudsdelen.
 
 ## Notert til senere
 
