@@ -81,6 +81,15 @@ Samme tekst brukes på forsiden (avsnitt 1-2 synlige, resten under "Mer →") og
 - Nå: Jeg vokste opp i fjellene i Sør-Polen, med foreldre som jobbet med idrett. Bevegelse var livet mitt helt fra jeg var liten.
 - Hvorfor: "Trente idretter" var direkte oversatt, og "idrett" sto to ganger. "Bevegelse var livet mitt" (Ewas eget forslag, med "idrett" tatt ut) er personlig og peker mot kjernen i Rewild. Den faglige tyngden (kroppsøving, sertifiseringer) kommer i avsnitt 3-4, under "Mer" på forsiden og synlig på Om meg-siden.
 
+**Avsnitt 3** - uendret
+- Jeg studerte kroppsøving i Storbritannia, der jeg ble kjent med yoga, pilates og biomekanikken bak skadeforebygging.
+- Hvorfor: Flyter godt. Vurderte å dele den og bytte verb for biomekanikk, men originalen flyter bedre.
+
+**Avsnitt 4** (sertifiseringene)
+- Før: Jeg er sertifisert hathayogalærer fra London, har sertifiseringen Advanced Trauma-Informed Academy fra Nordic Maha Yoga i Oslo, og diplom som Outdoor Yoga Guide in Wild Nature hos Marian Papp.
+- Nå: Jeg er utdannet hathayogalærer i London, har fullført Advanced Trauma-Informed Academy hos Nordic Maha Yoga i Oslo og har diplom som Outdoor Yoga Guide in Wild Nature hos Marian Papp.
+- Hvorfor: Fjernet "sertifisert/sertifiseringen", "fra London" -> "i London", ingen dobbel preposisjon ("fra ... hos"), ingen komma før "og" med samme subjekt. Tre ledd som alle starter med verb (er / har fullført / har) gir jevn rytme. Ikke noe tidsord ("senere") - det stemmer ikke med når utdanningene skjedde. Engelske navn på sertifiseringene beholdes som offisielle navn.
+
 ## Notert til senere
 
 - Kurssidene sier "Turen foregår på engelsk." - sjekk om det fortsatt stemmer nå som siden er norsk først.

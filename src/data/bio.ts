@@ -13,7 +13,7 @@ export const bio = (lang: Lang) =>
           'Jeg står bak Rewild og er guiden din på turene.',
           'Jeg vokste opp i fjellene i Sør-Polen, med foreldre som jobbet med idrett. Bevegelse var livet mitt helt fra jeg var liten.',
           'Jeg studerte kroppsøving i Storbritannia, der jeg ble kjent med yoga, pilates og biomekanikken bak skadeforebygging.',
-          'Jeg er sertifisert hathayogalærer fra London, har sertifiseringen Advanced Trauma-Informed Academy fra Nordic Maha Yoga i Oslo, og diplom som Outdoor Yoga Guide in Wild Nature hos Marian Papp.',
+          'Jeg er utdannet hathayogalærer i London, har fullført Advanced Trauma-Informed Academy hos Nordic Maha Yoga i Oslo og har diplom som Outdoor Yoga Guide in Wild Nature hos Marian Papp.',
           'Den egentlige historien om Rewild går tilbake til 80-tallet, da naturen var en del av hverdagen - trening, sanking og mye frihet til å leke vilt.',
           'Noen tiår senere møtte jeg utfordringer som førte til fysisk og psykisk utbrenthet.',
           'Jeg begynte å gå opp på toppene i nærheten, i all slags vær, og kombinerte fysisk trening med sansende kontakt med naturen.',
