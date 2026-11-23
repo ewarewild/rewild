@@ -76,6 +76,11 @@ Samme tekst brukes på forsiden (avsnitt 1-2 synlige, resten under "Mer →") og
 - Nå: Jeg står bak Rewild og er guiden din på turene.
 - Hvorfor: "Underviser i naturbasert bevegelse" hørtes ut som et høyskolefag, og "i Rewild" som en arbeidsplass. "Står bak" viser at Rewild er Ewas eget. "Guide" er ordet resten av siden bruker ("guidede turer", "guiden din i Rewild"). Hva hun underviser i, står allerede i avsnitt 9.
 
+**Avsnitt 2**
+- Før: Jeg vokste opp i fjellene i Sør-Polen med foreldre som jobbet med idrett, og trente mange ulike idretter helt fra jeg var liten.
+- Nå: Jeg vokste opp i fjellene i Sør-Polen, med foreldre som jobbet med idrett. Bevegelse var livet mitt helt fra jeg var liten.
+- Hvorfor: "Trente idretter" var direkte oversatt, og "idrett" sto to ganger. "Bevegelse var livet mitt" (Ewas eget forslag, med "idrett" tatt ut) er personlig og peker mot kjernen i Rewild. Den faglige tyngden (kroppsøving, sertifiseringer) kommer i avsnitt 3-4, under "Mer" på forsiden og synlig på Om meg-siden.
+
 ## Notert til senere
 
 - Kurssidene sier "Turen foregår på engelsk." - sjekk om det fortsatt stemmer nå som siden er norsk først.
