@@ -307,6 +307,11 @@ Skader, hund og infoboksen uendret (identisk med Evening Reset). Rewild Trip-sid
 - Nå: Kroppen kjentes sterk og sprek. Kneet og skulderen grodde.
 - Hvorfor: "Kapabel" er formelt og oversatt fra "capable". "Sterk og sprek" er hverdagslig og klinger godt.
 
+**Avsnitt 14**
+- Før: Til og med livet mitt begynte å forandre seg. Jeg fikk kjøpt meg et hus, og jeg begynte å følge en vei i tråd med mitt indre kompass. Jeg fant meg selv i et kjærlig forhold, slik jeg alltid hadde ønsket meg.
+- Nå: Også livet rundt meg begynte å forandre seg. Jeg fikk kjøpt meg et hus, og jeg begynte å følge en vei i tråd med mitt indre kompass. Og jeg havnet i et kjærlig forhold, slik jeg alltid hadde ønsket meg.
+- Hvorfor: "Til og med livet mitt" var uklart. "Fant meg selv i" betyr på norsk å oppdage hvem man er. "Fant kjærligheten" var for poetisk. "Havnet i" speiler avsnitt 1 ("havnet jeg i en situasjon ...") - samme verb, nå om noe godt.
+
 ## Notert til senere
 
 - Rewild Trip praktisk info: "Turen foregår på engelsk", spørsmålslinjen og "Du får all praktisk informasjon når du har booket plassen din." ble hoppet over. Den siste har "booket" (vurder "meldt deg på", likt med knappen).
