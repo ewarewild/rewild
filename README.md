@@ -92,6 +92,7 @@ Samme tekst brukes på forsiden (avsnitt 1-2 synlige, resten under "Mer →") og
 - "Advanced Trauma-Informed Academy" er beskrevet på norsk ("avansert sertifisering i traumebevisst undervisning") så leserne forstår hva det er - og det viser kompetansen på mental og emosjonell stabilitet. Mellomversjonen "har fullført" ble forkastet fordi den svekket den faglige tyngden.
 - "Diplom som Outdoor Yoga Guide in Wild Nature" byttet til "studert yoga i vill natur hos Marian Papp" (Ewas ønske): viser at hun har lært av en lærer, helt norsk, og "vill natur" klinger med Rewild. "Hos", ikke "med" (anglisisme). Det formelle er dekket av "utdannet" og "avansert sertifisering".
 - Til slutt delt i to setninger for å få plass til hvem Marian Papp er. Fra marianpapp.se: utdanningen heter "Naturyogaguide/coach i vild/orörd natur" (gir intyg/diplom) -> norsk "naturyogaguide i vill natur". "Studert til" fungerer med tittel (som "studere til lege"). Hun er yogaterapeut med PhD fra Karolinska Institutet (2017, om hathayoga) og beskriver seg med "evidensbaserte yogaprogram" - doktorgraden fra Karolinska viser det evidensbaserte konkret, uten fagord.
+- Engelsk versjon oppdatert til samme innhold: "I qualified as a Hatha Yoga teacher in London and hold an Advanced Trauma-Informed Academy certification from Nordic Maha Yoga in Oslo. I also trained as an Outdoor Yoga Guide in Wild Nature with Marian Papp, a yoga therapist with a PhD from Karolinska Institutet." (Offisielle engelske navn beholdt på engelsk.)
 
 ## Notert til senere
 
