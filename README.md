@@ -45,6 +45,8 @@ Startet 23. november 2026 (branch `norsk-og-bedrift`).
 - Før: Vi går i stillhet, løser opp spenninger og trener oppmerksomheten underveis. Du lærer å bevege deg på ujevnt underlag med mindre belastning - og kommer hjem med mer luft i hodet.
 - Nå: Vi går i stillhet, løser opp spenninger og trener oppmerksomheten underveis. Du lærer gangteknikker som bygger styrke og balanse på ujevnt underlag - og kommer hjem med mer ro i hodet.
 - Hvorfor: Første setning var sterk og ble beholdt. "Mindre belastning" gjentok underteksten. "Gangteknikker" viser at man lærer en teknikk (samme ord som på kurssidene). "Mer luft i hodet" var uklart.
+- Endret igjen: Vi går i stillhet, løser opp spenninger og trener oppmerksomheten underveis. På ujevnt underlag lærer du gangteknikker som tar vare på leddene - og du kommer hjem med mer ro i hodet.
+- Hvorfor: Leddene flyttet hit fra underteksten. "Styrke og balanse" tatt ut - styrke står i underteksten, og stabilitet dekker balanse. "Tar vare på" (omsorg, over tid) valgt fremfor "skåner" (beskytter mot belastning). "På ujevnt underlag" flyttet først, så stedet hører til læringen - å ta vare på leddene gjelder generelt, ikke bare i terrenget.
 
 **Linjen for bedrifter** (over bildet i toppen)
 - Før: Arbeider du med HMS eller personal? Se bedriftsopplegg →
