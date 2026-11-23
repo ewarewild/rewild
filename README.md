@@ -489,6 +489,7 @@ Kalenderkortene justert så forsiden ikke gjentar seg ("tar vare på leddene" st
 ## Engelsk side
 
 - Bio, Marian Papp: "I also trained as an Outdoor Yoga Guide in Wild Nature with Marian Papp ..." -> "I also studied to become a nature yoga guide in wild nature with Marian Papp, a yoga therapist with a PhD from Karolinska Institutet." (tilsvarer norsk: "studert til naturyogaguide i vill natur").
+- Bio: "The actual story of Rewild" -> "The story of Rewild".
 
 ## Rettet feil (engelsk side)
 

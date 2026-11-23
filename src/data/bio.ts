@@ -29,7 +29,7 @@ export const bio = (lang: Lang) =>
           'Growing up in the mountains of southern Poland, with parents professionally in sports, I trained a variety of disciplines from a very young age.',
           'I studied physical education in the UK, where I was introduced to yoga, Pilates, and the biomechanics of injury prevention.',
           'I qualified as a Hatha Yoga teacher in London and hold an Advanced Trauma-Informed Academy certification from Nordic Maha Yoga in Oslo. I also studied to become a nature yoga guide in wild nature with Marian Papp, a yoga therapist with a PhD from Karolinska Institutet.',
-          'The actual story of Rewild goes back to the 80s, when being in nature was a part of daily life - training, foraging, and having a lot of freedom to play wild.',
+          'The story of Rewild goes back to the 80s, when being in nature was a part of daily life - training, foraging, and having a lot of freedom to play wild.',
           'Fast forward a few decades, I experienced challenges that led to physical and mental burnout.',
           'I started to hike up local mountains, in all weather, infusing physical practices with sensory nature connection.',
           `The effects of it were immediate, and it totally changed my life. You can read more about this process ${link('/en/the-story', 'here')}.`,
