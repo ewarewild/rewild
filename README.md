@@ -382,6 +382,11 @@ Kontakt-siden er ferdig.
 
 **Fanen i nettleseren:** "Bedriftsopplegg - Rewild" -> "For bedrifter - Rewild" (likt med menyen). "For bedrifter" over overskriften uendret.
 
+**Overskrift**
+- Før: Færre skader. Bedre restitusjon.
+- Nå: Færre plager. Mer overskudd.
+- Hvorfor: Kontoransatte får plager, ikke skader (teksten under snakker om muskel- og skjelettplager). "Overskudd" dekker både kropp og hode - stress er like viktig i teksten under. Avveining: mister litt faglig presisjon ("restitusjon") og koblingen til skadeforebygging. Engelsk overskrift ikke endret.
+
 ## Notert til senere
 
 - Rewild Trip praktisk info: "Turen foregår på engelsk", spørsmålslinjen og "Du får all praktisk informasjon når du har booket plassen din." ble hoppet over. Den siste har "booket" (vurder "meldt deg på", likt med knappen).
