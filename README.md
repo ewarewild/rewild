@@ -424,6 +424,7 @@ Kontakt-siden er ferdig.
 - Punkt 4 før: Skarpere fokus: trening i å flytte og samle oppmerksomheten - en ferdighet de tar med seg tilbake til pulten
 - Punkt 4 nå: Skarpere fokus: de lærer å samle oppmerksomheten om én ting, også på travle dager
 - Hvorfor: Overlappet med avsnitt 3 ("trener ... flytte fokus") og punkt 5 ("ta med seg"). Nå handler det om å samle oppmerksomheten, som avsnitt 3 ikke dekker. "De lærer" beholder at det er en ferdighet.
+- Punkt 5: merkelappen "Noe å ta med seg" -> "Enkle grep i hverdagen" (vag, og "ta med seg" står i Fire ukers serie; "verktøy" forkastet fordi det står i Helgekurs). Forklaringen uendret - "ved pulten"/"i en pause" ble forkastet fordi det la til innhold.
 
 ## Notert til senere
 
