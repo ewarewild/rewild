@@ -479,3 +479,7 @@ Språket er godt, og i juridisk tekst er presisjon viktigere enn flyt. "Vi" og "
 
 - Bekreftelses-e-postene etter Vipps-betaling (`worker/emails.ts`) finnes bare på engelsk - norske deltakere får norsk side, men engelsk e-post.
 - Den engelske siden er ikke oppdatert tilsvarende (bortsett fra sertifiseringene i bioen). Bl.a. overskrift på bedriftssiden ("Fewer injuries. Better recovery."), "Hvem passer det for"-lista på Evening Reset (4 vs 5 punkter). Tas i en egen engelsk gjennomgang.
+
+## Rettet feil (engelsk side)
+
+- Engelsk Rewild Trip-side viste `{t.totalTime}`, `{t.experience}`, `{t.language}`, `{t.details}`, `{t.weather}`, `{t.injury}` og `{t.dog}` som tekst (oppsto i commit 76459df da siden ble delt i norsk/engelsk). Opprinnelig engelsk tekst satt tilbake ordrett fra historikken. NB: engelsk erfaringstekst sier fortsatt "9km" (feil for Østre Vealøs) - tas i engelsk gjennomgang.
