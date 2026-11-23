@@ -114,6 +114,11 @@ Samme tekst brukes på forsiden (avsnitt 1-2 synlige, resten under "Mer →") og
 - Nå: Jeg kjente forskjellen med en gang, og livet mitt forandret seg fullstendig. Du kan lese hele historien her.
 - Hvorfor: "Det" pekte feil (effekten = den), "effekten kom" var klinisk, og "denne prosessen" stivt. "Jeg kjente forskjellen" er personlig og kroppslig. "Hele historien" leder naturlig til Historien-siden.
 
+**Avsnitt 9**
+- Før: I undervisningen min legger jeg vekt på trygg, bevisst bevegelse i terrenget. Jeg bruker pusten, sansene og kontakten med naturen, og øvelser inspirert av yoga, pilates, qigong og funksjonell styrketrening, for å koble sammen kropp og sinn igjen.
+- Nå: I undervisningen min legger jeg vekt på trygg og bevisst bevegelse i terrenget. Jeg bruker pusten, sansene og naturen rundt oss, sammen med øvelser inspirert av yoga, pilates, qigong og funksjonell styrketrening. Slik kobler vi kropp og sinn sammen igjen.
+- Hvorfor: Andre setning hadde liste i liste (fire "og", tre komma). Delt opp, poenget fikk egen kort sluttsetning med "vi". "Trygg, bevisst" -> "trygg og bevisst" (komma var engelsk). "I undervisningen min" beholdt for å understreke at Ewa underviser.
+
 ## Notert til senere
 
 - Kurssidene sier "Turen foregår på engelsk." - sjekk om det fortsatt stemmer nå som siden er norsk først.
