@@ -1,6 +1,7 @@
 ---
 import { Image } from 'astro:assets';
-import { events, sessions, tripUrl, timeRange, freeOffer } from '../data/events';
+import { sessions, tripUrl, timeRange, months as monthsEn, monthsNo, eventText, text, difficultyText, freeOffer } from '../data/events';
+import { langFromPath } from '../i18n';
 
 interface Props {
   limit?: number;
@@ -8,18 +9,23 @@ interface Props {
 
 const { limit = 0 } = Astro.props;
 
-const months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+const lang = langFromPath(Astro.url.pathname);
+const months = lang === 'no' ? monthsNo : monthsEn;
+const t = lang === 'no'
+  ? { fast: 'Delvis raskt tempo', varied: 'Variert tempo', more: 'Mer →', free: 'Gratis', empty: 'Nye datoer kommer snart.' }
+  : { fast: 'Partly fast pace', varied: 'Varied pace', more: 'More →', free: 'Free', empty: 'New dates coming soon.' };
 ---
 
 <div class="event-calendar" data-limit={limit}>
   <div class="grid md:grid-cols-2 gap-4 md:gap-8 mb-20">
     {sessions.map(s => {
-      const e = events[s.event];
+      const e = eventText(s.event, lang);
+      const url = tripUrl(s, lang);
       const day = new Date(`${s.date}T12:00:00`);
       return (
         <div class="cal-row bg-white group overflow-hidden flex flex-col" data-date={s.date} data-event={s.event}>
           {/* Phones: compact row with date badge, difficulty and time, photo on the right */}
-          <a href={tripUrl(s)} class="md:hidden flex h-[176px]">
+          <a href={url} class="md:hidden flex h-[176px]">
             <div class="flex-1 min-w-0 p-4 flex flex-col">
               <p class="text-[0.7rem] tracking-[0.2em] uppercase text-sage/80 font-light truncate">{s.place}</p>
               <h3 class="mt-1 font-display font-bold text-[1.1rem] text-forest leading-snug line-clamp-2">{e.name} - {s.spot ?? s.place}</h3>
@@ -32,12 +38,12 @@ const months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 
                   {s.difficulty && (
                     <p class="flex items-center gap-2 truncate">
                       <svg class="w-4 h-4 shrink-0 text-sage" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><rect x="1" y="10" width="3" height="5" rx="0.5"/><rect x="6.5" y="6" width="3" height="9" rx="0.5" opacity={s.difficulty === 'Easy' ? 0.3 : 1}/><rect x="12" y="2" width="3" height="13" rx="0.5" opacity={s.difficulty === 'Hard' ? 1 : 0.3}/></svg>
-                      {s.difficulty}
+                      {difficultyText(s, lang)}
                     </p>
                   )}
                   <p class="flex items-center gap-2 truncate">
                     <svg class="w-4 h-4 shrink-0 text-sage" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9.2" cy="2.4" r="1.4" fill="currentColor" stroke="none"/><path d="M8.7 5.2L7.8 9.6M7.8 9.6L5.6 14.5M7.8 9.6L9.8 11.4L10.3 14.5M5.4 8L8.5 5.6L10.8 8.2"/></svg>
-                    {s.event === 'evening-reset' ? 'Partly fast pace' : 'Varied pace'}
+                    {s.event === 'evening-reset' ? t.fast : t.varied}
                   </p>
                   <p class="flex items-center gap-2 truncate">
                     <svg class="w-4 h-4 shrink-0 text-sage" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><circle cx="8" cy="8" r="6.5"/><path d="M8 4.5V8l2.5 1.5"/></svg>
@@ -47,13 +53,13 @@ const months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 
               </div>
             </div>
             <div class="relative w-[38%] shrink-0 overflow-hidden">
-              {freeOffer(s) && <span class="absolute top-3 left-3 z-10 bg-forest text-white text-[0.7rem] tracking-[0.2em] uppercase font-light px-3 py-1.5">Free</span>}
+              {freeOffer(s) && <span class="absolute top-3 left-3 z-10 bg-forest text-white text-[0.7rem] tracking-[0.2em] uppercase font-light px-3 py-1.5">{t.free}</span>}
               <Image src={s.image ?? e.image} alt={e.alt} widths={[320, 480, 640, 960, 1200]} sizes="max(calc(38vw - 18px), 313px)" class="w-full h-full object-cover object-center" loading="lazy" />
             </div>
           </a>
-          <a href={tripUrl(s)} class="hidden md:block">
+          <a href={url} class="hidden md:block">
             <div class="relative overflow-hidden h-72">
-              {freeOffer(s) && <span class="absolute top-3 left-3 z-10 bg-forest text-white text-[0.7rem] tracking-[0.2em] uppercase font-light px-3 py-1.5">Free</span>}
+              {freeOffer(s) && <span class="absolute top-3 left-3 z-10 bg-forest text-white text-[0.7rem] tracking-[0.2em] uppercase font-light px-3 py-1.5">{t.free}</span>}
               <Image
                 src={s.image ?? e.image}
                 alt={e.alt}
@@ -66,10 +72,10 @@ const months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 
           </a>
           <div class="hidden md:flex p-8 flex-col flex-1">
             <p class="text-xs tracking-[0.3em] uppercase text-sage/80 mb-3 font-light">{s.place}</p>
-            <a href={tripUrl(s)} class="block">
+            <a href={url} class="block">
               <h3 class="font-display font-bold text-3xl text-forest mb-5 leading-tight hover:opacity-60 transition-opacity duration-200">{e.name} - {s.spot ?? s.place}</h3>
             </a>
-            <a href={tripUrl(s)} class="mb-6 flex items-center gap-5">
+            <a href={url} class="mb-6 flex items-center gap-5">
               <div class="w-20 h-20 shrink-0 flex flex-col items-center justify-center bg-cream text-forest">
                 <span class="font-display font-bold text-3xl leading-none">{day.getDate()}</span>
                 <span class="mt-1.5 text-xs tracking-[0.15em] uppercase font-light leading-none">{months[day.getMonth()].slice(0, 3)}</span>
@@ -78,12 +84,12 @@ const months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 
                 {s.difficulty && (
                   <p class="flex items-center gap-2">
                     <svg class="w-4 h-4 shrink-0 text-sage" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><rect x="1" y="10" width="3" height="5" rx="0.5"/><rect x="6.5" y="6" width="3" height="9" rx="0.5" opacity={s.difficulty === 'Easy' ? 0.3 : 1}/><rect x="12" y="2" width="3" height="13" rx="0.5" opacity={s.difficulty === 'Hard' ? 1 : 0.3}/></svg>
-                    {s.difficulty}
+                    {difficultyText(s, lang)}
                   </p>
                 )}
                 <p class="flex items-center gap-2">
                   <svg class="w-4 h-4 shrink-0 text-sage" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9.2" cy="2.4" r="1.4" fill="currentColor" stroke="none"/><path d="M8.7 5.2L7.8 9.6M7.8 9.6L5.6 14.5M7.8 9.6L9.8 11.4L10.3 14.5M5.4 8L8.5 5.6L10.8 8.2"/></svg>
-                  {s.event === 'evening-reset' ? 'Partly fast pace' : 'Varied pace'}
+                  {s.event === 'evening-reset' ? t.fast : t.varied}
                 </p>
                 <p class="flex items-center gap-2">
                   <svg class="w-4 h-4 shrink-0 text-sage" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><circle cx="8" cy="8" r="6.5"/><path d="M8 4.5V8l2.5 1.5"/></svg>
@@ -92,10 +98,10 @@ const months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 
               </div>
             </a>
             <p class="text-forest font-light text-[1.08rem] leading-relaxed mb-8 flex-1">
-              {s.description ?? e.description}
+              {text(s, 'description', lang) ?? e.description}
             </p>
             <div class="pt-5 border-t border-cream flex justify-between">
-              <a href={tripUrl(s)} class="text-xs tracking-[0.25em] uppercase font-light text-sage/80 hover:text-sage transition-colors duration-300">More →</a>
+              <a href={url} class="text-xs tracking-[0.25em] uppercase font-light text-sage/80 hover:text-sage transition-colors duration-300">{t.more}</a>
             </div>
           </div>
         </div>
@@ -103,7 +109,7 @@ const months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 
     })}
   </div>
 
-  <p class="cal-empty hidden text-forest font-light text-[1.08rem]">New dates coming soon.</p>
+  <p class="cal-empty hidden text-forest font-light text-[1.08rem]">{t.empty}</p>
 </div>
 
 <script>

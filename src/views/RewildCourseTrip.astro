@@ -1,0 +1,300 @@
+---
+import { heroImage as heroPhoto } from '../lib/hero';
+import Layout from '../layouts/Layout.astro';
+import Nav from '../components/Nav.astro';
+import Footer from '../components/Footer.astro';
+import nordkollenHero from '../images/nordkollen-hero.webp';
+import { localePath, langFromPath } from '../i18n';
+import { events, longDate, signupLabel, priceText, freeOffer, regularPriceText, text, courseDuration, meetUpTime, type Session } from '../data/events';
+
+
+interface Props {
+  session: Session;
+}
+
+const { session } = Astro.props;
+const lang = langFromPath(Astro.url.pathname);
+const p = (path: string) => localePath(lang, path);
+const name = events['rewild-course'].name;
+
+const nordkollenLink = '<a href="https://www.google.com/maps?q=59.197427717465644,9.8402239222746" target="_blank" rel="noopener" class="font-semibold underline hover:text-sage transition-colors duration-200">Nordkollen</a>';
+const oklungenLink = '<a href="https://www.google.com/maps?q=59.18604216274942,9.803863873385133" target="_blank" rel="noopener" class="font-semibold underline hover:text-sage transition-colors duration-200">Oklungen</a>';
+const t = lang === 'no'
+  ? {
+      description: 'En hel dag med praktisk trening i terrenget. Du lærer gangteknikker og øvelser underveis som forebygger skader og gir balanse - både fysisk og mentalt.',
+      back: 'Alle turer',
+      tagline: 'Ferdigheter for livet, lært i naturen.',
+      intro: [
+        'Velkommen til en dag med praktisk trening i naturen som gir deg verktøy til å bevege deg trygt, bygge styrke i kjernemuskulaturen og hente deg bedre inn - på stien og i hverdagen.',
+        `Vi går til ${nordkollenLink}, en topp like ved Porsgrunn, og kommer oss skikkelig ut i naturen.`,
+      ],
+      alternate: 'Vi veksler mellom å utfordre kroppen og å gjøre roligere øvelser. Vi tar oss god tid til å hvile og senke skuldrene.',
+      learnHeading: 'Du lærer:',
+      learn: [
+        'Å bruke pusten og sansene til å samle oppmerksomheten i kroppen og løse opp spenninger',
+        'Øvelser underveis som styrker kroppen og motvirker følgene av mye stillesitting, som vondt i korsryggen',
+        'Å trene koordinasjon og kroppsbevissthet (propriosepsjon), så du får bedre balanse og beveger deg tryggere i terrenget',
+        'Gangteknikker som reduserer belastningen på leddene - i oppoverbakke, nedoverbakke og på flat mark',
+      ],
+      lunch: 'På toppen slår vi oss ned, prater og nyter matpakken og en kopp te.',
+      whoHeading: 'Hvem passer det for?',
+      who: [
+        'Deg som vil trene smartere på tur, ikke bare gå',
+        'Deg som liker å være ute og vil ta vare på leddene',
+        'Deg som vil stresse ned og få mer energi i hverdagen',
+        'Alle som har vondt i ledd eller rygg etter mange timer med sitting',
+      ],
+      infoHeading: 'Praktisk info:',
+      meetUp: `Vi møtes på en parkeringsplass i ${oklungenLink} og går derfra først på grusvei, så på skogssti.`,
+      route: 'Ruten er 9 km tur-retur, for det meste lett, men middels krevende i den lengste stigningen.',
+      totalTime: 'Med øvelser og pauser tar turen opptil 5 timer.',
+      experience: 'Du trenger ingen erfaring, men du bør klare å gå opptil 9 km i terrenget, med øvelser underveis - også i oppoverbakke.',
+      language: 'Turen foregår på engelsk.',
+      questions: 'Ta gjerne <a href="/contact" class="font-semibold underline hover:text-sage transition-colors duration-200">kontakt</a> hvis du har spørsmål.',
+      details: 'Du får all praktisk informasjon når du har booket plassen din.',
+      bringHeading: 'Ta med:',
+      bring: [
+        'Klær etter været',
+        'Ekstra varme og vindtette lag, lue og votter til toppen',
+        'Tursko med godt grep',
+        'Minst 1 liter vann',
+        'Matpakke',
+        'Sitteunderlag',
+        'En liten pakke papirlommetørklær',
+        'Staver (valgfritt)',
+        'Varm te (anbefales)',
+      ],
+      weather: 'Vi går i nesten all slags vær, men blir forholdene farlige, avlyses turen. Du får da pengene tilbake eller kan melde deg på en annen tur.',
+      injury: 'Har du en fersk eller pågående skade, bør du snakke med legen eller fysioterapeuten din før du blir med.',
+      dog: 'Denne turen passer ikke for hund.',
+      duration: 'Varighet', date: 'Dato', meetUpLabel: 'Oppmøte', meetingPoint: 'Møtested', tba: 'Kommer senere', price: 'Pris',
+      signup: 'Meld deg på', limited: 'Begrenset antall plasser.',
+    }
+  : {
+      description: 'A hands-on day to learn how to reduce the strain on your joints in terrain, increase strength and stability while walking, and get more mental and physical benefits from being in nature.',
+      back: 'All events',
+      tagline: 'Walk through nature, learn skills for life.',
+      intro: [
+        'Welcome to a day of practical training in nature that gives you tools to move safely, build core strength, and recover better - on the trail, and in everyday life.',
+        `We hike to ${nordkollenLink}, a mountain near Porsgrunn, to immerse ourselves in wild nature.`,
+      ],
+      alternate: 'We alternate between physically challenging our bodies and more relaxing practices, taking time to rest and unwind.',
+      learnHeading: "You'll learn:",
+      learn: [
+        'How to use breath and the senses to focus attention in the body and release tensions',
+        'Walking exercises to strengthen muscles and joints to counteract the effects of prolonged sitting, such as lower back pain',
+        'How to train coordination and proprioception for better balance, reduced risk of injury and greater ease in terrain',
+        'Walking techniques that reduce the strain on your joints in terrain - uphill, downhill and on flat ground',
+      ],
+      lunch: 'On top of the mountain, we take time to rest, chat, enjoy lunch and a cup of tea.',
+      whoHeading: 'Who is it for?',
+      who: [
+        'People who want to train smarter on the trail, instead of just walking it',
+        'People who enjoy being outdoors and want to protect their joints in terrain',
+        'People looking to relieve stress and boost their energy levels for everyday tasks',
+        'Anyone who deals with joint or back pain from hours of sitting',
+      ],
+      infoHeading: 'Technical info:',
+      meetUp: `We meet up at a parking space in ${oklungenLink} and walk from there on a gravel road, then on a forest trail.`,
+      route: 'The total distance both ways is 9km, mostly easy but moderately demanding on the main climb.',
+      totalTime: 'Including practice and breaks, the total time is up to 5 hours.',
+      experience: 'No previous experience is needed, but you should be comfortable hiking 9km in terrain with additional exercises, also on steeper sections uphill.',
+      language: 'The event is held in English.',
+      questions: 'Please <a href="/en/contact" class="font-semibold underline hover:text-sage transition-colors duration-200">get in touch</a> if you have any questions.',
+      details: "Full practical details will be sent once you've booked your place.",
+      bringHeading: 'What to bring:',
+      bring: [
+        'Appropriate clothes for the weather, plus warm, windproof layers, a hat and gloves for the top of the mountain',
+        'Comfortable shoes with good grip',
+        'At least 1 litre of water',
+        'A packed lunch',
+        'Seating mat',
+        'Small pack of paper tissues',
+        'Walking poles (optional)',
+        'Hot tea (recommended)',
+      ],
+      weather: 'We hike in most weather. However, if hazardous conditions arise, the hike will be cancelled. You will receive a full refund or an option to rebook your trip.',
+      injury: 'If you have a recent or current injury, please check with your doctor or physio before participating.',
+      dog: 'This event is not suitable for bringing a dog.',
+      duration: 'Duration', date: 'Date', meetUpLabel: 'Meet up', meetingPoint: 'Meeting point', tba: 'To be announced', price: 'Price',
+      signup: 'Sign up', limited: 'Places are limited.',
+    };
+
+const heroImage = await heroPhoto(session.image ?? nordkollenHero, 65);
+---
+
+<Layout title={`${name} - ${session.spot ?? session.place} - Rewild`} description={t.description} preloadImage={heroImage}>
+
+  <!-- Navigation -->
+  <Nav />
+
+  <!-- Hero image -->
+  <section class="relative mt-[60px] overflow-hidden" style="height: 65vh;">
+    <img
+      src={heroImage.src}
+      srcset={heroImage.srcset}
+      sizes={heroImage.sizes}
+      alt=""
+      fetchpriority="high"
+      decoding="async"
+      class="absolute inset-0 w-full h-full object-cover" style="object-position: center 70%;"
+    />
+    <div class="absolute inset-0" style="background: linear-gradient(to top, rgba(20,25,14,0.5) 0%, transparent 60%);"></div>
+    <a href={p('/#events')} class="absolute top-6 left-6 md:left-12 inline-flex items-center gap-2 text-xs tracking-[0.25em] uppercase font-light text-white hover:opacity-70 transition-opacity duration-200">
+      <span>←</span><span>{t.back}</span>
+    </a>
+  </section>
+
+  <!-- Title strip (bg-white) -->
+  <div class="bg-white py-10 px-6 text-center">
+    <p class="font-display font-normal italic text-forest text-[16pt] md:text-[20.5pt] lg:text-[25pt] leading-relaxed max-w-2xl mx-auto">{t.tagline}</p>
+  </div>
+
+  <!-- Intro section (bg-cream, matching 'You were built for this') -->
+  <section class="bg-cream pt-16 md:pt-24 pb-12 md:pb-[72px]">
+    <div class="max-w-6xl mx-auto px-6 md:px-12">
+      <div class="max-w-[420px]">
+        <h2 class="font-display font-bold text-4xl md:text-5xl text-forest mb-10 leading-tight">{name} - {session.spot ?? session.place}</h2>
+        <div class="space-y-5 text-forest font-light leading-relaxed text-[1.08rem]">
+          {(text(session, 'intro', lang) ?? t.intro).map(paragraph => <p set:html={paragraph} />)}
+          <p>{t.alternate}</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- What you'll learn strip (bg-white, full width) -->
+  <div class="bg-white pt-12 md:pt-[72px] pb-12 md:pb-[72px]">
+    <div class="max-w-6xl mx-auto px-6 md:px-12">
+      <div class="max-w-[420px]">
+        <h3 class="font-display font-medium text-3xl md:text-4xl text-forest leading-tight mb-6">{t.learnHeading}</h3>
+        <div class="space-y-6">
+          {t.learn.map(item => (
+            <div class="flex items-start gap-4">
+              <span class="mt-2 w-1.5 h-1.5 rounded-full bg-sage-light flex-shrink-0"></span>
+              <span class="text-[1.08rem] text-forest font-light leading-relaxed">{item}</span>
+            </div>
+          ))}
+        </div>
+        <p class="text-forest font-light text-[1.08rem] leading-relaxed pt-[28px] md:pt-[36px]">{t.lunch}</p>
+      </div>
+    </div>
+  </div>
+
+  <section class="bg-cream pt-12 md:pt-[72px] pb-12 md:pb-[72px]">
+    <div class="max-w-6xl mx-auto px-6 md:px-12">
+      <div class="max-w-[420px]">
+        <div class="space-y-5 text-forest font-light leading-relaxed text-[1.08rem]">
+          <h3 class="font-display font-medium text-3xl md:text-4xl text-forest leading-tight">{t.whoHeading}</h3>
+          <div class="space-y-6">
+            {t.who.map(item => (
+              <div class="flex items-start gap-4">
+                <span class="mt-2 w-1.5 h-1.5 rounded-full bg-sage-light flex-shrink-0"></span>
+                <span class="text-[1.08rem] text-forest font-light leading-relaxed">{item}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Practical info (bg-white) -->
+  <section class="bg-white pt-12 md:pt-[72px] pb-12 md:pb-[72px]">
+    <div class="max-w-6xl mx-auto px-6 md:px-12">
+      <div class="max-w-[420px]">
+        <h3 class="font-display font-medium text-3xl md:text-4xl text-forest mb-10 leading-tight">{t.infoHeading}</h3>
+        <div class="space-y-5 text-forest font-light leading-relaxed text-[1.08rem]">
+          <p set:html={text(session, 'meetUp', lang) ?? t.meetUp} />
+          <p set:html={text(session, 'routeInfo', lang) ?? t.route} />
+          <p>
+            {t.totalTime}
+          </p>
+          <p>
+            {t.experience}
+          </p>
+          <p>
+            {t.language}
+          </p>
+          <p set:html={t.questions} />
+          <p>
+            {t.details}
+          </p>
+        </div>
+        <h3 class="font-display font-medium text-3xl md:text-4xl text-forest leading-tight mt-12 mb-6">{t.bringHeading}</h3>
+        <div class="space-y-6">
+          {t.bring.map(item => (
+            <div class="flex items-start gap-4">
+              <span class="mt-2 w-1.5 h-1.5 rounded-full bg-sage-light flex-shrink-0"></span>
+              <span class="text-[1.08rem] text-forest font-light leading-relaxed">{item}</span>
+            </div>
+          ))}
+        </div>
+        <p class="text-forest text-[1.08rem] font-light leading-relaxed mt-5">
+          {t.weather}
+        </p>
+        <p class="text-forest text-[1.08rem] font-light leading-relaxed mt-5">
+          {t.injury}
+        </p>
+        <p class="text-forest text-[1.08rem] font-light leading-relaxed mt-5">
+          {t.dog}
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Details (bg-cream) -->
+  <section class="bg-cream pt-12 md:pt-[72px] pb-14 md:pb-20">
+    <div class="max-w-6xl mx-auto px-6 md:px-12">
+      <div class="grid md:grid-cols-[5fr_7fr] gap-16 md:gap-24">
+        <div>
+          <!-- Details -->
+          <div class="space-y-4">
+            <div class="flex gap-6">
+              <span class="text-xs tracking-[0.2em] uppercase text-sage/80 font-light w-28 flex-shrink-0">{t.duration}</span>
+              <span class="text-base text-forest font-light">{courseDuration(session, lang)}</span>
+            </div>
+            <div class="flex gap-6">
+              <span class="text-xs tracking-[0.2em] uppercase text-sage/80 font-light w-28 flex-shrink-0">{t.date}</span>
+              <span class="text-base text-forest font-light">{longDate(session, lang)}</span>
+            </div>
+            <div class="flex gap-6">
+              <span class="text-xs tracking-[0.2em] uppercase text-sage/80 font-light w-28 flex-shrink-0">{t.meetUpLabel}</span>
+              <span class="text-base text-forest font-light">{meetUpTime(session, 10)}</span>
+            </div>
+            <div class="flex gap-6">
+              <span class="text-xs tracking-[0.2em] uppercase text-sage/80 font-light w-28 flex-shrink-0">{t.meetingPoint}</span>
+              <span class="text-base text-forest font-light">
+                {session.mapUrl
+                  ? <a href={session.mapUrl} target="_blank" rel="noopener" class="font-semibold underline hover:text-sage transition-colors duration-200">{session.meetingPoint}</a>
+                  : session.meetingPoint ?? t.tba}
+              </span>
+            </div>
+            <div class="flex gap-6">
+              <span class="text-xs tracking-[0.2em] uppercase text-sage/80 font-light w-28 flex-shrink-0">{t.price}</span>
+              <span class="text-base text-forest font-light">
+                {freeOffer(session) && <s class="text-forest/50 mr-2">{regularPriceText(session, lang)}</s>}
+                {priceText(session, lang)}
+              </span>
+            </div>
+
+            <p class="pt-2 text-sm text-sage font-light">{t.limited}</p>
+            <div class="pt-10">
+              <a
+                href={`${p('/signup')}?event=${encodeURIComponent(signupLabel(session))}`}
+                class="inline-block px-10 py-4 bg-forest text-white text-xs tracking-[0.25em] uppercase font-light hover:bg-sage transition-colors duration-300"
+              >
+                {t.signup}
+              </a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <Footer />
+
+</Layout>

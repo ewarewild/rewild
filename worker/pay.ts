@@ -1,4 +1,4 @@
-// POST /api/pay  { offering, name, email, phone }  ->  { reference, redirectUrl }
+// POST /api/pay  { offering, name, email, phone, lang }  ->  { reference, redirectUrl }
 // Starts a Vipps payment for one trip. The price is looked up in /trips.json (built from
 // src/data/events.ts), so the browser only says which trip, never how much.
 import { vipps, vippsConfig, json, failure, type Env } from './vipps';
@@ -13,7 +13,7 @@ const vippsPhone = (raw: string) => {
 };
 
 export async function pay(request: Request, env: Env) {
-  const { offering, name, email, phone } = await request.json().catch(() => ({})) as Record<string, string>;
+  const { offering, name, email, phone, lang } = await request.json().catch(() => ({})) as Record<string, string>;
 
   const trip = offering ? (await loadTrips(env, request.url))[offering] : undefined;
   const today = new Date().toLocaleDateString('sv-SE', { timeZone: 'Europe/Oslo' }); // YYYY-MM-DD
@@ -35,7 +35,8 @@ export async function pay(request: Request, env: Env) {
         ...(phoneNumber ? { customer: { phoneNumber } } : {}),
         reference,
         userFlow: 'WEB_REDIRECT',
-        returnUrl: new URL(`/payment?ref=${reference}`, request.url).toString(),
+        // Back to the payment page in the language the customer signed up in
+        returnUrl: new URL(`${lang === 'en' ? '/en' : ''}/payment?ref=${reference}`, request.url).toString(),
         paymentDescription: `${offering} - ${(name ?? '').slice(0, 40)}`.slice(0, 100),
       },
     });

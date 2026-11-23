@@ -1,0 +1,226 @@
+---
+// Business page, Norwegian (/bedrift) and English (/en/bedrift). Self-contained: a buyer linked
+// here from an email should find everything without going elsewhere. Based on the strategy brief,
+// section 6 (INFO/Documents/rewild-strategy-and-website-brief.md), reworked with the user 2026-11-22.
+import { heroImage as heroPhoto } from '../lib/hero';
+import { Image } from 'astro:assets';
+import Layout from '../layouts/Layout.astro';
+import Nav from '../components/Nav.astro';
+import Footer from '../components/Footer.astro';
+import forestsun from '../images/forestsun.webp';
+import eva from '../images/eva.webp';
+import { langFromPath, localePath } from '../i18n';
+
+const heroImage = await heroPhoto(forestsun, 65);
+const lang = langFromPath(Astro.url.pathname);
+
+const t = lang === 'no'
+  ? {
+      title: 'For bedrifter - Rewild',
+      description: 'Utendørs økter for ansatte i Grenland og Vestfold, på stier nær arbeidsplassen: mer variasjon, mindre belastning og bedre restitusjon.',
+      eyebrow: 'For bedrifter',
+      headline: 'Færre plager. Mer overskudd.',
+      why: [
+        'Muskel- og skjelettplager og stressrelaterte psykiske plager er de største årsakene til sykefravær i Norge. Mange av de vanlige løsningene, som holdningskorrigering og ergonomi, har svak støtte i forskningen. Hvor mye vi sitter, sier faktisk lite om hvem som får vondt i ryggen.',
+        'Forskningen peker heller på noe enklere: Vev som belastes på samme måte hele dagen, samler opp slitasje. Det gjelder like mye for en rygg i en kontorstol som for et kne i en motbakke. Hodet fungerer på samme måte: Det som tærer mest, er ofte ikke selve jobben, men at man ikke klarer å koble av fra den.',
+        'Jeg holder økter utendørs der de ansatte lærer å bevege seg med mer variasjon og gi kroppen det den ikke får av en dag med sitting. De trener også opp evnen til å flytte fokus, både mellom oppgaver og fra jobb til hvile. Vi møtes på en sti i nærheten av arbeidsplassen deres. Ingen møterom, ingen matter, ikke noe utstyr.',
+      ],
+      offerHeading: 'Tilbud',
+      bestForLabel: 'Passer best for:',
+      // The 90-minute session was taken off the page 2026-11-22; still offered in conversation as a shorter option or taster
+      formats: [
+        { name: 'Halv dag', text: 'Hele programmet, på en topp eller sti innen 25 minutters kjøring fra sentrum. Opptil 15 deltakere.', bestFor: 'en fagdag eller HMS-dag. Tid til å gå dypere i teknikk og styrke, med en lengre stund i stillhet.' },
+        { name: 'Fire ukers serie', text: 'Én økt på 2 timer i uka på en sti ca. 10 minutters kjøring fra sentrum, der de ansatte lærer øvelser de kan ta med seg inn i arbeidsdagen. Opptil 15 deltakere.', bestFor: 'varig endring. Én ting om gangen, som de øver på mellom øktene til det blir en vane.' },
+        { name: 'Helgekurs', text: 'To dager i naturen, borte fra arbeidsdagen, med tid til å gå skikkelig i dybden på teknikk, styrke, pust og oppmerksomhet. Dere booker stedet, jeg står for programmet. Opptil 15 deltakere.', bestFor: 'en samling eller kickoff med faglig innhold. Rom for å hente seg inn, øve til teknikkene sitter og ta med felles verktøy tilbake til jobben.' },
+      ],
+      outcomesHeading: 'Hva de ansatte får ut av det',
+      // Agreed in English 2026-11-22, translated
+      outcomes: [
+        { label: 'En ordentlig pause fra sittingen', text: 'variert bevegelse ute, i stedet for samme stilling ved pulten hele dagen' },
+        { label: 'Mindre slitasje på kroppen', text: 'gangteknikk som fordeler belastningen og avlaster knær, rygg og hofter' },
+        { label: 'Et hode som får koble av', text: 'enkle øvelser for å legge jobbtankene bak seg og hente seg inn' },
+        { label: 'Skarpere fokus', text: 'de lærer å samle oppmerksomheten om én ting, også på travle dager' },
+        { label: 'Enkle grep i hverdagen', text: 'korte øvelser de kan bruke i arbeidsdagen, uten utstyr' },
+      ],
+      languages: 'Øktene holdes på norsk eller engelsk.',
+      largerGroups: 'Større grupper fordeles på flere økter.',
+      price: 'Prisen avhenger av opplegg og gruppestørrelse.',
+      priceLink: 'Ta kontakt for et tilbud.',
+      aboutHeading: 'Om meg',
+      about: [
+        'Jeg heter Ewa. Jeg har studert kroppsøving, er utdannet yogalærer i London og har en avansert sertifisering i traumebevisst undervisning fra Nordic Maha Yoga i Oslo. Jeg har også studert til naturyogaguide hos Marian Papp, yogaterapeut med doktorgrad fra Karolinska Institutet.',
+        'Jeg har spesialisert meg på aktiviteter i naturen som minimerer risikoen for skader. De gir også praktiske teknikker for å løse opp stress og spenninger. Jeg oppfordrer deltakerne til å lytte til sin egen kropp i stedet for bare å følge instruksjoner.',
+        'Jeg har bakgrunn fra flere idretter og mange års erfaring med å bevege meg utenfor stien, også i vintermørket.',
+        'Rewild holder til ved Porsgrunn og har økter i hele Grenland og Vestfold.',
+      ],
+      contactHeading: 'Vil dere høre mer?',
+      contactBefore: 'Send en e-post til',
+      contactAfter: 'eller bruk kontaktskjemaet.',
+      contactButton: 'Ta kontakt',
+    }
+  : {
+      title: 'For Business - Rewild',
+      description: 'Outdoor sessions for staff in Grenland and Vestfold: moving with more variation, less strain on the body and better recovery - on trails near your workplace.',
+      eyebrow: 'For business',
+      headline: 'Fewer injuries. Better recovery.',
+      why: [
+        'Musculoskeletal problems are, together with stress-related mental health issues, the biggest causes of sick leave in Norway. Many of the usual fixes, like posture correction and ergonomics, have little support in the research. How much we sit actually says little about who gets back pain.',
+        'The research points instead to something simpler: tissue loaded the same way all day accumulates wear. That is as true of a back in an office chair as of a knee on a hill. The same goes for the head: what drains people is often not the work itself, but not being able to switch off from it.',
+        'I run outdoor sessions where staff learn to move with more variation, giving the body what a day of sitting doesn\'t. They also gain more freedom to shift their focus when they need to. We meet on a trail near your workplace. No meeting room, no mats, no equipment.',
+      ],
+      offerHeading: 'What I offer',
+      bestForLabel: 'Best for:',
+      formats: [
+        { name: 'Half day', text: 'The full programme, on a hilltop or trail within a 25-minute drive of the town centre. Up to 15 people.', bestFor: 'a training day or HMS day. Time to go deeper into technique and strength, with a longer stretch in quiet.' },
+        { name: 'Four-week series', text: 'One 2-hour session a week, on a trail about a 10-minute drive from the town centre, with practices your staff can carry into the working day. Up to 15 people.', bestFor: 'lasting change. One thing at a time, practised between sessions so it becomes habit.' },
+        { name: 'Weekend retreat', text: 'Two days in nature, with time to go properly deep into technique, strength, breath and attention, away from the working day. You book the venue; I deliver the programme. Up to 15 people.', bestFor: 'a team gathering or kick-off with real content. Room to practise, recover and build habits that last.' },
+      ],
+      outcomesHeading: 'What your team gets out of it',
+      outcomes: [
+        { label: 'A real break from sitting', text: 'moving the body in ways a working day at a desk doesn\'t' },
+        { label: 'Less strain on the body', text: 'walking technique that spreads the load and takes pressure off joints, back and hips' },
+        { label: 'A mind that can switch off', text: 'simple practices for leaving work thoughts behind, so the head gets a chance to recover' },
+        { label: 'Sharper focus', text: 'training in shifting and settling attention, a skill that carries back to the desk' },
+        { label: 'Something to take with them', text: 'short practices they can use in the working day, with no equipment needed' },
+      ],
+      languages: 'Sessions are held in Norwegian or English.',
+      largerGroups: 'Larger groups are split across several sessions.',
+      price: 'Price depends on the format and group size.',
+      priceLink: 'Get in touch for a quote.',
+      aboutHeading: 'About me',
+      about: [
+        'My name is Ewa. I studied physical education, qualified as a yoga teacher in London and hold an advanced trauma-aware certification from Nordic Maha Yoga in Oslo.',
+        'I specialise in nature-based activities that minimise the risk of injury. They also provide practical tools to release stress and tension. I encourage people to listen to their own bodies rather than simply follow instructions.',
+        'I have a background in several sports and years of experience moving off-trail, including in the winter dark. I teach in Norwegian and English.',
+        'Rewild is based near Porsgrunn and runs sessions across Grenland and Vestfold.',
+      ],
+      contactHeading: 'Want to hear more?',
+      contactBefore: 'Email',
+      contactAfter: 'or use the contact form.',
+      contactButton: 'Get in touch',
+    };
+---
+
+<Layout title={t.title} description={t.description} preloadImage={heroImage}>
+
+  <!-- Navigation -->
+  <Nav />
+
+  <!-- Hero image (same as the other subpages) -->
+  <section class="relative mt-[60px] overflow-hidden" style="height: 65vh;">
+    <img
+      src={heroImage.src}
+      srcset={heroImage.srcset}
+      sizes={heroImage.sizes}
+      alt=""
+      fetchpriority="high"
+      decoding="async"
+      class="absolute inset-0 w-full h-full object-cover" style="object-position: center 40%;"
+    />
+    <div class="absolute inset-0" style="background: linear-gradient(to top, rgba(20,25,14,0.5) 0%, transparent 60%);"></div>
+  </section>
+
+  <!-- Title strip (bg-white) -->
+  <div class="bg-white py-10 px-6 text-center">
+    <p class="font-display font-normal italic text-forest text-[16pt] md:text-[20.5pt] lg:text-[25pt] leading-relaxed max-w-2xl mx-auto">{t.headline}</p>
+  </div>
+
+  <!-- Intro (bg-cream) -->
+  <section class="bg-cream pt-16 md:pt-24 pb-12 md:pb-[72px]">
+    <div class="max-w-6xl mx-auto px-6 md:px-12">
+      <div class="max-w-[420px]">
+        <h1 class="font-display font-bold text-4xl md:text-5xl text-forest mb-10 leading-tight">{t.eyebrow}</h1>
+        <div class="space-y-5 text-forest font-light leading-relaxed text-[1.08rem]">
+          {t.why.map(paragraph => <p>{paragraph}</p>)}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Formats (bg-white) -->
+  <section class="bg-white pt-12 md:pt-[72px] pb-12 md:pb-[72px]">
+    <div class="max-w-6xl mx-auto px-6 md:px-12">
+      <h2 class="font-display font-medium text-3xl md:text-4xl text-forest mb-10 leading-tight">{t.offerHeading}</h2>
+      <div class="grid gap-4 md:grid-cols-3 md:gap-8">
+        {t.formats.map(f => (
+          <div class="bg-cream p-8">
+            <h3 class="font-display font-bold text-3xl text-forest leading-tight mb-5">{f.name}</h3>
+            <p class="text-forest font-light leading-relaxed text-[1.08rem]">{f.text}</p>
+            <p class="mt-4 pt-4 border-t border-forest/10 text-forest font-light italic leading-relaxed text-[1.02rem]"><span class="not-italic font-semibold">{t.bestForLabel}</span> {f.bestFor}</p>
+          </div>
+        ))}
+      </div>
+      <div class="mt-12 max-w-[420px] space-y-5 text-forest font-light leading-relaxed text-[1.08rem]">
+        <p>{t.largerGroups}</p>
+        <p>{t.languages}</p>
+        {/* Add "Forsikret." here once the ansvarsforsikring is in place - the brief says buyers look for it */}
+        <p>{t.price} <a href={localePath(lang, '/contact')} class="font-semibold underline hover:text-sage transition-colors duration-200">{t.priceLink}</a></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- What staff get out of it (bg-cream) -->
+  <section class="bg-cream pt-12 md:pt-[72px] pb-12 md:pb-[72px]">
+    <div class="max-w-6xl mx-auto px-6 md:px-12">
+      <div class="max-w-[420px]">
+        <h3 class="font-display font-medium text-3xl md:text-4xl text-forest leading-tight mb-6">{t.outcomesHeading}</h3>
+        <div class="space-y-6">
+          {t.outcomes.map(o => (
+            <div class="flex items-start gap-4">
+              <span class="mt-2 w-1.5 h-1.5 rounded-full bg-sage-light flex-shrink-0"></span>
+              <span class="text-[1.08rem] text-forest font-light leading-relaxed"><strong class="font-semibold">{o.label}:</strong> {o.text}</span>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  {/* "Det jeg ikke lover" section removed 2026-11-22, kept for reuse:
+  Det jeg ikke lover - Jeg lover ikke bedre holdning eller et «nullstilt» nervesystem. Forskningen bak slike løfter er tynn. Jeg holder meg til det som er godt dokumentert, og sier ærlig fra om resten. */}
+
+  <!-- About (bg-white, same layout as the homepage About) -->
+  <section class="bg-white pt-12 md:pt-[72px] pb-12 md:pb-[72px]">
+    <div class="max-w-6xl mx-auto px-6 md:px-12">
+      <div class="grid gap-10 md:grid-cols-2 md:gap-24 items-stretch">
+        <div class="md:order-1 md:sticky md:top-32 self-start">
+          <Image
+            src={eva}
+            alt="Ewa"
+            widths={[480, 720, 960, 1440, 2000]}
+            sizes="(min-width: 768px) 480px, calc(100vw - 48px)"
+            class="w-full h-auto aspect-square object-cover object-top"
+            loading="lazy"
+          />
+        </div>
+        <div class="md:order-2">
+          <h2 class="font-display font-bold text-3xl md:text-4xl text-forest mb-6 md:mb-10 leading-tight">{t.aboutHeading}</h2>
+          <div class="space-y-6 text-forest font-light leading-relaxed text-[1.08rem]">
+            {t.about.map(paragraph => <p>{paragraph}</p>)}
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact (bg-cream) -->
+  <section class="bg-cream pt-12 md:pt-[72px] pb-14 md:pb-20">
+    <div class="max-w-6xl mx-auto px-6 md:px-12">
+      <div class="max-w-[420px]">
+        <h2 class="font-display font-medium text-3xl md:text-4xl text-forest mb-10 leading-tight">{t.contactHeading}</h2>
+        <p class="text-forest font-light leading-relaxed text-[1.08rem]">
+          {t.contactBefore}
+          <a href="mailto:ewa@re-wild.no" class="font-semibold underline hover:text-sage transition-colors duration-200">ewa@re-wild.no</a>
+          {t.contactAfter}
+        </p>
+        <div class="pt-12">
+          <a href={localePath(lang, '/contact')} class="inline-block px-10 py-4 bg-forest text-white text-xs tracking-[0.25em] uppercase font-light hover:bg-sage transition-colors duration-300">{t.contactButton}</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <Footer />
+
+</Layout>

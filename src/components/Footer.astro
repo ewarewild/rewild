@@ -1,5 +1,21 @@
 ---
+import { langFromPath, localePath } from '../i18n';
+
 const year = new Date().getFullYear();
+const lang = langFromPath(Astro.url.pathname);
+const t = lang === 'no'
+  ? {
+      instagram: 'Rewild på Instagram',
+      facebook: 'Rewild på Facebook',
+      disclaimer: 'Rewild tilbyr bevegelse og aktiviteter i naturen for helse og velvære. Ingenting på denne nettsiden eller i øktene er medisinske råd, diagnose eller behandling. Har du en skade eller en helsetilstand, bør du snakke med lege eller fysioterapeut før du blir med.',
+      terms: 'Salgsvilkår',
+    }
+  : {
+      instagram: 'Rewild on Instagram',
+      facebook: 'Rewild on Facebook',
+      disclaimer: 'Rewild offers movement and nature-based wellness activities. Nothing on this site or in the sessions constitutes medical advice, diagnosis, or treatment. If you have an injury or health condition, please consult a doctor or physiotherapist before participating.',
+      terms: 'Terms of sale',
+    };
 ---
 
 <footer class="bg-forest text-white py-14 px-6">
@@ -9,7 +25,7 @@ const year = new Date().getFullYear();
         href="https://www.instagram.com/rewild.eva"
         target="_blank"
         rel="noopener noreferrer"
-        aria-label="Rewild on Instagram"
+        aria-label={t.instagram}
         class="text-white/50 hover:text-white transition-colors duration-200"
       >
         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
@@ -22,7 +38,7 @@ const year = new Date().getFullYear();
         href="https://www.facebook.com/profile.php?id=61569362843137"
         target="_blank"
         rel="noopener noreferrer"
-        aria-label="Rewild on Facebook"
+        aria-label={t.facebook}
         class="text-white/50 hover:text-white transition-colors duration-200"
       >
         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
@@ -31,11 +47,11 @@ const year = new Date().getFullYear();
       </a>
     </div>
     <p class="text-white/30 text-xs font-light max-w-2xl leading-relaxed">
-      Rewild offers movement and nature-based wellness activities. Nothing on this site or in the sessions constitutes medical advice, diagnosis, or treatment. If you have an injury or health condition, please consult a doctor or physiotherapist before participating.
+      {t.disclaimer}
     </p>
     <p class="text-white/30 text-xs font-light">
       Rewild · Org.nr. 938 483 833 ·
-      <a href="/vilkar" class="hover:text-white transition-colors duration-200">Salgsvilkår</a>
+      <a href={localePath(lang, '/vilkar')} class="hover:text-white transition-colors duration-200">{t.terms}</a>
     </p>
     <p class="text-white/30 text-xs font-light">© {year} Rewild</p>
   </div>

@@ -14,6 +14,10 @@ export default defineConfig({
     '/rewild-course': '/#events',
     '/rewild-course/larvik-8-november': '/#events',
     '/rewild-course/larvik-21-november': '/#events',
+    '/rewild-trip': '/#events',
+    '/en/evening-reset': '/en/#events',
+    '/en/rewild-course': '/en/#events',
+    '/en/rewild-trip': '/en/#events',
   },
   vite: {
     plugins: [tailwindcss()],

@@ -1,18 +1,56 @@
 ---
+// Top menu for every page. On the homepage (transparent) it sits over the hero photo in white
+// and turns solid once you scroll.
+import { langFromPath, localePath, otherLangPath } from '../i18n';
+
+interface Props {
+  transparent?: boolean;
+}
+
+const { transparent = false } = Astro.props;
+const pathname = Astro.url.pathname;
+const lang = langFromPath(pathname);
+const p = (path: string) => localePath(lang, path);
+
+const links = lang === 'no'
+  ? [
+      { href: '/', label: 'Rewild' },
+      { href: '/#events', label: 'Turer' },
+      { href: '/#about', label: 'Om meg' },
+      { href: '/the-story', label: 'Historien' },
+      { href: '/one-to-one', label: '1:1' },
+      { href: '/contact', label: 'Kontakt' },
+    ].map(l => ({ ...l, href: p(l.href) }))
+  : [
+      { href: '/', label: 'Rewild' },
+      { href: '/#events', label: 'Events' },
+      { href: '/#about', label: 'About' },
+      { href: '/the-story', label: 'The Story' },
+      { href: '/one-to-one', label: '1:1' },
+      { href: '/contact', label: 'Contact' },
+    ].map(l => ({ ...l, href: p(l.href) }));
+links.push({ href: p('/bedrift'), label: lang === 'no' ? 'For bedrifter' : 'For business' });
+
+// The same page in the other language
+const switchTo = lang === 'no'
+  ? { href: otherLangPath(pathname), label: 'EN', title: 'English', hreflang: 'en' }
+  : { href: otherLangPath(pathname), label: 'NO', title: 'Norsk', hreflang: 'nb' };
+
+const tone = transparent ? 'text-white' : 'text-forest';
 ---
 
-<nav id="nav" class="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-sm shadow-sm transition-all duration-300 px-6 py-5 md:px-12">
-  <div class="max-w-6xl mx-auto flex items-center justify-between md:justify-center">
-    <a href="/" class="md:hidden text-xs tracking-[0.25em] uppercase font-light text-forest">Rewild</a>
-    <ul class="hidden md:flex gap-10 text-xs tracking-[0.3em] uppercase font-light">
-      <li><a href="/" class="text-forest hover:opacity-60 transition-opacity duration-200">Rewild</a></li>
-      <li><a href="/#events" class="text-forest hover:opacity-60 transition-opacity duration-200">Events</a></li>
-      <li><a href="/#about" class="text-forest hover:opacity-60 transition-opacity duration-200">About</a></li>
-      <li><a href="/the-story" class="text-forest hover:opacity-60 transition-opacity duration-200">The Story</a></li>
-      <li><a href="/one-to-one" class="text-forest hover:opacity-60 transition-opacity duration-200">1:1</a></li>
-      <li><a href="/contact" class="text-forest hover:opacity-60 transition-opacity duration-200">Contact</a></li>
+<nav id="nav" data-transparent={transparent ? '' : undefined} class:list={['fixed top-0 left-0 right-0 z-50 transition-all duration-300 px-6 py-5 lg:px-12', !transparent && 'bg-white/95 backdrop-blur-sm shadow-sm']}>
+  <div class:list={['max-w-6xl mx-auto flex items-center justify-between', transparent ? 'lg:justify-start' : 'lg:justify-center']}>
+    <a href={p(transparent ? '/#return-to-yourself' : '/')} class:list={['nav-tone lg:hidden text-xs tracking-[0.25em] uppercase font-light transition-colors duration-300', tone]}>Rewild</a>
+    <ul class:list={['hidden lg:flex items-center gap-8 xl:gap-10 text-xs tracking-[0.3em] uppercase', transparent ? 'font-normal' : 'font-light']}>
+      {links.map(l => (
+        <li><a href={l.href} class:list={['nav-tone hover:opacity-60 transition-opacity duration-200', tone]}>{l.label}</a></li>
+      ))}
+      <li class:list={['nav-tone border-l pl-8 xl:pl-10 border-current/30', tone]}>
+        <a href={switchTo.href} hreflang={switchTo.hreflang} title={switchTo.title} class="hover:opacity-60 transition-opacity duration-200">{switchTo.label}</a>
+      </li>
     </ul>
-    <button id="menu-btn" class="md:hidden text-forest transition-colors duration-300" aria-label="Open menu">
+    <button id="menu-btn" class:list={['nav-tone lg:hidden transition-colors duration-300', tone]} aria-label={lang === 'no' ? 'Åpne menyen' : 'Open menu'}>
       <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
         <line x1="3" y1="6" x2="21" y2="6"/>
         <line x1="3" y1="12" x2="21" y2="12"/>
@@ -24,26 +62,43 @@
 
 <!-- Mobile menu -->
 <div id="mobile-menu" class="fixed inset-0 z-40 bg-white flex flex-col items-center justify-center hidden">
-  <button id="menu-close" class="absolute top-5 right-6 text-forest" aria-label="Close menu">
+  <button id="menu-close" class="absolute top-5 right-6 text-forest" aria-label={lang === 'no' ? 'Lukk menyen' : 'Close menu'}>
     <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
       <line x1="18" y1="6" x2="6" y2="18"/>
       <line x1="6" y1="6" x2="18" y2="18"/>
     </svg>
   </button>
   <ul class="flex flex-col gap-8 text-center">
-    <li><a href="/" class="font-display text-[1.8rem] text-forest font-light mobile-link">Rewild</a></li>
-    <li><a href="/#events" class="font-display text-[1.8rem] text-forest font-light mobile-link">Events</a></li>
-    <li><a href="/#about" class="font-display text-[1.8rem] text-forest font-light mobile-link">About</a></li>
-    <li><a href="/the-story" class="font-display text-[1.8rem] text-forest font-light mobile-link">The Story</a></li>
-    <li><a href="/one-to-one" class="font-display text-[1.8rem] text-forest font-light mobile-link">1:1</a></li>
-    <li><a href="/contact" class="font-display text-[1.8rem] text-forest font-light mobile-link">Contact</a></li>
+    {links.map(l => (
+      <li><a href={l.href} class="font-display text-[1.8rem] text-forest font-light mobile-link">{l.label}</a></li>
+    ))}
+    <li class="pt-2">
+      <a href={switchTo.href} hreflang={switchTo.hreflang} class="text-xs tracking-[0.3em] uppercase font-light text-sage/80 mobile-link">{switchTo.title}</a>
+    </li>
   </ul>
 </div>
 
 <script>
+  const nav = document.getElementById('nav');
   const menuBtn = document.getElementById('menu-btn');
   const mobileMenu = document.getElementById('mobile-menu');
   const menuClose = document.getElementById('menu-close');
+
+  // Homepage: white over the hero, solid once scrolled
+  if (nav?.hasAttribute('data-transparent')) {
+    const updateNav = () => {
+      const scrolled = window.scrollY > 80;
+      nav.classList.toggle('bg-white/95', scrolled);
+      nav.classList.toggle('backdrop-blur-sm', scrolled);
+      nav.classList.toggle('shadow-sm', scrolled);
+      nav.querySelectorAll('.nav-tone').forEach(el => {
+        el.classList.toggle('text-forest', scrolled);
+        el.classList.toggle('text-white', !scrolled);
+      });
+    };
+    window.addEventListener('scroll', updateNav);
+    updateNav();
+  }
 
   const closeMobileMenu = () => {
     mobileMenu?.classList.add('hidden');
