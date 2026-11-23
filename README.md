@@ -14,8 +14,8 @@ Startet 23. november 2026 (branch `norsk-og-bedrift`).
 6. Kontakt (`src/views/Contact.astro`) - ferdig
 7. Bedrift (`src/views/Bedrift.astro`) - ferdig
 8. Påmelding og betaling (`src/views/Signup.astro`, `src/views/Payment.astro`) - ferdig
-9. Vilkår (`src/views/Vilkar.astro`) - neste
-10. Meny og bunntekst (`src/components/Nav.astro`, `src/components/Footer.astro`)
+9. Vilkår (`src/views/Vilkar.astro`) - ferdig (uendret)
+10. Meny og bunntekst (`src/components/Nav.astro`, `src/components/Footer.astro`) - neste
 
 ## Prinsipper vi har landet på
 
@@ -458,6 +458,10 @@ Bedriftssiden er ferdig.
 - Avbrutt: "Betalingen ble avbrutt, så plassen din er ikke booket." -> "Plassen din er derfor ikke reservert." (gjentok overskriften ordrett, "booket" er lånord).
 - Ikke kommet gjennom: "vi bekrefter" -> "jeg bekrefter", unødvendig komma før "eller" fjernet.
 - Google-beskrivelse: "Bookingen din hos Rewild." -> "Påmeldingen din hos Rewild."
+
+### Vilkår (`src/views/Vilkar.astro`) - uendret
+
+Språket er godt, og i juridisk tekst er presisjon viktigere enn flyt. "Vi" og "ombooking" beholdt - vanlig og presist i vilkår.
 
 ## Notert til senere
 
