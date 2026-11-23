@@ -44,9 +44,13 @@ Startet 23. november 2026 (branch `norsk-og-bedrift`).
 - Nå: Vi går i stillhet, løser opp spenninger og trener oppmerksomheten underveis. Du lærer gangteknikker som bygger styrke og balanse på ujevnt underlag - og kommer hjem med mer ro i hodet.
 - Hvorfor: Første setning var sterk og ble beholdt. "Mindre belastning" gjentok underteksten. "Gangteknikker" viser at man lærer en teknikk (samme ord som på kurssidene). "Mer luft i hodet" var uklart.
 
+**Linjen for bedrifter** (over bildet i toppen)
+- Før: Arbeider du med HMS eller personal? Se bedriftsopplegg →
+- Nå: Jobber du med HMS eller HR? Se tilbud til bedrifter →
+- Hvorfor: "Arbeider" og "personal" var stivt og gammeldags. "Tilbud til bedrifter" er enklere enn det lange "bedriftsopplegg". Vurderte å åpne for daglige ledere/teamledere, men valgte å holde målgruppen HMS og HR.
+
 ## Gjenstår på forsiden
 
-- Linjen for bedrifter: "Arbeider du med HMS eller personal? Se bedriftsopplegg →" (forslag: "Jobber du med HMS eller HR? Se tilbud til bedrifter →")
 - "Scroll" nederst i hjørnet (beholde, eller "Bla ned")
 - Over 1:1-knappen: "Vil du ha noe skreddersydd for deg?" (forslag: "Vil du ha et opplegg tilpasset deg?")
 
