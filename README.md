@@ -408,6 +408,7 @@ Kontakt-siden er ferdig.
 - Fire ukers serie nå: Én økt på 2 timer i uka på en sti ca. 10 minutters kjøring fra sentrum, der de ansatte lærer øvelser de kan ta med seg inn i arbeidsdagen. Opptil 15 deltakere.
 - Hvorfor: Færre komma. "Der" binder stien og øvelsene sammen (Ewa: å dele det opp forenklet opplegget). "Lærer" viser at det er en ferdighet.
 - Fire ukers serie, "Passer best for": "øvd på mellom øktene så det blir en vane" -> "som de øver på mellom øktene til det blir en vane" (manglet subjekt, haltet).
+- Helgekurs: "borte fra arbeidsdagen" flyttet fra slutten til rett etter "To dager i naturen" - beskriver stedet, og innholdet (teknikk, styrke, pust og oppmerksomhet) får trykk til slutt. "Dere booker stedet, jeg står for programmet." beholdt ("booker" er tydelig på at bedriften bestiller). "Passer best for" uendret.
 
 ## Notert til senere
 
