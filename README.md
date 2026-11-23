@@ -317,6 +317,11 @@ Skader, hund og infoboksen uendret (identisk med Evening Reset). Rewild Trip-sid
 - Nå: Stress var ikke lenger normaltilstanden min. Overlevelsesmodus ga plass til kreativitet og en følelse av frihet.
 - Hvorfor: "Utgangspunkt" (oversatt fra "baseline/default") betyr der man starter fra. "Normaltilstand" er presist.
 
+**Avsnitt 16**
+- Før: Forvandlingen inspirerte meg enormt til å dele disse verktøyene med andre. Så de kan kjenne den samme lettelsen og styrken i sine egne liv.
+- Nå: Forvandlingen inspirerte meg til å dele disse verktøyene med andre. Så de også kan kjenne den samme lettelsen og styrken i sitt eget liv.
+- Hvorfor: "Enormt" var oversatt og sto rart. "Sine egne liv" er engelsk stil -> "sitt eget liv". "Også" knytter leseren til Ewas erfaring. To korte setninger beholdt.
+
 ## Notert til senere
 
 - Rewild Trip praktisk info: "Turen foregår på engelsk", spørsmålslinjen og "Du får all praktisk informasjon når du har booket plassen din." ble hoppet over. Den siste har "booket" (vurder "meldt deg på", likt med knappen).
