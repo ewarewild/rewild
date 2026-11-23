@@ -431,6 +431,7 @@ Kontakt-siden er ferdig.
 **Om meg (bedrift)** - overskrift uendret.
 - Avsnitt 1: lagt til "Jeg har også studert til naturyogaguide hos Marian Papp, yogaterapeut med doktorgrad fra Karolinska Institutet."
 - Hvorfor: Bedriftssiden argumenterer med forskning - doktorgraden fra Karolinska gir mest faglig tyngde for HMS. Forenklet fra bioen (uten "i vill natur").
+- Avsnitt 2: "naturbaserte aktiviteter" -> "aktiviteter i naturen", "praktiske verktøy" -> "praktiske teknikker" ("verktøy" står i Helgekurs). Ellers uendret - stress beholder sin egen setning, viktig for HMS.
 
 ## Notert til senere
 
