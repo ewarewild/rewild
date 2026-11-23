@@ -486,6 +486,10 @@ Kalenderkortene justert så forsiden ikke gjentar seg ("tar vare på leddene" st
 - Evening Reset-kortet nå: Rist av deg dagen og kom i kontakt med kroppen igjen på en kveldstur. Vi slipper stresset og skjerper fokuset.
 - Rewild Trip-kortet (og Google-beskrivelse) nå: En hel dag med praktisk trening i terrenget. Du lærer gangteknikker og øvelser underveis som forebygger skader og gir balanse - både fysisk og mentalt.
 
+## Engelsk side
+
+- Bio, Marian Papp: "I also trained as an Outdoor Yoga Guide in Wild Nature with Marian Papp ..." -> "I also studied to become a nature yoga guide in wild nature with Marian Papp, a yoga therapist with a PhD from Karolinska Institutet." (tilsvarer norsk: "studert til naturyogaguide i vill natur").
+
 ## Rettet feil (engelsk side)
 
 - Engelsk Rewild Trip-side viste `{t.totalTime}`, `{t.experience}`, `{t.language}`, `{t.details}`, `{t.weather}`, `{t.injury}` og `{t.dog}` som tekst (oppsto i commit 76459df da siden ble delt i norsk/engelsk). Opprinnelig engelsk tekst satt tilbake ordrett fra historikken. NB: engelsk erfaringstekst sier fortsatt "9km" (feil for Østre Vealøs) - tas i engelsk gjennomgang.
