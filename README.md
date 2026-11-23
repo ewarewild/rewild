@@ -420,6 +420,7 @@ Kontakt-siden er ferdig.
 - Punkt 2 før: Mindre belastning på kroppen: gangteknikk som fordeler belastningen og avlaster ledd, rygg og hofter
 - Punkt 2 nå: Mindre slitasje på kroppen: gangteknikk som fordeler belastningen og avlaster knær, rygg og hofter
 - Hvorfor: "Belastning" sto to ganger. "Slitasje" er forskningens ord fra avsnitt 2 (problemord er greit på bedriftssiden). Hofter er ledd - "knær, rygg og hofter" er tre konkrete steder og speiler "et kne i en motbakke".
+- Punkt 3: "enkle øvelser for å legge jobbtankene bak seg, så hodet får hente seg inn" -> "enkle øvelser for å legge jobbtankene bak seg og hente seg inn" ("hode" og "får" sto to ganger). Merkelappen "Et hode som får koble av" uendret.
 
 ## Notert til senere
 
