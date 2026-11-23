@@ -397,6 +397,11 @@ Kontakt-siden er ferdig.
 - Nå: ... Hodet fungerer på samme måte: Det som tærer mest, ...
 - Hvorfor: Unngår "Det gjelder ... Det samme gjelder" i to setninger på rad. Like stram og saklig, og "Hodet" først får trykk. Resten uendret.
 
+**Tredje avsnitt**
+- Før: Jeg holder økter utendørs der de ansatte lærer å bevege seg med mer variasjon, og gir kroppen det den ikke får av en dag med sitting. De får også større frihet til å skifte fokus når det trengs. ...
+- Nå: Jeg holder økter utendørs der de ansatte lærer å bevege seg med mer variasjon og gi kroppen det den ikke får av en dag med sitting. De trener også opp evnen til å flytte fokus, både mellom oppgaver og fra jobb til hvile. ...
+- Hvorfor: Uklart subjekt ("og gir") rettet. "Større frihet til å skifte fokus når det trengs" var oversatt og vagt. Ewas presisering: evnen til å flytte fokus mellom oppgaver og mellom jobb og hvile - konkret nytte for arbeidsgiver, og svarer på "koble av" i avsnittet før. Merk: "Skarpere fokus"-punktet i lista lenger ned bør justeres så det ikke gjentar dette.
+
 ## Notert til senere
 
 - Rewild Trip praktisk info: "Turen foregår på engelsk", spørsmålslinjen og "Du får all praktisk informasjon når du har booket plassen din." ble hoppet over. Den siste har "booket" (vurder "meldt deg på", likt med knappen).
