@@ -338,6 +338,11 @@ Skader, hund og infoboksen uendret (identisk med Evening Reset). Rewild Trip-sid
 - Nå: Vi finner veien sammen, i ditt tempo.
 - Hvorfor: Originalen var stakkato. "Din (egen) vei" går mot hva 1:1 er - "gå sin egen vei" betyr å klare seg uten andre. "Sammen" viser veiledningen og speiler slutten av Historien ("Sammen med deg.").
 
+**Avsnitt 1**
+- Før: Enten du er på vei tilbake etter en skade eller utbrenthet, trener mot et bestemt mål, eller bare vil bevege deg og ha det bedre i hverdagen, tar øktene utgangspunkt i hvor du er.
+- Nå: Øktene tar utgangspunkt i der du er. Kanskje er du på vei tilbake etter en skade eller utbrenthet, trener mot et bestemt mål eller vil bare bevege deg og ha det bedre i hverdagen.
+- Hvorfor: Poenget først i en kort setning. Feil komma før "eller" fjernet, "hvor du er" -> "der du er". "Kanskje er du ..." snakker direkte til leseren.
+
 ## Notert til senere
 
 - Rewild Trip praktisk info: "Turen foregår på engelsk", spørsmålslinjen og "Du får all praktisk informasjon når du har booket plassen din." ble hoppet over. Den siste har "booket" (vurder "meldt deg på", likt med knappen).
