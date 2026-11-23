@@ -179,6 +179,9 @@ Bioen er ferdig gjennomgått.
 - Punkt 2 før: Deg som ikke har tid til å trene i løpet av dagen
 - Punkt 2 nå: Deg som ikke rekker å trene i løpet av dagen
 - Hvorfor: "Rekker" er mer muntlig norsk og får frem travelheten.
+- Punkt 3 før: Deg som vil få mer ut av turene i naturen, både fysisk og mentalt
+- Punkt 3 nå: Deg som vil få mer ut av turene dine, både fysisk og mentalt
+- Hvorfor: "Turer i naturen" sier det samme to ganger (og punkt 1 har "i naturen"). "Dine" er mer personlig.
 
 ## Notert til senere
 
