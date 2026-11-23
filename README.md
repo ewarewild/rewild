@@ -276,6 +276,11 @@ Skader, hund og infoboksen uendret (identisk med Evening Reset). Rewild Trip-sid
 - Nå: Mens jeg bygde opp livet mitt igjen etter en krise, havnet jeg i en situasjon jeg ikke lenger klarte å stå i. Påkjenningene var så store at jeg ble skadet og utbrent.
 - Hvorfor: "Hadde kapasitet til" var oversatt fra engelsk. "Klarte å stå i" er et vanlig norsk uttrykk for å tåle noe tungt.
 
+**Avsnitt 2**
+- Før: Brystet verket hele tiden av opphopet stress og følelser. Jeg hadde en skade i kneet og i skulderen som ikke ville gro. Jeg følte meg deprimert, fanget og isolert, og så ingen åpenbar vei ut av situasjonen jeg var i.
+- Nå: Brystet verket hele tiden av oppdemmet stress og følelser. Jeg hadde skader i kneet og skulderen som ikke ville gro. Jeg følte meg deprimert, fanget og isolert og så ingen vei ut.
+- Hvorfor: "Oppdemmet" (Ewas valg) er et sterkere bilde. "En skade" på to steder -> "skader". "Ingen åpenbar vei ut av situasjonen jeg var i" var oversatt og gjentok "situasjon" fra avsnitt 1 - "ingen vei ut" er kort og tungt. Feil komma fjernet.
+
 ## Notert til senere
 
 - Rewild Trip praktisk info: "Turen foregår på engelsk", spørsmålslinjen og "Du får all praktisk informasjon når du har booket plassen din." ble hoppet over. Den siste har "booket" (vurder "meldt deg på", likt med knappen).
