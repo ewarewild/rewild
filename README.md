@@ -99,6 +99,11 @@ Samme tekst brukes på forsiden (avsnitt 1-2 synlige, resten under "Mer →") og
 - Nå: Historien om Rewild begynner egentlig på 80-tallet, da naturen var en del av hverdagen - trening, sanking og frihet til å leke vilt.
 - Hvorfor: "Den egentlige historien" var oversatt fra "the actual story" og kunne antyde en falsk historie. "Egentlig" inni setningen er muntlig og naturlig. "Begynner" er mer levende enn "går tilbake til". "Mye" tatt ut - "frihet til å leke vilt" står sterkere alene.
 
+**Avsnitt 6**
+- Før: Noen tiår senere møtte jeg utfordringer som førte til fysisk og psykisk utbrenthet.
+- Nå: Noen tiår senere havnet jeg i en krise og ble utbrent, både fysisk og psykisk.
+- Hvorfor: "Møtte utfordringer" var oversatt og et slitt jobbord som holder leseren på avstand. "Havnet i" viser at det skjedde med henne. "Krise" er Ewas eget ord fra Historien-siden. "Ble utbrent" er direkte, ikke klinisk.
+
 ## Notert til senere
 
 - Kurssidene sier "Turen foregår på engelsk." - sjekk om det fortsatt stemmer nå som siden er norsk først.
