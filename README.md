@@ -221,6 +221,12 @@ Resten av Evening Reset-siden (skader, hund, infoboksen) uendret. All felles tek
 - Nå: Vi veksler mellom å utfordre kroppen og å gjøre roligere øvelser. Vi tar oss god tid til å hvile og senke skuldrene.
 - Hvorfor: "Veksler mellom å utfordre ... og øvelser" var ulike ledd. Feil komma før "og tar". Delt i to. "Innimellom" og "også" forkastet - hvilen skal stå like sterkt som treningen. "God tid" gjør hvilen bevisst.
 
+**"Du lærer:"-lista**
+- Overskrift og punkt 1 uendret (samme som Evening Reset punkt 1).
+- Punkt 2 før: Øvelser underveis som styrker muskler og ledd og motvirker følgene av mye stillesitting, som smerter i korsryggen
+- Punkt 2 nå: Øvelser underveis som styrker kroppen og motvirker følgene av mye stillesitting, som vondt i korsryggen
+- Hvorfor: Samme løsning som Evening Reset punkt 2 - fjerner dobbel "og", "vondt" i stedet for "smerter".
+
 ## Notert til senere
 
 - Engelsk Evening Reset-tekst: "step into trees" -> "into the trees"; "tension releasing, something opening" leses ujevnt. Tas i en egen engelsk gjennomgang.
