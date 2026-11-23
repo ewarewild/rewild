@@ -312,6 +312,11 @@ Skader, hund og infoboksen uendret (identisk med Evening Reset). Rewild Trip-sid
 - Nå: Også livet rundt meg begynte å forandre seg. Jeg fikk kjøpt meg et hus, og jeg begynte å følge en vei i tråd med mitt indre kompass. Og jeg havnet i et kjærlig forhold, slik jeg alltid hadde ønsket meg.
 - Hvorfor: "Til og med livet mitt" var uklart. "Fant meg selv i" betyr på norsk å oppdage hvem man er. "Fant kjærligheten" var for poetisk. "Havnet i" speiler avsnitt 1 ("havnet jeg i en situasjon ...") - samme verb, nå om noe godt.
 
+**Avsnitt 15**
+- Før: Stress var ikke lenger utgangspunktet mitt. Overlevelsesmodus ga plass til kreativitet og en følelse av frihet.
+- Nå: Stress var ikke lenger normaltilstanden min. Overlevelsesmodus ga plass til kreativitet og en følelse av frihet.
+- Hvorfor: "Utgangspunkt" (oversatt fra "baseline/default") betyr der man starter fra. "Normaltilstand" er presist.
+
 ## Notert til senere
 
 - Rewild Trip praktisk info: "Turen foregår på engelsk", spørsmålslinjen og "Du får all praktisk informasjon når du har booket plassen din." ble hoppet over. Den siste har "booket" (vurder "meldt deg på", likt med knappen).
