@@ -520,3 +520,4 @@ Kalenderkortene justert så forsiden ikke gjentar seg ("tar vare på leddene" st
 - 24. november 2026: Bedrift, Helgekurs: "med faglig innhold" -> "med et helhetlig program". Hvorfor: "faglig innhold" kunne leses som bedriftens eget innhold; "konsentrert program" ble vurdert, men kolliderte med "rom for å hente seg inn".
 - 24. november 2026: Bedrift: "Vi møtes på en sti i nærheten av arbeidsplassen deres." fjernet (NO + EN, Ewas ønske). Avsnittet slutter nå med "Ingen møterom, ingen matter, ikke noe utstyr."
 - 24. november 2026: Bedrift: "Øktene holdes på norsk eller engelsk." -> "Øktene holdes på engelsk." (EN: "Sessions are held in English.").
+- 24. november 2026: Rewild Trip: "Du får all praktisk informasjon når du har booket plassen din." fjernet (NO + EN). Bare Rewild Trip-siden hadde setningen.
