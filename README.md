@@ -500,3 +500,7 @@ Kalenderkortene justert så forsiden ikke gjentar seg ("tar vare på leddene" st
 ## Evening Reset-siden
 
 - 24. november 2026: ", som vondt i korsryggen" fjernet fra punktet om øvelser underveis (Ewas ønske). Også fjernet på engelsk (", such as lower back pain"). Samme endring gjort på Rewild Trip-siden (NO + EN). "Hathayogalærer" i Om-teksten beholdes (riktig norsk sammensetning).
+
+## Ta med-listen
+
+- 24. november 2026: "Klær etter været" -> "Klær etter været, i lag du kan ta av og på" på Evening Reset og Rewild Trip (NO). Hvorfor: "(flere lag)" i parentes sa ikke at poenget er å kunne ta av og på. Engelsk ikke endret ennå.
