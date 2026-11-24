@@ -505,3 +505,4 @@ Kalenderkortene justert så forsiden ikke gjentar seg ("tar vare på leddene" st
 
 - 24. november 2026: "Klær etter været" -> "Klær etter været, i lag du kan ta av og på" på Evening Reset og Rewild Trip (NO). Hvorfor: "(flere lag)" i parentes sa ikke at poenget er å kunne ta av og på. Engelsk ikke endret ennå.
 - 24. november 2026: Nytt punkt etter klærne på begge sider: "En ryggsekk som sitter godt, ikke større enn nødvendig" (Ewas ønske). "Sitter godt" i stedet for "velpasset", som er sjeldent på norsk. Engelsk ikke lagt til ennå.
+- 24. november 2026: Samme endringer på engelsk. Evening Reset: "Clothes for the weather, in layers you can take on and off" + "A well-fitting backpack, no bigger than you need". Rewild Trip: klespunktet delt i to som på norsk ("Clothes for the weather, in layers you can take on and off" / "Extra warm, windproof layers, a hat and gloves for the top of the mountain") + samme sekkepunkt.
