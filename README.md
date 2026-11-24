@@ -496,3 +496,7 @@ Kalenderkortene justert så forsiden ikke gjentar seg ("tar vare på leddene" st
 ## Rettet feil (engelsk side)
 
 - Engelsk Rewild Trip-side viste `{t.totalTime}`, `{t.experience}`, `{t.language}`, `{t.details}`, `{t.weather}`, `{t.injury}` og `{t.dog}` som tekst (oppsto i commit 76459df da siden ble delt i norsk/engelsk). Opprinnelig engelsk tekst satt tilbake ordrett fra historikken. NB: engelsk erfaringstekst sier fortsatt "9km" (feil for Østre Vealøs) - tas i engelsk gjennomgang.
+
+## Evening Reset-siden
+
+- 24. november 2026: ", som vondt i korsryggen" fjernet fra punktet om øvelser underveis (Ewas ønske). Også fjernet på engelsk (", such as lower back pain"). Rewild Trip-siden har fortsatt formuleringen.
