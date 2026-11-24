@@ -511,3 +511,4 @@ Kalenderkortene justert så forsiden ikke gjentar seg ("tar vare på leddene" st
 - 24. november 2026: Rewild Trip, "Hvem passer det for?": "Alle som har vondt i ledd eller rygg etter mange timer med sitting" -> "Alle som kjenner følgene av mye sitting". Hvorfor: Ewa ville ha noe mer generelt enn ledd/rygg; "følgene av" i stedet for "negative effekter" (anglisisme), og samme uttrykk som i øvelsespunktet. Engelsk ikke endret ennå.
 - 24. november 2026: "Alle som" -> "Deg som" i samme punkt, så alle fire punktene begynner likt.
 - 24. november 2026: Engelsk tilsvarende: "Anyone who deals with joint or back pain from hours of sitting" -> "People who feel the effects of too much sitting" ("People who" som de andre punktene).
+- 24. november 2026: Historien: "ble de avhengighetsskapende" -> "ble jeg hekta" (Ewas ønske). Mer muntlig og personlig, passer fortellingen.
