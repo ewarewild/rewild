@@ -483,7 +483,8 @@ Språket er godt, og i juridisk tekst er presisjon viktigere enn flyt. "Vi" og "
 ## Helhetlig gjennomgang av forsiden
 
 Kalenderkortene justert så forsiden ikke gjentar seg ("tar vare på leddene" sto 3 ganger, "styrke og stabilitet" 2 ganger). Hvert kort sier nå det som er særegent for turen, kun med innhold fra turens egen side.
-- Evening Reset-kortet nå: Rist av deg dagen og kom i kontakt med kroppen igjen på en kveldstur. Vi slipper stresset og skjerper fokuset.
+- Evening Reset-kortet nå: Rist av deg dagen og kom i kontakt med kroppen igjen på en kveldstur. Vi slipper stress og skjerper fokuset.
+  - 24. november 2026: "stresset" -> "stress" (Ewas ønske).
 - Rewild Trip-kortet (og Google-beskrivelse) nå: En hel dag med praktisk trening i terrenget. Du lærer gangteknikker og øvelser underveis som forebygger skader og gir balanse - både fysisk og mentalt.
 
 ## Engelsk side

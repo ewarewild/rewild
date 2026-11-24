@@ -29,7 +29,7 @@ export const events: Record<EventId, EventInfo> = {
     description: 'Shake off the day and reconnect with your body on an evening hike that supports stress release, increased focus and reduced strain on your joints.',
     no: {
       alt: 'Evening Reset - tur i skogen',
-      description: 'Rist av deg dagen og kom i kontakt med kroppen igjen på en kveldstur. Vi slipper stresset og skjerper fokuset.',
+      description: 'Rist av deg dagen og kom i kontakt med kroppen igjen på en kveldstur. Vi slipper stress og skjerper fokuset.',
     },
   },
   'rewild-course': {
