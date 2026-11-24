@@ -509,3 +509,4 @@ Kalenderkortene justert så forsiden ikke gjentar seg ("tar vare på leddene" st
 - 24. november 2026: Evening Reset: "Vann" -> "Vann eller te", "Water" -> "Water or tea".
 - 24. november 2026: Rewild Trip: "Vi tar oss god tid til å hvile" -> "Vi tar oss tid til å hvile" (Ewas ønske).
 - 24. november 2026: Rewild Trip, "Hvem passer det for?": "Alle som har vondt i ledd eller rygg etter mange timer med sitting" -> "Alle som kjenner følgene av mye sitting". Hvorfor: Ewa ville ha noe mer generelt enn ledd/rygg; "følgene av" i stedet for "negative effekter" (anglisisme), og samme uttrykk som i øvelsespunktet. Engelsk ikke endret ennå.
+- 24. november 2026: "Alle som" -> "Deg som" i samme punkt, så alle fire punktene begynner likt.
