@@ -485,7 +485,8 @@ Språket er godt, og i juridisk tekst er presisjon viktigere enn flyt. "Vi" og "
 Kalenderkortene justert så forsiden ikke gjentar seg ("tar vare på leddene" sto 3 ganger, "styrke og stabilitet" 2 ganger). Hvert kort sier nå det som er særegent for turen, kun med innhold fra turens egen side.
 - Evening Reset-kortet nå: Rist av deg dagen og kom i kontakt med kroppen igjen på en kveldstur. Vi slipper stress og skjerper fokus.
   - 24. november 2026: "stresset" -> "stress" og "fokuset" -> "fokus" (Ewas ønske). Ubestemt form på begge gir lik rytme.
-- Rewild Trip-kortet (og Google-beskrivelse) nå: En hel dag med praktisk trening i terrenget. Du lærer gangteknikker og øvelser underveis som forebygger skader og gir balanse - både fysisk og mentalt.
+- Rewild Trip-kortet (og Google-beskrivelse) nå: En hel dag med praktisk trening i terrenget. Du lærer gangteknikker og øvelser underveis som reduserer risikoen for skader og gir balanse - både fysisk og mentalt.
+  - 24. november 2026: "forebygger skader" -> "reduserer risikoen for skader", også i innledningen på turside ("verktøy til å redusere risikoen for skader"). Hvorfor: Ewa ønsket "minimaliserer"; det er en anglisisme, så "reduserer risikoen" ble valgt - vanlig norsk, lover ikke for mye, og samme tanke som "minimerer risikoen for skader" på bedriftssiden.
 
 ## Engelsk side
 
