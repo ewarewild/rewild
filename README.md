@@ -512,3 +512,4 @@ Kalenderkortene justert så forsiden ikke gjentar seg ("tar vare på leddene" st
 - 24. november 2026: "Alle som" -> "Deg som" i samme punkt, så alle fire punktene begynner likt.
 - 24. november 2026: Engelsk tilsvarende: "Anyone who deals with joint or back pain from hours of sitting" -> "People who feel the effects of too much sitting" ("People who" som de andre punktene).
 - 24. november 2026: Historien: "ble de avhengighetsskapende" -> "ble jeg hekta" (Ewas ønske). Mer muntlig og personlig, passer fortellingen.
+- 24. november 2026: Historien: siste avsnitt "Sammen med deg." fjernet, også på engelsk ("With you."). Siden slutter nå med "Nå mer gjennomarbeidet, mer tilgjengelig og i stadig utvikling."
