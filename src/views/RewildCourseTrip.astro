@@ -5,7 +5,7 @@ import Nav from '../components/Nav.astro';
 import Footer from '../components/Footer.astro';
 import nordkollenHero from '../images/nordkollen-hero.webp';
 import { localePath, langFromPath } from '../i18n';
-import { events, longDate, signupLabel, priceText, freeOffer, regularPriceText, text, courseDuration, meetUpTime, type Session } from '../data/events';
+import { events, longDate, signupLabel, priceText, price, freeOffer, regularPriceText, text, courseDuration, meetUpTime, type Session } from '../data/events';
 
 
 interface Props {
@@ -64,7 +64,8 @@ const t = lang === 'no'
         'Staver (valgfritt)',
         'Varm te (anbefales)',
       ],
-      weather: 'Vi går i nesten all slags vær, men blir forholdene farlige, avlyses turen. Du får da pengene tilbake eller kan melde deg på en annen tur.',
+      weather: 'Vi går i nesten all slags vær, men blir forholdene farlige, avlyses turen.',
+      refund: 'Du får da pengene tilbake eller kan melde deg på en annen tur.', // left out for free sessions
       injury: 'Har du en fersk eller pågående skade, bør du snakke med legen eller fysioterapeuten din før du blir med.',
       dog: 'Denne turen passer ikke for hund.',
       duration: 'Varighet', date: 'Dato', meetUpLabel: 'Oppmøte', meetingPoint: 'Møtested', tba: 'Kommer senere', price: 'Pris',
@@ -114,7 +115,8 @@ const t = lang === 'no'
         'Walking poles (optional)',
         'Hot tea (recommended)',
       ],
-      weather: 'We hike in most weather. However, if hazardous conditions arise, the hike will be cancelled. You will receive a full refund or an option to rebook your trip.',
+      weather: 'We hike in most weather. However, if hazardous conditions arise, the hike will be cancelled.',
+      refund: 'You will receive a full refund or an option to rebook your trip.', // left out for free sessions
       injury: 'If you have a recent or current injury, please check with your doctor or physio before participating.',
       dog: 'This event is not suitable for bringing a dog.',
       duration: 'Duration', date: 'Date', meetUpLabel: 'Meet up', meetingPoint: 'Meeting point', tba: 'To be announced', price: 'Price',
@@ -229,7 +231,7 @@ const heroImage = await heroPhoto(session.image ?? nordkollenHero, 65);
           ))}
         </div>
         <p class="text-forest text-[1.08rem] font-light leading-relaxed mt-9">
-          {t.weather}
+          {t.weather}{price(session) > 0 && ` ${t.refund}`}
         </p>
         <p class="text-forest text-[1.08rem] font-light leading-relaxed mt-5">
           {t.injury}
