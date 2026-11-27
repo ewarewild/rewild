@@ -30,7 +30,7 @@ const t = lang === 'no'
       bestForLabel: 'Passer best for:',
       // The 90-minute session was taken off the page 2026-11-22; still offered in conversation as a shorter option or taster
       formats: [
-        { name: 'Halv dag: Hvile og nærvær', text: 'Rolig kontakt med kroppen på en tur i lett tempo, som hjelper de ansatte ut av hodet. Puste- og sanseøvelser som styrker fokuset, gjør det lettere å koble av fra jobbmodus, utvider oppmerksomheten og forsterker det naturen gir: mindre uro og grubling, bedre humør og et klarere hode. Dette er enkle, praktiske verktøy de ansatte kan bruke på hverdagsturene sine for å løse opp spenninger og få mer mentalt og fysisk utbytte av tiden i naturen. På en sti innen 25 minutters kjøring fra sentrum. Opptil 15 deltakere.', bestFor: 'en fagdag eller HMS-dag for team med mentalt krevende jobber.' },
+        { label: 'Halv dag', name: 'Hvile og nærvær', lead: 'Rolig kontakt med kroppen på en tur i lett tempo, som hjelper de ansatte ut av hodet.', listIntro: 'Puste- og sanseøvelser som:', points: ['styrker fokuset', 'bedrer evnen til å være til stede i stressende situasjoner', 'gjør det lettere å koble av fra jobbmodus', 'demper uro og grubling', 'gir bedre humør og et klarere hode'], after: 'Dette er enkle, praktiske verktøy de ansatte kan bruke på hverdagsturene sine for å løse opp spenninger og få mer mentalt og fysisk utbytte av tiden i naturen.', meta: 'På en sti innen 25 minutters kjøring fra sentrum. Opptil 15 deltakere.', bestFor: 'en fagdag eller HMS-dag for team med mentalt krevende jobber.' },
         { name: 'Halv dag: Kropp i bevegelse', text: 'En tur i rolig til middels tempo, laget for å reaktivere kroppen etter lange dager i stolen. En kombinasjon av pust, gangteknikk som avlaster leddene, enkel yoga og gangøvelser som motvirker følgene av å sitte lenge i samme stilling. Innslag av sanseøvelser gir også hodet en pause. Dette er enkle, praktiske verktøy de ansatte kan bruke på hverdagsturene sine for å løse opp spenninger og få mer mentalt og fysisk utbytte av tiden i naturen. På en sti innen 25 minutters kjøring fra sentrum. Opptil 15 deltakere.', bestFor: 'en fagdag eller HMS-dag for team som sitter mye.' },
         { name: 'Helgekurs', text: 'To dager i naturen, borte fra arbeidsdagen, med tid til å gå skikkelig i dybden på styrke, pust og oppmerksomhet. Mentale og fysiske teknikker som løser opp spenninger, styrker fokus og nærvær, bedrer evnen til å takle stress i hverdagen, reaktiverer kroppen etter mye stillesitting, gir bedre humør og gjør det lettere å skifte fokus mellom jobb og hvile. Dette er enkle, praktiske verktøy de ansatte kan ta med seg inn i hverdagen. Dere booker stedet, jeg står for programmet. Opptil 15 deltakere.', bestFor: 'en samling eller kickoff med et helhetlig program. Rom for å hente seg inn, øve til teknikkene sitter og ta med felles verktøy tilbake til jobben.' },
       ],
@@ -73,7 +73,7 @@ const t = lang === 'no'
       offerHeading: 'What I offer',
       bestForLabel: 'Best for:',
       formats: [
-        { name: 'Half day: Rest and presence', text: 'Gentle reconnection with the body on an easy-paced hike, helping your staff get out of their heads. Breath and sensory practices that sharpen focus, make it easier to switch off from work mode, expand awareness and deepen what nature offers: less restlessness and rumination, better mood and a clearer head. These are simple, practical tools your staff can use on their everyday walks to release tension and get more mental and physical benefit from time in nature. On a trail within a 25-minute drive of the town centre. Up to 15 people.', bestFor: 'a training day or HMS day for teams with mentally demanding jobs.' },
+        { label: 'Half day', name: 'Rest and presence', lead: 'Gentle reconnection with the body on an easy-paced hike, helping your staff get out of their heads.', listIntro: 'Breath and sensory practices that:', points: ['sharpen focus', 'improve the ability to stay present in stressful situations', 'make it easier to switch off from work mode', 'ease restlessness and rumination', 'lift mood and clear the head'], after: 'These are simple, practical tools your staff can use on their everyday walks to release tension and get more mental and physical benefit from time in nature.', meta: 'On a trail within a 25-minute drive of the town centre. Up to 15 people.', bestFor: 'a training day or HMS day for teams with mentally demanding jobs.' },
         { name: 'Half day: Body in motion', text: 'An easy to medium-paced hike designed to reactivate the body after long days in the chair. A combination of breath, walking techniques that take strain off the joints, simple yoga and walking exercises that counteract the effects of sitting in one position for long periods. Some sensory practices also give the mind a break. These are simple, practical tools your staff can use on their everyday walks to release tension and get more mental and physical benefit from time in nature. On a trail within a 25-minute drive of the town centre. Up to 15 people.', bestFor: 'a training day or HMS day for teams who sit a lot.' },
         { name: 'Weekend retreat', text: 'Two days in nature, with time to go properly deep into strength, breath and attention, away from the working day. Mental and physical techniques that release tension, sharpen focus and presence, improve the ability to handle stress in everyday situations, reactivate the body after prolonged sitting, improve mood and make it easier to switch focus between work and rest. These are simple, practical tools your staff can take with them into everyday life. You book the venue; I deliver the programme. Up to 15 people.', bestFor: 'a team gathering or kick-off with real content. Room to practise, recover and build habits that last.' },
       ],
@@ -147,10 +147,31 @@ const t = lang === 'no'
       <h2 class="font-display font-medium text-3xl md:text-4xl text-forest mb-10 leading-tight">{t.offerHeading}</h2>
       <div class="grid gap-4 md:grid-cols-3 md:gap-8">
         {t.formats.map(f => (
-          <div class="bg-cream p-8">
+          <div class="bg-cream p-8 flex flex-col">
+            {f.label && <p class="text-xs tracking-[0.25em] uppercase text-sage font-light mb-2">{f.label}</p>}
             <h3 class="font-display font-bold text-3xl text-forest leading-tight mb-5">{f.name}</h3>
-            <p class="text-forest font-light leading-relaxed text-[1.08rem]">{f.text}</p>
-            <p class="mt-4 pt-4 border-t border-forest/10 text-forest font-light italic leading-relaxed text-[1.02rem]"><span class="not-italic font-semibold">{t.bestForLabel}</span> {f.bestFor}</p>
+            {f.points ? (
+              <div class="text-forest font-light leading-relaxed text-[1.08rem]">
+                <p>{f.lead}</p>
+                <p class="mt-4">{f.listIntro}</p>
+                {/* Tighter than the sitewide space-y-6 bullet standard - cards are narrow (agreed 2026-11-27) */}
+                <div class="mt-3 space-y-3">
+                  {f.points.map(point => (
+                    <div class="flex items-start gap-4">
+                      <span class="mt-2.5 w-1.5 h-1.5 rounded-full bg-sage-light flex-shrink-0"></span>
+                      <span>{point}</span>
+                    </div>
+                  ))}
+                </div>
+                <p class="mt-4">{f.after}</p>
+              </div>
+            ) : (
+              <p class="text-forest font-light leading-relaxed text-[1.08rem]">{f.text}</p>
+            )}
+            <div class="mt-auto">
+              {f.meta && <p class="mt-6 pt-4 border-t border-forest/10 text-forest/80 font-light leading-relaxed text-[0.95rem]">{f.meta}</p>}
+              <p class={`${f.meta ? 'mt-3' : 'mt-4 pt-4 border-t border-forest/10'} text-forest font-light italic leading-relaxed text-[1.02rem]`}><span class="not-italic font-semibold">{t.bestForLabel}</span> {f.bestFor}</p>
+            </div>
           </div>
         ))}
       </div>
